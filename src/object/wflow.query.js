@@ -1,0 +1,2 @@
+// try { regeneratorRuntime = t } catch (e) { Function("r","regeneratorRuntime = r")(t)}});
+// try { regeneratorRuntime = t } catch (e) { try { Function("r", "regeneratorRuntime = r")(t) } catch (err) { console.log(err); } };
