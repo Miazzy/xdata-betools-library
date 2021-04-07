@@ -405,15 +405,15 @@ const query = {
     /**
      * @description 企业微信查询登录用户函数
      */
-    async queryWeworkUser() {
+    async queryWeworkUser(codeSearchType = "search", systemSearchType = "history") {
 
         let userinfo = null;
         let response = null;
 
         try {
             //获取用户CODE
-            let code = tools.queryUrlString('code', 'search');
-            let system_type = tools.queryUrlString('system_type', 'history') || 'v2';
+            let code = tools.queryUrlString('code', codeSearchType);
+            let system_type = tools.queryUrlString('system_type', systemSearchType) || 'v2';
 
             //获取用户信息
             if (code) {
