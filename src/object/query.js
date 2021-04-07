@@ -428,7 +428,7 @@ const query = {
 
                 try {
                     response = await superagent.get(`${window.BECONFIG['restAPI']}/api/${system_type}/wework_user_code/${code}`);
-                    userinfo = response && response.body && response.body.userinfo && response.body.userinfo.errcode == 0 ? response.body.userinfo : null;
+                    userinfo = response && response.body && response.body.userinfo ? response.body.userinfo : null;
                 } catch (error) {
                     console.log(error);
                 }
