@@ -1495,6 +1495,27 @@ const manage = {
     },
 
     /**
+     * 显示遮罩函数
+     * @param {*} action 
+     * @param {*} done 
+     */
+    async showOverlayConfirm(action = 'cancel', done, tag, block) {
+        console.log(`action:`, action, ` done:`, done);
+        if (action == 'cancel') {
+            setTimeout(() => {
+                tag.showOverlay = false;
+                block.showOverlay = '';
+            }, 300);
+        } else if (action == 'confirm') {
+            tag.showOverlay = true;
+            block.showOverlay = 'block';
+        }
+        if (done) {
+            done();
+        }
+    },
+
+    /**
      * 取消函数
      * @param {*} Dialog 
      * @param {*} returnBack 
