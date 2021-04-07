@@ -13,13 +13,13 @@ var fileExports = require('./file');
 var toolsExports = require('./tools');
 var storageExports = require('./storage');
 var announceExports = require('./announce');
+var contactExports = require('./contact');
 var queryExports = require('./query');
-var manageExports = require('./manage');
 var lockExports = require('./lock');
 var taskExports = require('./task');
 var crontabExports = require('./crontab');
-var contactExports = require('./contact');
 var workconfigExports = require('./workconfig');
+var manageExports = require('./manage');
 var workflowExports = require('./workflow');
 var wflowprocessExports = require('./wflow.process');
 var methodExports = {};
@@ -37,9 +37,9 @@ Object.assign(
     constantExports,
     fileExports,
     toolsExports,
+    queryExports,
     storageExports,
     announceExports,
-    queryExports,
     manageExports,
     taskExports,
     workconfigExports,

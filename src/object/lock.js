@@ -1,8 +1,5 @@
-var { storage } = require('./storage');
 var { query } = require('./query');
 var { tools } = require('./tools');
-var { workflow } = require('./workflow');
-var { manage } = require('./manage');
 
 const lock = {
 
@@ -20,7 +17,7 @@ const lock = {
             } else { //未上锁，执行操作
                 const tempList = await query.queryTableDataByWhereSQL('bs_lock_info', `_where=(lock_name,eq,${lockName})&_sort=-id`); //先查询对应lock_name的所有数据，删除
                 for (const item of tempList) {
-                    await manage.deleteTableData("bs_lock_info", item.id);
+                    await Betools.manage.deleteTableData("bs_lock_info", item.id);
                 }
                 const elem = { //新增本条lock_name数据，上锁
                     id: tools.queryUniqueID(),
@@ -31,7 +28,7 @@ const lock = {
                     lock_username: lockOperator,
                     lock_flag: 'Y',
                 };
-                await manage.postTableData('bs_lock_info', elem);
+                await Betools.manage.postTableData('bs_lock_info', elem);
                 return true;
             }
         } catch (error) {
@@ -48,7 +45,7 @@ const lock = {
         try {
             const tempList = await query.queryTableDataByWhereSQL('bs_lock_info', `_where=(lock_name,eq,${lockName})&_sort=-id`); //先查询对应lock_name的所有数据，删除
             for (const item of tempList) {
-                await manage.deleteTableData("bs_lock_info", item.id);
+                await Betools.manage.deleteTableData("bs_lock_info", item.id);
             }
             return true;
         } catch (error) {

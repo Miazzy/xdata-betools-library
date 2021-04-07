@@ -1,6 +1,5 @@
 var { tools } = require('./tools');
 var { storage } = require('./storage');
-var { manage } = require('./manage');
 var { query } = require('./query');
 
 const crontab = {
@@ -15,7 +14,7 @@ const crontab = {
             const nowdate = dayjs().format('YYYYMMDD');
 
             //向数据库上锁，如果查询到数据库有锁，则不推送消息
-            const lockFlag = await manage.lock('crontab_mission', 5000, username);
+            const lockFlag = await Betools.manage.lock('crontab_mission', 5000, username);
             console.log(`lock flag : `, lockFlag, ` nowtime: `, nowtime);
 
             if (!!lockFlag) {
@@ -34,7 +33,7 @@ const crontab = {
                                 const element = {
                                     status: 'devisit',
                                 }; // 待处理元素 未到访
-                                const result = await manage.patchTableData('bs_visit_apply', item.id, element); //第二步，向表单提交form对象数据
+                                const result = await Betools.manage.patchTableData('bs_visit_apply', item.id, element); //第二步，向表单提交form对象数据
                                 console.log(`response :`, JSON.stringify(resp), `\n\r query url:`, queryURL, `\n\r result:`, result);
                             }
                         }
@@ -57,14 +56,14 @@ const crontab = {
                                     const receiveURL = encodeURIComponent(`${window.BECONFIG.domain.replace('www','wechat')}/#/app/borrowview?id=${item.id}&statustype=office&role=receive`);
                                     const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${item.create_by}/亲爱的同事，您于${date}借用的物品请在18:00前及时归还?rurl=${receiveURL}`;
                                     const resp = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('accept', 'json');
-                                    await manage.patchTableData('bs_goods_borrow', item.id, {
+                                    await Betools.manage.patchTableData('bs_goods_borrow', item.id, {
                                         notify_time: dayjs().format('YYYY-MM-DD HH:mm:ss'),
                                     }); //已推送的消息，添加到消息推送记录表中
                                 }
                             } else {
                                 const mlist = await query.queryTableDataByWhereSQL('bs_goods_borrow', `_where=(id,eq,${item.pid})&_size=1&_sort=-id`); //查询Pid对应数据状态，如果是已完成，则修改为已完成，如果是已驳回，则修改为已驳回
                                 if (mlist && mlist.length > 0) {
-                                    await manage.patchTableData('bs_goods_borrow', item.id, {
+                                    await Betools.manage.patchTableData('bs_goods_borrow', item.id, {
                                         status: mlist[0].status,
                                     });
                                 }
@@ -82,14 +81,14 @@ const crontab = {
                                     const receiveURL = encodeURIComponent(`${window.BECONFIG.domain.replace('www','wechat')}/#/app/goodsview?id=${item.id}&statustype=office&role=view`);
                                     const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${item.create_by}/亲爱的同事，您于${date}预约的办公用品已准备，请在17:00-18:00至前台领取?rurl=${receiveURL}`;
                                     const resp = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('accept', 'json');
-                                    await manage.patchTableData('bs_goods_receive', item.id, {
+                                    await Betools.manage.patchTableData('bs_goods_receive', item.id, {
                                         notify_time: dayjs().format('YYYY-MM-DD HH:mm:ss'),
                                     });
                                 }
                             } else {
                                 const mlist = await query.queryTableDataByWhereSQL('bs_goods_receive', `_where=(id,eq,${item.pid})&_size=1&_sort=-id`); //查询Pid对应数据状态，如果是已完成，则修改为已完成，如果是已驳回，则修改为已驳回
                                 if (mlist && mlist.length > 0) {
-                                    await manage.patchTableData('bs_goods_receive', item.id, {
+                                    await Betools.manage.patchTableData('bs_goods_receive', item.id, {
                                         status: mlist[0].status,
                                     });
                                 }
@@ -124,7 +123,7 @@ const crontab = {
                 }
 
                 //向数据库解锁
-                await manage.unlock('crontab_mission');
+                await Betools.manage.unlock('crontab_mission');
             }
 
         } catch (error) {
