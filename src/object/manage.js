@@ -1515,6 +1515,207 @@ const manage = {
         }
     },
 
+    /**
+     * 查询用印登记申请消息
+     * @param {*} state 
+     * @param {*} that 
+     */
+    async querySealApplyInfo(state, that = state) {
+
+        try {
+            state.iswechat = Betools.tools.isWechat();
+            state.userinfo = await state.weworkLogin(); //查询当前登录用户
+        } catch (error) {
+            console.log(error);
+        }
+
+        try {
+            state.item.sealman = Betools.tools.getUrlParam('sealman');
+            state.item.status = state.statusType[Betools.tools.getUrlParam('statustype')];
+            state.sealuserid = Betools.tools.getUrlParam('sealuserid');
+            state.groupid = Betools.tools.getUrlParam('groupid') || 'Group_LD';
+
+            state.item.seal = Betools.tools.getUrlParam('seal'); //用印管理员成员组
+            state.item.front = Betools.tools.getUrlParam('front'); //用印前台接受组
+            state.item.archive = Betools.tools.getUrlParam('archive'); //用印归档组(财务/档案)
+
+            // 查询公司名称记录
+            const clist = await Betools.manage.queryTableData('bs_company_flow_base', `_where=(status,in,0)~and(level,gt,2)&_sort=id&_p=0&_size=30`); // 获取最近12个月的已用印记录
+            clist.map((item, index) => {
+                item.title = item.name.slice(0, 24);
+                item.code = item.id;
+                item.tel = '';
+                item.name = item.name;
+                item.isDefault = false;
+            });
+            state.companyColumns = clist;
+
+            //如果盖印人填写为英文，则查询中文名称
+            if (/^[a-zA-Z_0-9]+$/.test(state.item.sealman)) {
+                //获取盖印人姓名
+                state.item.sealman = await Betools.manage.queryUsernameByID(state.item.sealman);
+            }
+
+            //如果前台人员填写为英文，则查询中文名称
+            if (/^[a-zA-Z_0-9]+$/.test(state.item.front)) {
+                //获取盖印人姓名
+                state.item.front_name = await Betools.manage.queryUsernameByID(state.item.front);
+            }
+
+            //如果盖印人候选列表存在
+            if (state.item.seal) {
+                //获取可选填报人列表
+                let slist = await Betools.manage.queryUsernameByIDs(state.item.seal.split(',').map(item => {
+                    return `'${item}'`;
+                }).join(','));
+                //遍历填报人列表
+                slist.map((elem, index) => {
+                    let company = elem.textfield1.split('||')[0];
+                    company = company.slice(company.lastIndexOf('>') + 1);
+                    let department = elem.textfield1.split('||')[1];
+                    department = department.slice(department.lastIndexOf('>') + 1);
+                    state.sealuserid = elem.loginid;
+                    state.suserList.push({
+                        id: elem.loginid,
+                        name: elem.lastname,
+                        tel: '',
+                        address: company + "||" + elem.textfield1.split('||')[1],
+                        company: company,
+                        department: department,
+                        mail: elem.email,
+                        isDefault: !state.suserList.length
+                    });
+                })
+            }
+
+            //如果前台人候选列表存在
+            if (state.item.front) {
+                //获取可选填报人列表
+                let flist = await Betools.manage.queryUsernameByIDs(state.item.front.split(',').map(item => {
+                    return `'${item}'`;
+                }).join(','));
+                //遍历填报人列表
+                flist.map((elem, index) => {
+                    let company = elem.textfield1.split('||')[0];
+                    company = company.slice(company.lastIndexOf('>') + 1);
+                    let department = elem.textfield1.split('||')[1];
+                    department = department.slice(department.lastIndexOf('>') + 1);
+                    state.fuserList.push({
+                        id: elem.loginid,
+                        name: elem.lastname,
+                        tel: '',
+                        address: company + "||" + elem.textfield1.split('||')[1],
+                        company: company,
+                        department: department,
+                        mail: elem.email,
+                        isDefault: !state.suserList.length
+                    });
+                })
+            }
+
+            //如果前台人候选列表存在
+            if (state.item.archive) {
+                let names = [];
+                let ids = [];
+                //获取可选填报人列表
+                let alist = await Betools.manage.queryUsernameByIDs(state.item.archive.split(',').map(item => {
+                    return `'${item}'`;
+                }).join(','));
+                //遍历填报人列表
+                alist.map((elem, index) => {
+                    let company = elem.textfield1.split('||')[0];
+                    company = company.slice(company.lastIndexOf('>') + 1);
+                    let department = elem.textfield1.split('||')[1];
+                    department = department.slice(department.lastIndexOf('>') + 1);
+                    names.push(elem.lastname);
+                    ids.push(elem.loginid);
+                    state.auserList.push({
+                        id: elem.loginid,
+                        value: `${elem.lastname},`,
+                        label: elem.lastname + ' ' + elem.mobile + " " + elem.textfield1.split('||')[1].replace('中心', ''),
+                        name: elem.lastname,
+                        tel: '',
+                        address: company + "||" + elem.textfield1.split('||')[1],
+                        company: company,
+                        department: department,
+                        mail: elem.email,
+                        isDefault: !state.auserList.length
+                    });
+                })
+                state.item.archive = ids.join(',');
+                state.item.archive_name = names.join(',');
+            }
+
+            //获取缓存的用户数据
+            const temp = Betools.storage.getStore('system_user_sealinfo');
+
+            if (!!temp) {
+                state.item.dealManager = temp.dealManager;
+                state.item.mobile = temp.mobile;
+                state.item.username = temp.username;
+                state.item.dealMail = temp.dealMail;
+                state.item.signman = temp.signman;
+                state.item.dealDepart = temp.dealDepart;
+            }
+
+            //获取用户信息
+            let userinfo = await Betools.storage.getStore('system_userinfo');
+
+            if (!Betools.tools.isNull(userinfo)) {
+                state.item.dealManager = userinfo.systemuserinfo.realname;
+                state.item.mobile = userinfo.systemuserinfo.mobile;
+                state.item.username = userinfo.systemuserinfo.username;
+                state.item.signman = userinfo.systemuserinfo.realname;
+                state.item.dealDepart = userinfo.systemuserinfo.textfield1.split('||')[1];
+                if (state.item.dealDepart.includes('>')) {
+                    state.item.dealDepart = state.item.dealDepart.split('>')[1]
+                }
+            }
+
+            //如果用户邮箱为空，则从以前填写的记录中获取邮箱账号
+            if (Betools.tools.isNull(state.item.dealMail) || Betools.tools.isNull(state.item.company)) {
+                const tmp = await Betools.query.queryMailBySealData(state.item.signman);
+                state.item.dealMail = tmp.deal_mail;
+                state.item.dealDepart = tmp.deal_depart;
+                state.item.sealman = tmp.seal_man;
+                state.item.seal = tmp.seal;
+            }
+
+            //如果前台不存在，则添加
+            if (Betools.tools.isNull(state.item.front)) {
+                const tmp = await Betools.query.queryFrontBySealData(state.item.signman);
+                state.item.front = tmp.front;
+                state.item.front_name = tmp.front_name;
+                state.item.archive = tmp.archive;
+                state.item.archive_name = tmp.archive_name;
+                state.item.record = tmp.record;
+                state.item.record_name = tmp.record_name;
+                state.item.finance = tmp.finance;
+                state.item.finance_name = tmp.finance_name;
+            }
+
+            //是否有最近缓存数据
+            const tempitem = Betools.storage.getStore('system_seal_item');
+
+            if (!!tempitem) {
+                state.item.filename = tempitem.filename;
+                state.item.count = tempitem.count;
+                state.item.prefix = tempitem.prefix;
+            }
+
+            if (!state.sealuserid) {
+                state.sealuserid = state.config[state.item.sealman];
+            }
+
+            //加载最近的同类型合同编号
+            await state.queryHContract();
+
+        } catch (error) {
+            console.log(error);
+        }
+
+    },
+
     //提交用印登记申请
     async handleSealApplyConfirm(state) {
 
