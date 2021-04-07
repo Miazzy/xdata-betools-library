@@ -1471,6 +1471,30 @@ const manage = {
     },
 
     /**
+     * 查询公司工商数据信息
+     * @param {*} tableName 
+     * @param {*} id 
+     * @param {*} state 
+     * @returns 
+     */
+    async queryCompanyIndustryInfo(tableName = 'bs_company_flow_data', id, state) {
+        const list = await Betools.manage.queryTableData(tableName, `_where=(id,eq,${id})`);
+        const element = list[0];
+        const { directorChairman, director, directorExecutive, manager, supervisorChairman, supervisor } = element;
+        const { shareholder0, ratioDetail0, shareholder1, ratioDetail1, shareholder2, ratioDetail2, shareholder3, ratioDetail3, shareholder4, ratioDetail4, shareholder5, ratioDetail5, shareholder6, ratioDetail6, shareholder7, ratioDetail7, shareholder8, ratioDetail8, shareholder9, ratioDetail9, shareholder10, ratioDetail10, shareholder11, ratioDetail11, shareholder12, ratioDetail12, shareholder13, ratioDetail13, shareholder14, ratioDetail14, shareholder15, ratioDetail15, shareholder16, ratioDetail16, shareholder17, ratioDetail17, shareholder18, ratioDetail18, shareholder19, ratioDetail19, } = element;
+        state.director = { directorChairman, director, directorExecutive, manager, supervisorChairman, supervisor };
+        state.stock = { shareholder0, ratioDetail0, shareholder1, ratioDetail1, shareholder2, ratioDetail2, shareholder3, ratioDetail3, shareholder4, ratioDetail4, shareholder5, ratioDetail5, shareholder6, ratioDetail6, shareholder7, ratioDetail7, shareholder8, ratioDetail8, shareholder9, ratioDetail9, shareholder10, ratioDetail10, shareholder11, ratioDetail11, shareholder12, ratioDetail12, shareholder13, ratioDetail13, shareholder14, ratioDetail14, shareholder15, ratioDetail15, shareholder16, ratioDetail16, shareholder17, ratioDetail17, shareholder18, ratioDetail18, shareholder19, ratioDetail19, };
+        state.item = element;
+        state.item.create_time = dayjs(element.create_time).format('YYYY-MM-DD');
+        state.item.paidTime = dayjs(element.paidTime).format('YYYY-MM-DD');
+        state.item.paidTureTime = dayjs(element.paidTureTime).format('YYYY-MM-DD');
+        state.item.businessTerm = dayjs(element.businessTerm).format('YYYY-MM-DD');
+        state.item.establish_time = dayjs(element.establish_time).format('YYYY-MM-DD');
+        state.item.examine_date = dayjs(element.examine_date).format('YYYY-MM-DD');
+        return state;
+    },
+
+    /**
      * 取消函数
      * @param {*} Dialog 
      * @param {*} returnBack 
