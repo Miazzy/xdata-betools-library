@@ -405,7 +405,7 @@ const query = {
     /**
      * @description 企业微信查询登录用户函数
      */
-    async queryWeworkUser(codeSearchType = "search", systemSearchType = "history") {
+    async queryWeworkUser(codeSearchType = "search", systemSearchType = "history", version = 'v2') {
 
         let userinfo = null;
         let response = null;
@@ -413,7 +413,7 @@ const query = {
         try {
             //获取用户CODE
             let code = tools.queryUrlString('code', codeSearchType);
-            let system_type = tools.queryUrlString('system_type', systemSearchType) || 'v2';
+            let system_type = tools.queryUrlString('system_type', systemSearchType) || version;
 
             //获取用户信息
             if (code) {
