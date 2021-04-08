@@ -44,12 +44,12 @@ Object.assign(
     manageExports,
     taskExports,
     workconfigExports,
-    contactExports,
-    lockExports,
-    crontabExports,
     sealapplyExports,
     workflowExports,
     wflowprocessExports,
+    contactExports,
+    lockExports,
+    crontabExports,
 );
 
 module.exports = methodExports
