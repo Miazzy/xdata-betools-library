@@ -1515,6 +1515,165 @@ const manage = {
         }
     },
 
+    //查询经办人基本信息
+    async queryManager(state) {
+        //获取经办人信息
+        const manager = this.item.dealManager;
+
+        try {
+            if (!!manager) {
+
+                //从用户表数据中获取填报人资料
+                let user = await Betools.manage.queryUserByNameHRM(manager.trim());
+                //从提交的历史数据中获取填报人资料
+                let info = await Betools.manage.queryUserBySealData(manager.trim());
+
+                if (!!user) {
+                    if (Array.isArray(user)) { //如果是用户数组列表，则展示列表，让用户自己选择
+
+                        try {
+                            user.map((elem, index) => {
+                                let company = elem.textfield1.split('||')[0];
+                                company = company.slice(company.lastIndexOf('>') + 1);
+                                let department = elem.textfield1.split('||')[1];
+                                department = department.slice(department.lastIndexOf('>') + 1);
+                                this.cuserList.push({
+                                    id: elem.loginid,
+                                    username: elem.loginid,
+                                    email: elem.email,
+                                    mail: elem.email,
+                                    realname: elem.name,
+                                    company,
+                                    department,
+                                    mobile: elem.mobile,
+                                    name: elem.lastname,
+                                    tel: '',
+                                    address: company + "||" + elem.textfield1.split('||')[1],
+                                    isDefault: !index
+                                });
+                            })
+                        } catch (error) {
+                            console.log(error);
+                        }
+
+                    } else {
+
+                        try {
+                            this.item.dealManager = user.deal_manager || this.item.dealManager;
+                            this.item.mobile = user.mobile;
+                            this.item.username = user.loginid;
+                            this.item.dealMail = user.email;
+                            this.item.signman = manager;
+                        } catch (error) {
+                            console.log(error);
+                        }
+
+                        try {
+                            if (!user.email && !!info) {
+                                this.item.dealMail = info.deal_mail;
+                                this.item.dealDepart = info.deal_depart;
+                            }
+                        } catch (error) {
+                            console.log(error);
+                        }
+
+                        try {
+                            this.cacheUserInfo(); //缓存特定属性
+                        } catch (error) {
+                            console.log(error);
+                        }
+
+                        try {
+                            let company = user.textfield1.split('||')[0];
+                            company = company.slice(company.lastIndexOf('>') + 1);
+                            let department = user.textfield1.split('||')[1];
+                            department = department.slice(department.lastIndexOf('>') + 1);
+                            this.item.dealDepart = department;
+                            this.cuserList.push({
+                                id: user.loginid,
+                                username: elem.loginid,
+                                email: elem.email,
+                                realname: elem.name,
+                                company,
+                                department,
+                                mobile: elem.mobile,
+                                name: user.lastname,
+                                tel: '',
+                                address: company + "||" + user.textfield1.split('||')[1],
+                                mail: this.item.dealMail,
+                                isDefault: !this.cuserList.length
+                            });
+                        } catch (error) {
+                            console.log(error);
+                        }
+
+                    }
+
+                    //遍历去重
+                    try {
+                        this.cuserList = this.cuserList.filter((item, index) => {
+                            item.isDefault = index == 0 ? true : false;
+                            let findex = this.cuserList.findIndex((subitem, index) => {
+                                return subitem.id == item.id
+                            });
+                            return index == findex;
+                        })
+                    } catch (error) {
+                        console.log(error);
+                    }
+
+                } else if (!user && !!info) {
+
+                    try {
+                        //如果是用户数组列表，则展示列表，让用户自己选择
+                        if (!Array.isArray(info)) {
+                            this.item.mobile = info.mobile;
+                            this.item.username = info.username;
+                            this.item.signman = manager;
+                            this.item.dealMail = info.deal_mail;
+                            this.item.dealDepart = info.deal_depart;
+                            this.cacheUserInfo(); //缓存特定属性
+                        }
+                    } catch (error) {
+                        console.log(error);
+                    }
+
+                }
+
+            }
+        } catch (error) {
+            console.log(error);
+        }
+
+    },
+
+    /**
+     * 缓存用印登记申请填报人信息
+     */
+    async cacheSealApplyUserInfo(item) {
+        try {
+            //获取特定属性
+            const temp = (({
+                dealManager,
+                mobile,
+                username,
+                dealMail,
+                signman,
+                dealDepart
+            }) => ({
+                dealManager,
+                mobile,
+                username,
+                dealMail,
+                signman,
+                dealDepart
+            }))(item);
+            Betools.storage.setStore('system_user_sealinfo', temp, 3600 * 24 * 30); //将用户名存放入缓存中，下次打开页面直接填入
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
     /**
      * 查询用印登记申请消息
      * @param {*} state 
