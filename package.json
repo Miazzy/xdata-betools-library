@@ -1,6 +1,6 @@
 {
     "name": "xdata-utils-btools",
-    "version": "1.1.8",
+    "version": "2.3.1",
     "description": "A collection of js function libraries",
     "scripts": {
         "lint": "eslint test/**/*.js src/**/*.js",
@@ -39,7 +39,7 @@
     "author": "miazzy",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Miazzy/bes-jstools/issues"
+        "url": "https://github.com/Miazzy/xdata-betools-library/issues"
     },
     "homepage": "https://github.com/Miazzy",
     "dependencies": {
