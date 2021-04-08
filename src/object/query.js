@@ -37,7 +37,7 @@ const query = {
 
         try {
             //查询表单信息
-            var tableInfo = await queryTableDataByField(
+            var tableInfo = await Betools.manage.queryTableDataByField(
                 'v_table_info',
                 'id',
                 tableName
@@ -72,7 +72,7 @@ const query = {
 
         try {
             //查询表单信息
-            var tableInfo = await queryTableDataByField(
+            var tableInfo = await Betools.manage.queryTableDataByField(
                 'v_table_info',
                 'id',
                 tableName
@@ -387,7 +387,7 @@ const query = {
 
         try {
 
-            var res = await queryTableDataByField('bs_hrmresource', 'loginid', userid); // await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            var res = await Betools.manage.queryTableDataByField('bs_hrmresource', 'loginid', userid); // await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
 
             if (res != null && res.length > 0) {
                 storage.setStore(`sys_user_cache_account#queryemployee#@${userid}`, res[0], 3600 * 24 * 31);
