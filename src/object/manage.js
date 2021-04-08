@@ -1515,10 +1515,13 @@ const manage = {
         }
     },
 
-    //查询经办人基本信息
-    async queryManager(state) {
+    /**
+     * 查询用印登记申请经办人基本信息
+     * @param {*} state 
+     */
+    async querySealApplyManager(state) {
         //获取经办人信息
-        const manager = this.item.dealManager;
+        const manager = state.item.dealManager;
 
         try {
             if (!!manager) {
@@ -1537,7 +1540,7 @@ const manage = {
                                 company = company.slice(company.lastIndexOf('>') + 1);
                                 let department = elem.textfield1.split('||')[1];
                                 department = department.slice(department.lastIndexOf('>') + 1);
-                                this.cuserList.push({
+                                state.cuserList.push({
                                     id: elem.loginid,
                                     username: elem.loginid,
                                     email: elem.email,
@@ -1559,26 +1562,26 @@ const manage = {
                     } else {
 
                         try {
-                            this.item.dealManager = user.deal_manager || this.item.dealManager;
-                            this.item.mobile = user.mobile;
-                            this.item.username = user.loginid;
-                            this.item.dealMail = user.email;
-                            this.item.signman = manager;
+                            state.item.dealManager = user.deal_manager || state.item.dealManager;
+                            state.item.mobile = user.mobile;
+                            state.item.username = user.loginid;
+                            state.item.dealMail = user.email;
+                            state.item.signman = manager;
                         } catch (error) {
                             console.log(error);
                         }
 
                         try {
                             if (!user.email && !!info) {
-                                this.item.dealMail = info.deal_mail;
-                                this.item.dealDepart = info.deal_depart;
+                                state.item.dealMail = info.deal_mail;
+                                state.item.dealDepart = info.deal_depart;
                             }
                         } catch (error) {
                             console.log(error);
                         }
 
                         try {
-                            this.cacheUserInfo(); //缓存特定属性
+                            state.cacheUserInfo(); //缓存特定属性
                         } catch (error) {
                             console.log(error);
                         }
@@ -1588,8 +1591,8 @@ const manage = {
                             company = company.slice(company.lastIndexOf('>') + 1);
                             let department = user.textfield1.split('||')[1];
                             department = department.slice(department.lastIndexOf('>') + 1);
-                            this.item.dealDepart = department;
-                            this.cuserList.push({
+                            state.item.dealDepart = department;
+                            state.cuserList.push({
                                 id: user.loginid,
                                 username: elem.loginid,
                                 email: elem.email,
@@ -1600,8 +1603,8 @@ const manage = {
                                 name: user.lastname,
                                 tel: '',
                                 address: company + "||" + user.textfield1.split('||')[1],
-                                mail: this.item.dealMail,
-                                isDefault: !this.cuserList.length
+                                mail: state.item.dealMail,
+                                isDefault: !state.cuserList.length
                             });
                         } catch (error) {
                             console.log(error);
@@ -1611,9 +1614,9 @@ const manage = {
 
                     //遍历去重
                     try {
-                        this.cuserList = this.cuserList.filter((item, index) => {
+                        state.cuserList = state.cuserList.filter((item, index) => {
                             item.isDefault = index == 0 ? true : false;
-                            let findex = this.cuserList.findIndex((subitem, index) => {
+                            let findex = state.cuserList.findIndex((subitem, index) => {
                                 return subitem.id == item.id
                             });
                             return index == findex;
@@ -1627,12 +1630,12 @@ const manage = {
                     try {
                         //如果是用户数组列表，则展示列表，让用户自己选择
                         if (!Array.isArray(info)) {
-                            this.item.mobile = info.mobile;
-                            this.item.username = info.username;
-                            this.item.signman = manager;
-                            this.item.dealMail = info.deal_mail;
-                            this.item.dealDepart = info.deal_depart;
-                            this.cacheUserInfo(); //缓存特定属性
+                            state.item.mobile = info.mobile;
+                            state.item.username = info.username;
+                            state.item.signman = manager;
+                            state.item.dealMail = info.deal_mail;
+                            state.item.dealDepart = info.deal_depart;
+                            state.cacheUserInfo(); //缓存特定属性
                         }
                     } catch (error) {
                         console.log(error);
