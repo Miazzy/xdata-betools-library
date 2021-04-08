@@ -1516,6 +1516,100 @@ const manage = {
     },
 
     /**
+     * 用印登记申请选中当前前台人员
+     * @param {*} value 
+     */
+    async selectSealApplyFrontUser(value, state) {
+        await Betools.tools.sleep(0);
+        const id = state.fuserid;
+        const user = state.fuserList.find((item, index) => {
+            return id == item.id
+        });
+        //获取盖印人姓名
+        state.item.front_name = user.name;
+        //当前盖印人编号
+        state.item.front = id;
+    },
+
+    /**
+     * 用印登记申请选中当前财务归档人员
+     * @param {*} value 
+     */
+    async selectSealApplyFinanceUser(value, state) {
+        await Betools.tools.sleep(0);
+        const id = state.financeUserid;
+        const user = state.financeuserList.find((item, index) => {
+            return id == item.id
+        });
+        //获取盖印人姓名
+        state.item.finance_name = user.name;
+        //当前盖印人编号
+        state.item.finance = id;
+        //设置归档组
+        state.item.archive_name = `${state.item.finance_name},${state.item.record_name}`;
+        state.item.archive = `${state.item.finance},${state.item.record}`;
+    },
+
+    /**
+     * 用印登记申请选中当前档案人员
+     * @param {*} value 
+     */
+    async selectSealApplyRecordUser(value, state) {
+        await Betools.tools.sleep(0);
+        const id = state.recordUserid;
+        const user = state.recorduserList.find((item, index) => {
+            return id == item.id
+        });
+        //获取盖印人姓名
+        state.item.record_name = user.name;
+        //当前盖印人编号
+        state.item.record = id;
+        //设置归档组
+        state.item.archive_name = `${state.item.finance_name},${state.item.record_name}`;
+        state.item.archive = `${state.item.finance},${state.item.record}`;
+    },
+
+    /**
+     * 用印登记申请选中当前盖印人员
+     * @param {*} value 
+     */
+    async selectSealApplySealUser(value, state) {
+        await Betools.tools.sleep(0);
+        const id = state.suserid;
+        const user = state.suserList.find((item, index) => {
+            return id == item.id
+        });
+        //获取盖印人姓名
+        state.item.sealman = user.name;
+        //设置盖印人电话
+        state.item.seal_mobile = user.mobile;
+        state.item.seal = id;
+        //当前盖印人编号
+        state.sealuserid = id;
+
+        //如果盖印人是总部的，则zonename为集团总部，如果不是总部的，则zonename为空
+        state.zoneNameValid();
+    },
+
+    /**
+     * 用印登记申请选中当前归档人员
+     * @param {*} values 
+     */
+    async selectSealApplyArchiveUser(values, state) {
+        await Betools.tools.sleep(0);
+        let ids = [];
+        let names = [];
+        state.$refs.checkboxGroup.$data.checkboxValues.map((value, index) => {
+            if (value == 1) {
+                ids.push(state.auserList[index].id);
+                names.push(state.auserList[index].name);
+            }
+        })
+        state.item.archive_name = names.join(',');
+        state.item.archive = ids.join(',');
+    },
+
+    /**
      * 查询用印登记申请经办人基本信息
      * @param {*} state 
      */
