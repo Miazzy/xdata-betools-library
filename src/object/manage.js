@@ -1508,7 +1508,9 @@ const manage = {
             }, 300);
         } else if (action == 'confirm') {
             tag.showOverlay = true;
-            block.showOverlay = 'block';
+            setTimeout(() => {
+                block.showOverlay = 'block';
+            }, 500);
         }
         if (done) {
             done();
