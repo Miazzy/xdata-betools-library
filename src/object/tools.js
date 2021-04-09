@@ -426,7 +426,27 @@ function getUrlParam(name) {
 }
 
 /**
- * 防抖函数 参数millisecond内只执行一次
+ * 防抖：高频事件触发n秒内函数只会执行一次，如n秒内再次触发，则重新计算时间
+ * 实现思路：每次触发事件时都取消之前的延时调用
+ * @param {*} fn
+ * @param {*} millisecond
+ * @returns 
+ */
+function debounce(fn, millisecond = 300) {
+    window._debounceTimeout = typeof window._debounceTimeout == 'undefined' ? null : window._debounceTimeout;
+    return function() {
+        console.log(window._debounceTimeout);
+        if (window._debounceTimeout != null) {
+            clearTimeout(window._debounceTimeout); //用户每次输入的时候清掉上一次的延时
+        }
+        window._debounceTimeout = setTimeout(function() {
+            fn.apply(this, arguments) //这里的this为全局window对象
+        }, millisecond);
+    }
+}
+
+/**
+ * 限流函数 参数millisecond内只执行一次
  * @param {*} fn 
  * @param {*} millisecond
  * @returns 
@@ -439,7 +459,7 @@ function throttle(fn, millisecond = 300) {
         setTimeout(function() {
             fn.apply(this, arguments);
             window._throttlecCanRunFlag = true;
-        }, millisecond)
+        }, millisecond);
     }
 }
 
@@ -619,6 +639,7 @@ var toolsExports = {
         mobileEnsconce,
         contain,
         throttle,
+        debounce,
     },
 }
 
