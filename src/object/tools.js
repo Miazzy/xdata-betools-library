@@ -449,17 +449,29 @@ function debounce(fn, millisecond = 300) {
  * 限流函数 参数millisecond内只执行一次
  * @param {*} fn 
  * @param {*} millisecond
+ * @param {*} firstms 第一次延时毫秒数
  * @returns 
  */
-function throttle(fn, millisecond = 300) {
+function throttle(fn, millisecond = 300, firstms = 300) {
+    window._throttlecCanRunFirst = typeof window._throttlecCanRunFlag == 'undefined' ? true : window._throttlecCanRunFirst;
     window._throttlecCanRunFlag = typeof window._throttlecCanRunFlag == 'undefined' ? true : window._throttlecCanRunFlag;
     return function() {
         if (!window._throttlecCanRunFlag) return;
         window._throttlecCanRunFlag = false;
-        setTimeout(function() {
-            fn.apply(this, arguments);
-            window._throttlecCanRunFlag = true;
-        }, millisecond);
+        if (window._throttlecCanRunFirst) {
+            window._throttlecCanRunFirst = false;
+            setTimeout(function() {
+                fn.apply(this, arguments);
+            }, firstms);
+            setTimeout(() => {
+                window._throttlecCanRunFlag = true;
+            }, millisecond);
+        } else {
+            setTimeout(function() {
+                fn.apply(this, arguments);
+                window._throttlecCanRunFlag = true;
+            }, millisecond);
+        }
     }
 }
 
