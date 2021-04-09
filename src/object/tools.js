@@ -426,6 +426,24 @@ function getUrlParam(name) {
 }
 
 /**
+ * 防抖函数 参数millisecond内只执行一次
+ * @param {*} fn 
+ * @param {*} millisecond
+ * @returns 
+ */
+function throttle(fn, millisecond = 300) {
+    window._throttlecCanRunFlag = typeof window._throttlecCanRunFlag == 'undefined' ? true : window._throttlecCanRunFlag;
+    return function() {
+        if (!window._throttlecCanRunFlag) return;
+        window._throttlecCanRunFlag = false;
+        setTimeout(function() {
+            fn.apply(this, arguments);
+            window._throttlecCanRunFlag = true;
+        }, millisecond)
+    }
+}
+
+/**
  * 获取URL参数值
  * @param {*} val
  */
@@ -600,6 +618,7 @@ var toolsExports = {
         mobileHide,
         mobileEnsconce,
         contain,
+        throttle,
     },
 }
 
