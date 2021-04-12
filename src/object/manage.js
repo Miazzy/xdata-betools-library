@@ -1373,6 +1373,8 @@ const manage = {
             data = await this.queryUserData(searchkey, []);
         } else if (type == 'company_ic') {
             data = await this.queryCompanyICData(searchkey, []);
+        } else if (type == 'stockholder') {
+            data = await this.queryCompanyAndUserData(searchkey, []);
         }
         state.tag['show' + this.prefixUpperCase(fieldKey)] = true;
         state.tag.showKey = key;
