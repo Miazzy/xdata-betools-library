@@ -1266,22 +1266,23 @@ const manage = {
      */
     async queryCompanyAndUserData(searchkey = '', data = [], data_ = []) {
         let list = [];
+
         try {
             if (searchkey && searchkey.length >= 2) {
 
-                data = await this.queryUserData(searchkey, data);
+                data = await Betools.manage.queryUserData(searchkey, data);
                 data = data.map(obj => {
                     const { id, code, name, title } = obj;
                     return { id, code, name, title };
                 });
-                list.concat(data);
+                list = list.concat(data);
 
-                data_ = await this.queryCompanyData(searchkey, data_);
+                data_ = await Betools.manage.queryCompanyData(searchkey, data_);
                 data_ = data_.map(obj => {
                     const { id, code, name, title } = obj;
                     return { id, code, name, title };
                 });
-                list.concat(data_);
+                list = list.concat(data_);
             }
 
             return list;
