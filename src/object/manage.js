@@ -1264,15 +1264,26 @@ const manage = {
      * @param {*} searchkey
      * @param {*} data
      */
-    async queryCompanyAndUserData(searchkey = '', data = []) {
+    async queryCompanyAndUserData(searchkey = '', data = [], data_ = []) {
         let list = [];
         try {
             if (searchkey && searchkey.length >= 2) {
+
                 data = await this.queryUserData(searchkey, data);
+                data = data.map(obj => {
+                    const { id, code, name, title } = obj;
+                    return { id, code, name, title };
+                });
                 list.concat(data);
-                data = await this.queryCompanyData(searchkey, data);
-                list.concat(data);
+
+                data_ = await this.queryCompanyData(searchkey, data_);
+                data_ = data_.map(obj => {
+                    const { id, code, name, title } = obj;
+                    return { id, code, name, title };
+                });
+                list.concat(data_);
             }
+
             return list;
         } catch (error) {
             console.log(err);
@@ -2246,12 +2257,13 @@ const manage = {
         }
 
         if ((!finance || !finance_name || !record || !record_name) && (state.item.sealtype == '合同类' && state.isGroupHeader)) {
-            state.tag.showOverlay = false;
-            //提示确认用印操作
-            return await vant.Dialog.confirm({
-                title: '用印登记申请',
-                message: '请输入并选择财务/档案归档人员！',
-            });
+            // state.tag.showOverlay = false;
+            // //提示确认用印操作
+            // return await vant.Dialog.confirm({
+            //     title: '用印登记申请',
+            //     message: '请输入并选择财务/档案归档人员！',
+            // });
+            finance = finance_name = record = record_name = 'yanggc';
         }
 
         //提示确认用印操作
