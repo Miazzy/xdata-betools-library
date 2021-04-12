@@ -2501,7 +2501,9 @@ const manage = {
             ...state.director,
             ...state.stock,
         };
+
         companyNodes.push(elem);
+
         console.log(`element:`, JSON.stringify(elem));
 
         Dialog.confirm({
@@ -2597,6 +2599,8 @@ const manage = {
                 console.log(error);
             }
         });
+
+        return elem;
     },
 
     /**
