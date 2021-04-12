@@ -1301,6 +1301,10 @@ const manage = {
                     data = await this.queryCompanyICData(searchkey, data);
                     list.concat(data);
                 }
+                if (type == 'stockholder') {
+                    data = await this.queryCompanyAndUserData(searchkey, data);
+                    list.concat(data);
+                }
             }
             return list;
         } catch (error) {
