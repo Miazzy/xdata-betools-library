@@ -2523,6 +2523,7 @@ const manage = {
             ...state.item,
             ...state.director,
             ...state.stock,
+            ...state.qualification,
         };
 
         companyNodes.push(elem);
