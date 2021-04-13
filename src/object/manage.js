@@ -2636,7 +2636,7 @@ const manage = {
             //此次校验，公司基础信息是否填写完整
             const invalidKeys = checkValid(state.item);
             if (tools.isNull(invalidKeys)) {
-                state.step = 'two'
+                state.step = 'two';
             } else {
                 Dialog.confirm({
                     title: '请填写完公司设立信息后进行下一步！',
@@ -2644,15 +2644,24 @@ const manage = {
                 })
             }
         } else if (state.step == 'two') {
+            if (!state.director.directorExecutive) {
+                state.director.directorExecutive = '--';
+            }
+            if (!state.director.directorChairman) {
+                state.director.directorChairman = '--';
+            }
+            if (!state.director.director) {
+                state.director.director = '--';
+            }
             //此次校验，公司的董事信息是否填写完整
             const invalidKeys = checkValid(state.director);
             if (tools.isNull(invalidKeys)) {
-                state.step = 'three'
+                state.step = 'three';
             } else {
                 Dialog.confirm({
                     title: '请填写完公司董事信息后进行下一步！',
                     message: `请检查缺失信息：${invalidKeys}`
-                })
+                });
             }
         } else if (state.step == 'three') {
             const elem = {
