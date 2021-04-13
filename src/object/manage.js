@@ -3047,6 +3047,7 @@ const manage = {
                 ]
             },
         ];
+        return data;
     },
 
     /**
