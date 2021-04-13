@@ -2973,6 +2973,82 @@ const manage = {
         }
     },
 
+    async queryZoneName(data = null) {
+        data = [{
+                "text": "融量集团总部",
+                "value": "融量集团总部",
+                "children": [
+                    { "text": "融量集团总部", "value": "融量集团总部", "children": [] },
+                ]
+            },
+            {
+                "text": "地产板块",
+                "value": "地产板块",
+                "children": [
+                    { "text": "领地集团总部", "value": "领地集团总部", "children": [] },
+                    { "text": "重庆区域", "value": "重庆区域", "children": [] },
+                    { "text": "两湖区域", "value": "两湖区域", "children": [] },
+                    { "text": "川北区域", "value": "川北区域", "children": [] },
+                    { "text": "成都区域", "value": "成都区域", "children": [] },
+                    { "text": "川南区域", "value": "川南区域", "children": [] },
+                    { "text": "中原区域", "value": "中原区域", "children": [] },
+                    { "text": "攀西区域", "value": "攀西区域", "children": [] },
+                    { "text": "新疆区域", "value": "新疆区域", "children": [] },
+                    { "text": "大湾区域", "value": "大湾区域", "children": [] },
+                    { "text": "北京区域", "value": "北京区域", "children": [] },
+                    { "text": "园林公司", "value": "园林公司", "children": [] },
+                ]
+            },
+            {
+                "text": "金融板块",
+                "value": "金融板块",
+                "children": [
+                    { "text": "量石投资", "value": "量石投资", "children": [] },
+                ]
+            },
+            {
+                "text": "物业板块",
+                "value": "物业板块",
+                "children": [
+                    { "text": "领悦集团总部", "value": "领悦集团总部", "children": [] },
+                    { "text": "川南区域", "value": "川南区域", "children": [] },
+                    { "text": "商写事业部", "value": "商写事业部", "children": [] },
+                    { "text": "川北区域", "value": "川北区域", "children": [] },
+                    { "text": "新疆区域", "value": "新疆区域", "children": [] },
+                    { "text": "攀西区域", "value": "攀西区域", "children": [] },
+                    { "text": "长春区域", "value": "长春区域", "children": [] },
+                    { "text": "大湾区域", "value": "大湾区域", "children": [] },
+                    { "text": "郑州荆州区域", "value": "郑州荆州区域", "children": [] },
+                    { "text": "贵阳区域", "value": "贵阳区域", "children": [] },
+                    { "text": "佳美物业公司", "value": "佳美物业公司", "children": [] },
+                ]
+            },
+            {
+                "text": "医疗健康板块",
+                "value": "医疗健康板块",
+                "children": [
+                    { "text": "健康事业部", "value": "健康事业部", "children": [] },
+                    { "text": "至诚和爱健管中心", "value": "至诚和爱健管中心", "children": [] },
+                    { "text": "高康国际医院", "value": "高康国际医院", "children": [] },
+                ]
+            },
+            {
+                "text": "商业板块",
+                "value": "商业板块",
+                "children": [
+                    { "text": "宝瑞商管", "value": "宝瑞商管", "children": [] },
+                ]
+            },
+            {
+                "text": "合作方财务公司",
+                "value": "合作方财务公司",
+                "children": [
+                    { "text": "共享财务中心", "value": "共享财务中心", "children": [] },
+                ]
+            },
+        ];
+    },
+
     /**
      * 添加数据
      * @param {*} tableName
