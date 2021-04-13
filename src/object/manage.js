@@ -2574,6 +2574,8 @@ const manage = {
                     i++;
                 }
             }
+            //设置股权股东信息
+            elem['stocklist'] = stockNodes;
 
             //检查董监高信息
             if (state.director && (state.director.supervisor || state.director.manager || state.director.supervisorChairman || state.director.director || state.director.directorExecutive || state.director.directorChairman)) {
@@ -2603,30 +2605,102 @@ const manage = {
                 'bs_company_flow_manager': managerNodes,
             };
 
-            //第三步，向表单提交form对象数据
-            console.log(`第三步，向表单提交form对象数据`);
-            result = await this.multiTableData('bs_dynamic', multiElement);
-            await tools.sleep(Math.random() * 10);
+            (async(multiTableData, Dialog, result, multiElement) => {
+                //第三步，向表单提交form对象数据
+                console.log(`第三步，向表单提交form对象数据`);
+                result = await multiTableData('bs_dynamic', multiElement);
 
-            //第四步，如果返回信息成功，则提示用户申请成功
-            if (result.protocol41 == true && result.affectedRows > 0) {
-                console.log(`如果返回信息成功，则提示用户申请成功`);
-                await Dialog.confirm({
-                    title: '设立公司申请提交成功！',
-                });
-            } else {
-                let code = result && result.error && result.error.code ? result.error.code : '';
-                await Dialog.confirm({
-                    title: `设立公司申请失败，请检查是否已提交过此公司申请！Error:[${code}]`,
-                });
-            }
+                //第四步，如果返回信息成功，则提示用户申请成功
+                if (result.protocol41 == true && result.affectedRows > 0) {
+                    console.log(`如果返回信息成功，则提示用户申请成功`);
+                    await Dialog.confirm({
+                        title: '设立公司申请提交成功！',
+                    });
+                } else {
+                    let code = result && result.error && result.error.code ? result.error.code : '';
+                    await Dialog.confirm({
+                        title: `设立公司申请失败，请检查是否已提交过此公司申请！Error:[${code}]`,
+                    });
+                }
+            })(this.multiTableData, Dialog, result, multiElement);
         } catch (error) {
             console.log(error);
         }
 
-        elem['stocklist'] = stockNodes;
-
         return elem;
+    },
+
+    /**
+     * 向主数据接口推送公司工商信息数据
+     * @param {*} companyInfo 
+     * @param {*} stocks 
+     * @param {*} qualification 
+     */
+    async postMainDataInfoInc(director, company, stocks, qualification, postURL = `https://api.yunwisdom.club:30443/gateway-mdm/api/inner/datahub/producer/serverApi`, postURL_ = `https://api.yunwisdom.club:30443/gateway-mdm-slave/api/inner/datahub/producer/serverApi`, resp = '') {
+
+        console.log(`company info :`, company);
+        const stocklist = [];
+
+        if (Array.isArray(stocks)) {
+            stocks.map((item, index) => {
+                try {
+                    stocklist.push({
+                        shareholder: item.shareholder,
+                        ratioDetail: parseFloat(item['ratioDetail'] / 100).toFixed(2) + '',
+                    });
+                } catch (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        if (qualification && qualification.length > 0 && qualification[0].qualificationType == '--') {
+            qualification = [];
+        }
+
+        const node = {
+            "appCode": "de",
+            "topicCode": "cor_c",
+            "jsonData": [{
+                "single": [{
+                    "sn": company.id.slice(0, 16),
+                    "comPanyNum": company.id.slice(0, 16),
+                    "companyAreaCode": "0000",
+                    "registrationStatusCode": "4201",
+                    "companyArea": company.companyCode,
+                    "comPanyName": company.companyName,
+                    "registrationStatus": company.registrationStatus,
+                    "businessScope": company.businessScope,
+                    "registeredAddress": company.registeredAddress,
+                    "registeredCapital": company.registeredCapital,
+                    "legalRepresentative": company.legalRepresentative,
+                    "directorChairman": director.directorChairman,
+                    "director": director.director,
+                    "directorExecutive": director.directorExecutive,
+                    "manager": director.manager,
+                    "supervisorChairman": director.supervisorChairman,
+                    "supervisor": director.supervisor,
+                    "validStatus": "0",
+                    "dataStatus": "0",
+                }],
+                "ShareholderInformation": stocklist,
+                "qualification": qualification,
+            }]
+        };
+
+        try {
+            superagent.post(postURL).send(node).set('accept', 'application/json').then(() => {});
+            superagent.post(postURL_).send(node).set('accept', 'application/json').then(() => {});
+        } catch (error) {
+            superagent.post(postURL).send(node).set('accept', 'application/json').then(() => {});
+            superagent.post(postURL_).send(node).set('accept', 'application/json').then(() => {});
+            console.log(`post mdm data error : `, error);
+        }
+
+        console.log(`post mdm data and response :`, resp, `\n\rpost mdm data :`, node);
+
+        //返回响应结果
+        return resp;
     },
 
     /**
