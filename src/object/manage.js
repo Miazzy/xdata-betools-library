@@ -2615,8 +2615,9 @@ const manage = {
                     title: '设立公司申请提交成功！',
                 });
             } else {
+                let code = result && result.error && result.error.code ? result.error.code : '';
                 await Dialog.confirm({
-                    title: `设立公司申请失败，请检查是否已提交过此公司申请，Error:[${JSON.stringify(result)}]！`,
+                    title: `设立公司申请失败，请检查是否已提交过此公司申请！Error:[${code}]`,
                 });
             }
         } catch (error) {
