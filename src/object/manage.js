@@ -1203,6 +1203,9 @@ const manage = {
                     })
                     return findex == index;
                 });
+                if (searchkey.includes('、') || searchkey.includes('，') || searchkey.includes('；') || searchkey.includes(',') || searchkey.includes(';') || searchkey.includes('/')) {
+                    data = data.concat([{ code: '', name: searchkey, lastname: searchkey, title: searchkey }]);
+                }
             }
             return data;
         } catch (err) {
