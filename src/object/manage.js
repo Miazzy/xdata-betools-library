@@ -2675,6 +2675,54 @@ const manage = {
     },
 
     /**
+     * 更新主数据法人信息
+     * @param {*} state 法人信息
+     */
+    async deleteMainDataInfoInc(id, invalid = '99', postURL = `https://api.yunwisdom.club:30443/gateway-mdm/api/inner/datahub/producer/serverApi`, postURL_ = `https://api.yunwisdom.club:30443/gateway-mdm-slave/api/inner/datahub/producer/serverApi`, resp = 'success') {
+
+        const node = {
+            "appCode": "de",
+            "topicCode": "cor_c",
+            "jsonData": [{
+                "single": [{
+                    "sn": id.slice(0, 16),
+                    "comPanyNum": id.slice(0, 16),
+                    "companyAreaCode": "",
+                    "registrationStatusCode": "",
+                    "companyArea": '',
+                    "comPanyName": '',
+                    "registrationStatus": '',
+                    "businessScope": '',
+                    "registeredAddress": '',
+                    "registeredCapital": '',
+                    "legalRepresentative": '',
+                    "directorChairman": '',
+                    "director": '',
+                    "directorExecutive": '',
+                    "manager": '',
+                    "supervisorChairman": '',
+                    "supervisor": '',
+                    "validStatus": invalid,
+                    "dataStatus": invalid,
+                }],
+                "ShareholderInformation": [],
+                "qualification": [],
+            }]
+        };
+
+        try {
+            superagent.post(postURL).send(node).set('accept', 'application/json').then(() => {});
+            superagent.post(postURL_).send(node).set('accept', 'application/json').then(() => {});
+        } catch (error) {
+            superagent.post(postURL).send(node).set('accept', 'application/json').then(() => {});
+            superagent.post(postURL_).send(node).set('accept', 'application/json').then(() => {});
+            console.log(`post mdm data error : `, error);
+        }
+
+        return resp;
+    },
+
+    /**
      * 下一步函数 CompanyAdd
      * @param {*} state 
      * @param {*} checkValid 
