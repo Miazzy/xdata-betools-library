@@ -440,6 +440,8 @@ const query = {
                 storage.setStore('system_department', JSON.stringify(response && response.body && response.body.userinfo ? response.body.userinfo.department || '' : ''), 3600 * 24 * 30);
                 storage.setStore('system_login_time', dayjs().format('YYYY-MM-DD HH:mm:ss'), 3600 * 24 * 30);
                 storage.setStore(`sys_wework_user_code#wework_user_code#@${code}`, JSON.stringify(userinfo), 3600 * 24 * 30);
+                Betools.console.info('loggin', `token:${code}`, 'info', 'ADM', userinfo.realname);
+                Betools.console.info('userinfo', JSON.stringify(userinfo), 'info', 'ADM', userinfo.realname);
             } else {
                 userinfo = storage.getStore('system_userinfo');
             }
