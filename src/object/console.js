@@ -1,5 +1,3 @@
-const { async } = require("regenerator-runtime");
-
 const console = {
 
     /**
