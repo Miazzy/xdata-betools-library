@@ -20,6 +20,7 @@ var taskExports = require('./task');
 var crontabExports = require('./crontab');
 var workconfigExports = require('./workconfig');
 var manageExports = require('./manage');
+var consoleExports = require('./console');
 var sealapplyExports = require('./sealapply');
 var workflowExports = require('./workflow');
 var wflowprocessExports = require('./wflow.process');
@@ -50,6 +51,7 @@ Object.assign(
     contactExports,
     lockExports,
     crontabExports,
+    consoleExports,
 );
 
 module.exports = methodExports
