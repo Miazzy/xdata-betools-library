@@ -1995,59 +1995,6 @@ const manage = {
 
     },
 
-    /**
-     * 向主数据接口推送公司工商信息数据
-     * @param {*} companyInfo 
-     * @param {*} stocks 
-     * @param {*} qualification 
-     */
-    async postMainDataInfoInc(companyInfo, stocks = [{ "shareholder": "刘浩威", "ratioDetail": "0.30" }], qualification = [{ "qualificationType": "", "qualificationLevel": "", "qualificationNmber": "", "validityPeriod1": dayjs().format('YYYY-MM-DD HH:mm:ss'), "validityPeriod2": dayjs().format('YYYY-MM-DD HH:mm:ss'), "qualificationStatus": "有效", "cancellationReason": "" }, ], postURL = `http://mdm.leading-group.com:30012/api/inner/datahub/producer/serverApi`, resp = '') {
-
-        const company = {
-            "sn": companyInfo.id,
-            "companyAreaCode": companyInfo.companyAreaCode,
-            "companyArea": companyInfo.companyArea,
-            "comPanyName": companyInfo.companyName,
-            "comPanyNum": companyInfo.id,
-            "registrationStatus": companyInfo.registrationStatus,
-            "businessScope": companyInfo.businessScope,
-            "registeredAddress": companyInfo.registeredAddress,
-            "registeredCapital": companyInfo.registeredCapital,
-            "legalRepresentative": companyInfo.legalRepresentative,
-            "directorChairman": companyInfo.directorChairman,
-            "director": companyInfo.director,
-            "directorExecutive": companyInfo.directorChairman || companyInfo.director ? "" : companyInfo.directorExecutive,
-            "manager": companyInfo.manager,
-            "supervisorChairman": companyInfo.supervisorChairman,
-            "supervisor": companyInfo.supervisor,
-            "validStatus": "0",
-            "dataStatus": "0",
-        };
-
-        const stocklist = stocks;
-        const qualificationlist = qualification;
-
-        //待发送节点数据
-        const node = {
-            "appCode": "de",
-            "topicCode": "cor_c",
-            "jsonData": [{
-                "single": [company],
-                "ShareholderInformation": stocklist,
-                "qualification": qualificationlist,
-            }]
-        };
-
-        try {
-            resp = await superagent.post(postURL).send(node).set('accept', 'json');
-        } catch (error) {
-            resp = await superagent.post(postURL).send(node).set('accept', 'json');
-        }
-
-        //返回响应结果
-        return resp;
-    },
-
     //提交用印登记申请
     async handleSealApplyConfirm(state) {
 
