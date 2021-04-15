@@ -2466,7 +2466,7 @@ const manage = {
 
         elem = {
             id: tools.queryUniqueID(),
-            baseID: company.id,
+            baseID: company && company.id ? company.id : state.item.baseID,
             ...state.item,
             ...state.director,
             ...state.stock,
