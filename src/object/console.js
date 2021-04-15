@@ -2,10 +2,10 @@ const console = {
 
     /**
      * 打印日志信息Info
+     * @param {*} info 日志副内容(标题)
      * @param {*} content 日志内容
-     * @param {*} info 日志副内容
      */
-    async info(content = '', info = '', type = 'info', source = '', author = '') {
+    async info(info = '', content = '', type = 'info', source = '', author = '') {
         try {
             const id = Betools.tools.queryUniqueID();
             Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
@@ -17,10 +17,10 @@ const console = {
 
     /**
      * 打印日志信息Log
+     * @param {*} info 日志副内容(标题)
      * @param {*} content 日志内容
-     * @param {*} info 日志副内容
      */
-    async log(content = '', info = '', type = 'log', source = '', author = '') {
+    async log(info = '', content = '', type = 'log', source = '', author = '') {
         try {
             const id = Betools.tools.queryUniqueID();
             Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
@@ -32,9 +32,10 @@ const console = {
 
     /**
      * 打印日志信息Error
+     * @param {*} info 日志副内容(标题)
      * @param {*} content 
      */
-    async error(content = '', info = '', type = 'error', source = '', author = '') {
+    async error(info = '', content = '', type = 'error', source = '', author = '') {
         try {
             const id = Betools.tools.queryUniqueID();
             Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
@@ -46,9 +47,10 @@ const console = {
 
     /**
      * 打印日志信息Warn
+     * @param {*} info 日志副内容(标题)
      * @param {*} content 
      */
-    async warn(content = '', info = '', type = 'warn', source = '', author = '') {
+    async warn(info = '', content = '', type = 'warn', source = '', author = '') {
         try {
             const id = Betools.tools.queryUniqueID();
             Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
