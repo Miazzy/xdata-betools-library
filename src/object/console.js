@@ -1,3 +1,5 @@
+const { async } = require("regenerator-runtime");
+
 const console = {
 
     /**
@@ -6,13 +8,15 @@ const console = {
      * @param {*} content 日志内容
      */
     async info(info = '', content = '', type = 'info', source = '', author = '') {
-        try {
-            const id = Betools.tools.queryUniqueID();
-            Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
-            console.info(content);
-        } catch (error) {
-            console.log(`server async console error:`, error);
-        }
+        (async(info, content, type, source, author) => {
+            try {
+                const id = Betools.tools.queryUniqueID();
+                Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
+                console.info(content);
+            } catch (error) {
+                console.log(`server async console error:`, error);
+            }
+        })(info, content, type, source, author);
     },
 
     /**
@@ -21,13 +25,15 @@ const console = {
      * @param {*} content 日志内容
      */
     async log(info = '', content = '', type = 'log', source = '', author = '') {
-        try {
-            const id = Betools.tools.queryUniqueID();
-            Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
-            console.log(content);
-        } catch (error) {
-            console.log(`server async console error:`, error);
-        }
+        (async(info, content, type, source, author) => {
+            try {
+                const id = Betools.tools.queryUniqueID();
+                Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
+                console.log(content);
+            } catch (error) {
+                console.log(`server async console error:`, error);
+            }
+        })(info, content, type, source, author);
     },
 
     /**
@@ -36,13 +42,15 @@ const console = {
      * @param {*} content 
      */
     async error(info = '', content = '', type = 'error', source = '', author = '') {
-        try {
-            const id = Betools.tools.queryUniqueID();
-            Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
-            console.error(content);
-        } catch (error) {
-            console.log(`server async console error:`, error);
-        }
+        (async(info, content, type, source, author) => {
+            try {
+                const id = Betools.tools.queryUniqueID();
+                Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
+                console.error(content);
+            } catch (error) {
+                console.log(`server async console error:`, error);
+            }
+        })(info, content, type, source, author);
     },
 
     /**
@@ -51,13 +59,15 @@ const console = {
      * @param {*} content 
      */
     async warn(info = '', content = '', type = 'warn', source = '', author = '') {
-        try {
-            const id = Betools.tools.queryUniqueID();
-            Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
-            console.warn(content);
-        } catch (error) {
-            console.log(`server async console error:`, error);
-        }
+        (async(info, content, type, source, author) => {
+            try {
+                const id = Betools.tools.queryUniqueID();
+                Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
+                console.warn(content);
+            } catch (error) {
+                console.log(`server async console error:`, error);
+            }
+        })(info, content, type, source, author);
     },
 
 }
