@@ -770,6 +770,52 @@ const query = {
     },
 
     /**
+     * 搜索角色信息
+     * @param {*} userinfo 
+     * @param {*} resp 
+     * @param {*} role 
+     * @param {*} cacheKey 
+     * @param {*} time 
+     * @param {*} curtime 
+     * @returns 
+     */
+    async queryRoleInfo(userinfo = {}, resp = '', role = 'view', cacheKey = 'system_role_rights_v1', time = 0, curtime = 0) {
+
+        userinfo = await Betools.storage.getStore('system_userinfo');
+        time = await Betools.storage.getStore(`${cacheKey}_expire`) || 0;
+        role = await Betools.storage.getStore(`${cacheKey}`);
+        curtime = new Date().getTime() / 1000;
+
+        //开启debugger模式
+        if (role && (role.includes('COMMON_DEBUG_ADMIN') || role.includes('SEAL_ADMIN'))) {
+            try {
+                window.vConsole = window.vConsole ? window.vConsole : new VConsole();
+            } catch (error) {
+                console.info(`vconsole error ... `);
+            }
+        }
+
+        //如果缓存中没有获取到数据，则直接查询服务器
+        if (Betools.tools.isNull(role)) {
+            time = curtime + 3600 * 24 * 365 * 3;
+            role = await Betools.query.queryRoleInfoDB(userinfo, resp, role, cacheKey);
+            console.info(`storage cache : ${curtime} role:`, role);
+        } else {
+            console.info(`hit cache : ${curtime} role: `, role);
+        }
+
+        //如果缓存时间快到期，则重新查询数据
+        if ((time - 3600 * 24 * 365 * 3 + 100) < curtime) {
+            (async(userinfo, resp, role, cacheKey) => {
+                role = await Betools.query.queryRoleInfoDB(userinfo, resp, role, cacheKey);
+            })(userinfo, resp, role, cacheKey);
+            console.info(`refresh cache : ${curtime} role:`, role);
+        }
+
+        return role;
+    },
+
+    /**
      * 查询用户Role权限信息
      * @param {*} userinfo 
      * @param {*} resp 
