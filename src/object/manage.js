@@ -2651,6 +2651,30 @@ const manage = {
     },
 
     /**
+     * 更新主数据法人信息
+     * @param {*} state 法人信息
+     */
+    async patchMainDataInfoInc(state, resp = '', stockList = []) {
+        // 载入股东信息
+        for (let i = 0; i < 20; i++) {
+            const element = {
+                shareholder: state.stock['shareholder' + i],
+                ratioDetail: state.stock['ratioDetail' + i],
+            }
+            if (state.stock && state.stock['shareholder' + i]) {
+                stockList.push(element);
+            }
+        }
+        // 将资质数据载入基础信息
+        const { qualificationType, qualificationLevel, qualificationNumber, validityPeriod1, validityPeriod2, qualificationStatus, cancellationReason, } = state.item;
+        const qualificationList = qualificationType == '--' ? [] : [{ qualificationType, qualificationLevel, qualificationNumber, validityPeriod1, validityPeriod2, qualificationStatus, cancellationReason, }];
+        // 持久化工商管理数据，如果执行发现数据库存在数据，则改用patch修改公司工商数据
+        resp = await Betools.manage.postMainDataInfoInc(state.director, state.item, stockList, qualificationList); //向主数据接口推送公司工商信息数据
+        // 返回信息
+        return resp;
+    },
+
+    /**
      * 下一步函数 CompanyAdd
      * @param {*} state 
      * @param {*} checkValid 
