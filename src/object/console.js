@@ -1,3 +1,4 @@
+const _console = window.console;
 const console = {
 
     /**
@@ -10,9 +11,9 @@ const console = {
             try {
                 const id = Betools.tools.queryUniqueID();
                 Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
-                console.info(content);
+                _console.info(content);
             } catch (error) {
-                console.log(`server async console error:`, error);
+                _console.log(`server async console error:`, error);
             }
         })(info, content, type, source, author);
     },
@@ -27,9 +28,9 @@ const console = {
             try {
                 const id = Betools.tools.queryUniqueID();
                 Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
-                console.log(content);
+                _console.log(content);
             } catch (error) {
-                console.log(`server async console error:`, error);
+                _console.log(`server async console error:`, error);
             }
         })(info, content, type, source, author);
     },
@@ -44,9 +45,9 @@ const console = {
             try {
                 const id = Betools.tools.queryUniqueID();
                 Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
-                console.error(content);
+                _console.error(content);
             } catch (error) {
-                console.log(`server async console error:`, error);
+                _console.log(`server async console error:`, error);
             }
         })(info, content, type, source, author);
     },
@@ -61,9 +62,9 @@ const console = {
             try {
                 const id = Betools.tools.queryUniqueID();
                 Betools.manage.postTableData(`bs_async_log`, { id, content, info, type, source, author }).then(() => {});
-                console.warn(content);
+                _console.warn(content);
             } catch (error) {
-                console.log(`server async console error:`, error);
+                _console.log(`server async console error:`, error);
             }
         })(info, content, type, source, author);
     },
