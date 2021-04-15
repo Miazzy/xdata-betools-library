@@ -825,7 +825,12 @@ const query = {
                 role += ',COMMON_DEBUG_ADMIN';
                 window.vConsole = window.vConsole ? window.vConsole : new VConsole(); // 初始化vconsole
             };
-            role = role.replace('null', 'view');
+            try {
+                role = role.replace('null', 'view');
+                role = [...new Set(role.split(','))].toString();
+            } catch (error) {
+                console.log(`role error :`, role);
+            }
             Betools.storage.setStore(cacheKey, role, 3600 * 24 * 365 * 3);
             return role;
         } catch (error) {
