@@ -438,13 +438,15 @@ const manage = {
      * @param {*} type insert update delete multi
      */
     async recordDatabaseLog(type = 'insert', tname = '', tkey = '', tvalue = '', system = 'ADM', xid = '') {
+        let author = await storage.getStore('system_userinfo'); //获取当前登录用户信息
         try {
             tvalue = type != 'delete' ? JSON.stringify(tvalue) : tvalue;
+            author = author && (author.name || author.lastname || author.realname) ? (author.name || author.lastname || author.realname) : '';
         } catch (e) {
             console.log(`json stringify error:`, e);
         }
         const id = tools.queryUniqueID();
-        const node = { id, type, tname, tkey, tvalue, xid, system };
+        const node = { id, type, tname, tkey, tvalue, xid, system, author };
         const apiURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_database_log`; //Post数据的URL地址
         (async() => {
             try {
