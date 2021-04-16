@@ -499,7 +499,7 @@ const manage = {
      * @param {*} tableName
      * @param {*} whereSQL
      */
-     async queryTableDataCount(tableName, whereSQL) {
+    async queryTableDataCount(tableName, whereSQL) {
 
         let cacheKey = 'sys_cache_' + tableName + '_#count#whereSQL#_' + whereSQL;
         let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
@@ -555,7 +555,7 @@ const manage = {
      * @param {*} tableName
      * @param {*} whereSQL
      */
-     async queryTableFieldValue(tableName, field, value, _fields = '') {
+    async queryTableFieldValue(tableName, field, value, _fields = '') {
 
         let cacheKey = 'sys_cache_' + tableName + '_#FieldValue#Fields#whereSQL#_' + whereSQL;
         let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
@@ -616,7 +616,7 @@ const manage = {
      * @param {*} tableName
      * @param {*} whereSQL
      */
-     async queryTableFieldValueCount(tableName, field, value, _fields = '') {
+    async queryTableFieldValueCount(tableName, field, value, _fields = '') {
 
         let cacheKey = 'sys_cache_' + tableName + '_#count#FieldValue#Fields#whereSQL#_' + whereSQL;
         let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
@@ -677,7 +677,7 @@ const manage = {
      * @param {*} tableName
      * @param {*} whereSQL
      */
-     async queryTableDataByField(tableName, field, value ) {
+    async queryTableDataByField(tableName, field, value) {
 
         let cacheKey = 'sys_cache_' + tableName + '_#field#value#_' + whereSQL;
         let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
@@ -3563,7 +3563,71 @@ const manage = {
             return false;
         }
 
-    }
+    },
+
+    async querySealListByConStatus(status, month, userinfo, sealTypeSql, searchSql, page) {
+        const whereSQL = `_where=(status,in,${status})~and(create_time,gt,${month})~and(seal_group_ids,like,~${userinfo.username}~)${sealTypeSql}${searchSql}&_sort=-id&_p=${page}&_size=10`;
+        const resp = await manage.querySealListByCondition('bs_seal_regist', whereSQL); //获取最近几个月的待用印记录
+        return resp;
+    },
+
+    /**
+     * 查询用印数据合同类/非合同类(先查缓存，未命中则查询数据库)
+     * @param {*} tableName
+     * @param {*} whereSQL
+     */
+    async querySealListByConType(userinfo, sealTypeSql, searchSql) {
+
+        const storage = Betools.storage;
+        let cacheKey = 'sys_seal_cache_' + sealTypeSql + '_#' + userinfo.username + '#_' + searchSql;
+        let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStoreDB(`${cacheKey}`);
+        let curtime = new Date().getTime() / 1000;
+
+        //如果缓存中没有获取到数据，则直接查询服务器
+        if (Betools.tools.isNull(data)) {
+            time = curtime + 3600 * 24 * 365 * 3;
+            data = await manage.querySealListByConTypeDB(userinfo, sealTypeSql, searchSql);
+            console.info(`query table data storage cache : ${curtime} data:`, data);
+        } else {
+            console.info(`query table data hit cache : ${curtime} data: `, data);
+        }
+
+        //如果缓存时间快到期，则重新查询数据
+        if ((time - 3600 * 24 * 365 * 3 + 10800) < curtime) {
+            (async(userinfo, sealTypeSql, searchSql) => {
+                data = await manage.querySealListByConTypeDB(userinfo, sealTypeSql, searchSql);
+            })(userinfo, sealTypeSql, searchSql);
+            console.info(`query table data refresh cache : ${curtime} data:`, data);
+        }
+
+        return data;
+    },
+
+    async querySealListByConTypeDB(userinfo, sealTypeSql, searchSql) {
+        const cacheKey = 'sys_seal_cache_' + sealTypeSql + '_#' + userinfo.username + '#_' + searchSql;
+        const whereSQL = `_where=(seal_group_ids,like,~${userinfo.username}~)${sealTypeSql}${searchSql}&_sort=-id&_p=0&_size=30000`;
+        const resp = await manage.querySealListByCondition('bs_seal_regist', whereSQL); //获取最近几个月的待用印记录
+        Betools.storage.setStoreDB(cacheKey, resp, 3600 * 24 * 365 * 3);
+        return resp;
+    },
+
+    /**
+     * @param {*} tname 表名
+     * @param {*} tcondition whereSQL 
+     */
+    async querySealListByCondition(tname = 'bs_seal_regist ', tcondition) {
+        let result = await Betools.manage.queryTableData(tname, tcondition);
+        let size = await Betools.manage.queryTableDataCount(tname, tcondition);
+        result.map((item, index) => {
+            item.name = item.filename.slice(0, 16),
+                item.tel = '';
+            item.address = item.seal_type == '合同类' ? item.create_by + ' ' + item.filename + ' 序号:' + item.serialid + ' 流程编号:' + item.workno + ' 合同编号:' + item.contract_id : item.create_by + ' ' + item.filename + ' 序号:' + item.serialid + ' 流程编号:' + item.workno;
+            item.isDefault = true;
+        });
+        result.sort();
+        return { size, result };
+    },
 
 
 };
