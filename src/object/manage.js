@@ -446,8 +446,8 @@ const manage = {
     async queryTableData(tableName, whereSQL) {
 
         let cacheKey = 'sys_cache_' + tableName + '_#whereSQL#_' + whereSQL;
-        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
-        let data = await storage.getStore(`${cacheKey}`);
+        let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStoreDB(`${cacheKey}`);
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
@@ -484,7 +484,7 @@ const manage = {
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            storage.setStore(cacheKey, res.body, 3600 * 24 * 365 * 3);
+            storage.setStoreDB(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
@@ -502,8 +502,8 @@ const manage = {
      async queryTableDataCount(tableName, whereSQL) {
 
         let cacheKey = 'sys_cache_' + tableName + '_#count#whereSQL#_' + whereSQL;
-        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
-        let data = await storage.getStore(`${cacheKey}`);
+        let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStoreDB(`${cacheKey}`);
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
@@ -540,7 +540,7 @@ const manage = {
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            storage.setStore(cacheKey, res.body[0]['no_of_rows'], 3600 * 24 * 365 * 3);
+            storage.setStoreDB(cacheKey, res.body[0]['no_of_rows'], 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
@@ -558,8 +558,8 @@ const manage = {
      async queryTableFieldValue(tableName, field, value, _fields = '') {
 
         let cacheKey = 'sys_cache_' + tableName + '_#FieldValue#Fields#whereSQL#_' + whereSQL;
-        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
-        let data = await storage.getStore(`${cacheKey}`);
+        let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStoreDB(`${cacheKey}`);
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
@@ -601,7 +601,7 @@ const manage = {
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            storage.setStore(cacheKey, res.body, 3600 * 24 * 365 * 3);
+            storage.setStoreDB(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
@@ -619,8 +619,8 @@ const manage = {
      async queryTableFieldValueCount(tableName, field, value, _fields = '') {
 
         let cacheKey = 'sys_cache_' + tableName + '_#count#FieldValue#Fields#whereSQL#_' + whereSQL;
-        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
-        let data = await storage.getStore(`${cacheKey}`);
+        let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStoreDB(`${cacheKey}`);
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
@@ -662,7 +662,7 @@ const manage = {
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            storage.setStore(cacheKey, res.body, 3600 * 24 * 365 * 3);
+            storage.setStoreDB(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
@@ -680,8 +680,8 @@ const manage = {
      async queryTableDataByField(tableName, field, value ) {
 
         let cacheKey = 'sys_cache_' + tableName + '_#field#value#_' + whereSQL;
-        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
-        let data = await storage.getStore(`${cacheKey}`);
+        let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStoreDB(`${cacheKey}`);
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
@@ -721,7 +721,7 @@ const manage = {
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            storage.setStore(cacheKey, res.body, 3600 * 24 * 365 * 3);
+            storage.setStoreDB(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
