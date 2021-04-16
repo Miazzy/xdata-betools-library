@@ -319,7 +319,7 @@ const manage = {
             res = await superagent.post(insertURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
             console.log(err);
         } finally {
-            manage.recordDatabaseLog('insert', tableName, '' , node).then(()=>{ console.log(`record database log [type#insert] complete ... `); });
+            manage.recordDatabaseLog('insert', tableName, '', node).then(() => { console.log(`record database log [type#insert] complete ... `); });
         }
 
         return res.body;
@@ -331,7 +331,7 @@ const manage = {
      * @param {*} id
      * @param {*} node
      */
-     async patchTableData(tableName, id, node) {
+    async patchTableData(tableName, id, node) {
 
         //大写转小写
         tableName = tableName.toLowerCase();
@@ -352,7 +352,7 @@ const manage = {
             res = await superagent.patch(patchURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
             console.log(err);
         } finally {
-            manage.recordDatabaseLog('patch', tableName, id , node).then(()=>{ console.log(`record database log [type#patch] complete ... `); });
+            manage.recordDatabaseLog('patch', tableName, id, node).then(() => { console.log(`record database log [type#patch] complete ... `); });
         }
 
         return res.body;
@@ -363,7 +363,7 @@ const manage = {
      * @param {*} tableName
      * @param {*} id
      */
-     async deleteTableData(tableName, id ) {
+    async deleteTableData(tableName, id) {
         let res = '';
         //大写转小写
         tableName = tableName.toLowerCase();
@@ -375,7 +375,7 @@ const manage = {
         } catch (err) {
             res = await superagent.delete(deleteURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
         } finally {
-            manage.recordDatabaseLog('delete', tableName, id , '').then(()=>{ console.log(`record database log [type#delete] complete ... `); });
+            manage.recordDatabaseLog('delete', tableName, id, '').then(() => { console.log(`record database log [type#delete] complete ... `); });
         }
 
         return res.body;
@@ -386,7 +386,7 @@ const manage = {
      * @param {*} tableName
      * @param {*} id
      */
-     async deleteTableDataByWhere(tableName, fieldName, fieldValue) {
+    async deleteTableDataByWhere(tableName, fieldName, fieldValue) {
         let res = null;
         //大写转小写
         tableName = tableName.toLowerCase();
@@ -397,7 +397,7 @@ const manage = {
         } catch (err) {
             res = await superagent.delete(deleteURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
         } finally {
-            manage.recordDatabaseLog('delete', tableName, fieldName , fieldValue ).then(()=>{ console.log(`record database log [type#delete] complete ... `); });    
+            manage.recordDatabaseLog('delete', tableName, fieldName, fieldValue).then(() => { console.log(`record database log [type#delete] complete ... `); });
         }
         return res.body;
     },
@@ -427,7 +427,7 @@ const manage = {
             res = await superagent.post(insertURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
             console.log(err);
         } finally {
-            manage.recordDatabaseLog('multi', tableName, '' , node).then(()=>{ console.log(`record database log [type#multi] complete ... `); });
+            manage.recordDatabaseLog('multi', tableName, '', node).then(() => { console.log(`record database log [type#multi] complete ... `); });
         }
 
         return res.body;
@@ -440,11 +440,11 @@ const manage = {
     async recordDatabaseLog(type = 'insert', tname = '', tkey = '', tvalue = '', system = 'ADM', xid = '') {
         const id = tools.queryUniqueID();
         const node = { id, type, tname, tkey, tvalue, xid, system };
-        const apiURL = `${window.BECONFIG['xmysqlAPI']}/api/${tname}`; //Post数据的URL地址
+        const apiURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_database_log`; //Post数据的URL地址
         (async() => {
-            try{
+            try {
                 await superagent.post(apiURL).send(node).set('xid', tools.queryUniqueID()).set('accept', 'json');
-            } catch (e){
+            } catch (e) {
                 await superagent.post(apiURL).send(node).set('xid', tools.queryUniqueID()).set('accept', 'json');
             }
         })();
