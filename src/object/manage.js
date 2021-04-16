@@ -253,7 +253,7 @@ const manage = {
     /**
      * 根据数据字典中的节点编号，查询到这个节点对应的流程岗位名称
      */
-     async postProcessLog(node) {
+    async postProcessLog(node) {
         //提交URL
         var postURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_log`;
         var res = null;
@@ -355,7 +355,7 @@ const manage = {
     /**
      * 根据数据字典中的节点编号，查询到这个节点对应的流程岗位名称
      */
-     async deleteProcessLog(tableName, node) {
+    async deleteProcessLog(tableName, node) {
         //大写转小写
         tableName = tableName.toLowerCase();
         //提交URL
@@ -439,18 +439,52 @@ const manage = {
     },
 
     /**
-     * 查询数据
+     * 查询数据(先查缓存，未命中则查询数据库)
      * @param {*} tableName
      * @param {*} whereSQL
      */
     async queryTableData(tableName, whereSQL) {
 
+        let cacheKey = 'sys_cache_' + tableName + '_#whereSQL#_' + whereSQL;
+        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStore(`${cacheKey}`);
+        let curtime = new Date().getTime() / 1000;
+
+        //如果缓存中没有获取到数据，则直接查询服务器
+        if (Betools.tools.isNull(data)) {
+            time = curtime + 3600 * 24 * 365 * 3;
+            data = await manage.queryTableDataDB(tableName, whereSQL);
+            console.info(`query table data storage cache : ${curtime} data:`, data);
+        } else {
+            console.info(`query table data hit cache : ${curtime} data: `, data);
+        }
+
+        //如果缓存时间快到期，则重新查询数据
+        if ((time - 3600 * 24 * 365 * 3 + 5) < curtime) {
+            (async(tableName, whereSQL) => {
+                data = await manage.queryTableDataDB(tableName, whereSQL);
+            })(tableName, whereSQL);
+            console.info(`query table data refresh cache : ${curtime} data:`, data);
+        }
+
+        return data;
+    },
+
+    /**
+     * 查询数据
+     * @param {*} tableName
+     * @param {*} whereSQL
+     */
+    async queryTableDataDB(tableName, whereSQL) {
+
+        let cacheKey = 'sys_cache_' + tableName + '_#whereSQL#_' + whereSQL;
         let res = null; //查询完成返回对象
         tableName = tableName.toLowerCase(); //大写转小写
         const queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}?${whereSQL}`;
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            storage.setStore(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
@@ -461,18 +495,52 @@ const manage = {
     },
 
     /**
+     * 查询数据(先查缓存，未命中则查询数据库)
+     * @param {*} tableName
+     * @param {*} whereSQL
+     */
+     async queryTableDataCount(tableName, whereSQL) {
+
+        let cacheKey = 'sys_cache_' + tableName + '_#count#whereSQL#_' + whereSQL;
+        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStore(`${cacheKey}`);
+        let curtime = new Date().getTime() / 1000;
+
+        //如果缓存中没有获取到数据，则直接查询服务器
+        if (Betools.tools.isNull(data)) {
+            time = curtime + 3600 * 24 * 365 * 3;
+            data = await manage.queryTableDataCountDB(tableName, whereSQL);
+            console.info(`query table data storage cache : ${curtime} data:`, data);
+        } else {
+            console.info(`query table data hit cache : ${curtime} data: `, data);
+        }
+
+        //如果缓存时间快到期，则重新查询数据
+        if ((time - 3600 * 24 * 365 * 3 + 5) < curtime) {
+            (async(tableName, whereSQL) => {
+                data = await manage.queryTableDataCountDB(tableName, whereSQL);
+            })(tableName, whereSQL);
+            console.info(`query table data refresh cache : ${curtime} data:`, data);
+        }
+
+        return data;
+    },
+
+    /**
      * 查询数据
      * @param {*} tableName
      * @param {*} whereSQL
      */
-    async queryTableDataCount(tableName, whereSQL) {
-        
+    async queryTableDataCountDB(tableName, whereSQL) {
+
+        let cacheKey = 'sys_cache_' + tableName + '_#count#whereSQL#_' + whereSQL;
         let res = null; //查询完成返回对象
         tableName = tableName.toLowerCase();
         const queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}/count?${whereSQL}`;
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            storage.setStore(cacheKey, res.body[0]['no_of_rows'], 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
@@ -483,23 +551,57 @@ const manage = {
     },
 
     /**
+     * 查询数据(先查缓存，未命中则查询数据库)
+     * @param {*} tableName
+     * @param {*} whereSQL
+     */
+     async queryTableFieldValue(tableName, field, value, _fields = '') {
+
+        let cacheKey = 'sys_cache_' + tableName + '_#FieldValue#Fields#whereSQL#_' + whereSQL;
+        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStore(`${cacheKey}`);
+        let curtime = new Date().getTime() / 1000;
+
+        //如果缓存中没有获取到数据，则直接查询服务器
+        if (Betools.tools.isNull(data)) {
+            time = curtime + 3600 * 24 * 365 * 3;
+            data = await manage.queryTableFieldValueDB(tableName, field, value, _fields);
+            console.info(`query table data storage cache : ${curtime} data:`, data);
+        } else {
+            console.info(`query table data hit cache : ${curtime} data: `, data);
+        }
+
+        //如果缓存时间快到期，则重新查询数据
+        if ((time - 3600 * 24 * 365 * 3 + 5) < curtime) {
+            (async(tableName, field, value, _fields) => {
+                data = await manage.queryTableFieldValueDB(tableName, field, value, _fields);
+            })(tableName, field, value, _fields);
+            console.info(`query table data refresh cache : ${curtime} data:`, data);
+        }
+
+        return data;
+    },
+
+    /**
      * 查询数据库某表是否存在field字段为value值的数据
      * @param {*} tableName
      * @param {*} field
      * @param {*} value
      * @param {*} _fields
      */
-    async queryTableFieldValue(tableName, field, value, _fields = '') {
+    async queryTableFieldValueDB(tableName, field, value, _fields = '') {
 
+        let cacheKey = 'sys_cache_' + tableName + '_#FieldValue#Fields#whereSQL#_' + whereSQL;
         let res = null; //查询完成返回对象
         _fields = _fields ? `&_fields=${_fields}` : ''; //如果存在查询字段，则拼接语句
         tableName = tableName.toLowerCase(); //大写转小写
-        
+
         //查询URL GET	/apis/tableName/:id/exists	True or false whether a row exists or not  /apis/tableName/findOne
         const queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}?_where=(${field},eq,${value})${_fields}`;
-        
+
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            storage.setStore(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
@@ -510,16 +612,49 @@ const manage = {
     },
 
     /**
+     * 查询数据(先查缓存，未命中则查询数据库)
+     * @param {*} tableName
+     * @param {*} whereSQL
+     */
+     async queryTableFieldValueCount(tableName, field, value, _fields = '') {
+
+        let cacheKey = 'sys_cache_' + tableName + '_#count#FieldValue#Fields#whereSQL#_' + whereSQL;
+        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStore(`${cacheKey}`);
+        let curtime = new Date().getTime() / 1000;
+
+        //如果缓存中没有获取到数据，则直接查询服务器
+        if (Betools.tools.isNull(data)) {
+            time = curtime + 3600 * 24 * 365 * 3;
+            data = await manage.queryTableFieldValueCountDB(tableName, field, value, _fields);
+            console.info(`query table data storage cache : ${curtime} data:`, data);
+        } else {
+            console.info(`query table data hit cache : ${curtime} data: `, data);
+        }
+
+        //如果缓存时间快到期，则重新查询数据
+        if ((time - 3600 * 24 * 365 * 3 + 5) < curtime) {
+            (async(tableName, field, value, _fields) => {
+                data = await manage.queryTableFieldValueCountDB(tableName, field, value, _fields);
+            })(tableName, field, value, _fields);
+            console.info(`query table data refresh cache : ${curtime} data:`, data);
+        }
+
+        return data;
+    },
+
+    /**
      * 查询数据库某表是否存在field字段为value值的数据Count
      * @param {*} tableName
      * @param {*} field
      * @param {*} value
      * @param {*} _fields
      */
-    async queryTableFieldValueCount(tableName, field, value, _fields = '') {
+    async queryTableFieldValueCountDB(tableName, field, value, _fields = '') {
 
+        let cacheKey = 'sys_cache_' + tableName + '_#count#FieldValue#Fields#whereSQL#_' + whereSQL;
         let res = null; //查询完成返回对象
-        _fields = _fields ? `&_fields=${_fields}` : '';//如果存在查询字段，则拼接语句
+        _fields = _fields ? `&_fields=${_fields}` : ''; //如果存在查询字段，则拼接语句
         tableName = tableName.toLowerCase(); //大写转小写
 
         //查询URL GET	/apis/tableName/:id/exists	True or false whether a row exists or not  /apis/tableName/findOne
@@ -527,6 +662,7 @@ const manage = {
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            storage.setStore(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
@@ -537,13 +673,46 @@ const manage = {
     },
 
     /**
+     * 查询数据(先查缓存，未命中则查询数据库)
+     * @param {*} tableName
+     * @param {*} whereSQL
+     */
+     async queryTableDataByField(tableName, field, value ) {
+
+        let cacheKey = 'sys_cache_' + tableName + '_#field#value#_' + whereSQL;
+        let time = await storage.getStore(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStore(`${cacheKey}`);
+        let curtime = new Date().getTime() / 1000;
+
+        //如果缓存中没有获取到数据，则直接查询服务器
+        if (Betools.tools.isNull(data)) {
+            time = curtime + 3600 * 24 * 365 * 3;
+            data = await manage.queryTableDataByFieldDB(tableName, field, value);
+            console.info(`query table data storage cache : ${curtime} data:`, data);
+        } else {
+            console.info(`query table data hit cache : ${curtime} data: `, data);
+        }
+
+        //如果缓存时间快到期，则重新查询数据
+        if ((time - 3600 * 24 * 365 * 3 + 5) < curtime) {
+            (async(tableName, field, value) => {
+                data = await manage.queryTableDataByFieldDB(tableName, field, value);
+            })(tableName, field, value);
+            console.info(`query table data refresh cache : ${curtime} data:`, data);
+        }
+
+        return data;
+    },
+
+    /**
      * 查询数据
      * @param {*} tableName
      * @param {*} foreignKey
      * @param {*} id
      */
-    async queryTableDataByField(tableName, field, value) {
+    async queryTableDataByFieldDB(tableName, field, value) {
 
+        let cacheKey = 'sys_cache_' + tableName + '_#field#value#_' + whereSQL;
         let res = null; //查询完成返回对象
         tableName = tableName.toLowerCase(); //大写转小写
 
@@ -552,12 +721,13 @@ const manage = {
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            storage.setStore(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
             manage.recordDatabaseLog('query', tableName, field, value).then(() => { console.log(`record database log [type#query] complete ... `); });
         }
-        
+
         return res.body;
     },
 

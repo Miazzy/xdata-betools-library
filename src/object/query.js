@@ -117,11 +117,45 @@ const query = {
     },
 
     /**
-     * 查询数据
+     * 查询数据(先查缓存，未命中则查询数据库)
      * @param {*} tableName
      * @param {*} id
      */
     async queryTableData(tableName, id) {
+
+        let cacheKey = 'sys_cache_' + tableName + '_#id#_' + id;
+        let time = await Betools.storage.getStore(`${cacheKey}_expire`) || 0;
+        let data = await Betools.storage.getStore(`${cacheKey}`);
+        let curtime = new Date().getTime() / 1000;
+
+        //如果缓存中没有获取到数据，则直接查询服务器
+        if (Betools.tools.isNull(data)) {
+            time = curtime + 3600 * 24 * 365 * 3;
+            data = await query.queryTableDataDB(tableName, id);
+            console.info(`query table data storage cache : ${curtime} data:`, data);
+        } else {
+            console.info(`query table data hit cache : ${curtime} data: `, data);
+        }
+
+        //如果缓存时间快到期，则重新查询数据
+        if ((time - 3600 * 24 * 365 * 3 + 5) < curtime) {
+            (async(tableName, id) => {
+                data = await query.queryTableDataDB(tableName, id);
+            })(tableName, id);
+            console.info(`query table data refresh cache : ${curtime} data:`, data);
+        }
+
+        return data;
+    },
+
+    /**
+     * 查询数据(直接查询数据库)
+     * @param {*} tableName
+     * @param {*} id
+     */
+    async queryTableDataDB(tableName, id) {
+
+        let cacheKey = 'sys_cache_' + tableName + '_#id#_' + id;
 
         tableName = tableName.toLowerCase();
         var queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}/${id}`;
@@ -139,6 +173,7 @@ const query = {
 
             if (res.body != null && res.body.length > 0) {
                 storage.setStore(`sys_user_cache@${tableName}&id${id}`, res.body[0], 2);
+                storage.setStore(cacheKey, res.body[0], 3600 * 24 * 365 * 3);
             }
 
             return res.body[0];
