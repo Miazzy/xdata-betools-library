@@ -438,6 +438,11 @@ const manage = {
      * @param {*} type insert update delete multi
      */
     async recordDatabaseLog(type = 'insert', tname = '', tkey = '', tvalue = '', system = 'ADM', xid = '') {
+        try {
+            tvalue = type != 'delete' ? JSON.stringify(tvalue) : tvalue;
+        } catch (e) {
+            console.log(`json stringify error:`, e);
+        }
         const id = tools.queryUniqueID();
         const node = { id, type, tname, tkey, tvalue, xid, system };
         const apiURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_database_log`; //Post数据的URL地址
