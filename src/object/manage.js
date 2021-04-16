@@ -441,7 +441,7 @@ const manage = {
         let author = await storage.getStore('system_userinfo'); //获取当前登录用户信息
         try {
             tvalue = type != 'delete' ? JSON.stringify(tvalue) : tvalue;
-            author = author && (author.name || author.lastname || author.realname) ? (author.name || author.lastname || author.realname) : '';
+            author = author && (author.username || author.lastname || author.realname || author.name || author.loginid) ? (author.username || author.lastname || author.realname || author.name || author.loginid) : '';
         } catch (e) {
             console.log(`json stringify error:`, e);
         }
