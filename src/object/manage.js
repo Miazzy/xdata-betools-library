@@ -251,7 +251,69 @@ const manage = {
     },
 
     /**
-     * 想知会记录列表提交数据
+     * 根据数据字典中的节点编号，查询到这个节点对应的流程岗位名称
+     */
+     async postProcessLog(node) {
+        //提交URL
+        var postURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_log`;
+        var res = null;
+
+        try {
+            node.xid = tools.queryUniqueID();
+            res = await superagent.post(postURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+        } catch (err) {
+            delete node.xid;
+            res = await superagent.post(postURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            console.log(err);
+        } finally {
+            manage.recordDatabaseLog('process', 'pr_log', '', node).then(() => { console.log(`record database log [type#query] complete ... `); });
+        }
+
+        return res.body;
+    },
+
+    /**
+     * 根据数据字典中的节点编号，查询到这个节点对应的流程岗位名称
+     */
+    async postProcessLogHistory(node) {
+        var postURL = null; //提交URL
+        var bflag = node instanceof Array && node.length > 1 ? '/bulk' : ''; //是否批处理
+        var res = null;
+
+        //如果只有一条数据,则URL中不���要/bulk路径
+        try {
+            if (node instanceof Array && node.length == 1) {
+                bflag = '';
+                node = node[0];
+            }
+        } catch (error) {
+            console.log(error);
+        }
+
+        //构建流程历史表提交数据的URL
+        try {
+            postURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_log_history${bflag}`;
+        } catch (error) {
+            console.log(error);
+        }
+
+        //发送post请求，保存数据
+        try {
+            node.xid = tools.queryUniqueID();
+            res = await superagent.post(postURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+        } catch (err) {
+            delete node.xid;
+            res = await superagent.post(postURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            console.log(err);
+        } finally {
+            manage.recordDatabaseLog('process', 'pr_log_history', '', node).then(() => { console.log(`record database log [type#query] complete ... `); });
+        }
+
+        return res.body;
+    },
+
+    /**
+     * 知会记录提交数据
      */
     async postProcessLogInformed(node) {
         var postURL = null; //提交URL
@@ -283,7 +345,219 @@ const manage = {
             delete node.xid;
             res = await superagent.post(postURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
             console.log(err);
+        } finally {
+            manage.recordDatabaseLog('process', 'pr_log_informed', '', node).then(() => { console.log(`record database log [type#query] complete ... `); });
         }
+
+        return res.body;
+    },
+
+    /**
+     * 根据数据字典中的节点编号，查询到这个节点对应的流程岗位名称
+     */
+     async deleteProcessLog(tableName, node) {
+        //大写转小写
+        tableName = tableName.toLowerCase();
+        //提交URL
+        var deleteURL = '';
+        //遍历node,取出里面的ids
+        var ids = '';
+
+        //如果node不是数组，则转化为数组
+        if (!(node instanceof Array)) {
+            node = [node];
+        }
+
+        try {
+            node.map((item) => {
+                ids = ids + ',' + item['id'];
+            });
+
+            //去掉开头的逗号
+            ids = ids.indexOf(',') == 0 ? ids.substring(1) : ids;
+        } catch (error) {
+            console.log(error);
+        }
+
+        try {
+            deleteURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_log/bulk?_ids=${ids}`;
+        } catch (error) {
+            console.log(error);
+        }
+
+        try {
+            var res = await superagent.delete(deleteURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            console.log(res);
+
+            return res.body;
+        } catch (err) {
+            console.log(err);
+        }
+    },
+
+    /**
+     * 根据数据字典中的节点编号，删除到这个节点对应的流程信息
+     */
+    async deleteProcessLogInf(tableName, node) {
+        //大写转小写
+        tableName = tableName.toLowerCase();
+        //遍历node,取出里面的ids
+        var ids = '';
+        //提交URL
+        var deleteURL = '';
+
+        //如果node不是数组，则转化为数组
+        if (!(node instanceof Array)) {
+            node = [node];
+        }
+
+        try {
+            node.map((item) => {
+                ids = ids + ',' + item['id'];
+            });
+
+            //去掉开头的逗号
+            ids = ids.indexOf(',') == 0 ? ids.substring(1) : ids;
+        } catch (error) {
+            console.log(error);
+        }
+
+        try {
+            deleteURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_log_informed/bulk?_ids=${ids}`;
+        } catch (error) {
+            console.log(error);
+        }
+
+        try {
+            var res = await superagent.delete(deleteURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            console.log(res);
+
+            return res.body;
+        } catch (err) {
+            console.log(err);
+        }
+    },
+
+    /**
+     * 查询数据
+     * @param {*} tableName
+     * @param {*} whereSQL
+     */
+    async queryTableData(tableName, whereSQL) {
+
+        let res = null; //查询完成返回对象
+        tableName = tableName.toLowerCase(); //大写转小写
+        const queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}?${whereSQL}`;
+
+        try {
+            res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+        } catch (err) {
+            console.log(err);
+        } finally {
+            manage.recordDatabaseLog('query', tableName, '', whereSQL).then(() => { console.log(`record database log [type#query] complete ... `); });
+        }
+
+        return res.body;
+    },
+
+    /**
+     * 查询数据
+     * @param {*} tableName
+     * @param {*} whereSQL
+     */
+    async queryTableDataCount(tableName, whereSQL) {
+        
+        let res = null; //查询完成返回对象
+        tableName = tableName.toLowerCase();
+        const queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}/count?${whereSQL}`;
+
+        try {
+            res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+        } catch (err) {
+            console.log(err);
+        } finally {
+            manage.recordDatabaseLog('count', tableName, '', whereSQL).then(() => { console.log(`record database log [type#query] complete ... `); });
+        }
+
+        return res.body[0]['no_of_rows'];
+    },
+
+    /**
+     * 查询数据库某表是否存在field字段为value值的数据
+     * @param {*} tableName
+     * @param {*} field
+     * @param {*} value
+     * @param {*} _fields
+     */
+    async queryTableFieldValue(tableName, field, value, _fields = '') {
+
+        let res = null; //查询完成返回对象
+        _fields = _fields ? `&_fields=${_fields}` : ''; //如果存在查询字段，则拼接语句
+        tableName = tableName.toLowerCase(); //大写转小写
+        
+        //查询URL GET	/apis/tableName/:id/exists	True or false whether a row exists or not  /apis/tableName/findOne
+        const queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}?_where=(${field},eq,${value})${_fields}`;
+        
+        try {
+            res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+        } catch (err) {
+            console.log(err);
+        } finally {
+            manage.recordDatabaseLog('query', tableName, field, value).then(() => { console.log(`record database log [type#query] complete ... `); });
+        }
+
+        return res.body;
+    },
+
+    /**
+     * 查询数据库某表是否存在field字段为value值的数据Count
+     * @param {*} tableName
+     * @param {*} field
+     * @param {*} value
+     * @param {*} _fields
+     */
+    async queryTableFieldValueCount(tableName, field, value, _fields = '') {
+
+        let res = null; //查询完成返回对象
+        _fields = _fields ? `&_fields=${_fields}` : '';//如果存在查询字段，则拼接语句
+        tableName = tableName.toLowerCase(); //大写转小写
+
+        //查询URL GET	/apis/tableName/:id/exists	True or false whether a row exists or not  /apis/tableName/findOne
+        const queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}/count?_where=(${field},eq,${value})${_fields}`;
+
+        try {
+            res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+        } catch (err) {
+            console.log(err);
+        } finally {
+            manage.recordDatabaseLog('count', tableName, field, value).then(() => { console.log(`record database log [type#query] complete ... `); });
+        }
+
+        return res.body;
+    },
+
+    /**
+     * 查询数据
+     * @param {*} tableName
+     * @param {*} foreignKey
+     * @param {*} id
+     */
+    async queryTableDataByField(tableName, field, value) {
+
+        let res = null; //查询完成返回对象
+        tableName = tableName.toLowerCase(); //大写转小写
+
+        //更新URL PATCH	/apis/tableName/:id	Updates row element by primary key
+        const queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}?_where=(${field},eq,${value})`;
+
+        try {
+            res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+        } catch (err) {
+            console.log(err);
+        } finally {
+            manage.recordDatabaseLog('query', tableName, field, value).then(() => { console.log(`record database log [type#query] complete ... `); });
+        }
+        
         return res.body;
     },
 
@@ -729,40 +1003,6 @@ const manage = {
     },
 
     /**
-     * 查询数据
-     * @param {*} tableName
-     * @param {*} whereSQL
-     */
-    async queryTableData(tableName, whereSQL) {
-        //大写转小写
-        tableName = tableName.toLowerCase();
-        var queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}?${whereSQL}`;
-
-        try {
-            var res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            return res.body;
-        } catch (err) {
-            console.log(err);
-        }
-    },
-
-    /**
-     * 查询数据
-     * @param {*} tableName
-     * @param {*} whereSQL
-     */
-    async queryTableDataCount(tableName, whereSQL) {
-        tableName = tableName.toLowerCase();
-        var queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}/count?${whereSQL}`;
-        try {
-            var res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            return res.body[0]['no_of_rows'];
-        } catch (err) {
-            console.log(err);
-        }
-    },
-
-    /**
      * @description 获取当前编号前缀的合同的列表信息
      * @param {*} prefix
      */
@@ -959,52 +1199,6 @@ const manage = {
     },
 
     /**
-     * 查询数据库某表是否存在field字段为value值的数据
-     * @param {*} tableName
-     * @param {*} field
-     * @param {*} value
-     * @param {*} _fields
-     */
-    async queryTableFieldValue(tableName, field, value, _fields = '') {
-        //如果存在查询字段，则拼接语句
-        _fields = _fields ? `&_fields=${_fields}` : '';
-        //大写转小写
-        tableName = tableName.toLowerCase();
-        //查询URL GET	/apis/tableName/:id/exists	True or false whether a row exists or not  /apis/tableName/findOne
-        var queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}?_where=(${field},eq,${value})${_fields}`;
-        //查询标识
-        try {
-            var res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            return res.body;
-        } catch (err) {
-            console.log(err);
-        }
-    },
-
-    /**
-     * 查询数据库某表是否存在field字段为value值的数据Count
-     * @param {*} tableName
-     * @param {*} field
-     * @param {*} value
-     * @param {*} _fields
-     */
-    async queryTableFieldValueCount(tableName, field, value, _fields = '') {
-        //如果存在查询字段，则拼接语句
-        _fields = _fields ? `&_fields=${_fields}` : '';
-        //大写转小写
-        tableName = tableName.toLowerCase();
-        //查询URL GET	/apis/tableName/:id/exists	True or false whether a row exists or not  /apis/tableName/findOne
-        var queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}/count?_where=(${field},eq,${value})${_fields}`;
-        //查询标识
-        try {
-            var res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            return res.body;
-        } catch (err) {
-            console.log(err);
-        }
-    },
-
-    /**
      * @description 将当前自由流程的数据转移到历史数据中
      * @param {*} id
      */
@@ -1034,151 +1228,6 @@ const manage = {
 
         return result;
 
-    },
-
-    /**
-     * 根据数据字典中的节点编号，查询到这个节点对应的流程岗位名称
-     */
-    async postProcessLog(node) {
-        //提交URL
-        var postURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_log`;
-        var res = null;
-
-        try {
-            node.xid = tools.queryUniqueID();
-            res = await superagent.post(postURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-        } catch (err) {
-            delete node.xid;
-            res = await superagent.post(postURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            console.log(err);
-        }
-        return res.body;
-    },
-
-    /**
-     * 根据数据字典中的节点编号，查询到这个节点对应的流程岗位名称
-     */
-    async postProcessLogHistory(node) {
-        var postURL = null; //提交URL
-        var bflag = node instanceof Array && node.length > 1 ? '/bulk' : ''; //是否批处理
-        var res = null;
-
-        //如果只有一条数据,则URL中不���要/bulk路径
-        try {
-            if (node instanceof Array && node.length == 1) {
-                bflag = '';
-                node = node[0];
-            }
-        } catch (error) {
-            console.log(error);
-        }
-
-        //构建流程历史表提交数据的URL
-        try {
-            postURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_log_history${bflag}`;
-        } catch (error) {
-            console.log(error);
-        }
-
-        //发送post请求，保存数据
-        try {
-            node.xid = tools.queryUniqueID();
-            res = await superagent.post(postURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-        } catch (err) {
-            delete node.xid;
-            res = await superagent.post(postURL).send(node).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            console.log(err);
-        }
-
-        return res.body;
-    },
-
-
-    /**
-     * 根据数据字典中的节点编号，查询到这个节点对应的流程岗位名称
-     */
-    async deleteProcessLog(tableName, node) {
-        //大写转小写
-        tableName = tableName.toLowerCase();
-        //提交URL
-        var deleteURL = '';
-        //遍历node,取出里面的ids
-        var ids = '';
-
-        //如果node不是数组，则转化为数组
-        if (!(node instanceof Array)) {
-            node = [node];
-        }
-
-        try {
-            node.map((item) => {
-                ids = ids + ',' + item['id'];
-            });
-
-            //去掉开头的逗号
-            ids = ids.indexOf(',') == 0 ? ids.substring(1) : ids;
-        } catch (error) {
-            console.log(error);
-        }
-
-        try {
-            deleteURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_log/bulk?_ids=${ids}`;
-        } catch (error) {
-            console.log(error);
-        }
-
-        try {
-            var res = await superagent.delete(deleteURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            console.log(res);
-
-            return res.body;
-        } catch (err) {
-            console.log(err);
-        }
-    },
-
-
-    /**
-     * 根据数据字典中的节点编号，删除到这个节点对应的流程信息
-     */
-    async deleteProcessLogInf(tableName, node) {
-        //大写转小写
-        tableName = tableName.toLowerCase();
-        //遍历node,取出里面的ids
-        var ids = '';
-        //提交URL
-        var deleteURL = '';
-
-        //如果node不是数组，则转化为数组
-        if (!(node instanceof Array)) {
-            node = [node];
-        }
-
-        try {
-            node.map((item) => {
-                ids = ids + ',' + item['id'];
-            });
-
-            //去掉开头的逗号
-            ids = ids.indexOf(',') == 0 ? ids.substring(1) : ids;
-        } catch (error) {
-            console.log(error);
-        }
-
-        try {
-            deleteURL = `${window.BECONFIG['xmysqlAPI']}/api/pr_log_informed/bulk?_ids=${ids}`;
-        } catch (error) {
-            console.log(error);
-        }
-
-        try {
-            var res = await superagent.delete(deleteURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            console.log(res);
-
-            return res.body;
-        } catch (err) {
-            console.log(err);
-        }
     },
 
     async queryApprovalExist(tableName, businessID) {
@@ -1217,26 +1266,6 @@ const manage = {
         }
         return res.body;
 
-    },
-
-    /**
-     * 查询数据
-     * @param {*} tableName
-     * @param {*} foreignKey
-     * @param {*} id
-     */
-    async queryTableDataByField(tableName, field, value) {
-        //大写转小写
-        tableName = tableName.toLowerCase();
-        //更新URL PATCH	/apis/tableName/:id	Updates row element by primary key
-        var queryURL = `${window.BECONFIG['xmysqlAPI']}/api/${tableName}?_where=(${field},eq,${value})`;
-
-        try {
-            var res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            return res.body;
-        } catch (err) {
-            console.log(err);
-        }
     },
 
     /**
@@ -3373,4 +3402,5 @@ var manageExports = {
     manage,
 }
 
+module.exports = manageExports
 module.exports = manageExports
