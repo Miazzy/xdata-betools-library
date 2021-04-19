@@ -3582,7 +3582,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 3) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.5) < curtime) {
             (async(status, month, userinfo, sealTypeSql, searchSql, page) => {
                 data = await manage.querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page);
             })(status, month, userinfo, sealTypeSql, searchSql, page);
