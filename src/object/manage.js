@@ -3566,8 +3566,37 @@ const manage = {
     },
 
     async querySealListByConStatus(status, month, userinfo, sealTypeSql, searchSql, page) {
+        const storage = Betools.storage;
+        let cacheKey = 'sys_seal_cache_' + status + month + sealTypeSql + '_#' + userinfo.username + '#_' + searchSql + '#page#_' + page;
+        let time = await storage.getStoreDB(`${cacheKey}_expire`) || 0;
+        let data = await storage.getStoreDB(`${cacheKey}`);
+        let curtime = new Date().getTime() / 1000;
+
+        //如果缓存中没有获取到数据，则直接查询服务器
+        if (Betools.tools.isNull(data)) {
+            time = curtime + 3600 * 24 * 365 * 3;
+            data = await manage.querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page);
+            console.info(`query table data storage cache : ${curtime} data:`, data);
+        } else {
+            console.info(`query table data hit cache : ${curtime} data: `, data);
+        }
+
+        //如果缓存时间快到期，则重新查询数据
+        if ((time - 3600 * 24 * 365 * 3 + 3) < curtime) {
+            (async(status, month, userinfo, sealTypeSql, searchSql, page) => {
+                data = await manage.querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page);
+            })(status, month, userinfo, sealTypeSql, searchSql, page);
+            console.info(`query table data refresh cache : ${curtime} data:`, data);
+        }
+
+        return data;
+    },
+
+    async querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page) {
+        let cacheKey = 'sys_seal_cache_' + status + month + sealTypeSql + '_#' + userinfo.username + '#_' + searchSql + '#page#_' + page;
         const whereSQL = `_where=(status,in,${status})~and(create_time,gt,${month})~and(seal_group_ids,like,~${userinfo.username}~)${sealTypeSql}${searchSql}&_sort=-id&_p=${page}&_size=10`;
         const resp = await manage.querySealListByCondition('bs_seal_regist', whereSQL); //获取最近几个月的待用印记录
+        Betools.storage.setStoreDB(cacheKey, resp, 3600 * 24 * 365 * 3);
         return resp;
     },
 
