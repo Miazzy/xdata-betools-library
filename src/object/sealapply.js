@@ -128,6 +128,29 @@ const sealapply = {
         },
 
         /**
+         * 跳转到用印合同详情
+         * @param {*} item 
+         * @param {*} tabname 
+         * @param {*} $router 
+         */
+        async redirectSealContractInfo(item, tabname, $router) {
+            //根据当前状态，跳转到不同页面
+            if (tabname == '1') {
+                Betools.storage.setStore('system_seal_list_tabname', tabname);
+                $router.push(`/app/sealview?id=${item.id}&statustype=none&back=seallist`); //跳转到相应的用印界面
+            } else if (tabname == '2' && item.seal_type == '非合同类') {
+                Betools.storage.setStore('system_seal_list_tabname', tabname);
+                $router.push(`/app/sealreceive?id=${item.id}&statustype=none&type=receive&back=seallist`); //跳转到相应的用印界面
+            } else if (tabname == '2' || tabname == '3') {
+                Betools.storage.setStore('system_seal_list_tabname', tabname);
+                $router.push(`/app/sealview?id=${item.id}&statustype=none&type=front&back=seallist`); //跳转到相应的用印界面
+            } else if (tabname == '4' || tabname == '5' || tabname == '6' || tabname == '0') {
+                Betools.storage.setStore('system_seal_list_tabname', tabname);
+                $router.push(`/app/sealview?id=${item.id}&statustype=none&type=done&back=seallist`); //跳转到相应的用印界面
+            }
+        },
+
+        /**
          * 用户选择财务归档人员
          * @param {*} state 
          */
