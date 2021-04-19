@@ -81,6 +81,53 @@ const sealapply = {
         },
 
         /**
+         * 查询用印登记需导出的字段
+         * @returns 
+         */
+        querySealExportFields() {
+            const json_fields = {
+                '排序编号': 'serialid',
+                '登记时间': 'create_time',
+                '文件名称': 'filename',
+                '用印数量': 'count',
+                '用印部门': 'deal_depart',
+                '经办人员': 'deal_manager',
+                '用印公司': 'company',
+                '合同编号': 'contract_id',
+                '签收人员': 'signman',
+                '审批类型': 'approve_type',
+                '关联流程': 'workno',
+                '用印类型': 'seal_type',
+                '印章类型': 'seal_category',
+                '合作方': 'partner',
+                '排序类型': 'order_type',
+                '盖章人员': 'seal_man',
+                '备注信息': 'message',
+                '用印状态': 'status',
+            };
+            const json_fields_common = {
+                '排序编号': 'serialid',
+                '登记时间': 'create_time',
+                '文件名称': 'filename',
+                '用印数量': 'count',
+                '用印部门': 'deal_depart',
+                '经办人员': 'deal_manager',
+                '用印公司': 'company',
+                '签收人员': 'signman',
+                '审批类型': 'approve_type',
+                '关联流程': 'workno',
+                '用印类型': 'seal_type',
+                '印章类型': 'seal_category',
+                '合作方': 'partner',
+                '排序类型': 'order_type',
+                '盖章人员': 'seal_man',
+                '备注信息': 'message',
+                '用印状态': 'status',
+            };
+            return { json_fields, json_fields_common };
+        },
+
+        /**
          * 用户选择财务归档人员
          * @param {*} state 
          */
