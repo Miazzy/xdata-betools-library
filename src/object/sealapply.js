@@ -124,7 +124,15 @@ const sealapply = {
                 '备注信息': 'message',
                 '用印状态': 'status',
             };
-            return { json_fields, json_fields_common };
+            const sealApplyATypeList = {
+                '1': 'initContractList',
+                '2': 'sealContractList',
+                '3': 'receiveContractList',
+                '4': 'frontContractList',
+                '5': 'doneContractList',
+                '6': 'failContractList',
+            };
+            return { json_fields, json_fields_common, sealApplyATypeList };
         },
 
         /**
