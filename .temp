@@ -1,0 +1,7621 @@
+
+##### 301. akullpp/awesome-java
+A curated list of awesome frameworks, libraries and software for the Java programming language. awesome awesome-list
+ 28.4k
+
+
+##### 302. lukehoban/es6features
+Overview of ECMAScript 6 features
+ 28.3k
+
+##### 303. ariya/phantomjs
+Scriptable Headless Browser phantomjs automation headless headless-browser
+ 28.3k
+ C++
+
+##### 304. faif/python-patterns
+A collection of design patterns/idioms in Python idioms python design-patterns
+ 28.1k
+ Python
+
+##### 305. certbot/certbot
+Certbot is EFF's tool to obtain certs from Let's Encrypt and (optionally) auto-enable HTTPS on your server. It can al… python letsencrypt acme-client certificate acme certbot
+ 27.9k
+ Python
+
+##### 306. joshbuchea/HEAD
+🗿 A list of everything that *could* go in the head of your document
+
+html list web-development html5 reference seo twitter-cards favicon meta-tags head frontend-development
+ 27.9k
+
+##### 307. getsentry/sentry
+Sentry is cross-platform application monitoring, with a focus on error reporting.
+
+sentry python monitor devops django monitoring crash-reporting error-monitoring crash-reports csp-report apm hacktoberfest error-logging
+ 27.8k
+ Python
+
+##### 308. jashkenas/backbone
+Give your JS App some Backbone with Models, Views, Collections, and Events
+ 27.8k
+ JavaScript
+
+
+##### 309. lerna/lerna
+🐉 A tool for managing JavaScript projects with multiple packages. lerna npm package publishing monorepo
+ 27.7k
+ JavaScript
+
+
+##### 310. vuejs/vue-cli
+🛠️ Standard Tooling for Vue.js Development
+ 27.7k
+ JavaScript
+
+##### 311. google-research/bert
+TensorFlow code and pre-trained models for BERT tensorflow nlp natural-language-processing google natural-language-understanding
+ 27.7k
+ Python
+
+##### 312. Homebrew/brew
+🍺 The missing package manager for macOS (or Linux)
+homebrew macos ruby package-manager brew
+ 27.6k
+ Ruby
+
+##### 313. zxing/zxing
+ZXing ("Zebra Crossing") barcode scanning library for Java, Android
+zxing java android barcode qr-code upc datamatrix barcode-scanner
+ 27.6k
+ Java
+
+##### 314. Homebrew/legacy-homebrew Archived
+💀 The former home of Homebrew/homebrew (deprecated)
+ 27.6k
+
+##### 315. bayandin/awesome-awesomeness
+A curated list of awesome awesomeness
+ 27.5k
+ Ruby
+
+##### 316. ryanoasis/nerd-fonts
+Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph co…
+patched-fonts python octicons shell font fonts patcher font-awesome icon-font powerline statusline iconic-fonts
+ 27.5k
+ CSS
+
+##### 317. pingcap/tidb
+TiDB is an open source distributed HTAP database compatible with the MySQL protocol
+
+tidb htap mysql go sql database scale serverless distributed-transactions distributed-database cloud-native hacktoberfest mysql-compatibility
+ 27.5k
+ Go
+
+##### 318. google/styleguide
+Style guides for Google-originated open-source projects
+
+cpplint styleguide style-guide
+ 27.5k
+ HTML
+
+##### 319.  obsproject/obs-studio
+OBS Studio - Free and open source software for live streaming and screen recording
+
+c c-plus-plus ffmpeg live-streaming video-recording screen-capture twitch-tv directshow facebook-live youtube-live game-capture
+ 27.4k
+ C
+
+##### 320. codepath/android_guides
+Extensive Open-Source Guides for Android Developers
+codepath android tutorials development guides
+ 27.3k
+MIT license
+
+##### 321. react-boilerplate/react-boilerplate
+🔥 A highly scalable, offline-first foundation with the best developer experience and a focus on performance and best…
+
+react redux i18n styled-components redux-saga offline-first react-boilerplate scaffolding immer webpack4
+ 27.3k
+ JavaScript
+
+
+##### 322. tastejs/todomvc
+Helping you select an MV* framework - Todo apps for React.js, Ember.js, Angular, and many more
+ 27.3k
+ JavaScript
+
+##### 323. carbon-app/carbon
+🖤 Create and share beautiful images of your source code
+
+carbon javascript education snippets presentation sharing beautiful github-gist tweet
+ 27.1k
+ JavaScript
+ 
+##### 324. caolan/async
+Async utilities for node and the browser async javascript callbacks
+ 27.1k
+ JavaScript
+
+##### 325. nolimits4web/swiper
+Most modern mobile touch slider with hardware accelerated transitions swiper slider gallery mobile touch carousel swipe touch-events
+ 27k
+ JavaScript
+
+##### 326. dkhamsing/open-source-ios-apps
+📱 Collaborative List of Open-Source iOS Apps
+
+apple-watch apple-tv game swiftui swift ios app list apple awesome react-native objective-c tvos watchos cocoapods example reactiveswift iphone ipad reactive-programming
+ 27k
+ Swift
+
+##### 327. formium/formik
+Build forms in React, without the tears 😭
+react hooks react-native forms form higher-order-component formik render-props react-hooks
+ 27k
+ TypeScript
+
+##### 328. minio/minio
+High Performance, Kubernetes Native Object Storage go cloud storage s3 cloudnative objectstorage cloudstorage amazon-s3
+ 26.9k
+ Go
+
+##### 329. rclone/rclone
+"rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud St…
+
+cloud-storage rclone hubic google-drive go golang sync encryption dropbox amazon-drive ftp s3 google-cloud-storage onedrive sftp webdav openstack-swift fuse-filesystem azure-blob backblaze-b2
+ 26.9k
+ Go
+
+
+##### 330. dylanaraps/pure-bash-bible
+📖 A collection of pure bash alternatives to external processes.
+
+bible shell bash learning list script book reference guide handbook how-to shell-scripts
+ 26.9k
+ Shell
+
+##### 331. istio/istio
+Connect, secure, control, and observe services.
+
+microservices envoy proxies service-mesh kubernetes microservice consul api-management resiliency nomad fault-injection circuit-breaker lyft-envoy polyglot-microservices enforce-policies request-routing
+ 26.8k
+ Go
+
+##### 332. iina/iina
+The modern video player for macOS. mpv macos video swift video-player
+ 26.7k
+ Swift
+
+##### 333. kenwheeler/slick
+the last carousel you'll ever need
+ 26.7k
+ JavaScript
+
+##### 334. shengxinjing/programmer-job-blacklist
+🙈程序员找工作黑名单，换工作和当技术合伙人需谨慎啊 更新有赞
+ 26.7k
+ Shell
+
+##### 335. nativefier/nativefier
+Make any web page a desktop application
+electron macos linux nodejs windows desktop-application
+ 26.6k
+ TypeScript
+
+##### 336. brillout/awesome-react-components
+Curated List of React Components & Libraries.
+react-components react awesome react-component awesome-list
+ 26.6k
+
+##### 337. satwikkansal/wtfpython
+What the f*ck Python? 😱 python snippets documentation wtf gotchas interview-questions python-interview-questions pitfalls wats
+ 26.5k
+ Python
+
+##### 338. netty/netty
+Netty project - an event-driven asynchronous network application framework
+ 26.5k
+ Java
+
+##### 339. aosabook/500lines
+500 Lines or Less
+ 26.5k
+ JavaScript
+
+##### 340. hashicorp/terraform
+Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool… cloud graph terraform cloud-management infrastructure-as-code
+ 26.4k
+ Go
+
+##### 341. mathiasbynens/dotfiles
+🔧 .files, including ~/.macos — sensible hacker defaults for macOS dotfiles macos bash
+ 26.3k
+ Shell
+
+##### 342. beego/beego
+beego is an open-source, high-performance web framework for the Go programming language. beego go
+ 26.2k
+ Go
+
+##### 343. sharkdp/bat
+A cat(1) clone with wings. syntax-highlighting git rust cli terminal command-line tool hacktoberfest
+ 26.2k
+ Rust
+
+##### 344. CSSEGISandData/COVID-19
+Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE johns-hopkins-university systems-science engineering jhu csse 2019-ncov coronavirus covid-19
+ 26.2k
+
+##### 345. NationalSecurityAgency/ghidra
+Ghidra is a software reverse engineering (SRE) framework reverse-engineering disassembler software-analysis
+ 26.2k
+ Java
+
+##### 346. vuejs/vuex
+🗃️ Centralized State Management for Vue.js. vuex javascript state-management vue time-travel
+ 26.1k
+ JavaScript
+
+
+##### 347. fxsjy/jieba
+结巴中文分词
+ 26k
+ Python
+
+
+##### 348. square/leakcanary
+A memory leak detection library for Android.
+android kotlin java kotlin-android memory-leak leakcanary outofmemory outofmemoryerror leak-canary leak-trace
+ 26k
+ Kotlin
+Apache-2.0 license
+
+##### 349. crossoverJie/JCSprout
+👨‍🎓 Java Core Sprout : basic, concurrent, algorithm java netty algorithm jvm concurrent-programming basic-java
+ 26k
+ Java
+
+##### 350. geekxh/hello-algorithm
+🌍「算法面试+算法知识」针对小白的算法训练 | 还包括：1、阿里、字节、滴滴 百篇大厂面经汇总 2、千本开源电子书 3、百张思维导图 （右侧来个 star 吧 🌹，English version supported） algorithms leetcode leetcode-solutions interview-questions dynamic-programming
+ 26k
+ Java
+
+##### 351. jashkenas/underscore
+JavaScript's utility _ belt
+ 25.9k
+ JavaScript
+
+##### 352. iperov/DeepFaceLab
+DeepFaceLab is the leading software for creating deepfakes. deepfacelab deepfakes creating-deepfakes deep-neural-networks deep-learning faceswap neural-networks face-swap deeplearning arxiv neural-nets deepface fakeapp deep-face-swap
+ 25.9k
+ Python
+
+##### 353. bradtraversy/design-resources-for-developers
+Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and muc…
+ 25.8k
+
+##### 354. PowerShell/PowerShell
+PowerShell for every system! windows macos linux shell command-line powershell netcore hacktoberfest
+ 25.8k
+ C#
+
+##### 355. fzaninotto/Faker Archived
+Faker is a PHP library that generates fake data for you
+ 25.8k
+ PHP
+Updated on Mar 20
+1 issue needs help
+serhii-londar/open-source-mac-os-apps
+🚀 Awesome list of open source applications for macOS. https://t.me/opensourcemacosapps
+
+macos-application javascript ruby python c macos swift open-source mac c-plus-plus awesome opensource objective-c apps applications macosx awesome-list hacktoberfest
+ 25.7k
+ Swift
+CC0-1.0 license
+Updated yesterday
+3 issues need help
+wagoodman/dive
+A tool for exploring each layer in a docker image
+
+docker-image docker cli inspector tui explorer
+ 25.7k
+ Go
+MIT license
+Updated 8 days ago
+1 issue needs help
+skylot/jadx
+Dex to Java decompiler
+
+dex java android decompiler
+ 25.7k
+ Java
+Apache-2.0 license
+Updated 16 hours ago
+JakeWharton/butterknife
+Bind Android views and callbacks to fields and methods.
+
+ 25.7k
+ Java
+Apache-2.0 license
+Updated on Jan 7
+3 issues need help
+
+GokuMohandas/madewithml
+Learn how to responsibly deliver value with applied ML.
+
+mlops machine-learning natural-language-processing deep-learning pytorch applied-ml
+ 25.7k
+ Jupyter Notebook
+MIT license
+Updated 14 days ago
+kelseyhightower/kubernetes-the-hard-way
+Bootstrap Kubernetes the hard way on Google Cloud Platform. No scripts.
+
+ 25.7k
+Updated 12 hours ago
+agalwood/Motrix
+A full-featured download manager.
+
+motrix bittorrent magnet linux electron macos windows mac download aria2 bt download-manager
+ 25.7k
+ JavaScript
+MIT license
+Updated 17 days ago
+date-fns/date-fns
+⏳ Modern JavaScript date utility library ⌛️
+
+nodejs javascript time modules utilities date hacktoberfest date-fns
+ 25.6k
+ JavaScript
+Updated 3 hours ago
+unknwon/the-way-to-go_ZH_CN
+《The Way to Go》中文译本，中文正式名《Go 入门指南》
+
+go tutorial translation book
+ 25.6k
+ Go
+Updated 4 days ago
+Tencent/weui
+A UI library by WeChat official design team, includes the most useful widgets/modules in mobile web applications.
+
+weui wechat style mobile-web
+ 25.6k
+ Less
+Updated 27 days ago
+eugenp/tutorials
+Just Announced - "Learn Spring Security OAuth":
+
+ 25.6k
+ Java
+MIT license
+Updated 16 hours ago
+formulahendry/955.WLB
+955 不加班的公司名单 - 工作 955，work–life balance (工作与生活的平衡)
+
+ 25.6k
+Updated 5 days ago
+1 issue needs help
+houshanren/hangzhou_house_knowledge
+2017年买房经历总结出来的买房购房知识分享给大家，希望对大家有所帮助。买房不易，且买且珍惜。Sharing the knowledge of buy an own house that according to the experi…
+
+hangzhou knowledge
+ 25.5k
+ CSS
+Updated on Oct 18, 2020
+proxyee-down-org/proxyee-down
+http下载工具，基于http代理，支持多连接分块下载
+
+ 25.5k
+ Java
+Apache-2.0 license
+Updated on Aug 11, 2020
+
+
+freeCodeCamp/devdocs
+API Documentation Browser
+
+offline app documentation docs pwa api-documentation documentation-tool developer-tools devdocs
+ 25.5k
+ Ruby
+Updated 3 days ago
+4 issues need help
+alibaba/arthas
+Alibaba Java Diagnostic Tool Arthas/Alibaba Java诊断利器Arthas
+
+arthas alibaba java jvm agent trace classloader diagnosis trouble-shooting
+ 25.4k
+ Java
+Apache-2.0 license
+Updated 2 hours ago
+9 issues need help
+standard/standard
+🌟 JavaScript Style Guide, with linter & automatic code fixer
+
+linter nodejs javascript development eslint es6 static-code-analysis style-guide ecmascript standard
+ 25.4k
+ JavaScript
+MIT license
+Updated 5 days ago
+6 issues need help
+willmcgugan/rich
+Rich is a Python library for rich text and beautiful formatting in the terminal.
+
+rich python-library syntax-highlighting emoji traceback python markdown terminal progress-bar python3 ansi-colors hacktoberfest tables terminal-color progress-bar-python tracebacks-rich
+ 25.3k
+ Python
+MIT license
+Updated 18 hours ago
+ityouknow/spring-boot-examples
+about learning Spring Boot via examples. Spring Boot 教程、技术栈示例代码，快速简单上手教程。
+
+spring-boot thymeleaf mybatis java docker spring mongodb rabbitmq scheduler spring-cloud springboot spring-data-jpa fastdfs springcloud docker-composer spring-boot-mongodb spring-boot-mail spring-boot-examples spring-boot-upload-file springboot-shiro
+ 25.3k
+ Java
+Updated 17 days ago
+SheetJS/sheetjs
+📗 SheetJS Community Edition -- Spreadsheet Data Toolkit
+
+xlsx react nodejs javascript html ios json data angular grid csv database html5 vue xml excel table xls spreadsheet dbf
+ 25.2k
+ JavaScript
+Apache-2.0 license
+Updated 2 days ago
+10 issues need help
+ziadoz/awesome-php
+A curated list of amazingly awesome PHP libraries, resources and shiny things.
+
+php-library php-applications php-framework php awesome php7 awesome-lists php-installation
+ 25.2k
+WTFPL license
+Updated 9 days ago
+request/request
+🏊🏾 Simplified HTTP request client.
+
+ 25.1k
+ JavaScript
+Apache-2.0 license
+Updated 18 days ago
+symfony/symfony
+The Symfony PHP framework
+
+symfony php php-framework framework bundle symfony-bundle hacktoberfest
+ 25.1k
+ PHP
+MIT license
+Updated 11 minutes ago
+34 issues need help
+alibaba/p3c
+Alibaba Java Coding Guidelines pmd implements and IDE plugin
+
+ 25.1k
+ Kotlin
+Apache-2.0 license
+Updated 2 days ago
+
+
+composer/composer
+Dependency Manager for PHP
+
+composer php package-manager dependency-manager packages
+ 25.1k
+ PHP
+MIT license
+Updated 13 hours ago
+1 issue needs help
+herrbischoff/awesome-macos-command-line
+Use your macOS terminal shell to do awesome things.
+
+macos shell list awesome terminal macosx awesome-list
+ 25k
+CC-BY-SA-4.0 license
+Updated 11 days ago
+ZuzooVn/machine-learning-for-software-engineers
+A complete daily plan for studying to become a machine learning engineer.
+
+machine-learning deep-learning machine-learning-algorithms artificial-intelligence software-engineer
+ 24.9k
+CC-BY-SA-4.0 license
+Updated 14 days ago
+3 issues need help
+nvie/gitflow
+Git extensions to provide high-level repository operations for Vincent Driessen's branching model.
+
+ 24.9k
+ Shell
+Updated on Nov 14, 2019
+select2/select2
+Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolli…
+
+javascript jquery select2
+ 24.9k
+ JavaScript
+MIT license
+Updated 5 days ago
+4 issues need help
+Modernizr/Modernizr
+Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.
+
+modernizr css3-features javascript-library javascript feature-detection hacktoberfest
+ 24.9k
+ JavaScript
+Updated 7 days ago
+1 issue needs help
+markedjs/marked
+A markdown parser and compiler. Built for speed.
+
+markdown gfm parser compiler commonmark
+ 24.8k
+ JavaScript
+Updated 5 hours ago
+3 issues need help
+raywenderlich/swift-algorithm-club
+Algorithms and data structures in Swift, with explanations!
+
+swift algorithms data-structures
+ 24.7k
+ Swift
+MIT license
+Updated 18 days ago
+gorhill/uBlock
+uBlock Origin - An efficient blocker for Chromium and Firefox. Fast and lean.
+
+ublock-origin firefox chromium javascript browser-extension blocker ublock
+ 24.7k
+ JavaScript
+GPL-3.0 license
+Updated 21 hours ago
+BurntSushi/ripgrep
+ripgrep recursively searches directories for a regex pattern while respecting your gitignore
+
+ripgrep gitignore search cli command-line regex recursively-search command-line-tool grep
+ 24.7k
+ Rust
+Updated 3 days ago
+9 issues need help
+
+
+rethinkdb/rethinkdb
+The open-source database for the realtime web.
+
+ 24.6k
+ C++
+Apache-2.0 license
+Updated on Feb 23
+nylas/nylas-mail
+💌 An extensible desktop mail app built on the modern web. Forks welcome!
+
+electron react javascript windows macos linux flux productivity babel email nylas-mail
+ 24.6k
+ JavaScript
+MIT license
+Updated on Jan 13
+github/fetch
+A window.fetch JavaScript polyfill.
+
+polyfill javascript fetch promise
+ 24.6k
+ JavaScript
+MIT license
+Updated 5 days ago
+metabase/metabase
+The simplest, fastest way to get business intelligence and analytics to everyone in your company 😋
+
+metabase analytics slack visualization mysql postgres data clojure bi database dashboard reporting businessintelligence postgresql data-visualization business-intelligence data-analysis sql-editor
+ 24.6k
+ Clojure
+Updated 3 hours ago
+ReactiveX/rxjs
+A reactive programming library for JavaScript
+
+rxjs javascript
+ 24.6k
+ TypeScript
+Apache-2.0 license
+Updated 16 hours ago
+go-gitea/gitea
+Git with a cup of tea, painless self-hosted git service
+
+gitea github git go golang devops gitlab gogs hacktoberfest
+ 24.5k
+ Go
+MIT license
+Updated 3 hours ago
+17 issues need help
+sherlock-project/sherlock
+🔎 Hunt down social media accounts by username across social networks
+
+sherlock windows macos linux cli osint tools python3 information-gathering reconnaissance redteam
+ 24.4k
+ Python
+MIT license
+Updated 10 days ago
+1 issue needs help
+postcss/postcss
+Transforming styles with JS plugins
+
+css parser framework postcss ast
+ 24.4k
+ TypeScript
+MIT license
+Updated 8 days ago
+angular/angular-cli
+CLI tool for Angular
+
+cli angular typescript angular-cli
+ 24.4k
+ TypeScript
+MIT license
+Updated 2 days ago
+19 issues need help
+vitejs/vite
+Next generation frontend tooling. It's fast!
+
+vite hmr frontend dev-server build-tool
+ 24.4k
+ TypeScript
+MIT license
+Updated 1 hour ago
+2 issues need help
+
+
+ctripcorp/apollo
+Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
+
+spring-boot microservices config-management spring-cloud configuration configuration-management spring-mvc spring-cloud-netflix distributed-configuration
+ 24.4k
+ Java
+Apache-2.0 license
+Updated 8 days ago
+6 issues need help
+FFmpeg/FFmpeg
+Mirror of https://git.ffmpeg.org/ffmpeg.git
+
+ffmpeg audio video c streaming rtsp mp4 hls multimedia rtmp webm mpeg fft hevc matroska
+ 24.3k
+ C
+Updated 3 hours ago
+koalaman/shellcheck
+ShellCheck, a static analysis tool for shell scripts
+
+shell bash haskell linter static-analysis developer-tools
+ 24.3k
+ Haskell
+GPL-3.0 license
+Updated 6 days ago
+facebookresearch/Detectron
+FAIR's research platform for object detection research, implementing popular algorithms like Mask R-CNN and RetinaNet.
+
+ 24.3k
+ Python
+Apache-2.0 license
+Updated 18 days ago
+amix/vimrc
+The ultimate Vim configuration (vimrc)
+
+ 24.3k
+ Vim script
+MIT license
+Updated on Mar 6
+google/leveldb
+LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to st…
+
+ 24.3k
+ C++
+BSD-3-Clause license
+Updated 3 days ago
+1 issue needs help
+microsoft/monaco-editor
+A browser based code editor
+
+monaco-editor editor typescript browser vscode
+ 24.2k
+ JavaScript
+MIT license
+Updated 9 days ago
+33 issues need help
+AobingJava/JavaFamily
+【Java面试+Java学习指南】 一份涵盖大部分Java程序员所需要掌握的核心知识。
+
+java jvm redis mysql system interview zookeeper java8 rocketmq
+ 24.2k
+Updated 13 days ago
+johnpapa/angular-styleguide
+Angular Style Guide: A starting point for Angular development teams to provide consistency through good practices.
+
+ 24.2k
+MIT license
+Updated on Sep 12, 2019
+17 issues need help
+danielgindi/Charts
+Beautiful charts for iOS/tvOS/OSX! The Apple side of the crossplatform MPAndroidChart.
+
+ 24.1k
+ Swift
+Apache-2.0 license
+Updated 4 days ago
+21 issues need help
+
+sequelize/sequelize
+An easy-to-use multi SQL dialect ORM tool for Node.js
+
+orm javascript mysql sql sqlite postgresql mariadb transactions mssql
+ 24.1k
+ JavaScript
+MIT license
+Updated 3 days ago
+19 issues need help
+nlohmann/json
+JSON for Modern C++
+
+json-pointer cbor json json-serialization msgpack json-parser header-only messagepack json-patch stl-containers rfc-6901 rfc-6902 rfc-7159 rfc-7049 json-diff bson ubjson json-merge-patch rfc-8259
+ 24.1k
+ C++
+MIT license
+Updated 6 days ago
+elsewhencode/project-guidelines
+A set of best practices for JavaScript projects
+
+javascript best-practices how-to guidelines maintainability javascript-best-practices
+ 24.1k
+ JavaScript
+MIT license
+Updated 6 days ago
+1 issue needs help
+IanLunn/Hover
+A collection of CSS3 powered hover effects to be applied to links, buttons, logos, SVG, featured images and so on. Ea…
+
+css sass css-effects
+ 24.1k
+ CSS
+Updated on Dec 21, 2020
+tootsuite/mastodon
+Your self-hosted, globally interconnected microblogging community
+
+activitypub social-network docker activity-stream microblog mastodon webfinger
+ 24.1k
+ Ruby
+AGPL-3.0 license
+Updated 1 hour ago
+chubin/cheat.sh
+the only cheat sheet you need
+
+cli documentation terminal command-line curl examples help tldr cheatsheet
+ 24k
+ Python
+MIT license
+Updated 13 days ago
+1 issue needs help
+transloadit/uppy
+The next open source file uploader for web browsers 🐶
+
+uppy transloadit tus dropbox pick-files instagram encoding javascript open-source files modular mit uploader resumable file-uploads webbrowser file-uploader
+ 24k
+ JavaScript
+MIT license
+Updated 4 days ago
+4 issues need help
+openai/gym
+A toolkit for developing and comparing reinforcement learning algorithms.
+
+ 24k
+ Python
+Updated 18 hours ago
+airbnb/lottie-web
+Render After Effects animations natively on Web, Android and iOS, and React Native. http://airbnb.io/lottie/
+
+ 23.9k
+ JavaScript
+MIT license
+Updated 15 days ago
+1 issue needs help
+typeorm/typeorm
+ORM for TypeScript and JavaScript (ES7, ES6, ES5). Supports MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle…
+
+typeorm database typescript electron javascript mysql react-native orm sap sqlite postgresql oracle mariadb websql sap-hana active-record sqlserver data-mapper cockroachdb
+ 23.9k
+ TypeScript
+MIT license
+Updated 3 hours ago
+22 issues need help
+
+
+CorentinJ/Real-Time-Voice-Cloning
+Clone a voice in 5 seconds to generate arbitrary speech in real-time
+
+voice-cloning pytorch tensorflow python deep-learning tts
+ 23.9k
+ Python
+Updated 9 days ago
+1 issue needs help
+VincentGarreau/particles.js
+A lightweight JavaScript library for creating particles
+
+ 23.9k
+ JavaScript
+MIT license
+Updated on Jan 9
+laravel/framework
+The Laravel Framework.
+
+php laravel framework
+ 23.8k
+ PHP
+MIT license
+Updated 2 hours ago
+4 issues need help
+typescript-cheatsheets/react
+Cheatsheets for experienced React developers getting started with TypeScript
+
+typescript-playground react typescript reference ts cheatsheet hacktoberfest
+ 23.8k
+ JavaScript
+MIT license
+Updated 3 days ago
+iview/iview
+A high quality UI Toolkit built on Vue.js 2.0
+
+iview css javascript components ui-design design-systems vue frontend vue-components ui-kit
+ 23.8k
+ Vue
+Updated 20 days ago
+rapid7/metasploit-framework
+Metasploit Framework
+
+hacktoberfest
+ 23.7k
+ Ruby
+Updated 12 hours ago
+alibaba/druid
+阿里云计算平台DataWorks(https://help.aliyun.com/document_detail/137663.html) 团队出品，为监控而生的数据库连接池
+
+ 23.7k
+ Java
+Updated 5 hours ago
+geekcompany/ResumeSample
+Resume template for Chinese programmers . 程序员简历模板系列。包括PHP程序员简历模板、iOS程序员简历模板、Android程序员简历模板、Web前端程序员简历模板、Java程序员简历模板、C…
+
+ 23.7k
+Updated on Nov 26, 2020
+webtorrent/webtorrent
+⚡️ Streaming torrent client for the web
+
+webrtc nodejs javascript torrent streaming browser bittorrent p2p webtorrent hacktoberfest
+ 23.6k
+ JavaScript
+MIT license
+Updated 5 days ago
+29 issues need help
+cheeriojs/cheerio
+Fast, flexible, and lean implementation of core jQuery designed specifically for the server.
+
+cheerio jquery htmlparser2 dom html parser scraper selector htmlparser
+ 23.6k
+ JavaScript
+MIT license
+Updated 6 hours ago
+
+naptha/tesseract.js
+Pure Javascript OCR for more than 100 Languages 📖🎉🖥
+
+tesseract ocr javascript deep-learning webassembly
+ 23.6k
+ JavaScript
+Apache-2.0 license
+Updated 18 days ago
+4 issues need help
+mobxjs/mobx
+Simple, scalable state management.
+
+mobx react javascript typescript reactive-programming
+ 23.6k
+ TypeScript
+MIT license
+Updated 5 hours ago
+GitbookIO/gitbook
+📝 Modern documentation format and toolchain using Git and Markdown
+
+ 23.6k
+ JavaScript
+Apache-2.0 license
+Updated on Oct 20, 2020
+go-gorm/gorm
+The fantastic ORM library for Golang, aims to be developer friendly
+
+gorm golang go orm web
+ 23.6k
+ Go
+MIT license
+Updated yesterday
+sorrycc/awesome-javascript
+🐢 A collection of awesome browser-side JavaScript libraries, resources and shiny things.
+
+ 23.5k
+Updated 6 days ago
+1 issue needs help
+swisskyrepo/PayloadsAllTheThings
+A list of useful payloads and bypass for Web Application Security and Pentest/CTF
+
+payloads pentest cheatsheet privilege-escalation enumeration methodology security hacking web-application penetration-testing bounty vulnerability bugbounty bypass payload hacktoberfest redteam
+ 23.5k
+ Python
+MIT license
+Updated 18 hours ago
+evanw/esbuild
+An extremely fast JavaScript bundler and minifier
+
+javascript react css typescript es6 compiler jsx commonjs minifier tsx module-bundler
+ 23.5k
+ Go
+MIT license
+Updated 2 days ago
+SDWebImage/SDWebImage
+Asynchronous image downloader with cache support as a UIImageView category
+
+sdwebimage carthage swift macos ios image png objective-c watchos jpeg cache cocoapods gif webp
+ 23.5k
+ Objective-C
+MIT license
+Updated 5 days ago
+1 issue needs help
+lib-pku/libpku
+贵校课程资料民间整理
+
+ 23.5k
+ TeX
+Updated on Nov 22, 2020
+sentsin/layui
+采用自身模块规范编写的前端 UI 框架，遵循原生 HTML/CSS/JS 的书写形式，极低门槛，拿来即用。
+
+layui javascript css html ui js
+ 23.5k
+ JavaScript
+MIT license
+Updated 11 days ago
+
+vlang/v
+Simple, fast, safe, compiled language for developing maintainable software. Compiles itself in <1s with zero library …
+
+language programming-language compiler v
+ 23.4k
+ V
+MIT license
+Updated 2 hours ago
+vim/vim
+The official Vim repository
+
+vim c cross-platform text-editor
+ 23.4k
+ Vim script
+Updated 20 hours ago
+2 issues need help
+microsoft/playwright
+Node.js library to automate Chromium, Firefox and WebKit with a single API
+
+ 23.4k
+ TypeScript
+Apache-2.0 license
+Updated 4 hours ago
+atlassian/react-beautiful-dnd
+Beautiful and accessible drag and drop for lists with React
+
+drag react dnd drag-and-drop sortable reordering
+ 23.3k
+ JavaScript
+Updated 13 hours ago
+9 issues need help
+greenrobot/EventBus
+Event bus for Android and Java that simplifies communication between Activities, Fragments, Threads, Services, etc. L…
+
+ 23.3k
+ Java
+Apache-2.0 license
+Updated on Mar 4, 2020
+tabler/tabler
+Tabler is free and open-source HTML Dashboard UI Kit built on Bootstrap
+
+html5 bootstrap css html jekyll sass modular dashboard sponsors uikit boilerplate-template scss admin-dashboard themes dashboards ui-kit adminpanel dashboard-templates bootstrap4-theme bootstrap5
+ 23.3k
+ HTML
+MIT license
+Updated 3 days ago
+1 issue needs help
+alibaba/fastjson
+A fast JSON parser/generator for Java.
+
+fastjson java android serialization json json-serialization deserialization json-parser json-serializer best-performance
+ 23.3k
+ Java
+Apache-2.0 license
+Updated 7 hours ago
+CodeHubApp/CodeHub
+CodeHub is an iOS application written using Xamarin
+
+codehub github c-sharp reactiveui
+ 23.2k
+ C#
+Updated 14 days ago
+d2l-ai/d2l-zh
+《动手学深度学习》：面向中文读者、能运行、可讨论。中英文版被全球175所大学采用教学。
+
+deep-learning python machine-learning natural-language-processing computer-vision book notebook chinese
+ 23.2k
+ Python
+Apache-2.0 license
+Updated 3 hours ago
+niklasvh/html2canvas
+Screenshots with JavaScript
+
+dom javascript screenshot
+ 23.2k
+ TypeScript
+MIT license
+Updated 10 days ago
+
+commaai/openpilot
+openpilot is an open source driver assistance system. openpilot performs the functions of Automated Lane Centering an…
+
+ 23.2k
+ C++
+MIT license
+Updated 20 minutes ago
+6 issues need help
+pyenv/pyenv
+Simple Python version management
+
+ 23.1k
+ Roff
+MIT license
+Updated 2 days ago
+cli/cli
+GitHub’s official command line tool
+
+git cli golang hacktoberfest github-api-v4
+ 23k
+ Go
+MIT license
+Updated 18 hours ago
+38 issues need help
+junegunn/vim-plug
+🌺 Minimalist Vim Plugin Manager
+
+vim
+ 23k
+ Vim script
+MIT license
+Updated on Mar 20
+facebook/docusaurus
+Easy to maintain open source documentation websites.
+
+react javascript open-source website documentation hacktoberfest
+ 23k
+ TypeScript
+Updated 2 hours ago
+28 issues need help
+ajaxorg/ace
+Ace (Ajax.org Cloud9 Editor)
+
+ 22.9k
+ JavaScript
+Updated 5 days ago
+CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers
+aka "Bayesian Methods for Hackers": An introduction to Bayesian methods + probabilistic programming with a computatio…
+
+bayesian-methods pymc mathematical-analysis jupyter-notebook data-science statistics
+ 22.8k
+ Jupyter Notebook
+MIT license
+Updated on Mar 17
+drone/drone
+Drone is a Container-Native, Continuous Delivery Platform
+
+go docker continuous-integration continuous-delivery ci build-pipelines build-automation ci-cd
+ 22.8k
+ Go
+Updated 15 days ago
+realpython/python-guide
+Python best practices guidebook, written for humans.
+
+python book guide kennethreitz
+ 22.8k
+ Batchfile
+Updated on Feb 24
+terryum/awesome-deep-learning-papers
+The most cited deep learning papers
+
+machine-learning deep-neural-networks deep-learning
+ 22.8k
+ TeX
+Updated on Aug 27, 2020
+
+Advanced-Frontend/Daily-Interview-Question
+我是依扬（木易杨），公众号「高级前端进阶」作者，每天搞定一道前端大厂面试题，祝大家天天进步，一年后会看到不一样的自己。
+
+react javascript css vue interview
+ 22.8k
+ JavaScript
+Updated on Nov 9, 2020
+goabstract/Awesome-Design-Tools
+The best design tools and plugins for everything 👉
+
+design ui-design design-systems awesome font-awesome animations awesome-list design-tools
+ 22.8k
+ JavaScript
+MIT license
+Updated 7 days ago
+ycm-core/YouCompleteMe
+A code-completion engine for Vim
+
+vim semantic-engine code-analysis code-completion
+ 22.8k
+ Python
+GPL-3.0 license
+Updated 3 days ago
+ageron/handson-ml
+A series of Jupyter notebooks that walk you through the fundamentals of Machine Learning and Deep Learning in python …
+
+machine-learning python tensorflow deep-learning neural-network scikit-learn jupyter-notebook ml distributed
+ 22.7k
+ Jupyter Notebook
+Apache-2.0 license
+Updated 9 days ago
+rstacruz/nprogress
+For slim progress bars like on YouTube, Medium, etc
+
+ 22.7k
+ JavaScript
+MIT license
+Updated on Nov 16, 2020
+jgraph/drawio
+Source to app.diagrams.net
+
+ 22.7k
+ JavaScript
+Apache-2.0 license
+Updated 29 minutes ago
+4 issues need help
+aria2/aria2
+aria2 is a lightweight multi-protocol & multi-source, cross platform download utility operated in command-line. It su…
+
+http bittorrent download ftp sftp rpc cpp11 metalink
+ 22.6k
+ C++
+Updated 3 days ago
+mqyqingfeng/Blog
+冴羽写博客的地方，预计写四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列。
+
+javascript blog advanced
+ 22.6k
+Updated on Mar 5
+golang-standards/project-layout
+Standard Go Project Layout
+
+go golang project-template standards project-structure
+ 22.6k
+ Makefile
+Updated on Mar 19
+alibaba/flutter-go
+flutter 开发者帮助 APP，包含 flutter 常用 140+ 组件的demo 演示与中文文档
+
+dart flutter flutter-demo flutter-doc
+ 22.6k
+ Dart
+Updated on Dec 27, 2020
+
+0xAX/linux-insides
+A little bit about a linux kernel
+
+linux-insides linux-kernel linux
+ 22.6k
+ Python
+Updated on Mar 21
+8 issues need help
+hankcs/HanLP
+中文分词 词性标注 命名实体识别 依存句法分析 语义依存分析 新词发现 关键词短语提取 自动摘要 文本分类聚类 拼音简繁转换 自然语言处理
+
+hanlp nlp natural-language-processing text-classification named-entity-recognition dependency-parser pos-tagging semantic-parsing
+ 22.6k
+ Python
+Apache-2.0 license
+Updated 2 days ago
+gitlabhq/gitlabhq
+GitLab CE Mirror | Please open new issues in our issue tracker on GitLab.com
+
+gitlab ruby rails
+ 22.6k
+ Ruby
+Updated on Jan 20
+codemirror/CodeMirror
+In-browser code editor
+
+ 22.5k
+ JavaScript
+MIT license
+Updated 4 minutes ago
+Automattic/mongoose
+MongoDB object modeling designed to work in an asynchronous environment.
+
+ 22.5k
+ JavaScript
+MIT license
+Updated 18 hours ago
+1 issue needs help
+akveo/ngx-admin
+Customizable admin dashboard template based on Angular 10+
+
+ngx-admin material-theme angular-dashboard-template sass theme admin framework typescript webpack dashboard responsive angular2 ng2 admin-dashboard bootstrap4 admin-ui admin-template ng2-admin angular9 angular10
+ 22.5k
+ TypeScript
+MIT license
+Updated on Mar 14
+23 issues need help
+typicode/husky
+Modern native Git hooks made easy 🐶 woof!
+
+git hooks pre-commit commit
+ 22.5k
+ JavaScript
+MIT license
+Updated 2 days ago
+1 issue needs help
+facebookresearch/fastText
+Library for fast text representation and classification.
+
+ 22.5k
+ HTML
+MIT license
+Updated on Jan 15
+cmderdev/cmder
+Lovely console emulator package for Windows
+
+cmder portable conemu mintty c-plus-plus powershell color-scheme ssh-agent
+ 22.5k
+ C++
+MIT license
+Updated 4 days ago
+Developer-Y/cs-video-courses
+List of Computer Science courses with video lectures.
+
+computer-vision embedded-systems computer-science database-systems programming-language security machine-learning bioinformatics web-development algorithms robotics databases systems quantum-computing computer-architecture
+ 22.4k
+Updated on Jan 17
+
+scwang90/SmartRefreshLayout
+🔥下拉刷新、上拉加载、二级刷新、淘宝二楼、RefreshLayout、OverScroll，Android智能下拉刷新框架，支持越界回弹、越界拖动，具有极强的扩展性，集成了几十种炫酷的Header和 Footer。
+
+android header pulltorefresh android-ui pull-to-refresh refreshlayout footer overscroll
+ 22.4k
+ Java
+Apache-2.0 license
+Updated on Jan 6
+3 issues need help
+laurent22/joplin
+Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux…
+
+joplin enex-files synchronisation evernote webdav nextcloud electron nodejs javascript android react-native dropbox onedrive web-clipper
+ 22.4k
+ JavaScript
+MIT license
+Updated 16 hours ago
+1 issue needs help
+docker/compose
+Define and run multi-container applications with Docker
+
+docker python docker-compose orchestration
+ 22.4k
+ Python
+Apache-2.0 license
+Updated 8 hours ago
+JedWatson/react-select
+The Select Component for React.js
+
+ 22.4k
+ JavaScript
+MIT license
+Updated 3 days ago
+geekcomputers/Python
+My Python Examples
+
+ 22.4k
+ Python
+MIT license
+Updated 2 days ago
+donnemartin/interactive-coding-challenges
+120+ interactive Python coding interview challenges (algorithms and data structures). Includes Anki flashcards.
+
+python development algorithm programming data-structure interview competitive-programming coding interview-practice interview-questions
+ 22.3k
+ Python
+Updated 8 days ago
+anuraghazra/github-readme-stats
+⚡ Dynamically generated stats for your github readmes
+
+serverless dynamic hacktoberfest readme-generator profile-readme readme-stats
+ 22.3k
+ JavaScript
+MIT license
+Updated 3 hours ago
+2 issues need help
+StreisandEffect/streisand
+Streisand sets up a new server running your choice of WireGuard, OpenConnect, OpenSSH, OpenVPN, Shadowsocks, sslh, St…
+
+streisand censorship wireguard openconnect ssh ansible openvpn stunnel tor shadowsocks vpn anyconnect
+ 22.3k
+ Shell
+Updated 27 days ago
+jgm/pandoc
+Universal markup converter
+
+pandoc markdown converter haskell presentation markup publishing document
+ 22.3k
+ Haskell
+Updated 6 hours ago
+23 issues need help
+SortableJS/Sortable
+Create and reorder lists with drag-and-drop. For use with modern browsers and touch devices
+
+sort ui drag-and-drop drag-drop drag sortable reordering droppable draggable
+ 22.3k
+ JavaScript
+MIT license
+Updated 6 days ago
+14 issues need help
+
+VundleVim/Vundle.vim
+Vundle, the plug-in manager for Vim
+
+ 22.2k
+ Vim script
+MIT license
+Updated on Sep 20, 2020
+hammerjs/hammer.js
+A javascript library for multi-touch gestures :// You can touch this
+
+ 22.2k
+ JavaScript
+MIT license
+Updated 27 days ago
+remy/nodemon
+Monitor for any changes in your node.js application and automatically restart the server - perfect for development
+
+nodemon node watch hacktoberfest
+ 22.2k
+ JavaScript
+MIT license
+Updated 19 days ago
+1 issue needs help
+GoogleChrome/lighthouse
+Automated auditing, performance metrics, and best practices for the web.
+
+performance-metrics chrome-devtools web pwa best-practices audit developer-tools performance-analysis
+ 22.2k
+ JavaScript
+Apache-2.0 license
+Updated 2 days ago
+4 issues need help
+harvesthq/chosen
+Deprecated - Chosen is a library for making long, unwieldy select boxes more friendly.
+
+deprecated not-maintained
+ 22.1k
+ HTML
+Updated on Jan 13
+mitmproxy/mitmproxy
+An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
+
+ssl python tls http security proxy websocket http2 man-in-the-middle
+ 22.1k
+ Python
+MIT license
+Updated 2 days ago
+26 issues need help
+gto76/python-cheatsheet
+Comprehensive Python Cheatsheet
+
+python-cheatsheet python reference cheatsheet
+ 22.1k
+ Python
+Updated 3 days ago
+jobbole/awesome-python-cn
+Python资源大全中文版，包括：Web框架、网络爬虫、模板引擎、数据库、数据可视化、图片处理等，由「开源前哨」和「Python开发者」微信公号团队维护更新。
+
+python
+ 22k
+ Makefile
+Updated 19 days ago
+balderdashy/sails
+Realtime MVC Framework for Node.js
+
+ 21.9k
+ JavaScript
+MIT license
+Updated 29 days ago
+15 issues need help
+hashicorp/consul
+Consul is a distributed, highly available, and data center aware solution to connect and configure applications acros…
+
+ 21.9k
+ Go
+MPL-2.0 license
+Updated yesterday
+
+acmesh-official/acme.sh
+A pure Unix shell script implementing ACME client protocol
+
+acme-protocol shell bash letsencrypt acme-client acme posix certbot posix-sh ash zerossl buypass
+ 21.9k
+ Shell
+GPL-3.0 license
+Updated 9 hours ago
+3 issues need help
+dotnet/aspnetcore
+ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or …
+
+dotnet aspnetcore hacktoberfest
+ 21.9k
+ C#
+Apache-2.0 license
+Updated 9 hours ago
+152 issues need help
+ggreer/the_silver_searcher
+A code-searching tool similar to ack, but faster.
+
+silver-searcher pcre c search-in-text command-line-tool ag
+ 21.8k
+ C
+Apache-2.0 license
+Updated 5 days ago
+microsoft/calculator
+Windows Calculator: A simple yet powerful calculator that ships with Windows
+
+windows xaml csharp cpp uwp windows-10
+ 21.8k
+ C++
+MIT license
+Updated 3 days ago
+63 issues need help
+vuejs/vue-next
+🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
+
+ 21.8k
+ TypeScript
+MIT license
+Updated 1 hour ago
+emberjs/ember.js
+Ember.js - A JavaScript framework for creating ambitious web applications
+
+ember javascript-framework javascript hacktoberfest
+ 21.8k
+ JavaScript
+MIT license
+Updated yesterday
+15 issues need help
+hashicorp/vagrant
+Vagrant is a tool for building and distributing development environments.
+
+vagrant ruby automation virtualization hacktoberfest
+ 21.8k
+ Ruby
+MIT license
+Updated 3 days ago
+MrRio/jsPDF
+Client-side JavaScript PDF generation for everyone.
+
+hacktoberfest
+ 21.8k
+ JavaScript
+MIT license
+Updated 3 days ago
+4 issues need help
+zhangdaiscott/jeecg-boot
+「企业级低代码平台」前后端分离架构SpringBoot 2.x，SpringCloud，Ant Design&Vue，Mybatis-plus，Shiro，JWT。强大的代码生成器让前后端代码一键生成，无需写任何代码! 引领新的开发模…
+
+vue mybatis admin spring spring-boot spring-cloud codegenerator antd springboot shiro activiti ant-design mybatis-plus springcloud low-code jbpm flowable jeecg ant-design-vue jeecgboot
+ 21.8k
+ Java
+Apache-2.0 license
+Updated 3 days ago
+denysdovhan/wtfjs
+🤪 A list of funny and tricky JavaScript examples
+
+javascript learning js book notes handbook specification wtf
+ 21.8k
+ JavaScript
+WTFPL license
+Updated 4 days ago
+
+pypa/pipenv
+Python Development Workflow for Humans.
+
+virtualenv python packaging pip pipfile
+ 21.8k
+ Python
+MIT license
+Updated 2 days ago
+23 issues need help
+CymChad/BaseRecyclerViewAdapterHelper
+BRVAH:Powerful and flexible RecyclerAdapter
+
+recyclerview-adapter android recyclerview android-library recyclerview-item-animation
+ 21.8k
+ Java
+MIT license
+Updated 4 days ago
+1 issue needs help
+fengdu78/Coursera-ML-AndrewNg-Notes
+吴恩达老师的机器学习课程个人笔记
+
+machine-learning coursera
+ 21.7k
+ HTML
+Updated 27 days ago
+google/googletest
+Googletest - Google Testing and Mocking Framework
+
+ 21.7k
+ C++
+BSD-3-Clause license
+Updated 7 hours ago
+5 issues need help
+pure-css/pure
+A set of small, responsive CSS modules that you can use in every web project.
+
+css html pure
+ 21.6k
+ JavaScript
+Updated 8 days ago
+heartcombo/devise
+Flexible authentication solution for Rails with Warden.
+
+devise rails ruby authentication
+ 21.6k
+ Ruby
+MIT license
+Updated 17 days ago
+t4t5/sweetalert
+A beautiful replacement for JavaScript's "alert"
+
+javascript alert ui modal sweetalert dialog popup
+ 21.6k
+ TypeScript
+MIT license
+Updated on Jan 13
+6 issues need help
+Polymer/polymer
+Our original Web Component library.
+
+polymer web-components
+ 21.6k
+ HTML
+Updated on Mar 10
+streamich/react-use
+React Hooks — 👍
+
+ 21.5k
+ TypeScript
+Unlicense license
+Updated 14 hours ago
+18 issues need help
+bvaughn/react-virtualized
+React components for efficiently rendering large lists and tabular data
+
+react tabular-data virtualization list performance grid listview react-components windowing
+ 21.5k
+ JavaScript
+MIT license
+Updated 6 days ago
+10 issues need help
+
+xkcoding/spring-boot-demo
+该项目已成功集成 actuator(监控)、admin(可视化监控)、logback(日志)、aopLog(通过AOP记录web请求日志)、统一异常处理(json级别和页面级别)、freemarker(模板引擎)、thymeleaf(…
+
+spring-boot demo java web spring spring-boot-demo spring-boot-2 in-action xkcoding
+ 21.5k
+ Java
+MIT license
+Updated 9 days ago
+fouber/blog
+没事写写文章，喜欢的话请点star，想订阅点watch，千万别fork！
+
+ 21.5k
+Updated on Nov 12, 2019
+redux-saga/redux-saga
+An alternative side effect model for Redux apps
+
+redux-saga middleware redux sagas effects
+ 21.5k
+ JavaScript
+Updated 19 days ago
+5 issues need help
+powerline/fonts
+Patched fonts for Powerline users.
+
+ 21.5k
+ Shell
+Updated on Jan 18
+Netflix/Hystrix
+Hystrix is a latency and fault tolerance library designed to isolate points of access to remote systems, services and…
+
+ 21.4k
+ Java
+Apache-2.0 license
+Updated on Mar 3
+sindresorhus/awesome-electron
+Useful resources for creating apps with Electron
+
+electron list awesome awesome-list
+ 21.4k
+CC0-1.0 license
+Updated 14 days ago
+hasura/graphql-engine
+Blazing fast, instant realtime GraphQL APIs on your DB with fine grained access control, also trigger webhooks on dat…
+
+hasura postgres graphql graphql-server access-control hacktoberfest automatic-api
+ 21.4k
+ Haskell
+Updated 3 hours ago
+36 issues need help
+angular/components
+Component infrastructure and Material Design components for Angular
+
+angular material material-design angular-components
+ 21.4k
+ TypeScript
+MIT license
+Updated 23 hours ago
+98 issues need help
+littlecodersh/ItChat
+A complete and graceful API for Wechat. 微信个人号接口、微信机器人及命令行微信，三十行即可自定义个人号机器人。
+
+api robot wechat itchat
+ 21.4k
+ Python
+Updated 19 days ago
+8 issues need help
+syl20bnr/spacemacs
+A community-driven Emacs distribution - The best editor is neither Emacs nor Vim, it's Emacs *and* Vim!
+
+emacs vim configuration spacemacs community-driven
+ 21.3k
+ Emacs Lisp
+GPL-3.0 license
+Updated 5 hours ago
+34 issues need help
+
+airbnb/lottie-ios
+An iOS library to natively render After Effects vector animations
+
+bodymovin ios animation transition-animation ios-animation ios-transition custom-transitions keyframes
+ 21.3k
+ Swift
+Apache-2.0 license
+Updated 5 days ago
+facebook/flow
+Adds static typing to JavaScript to improve developer productivity and code quality.
+
+ 21.3k
+ OCaml
+MIT license
+Updated yesterday
+16 issues need help
+influxdata/influxdb
+Scalable datastore for metrics, events, and real-time analytics
+
+influxdb react go database monitoring time-series metrics
+ 21.3k
+ Go
+MIT license
+Updated 3 days ago
+4 issues need help
+dokku/dokku
+A docker-powered PaaS that helps you build and manage the lifecycle of applications
+
+dokku heroku docker kubernetes devops containers paas buildpack nomad
+ 21.3k
+ Shell
+MIT license
+Updated 2 days ago
+Tencent/wepy
+小程序组件化开发框架
+
+weapp wepy
+ 21.2k
+ JavaScript
+Updated 18 days ago
+9 issues need help
+kahun/awesome-sysadmin
+A curated list of amazingly awesome open source sysadmin resources inspired by Awesome PHP.
+
+ 21.2k
+Updated on Jan 20
+alebcay/awesome-shell
+A curated list of awesome command-line frameworks, toolkits, guides and gizmos. Inspired by awesome-php.
+
+zsh fish shell bash cli list awesome awesome-list
+ 21.2k
+CC0-1.0 license
+Updated 3 days ago
+spf13/cobra
+A Commander for modern Go CLI interactions
+
+cobra cobra-library cobra-generator posix-compliant-flags command-cobra subcommands posix go cli golang commandline command command-line cli-app golang-library golang-application
+ 21.2k
+ Go
+Apache-2.0 license
+Updated 3 days ago
+2 issues need help
+ovity/octotree
+GitHub on steroids
+
+opera edge firefox chrome github safari code-review browser-extension code-files pull-request-review
+ 21.2k
+ JavaScript
+AGPL-3.0 license
+Updated 20 days ago
+apache/airflow
+Apache Airflow - A platform to programmatically author, schedule, and monitor workflows
+
+airflow python workflow scheduler apache apache-airflow
+ 21.2k
+ Python
+Apache-2.0 license
+Updated 34 minutes ago
+111 issues need help
+
+poteto/hiring-without-whiteboards
+⭐️ Companies that don't have a broken hiring process
+
+tech jobs interview whiteboard hiring airtable hiring-without-whiteboards
+ 21.1k
+ JavaScript
+MIT license
+Updated 3 days ago
+odoo/odoo
+Odoo. Open Source Apps To Grow Your Business.
+
+odoo odoo-apps python business erp apps management
+ 21.1k
+ JavaScript
+Updated 10 minutes ago
+mbeaudru/modern-js-cheatsheet
+Cheatsheet for the JavaScript knowledge you will frequently encounter in modern projects.
+
+javascript es6
+ 21.1k
+MIT license
+Updated on May 7, 2020
+microsoft/Web-Dev-For-Beginners
+24 Lessons, 12 Weeks, Get Started as a Web Developer
+
+ 21.1k
+ JavaScript
+MIT license
+Updated 6 days ago
+lenve/vhr
+微人事是一个前后端分离的人力资源管理系统，项目采用SpringBoot+Vue开发。
+
+ 21k
+ Java
+Updated 20 days ago
+pcottle/learnGitBranching
+An interactive git visualization and tutorial. Aspiring students of git can use this app to educate and challenge the…
+
+ 21k
+ JavaScript
+MIT license
+Updated 6 hours ago
+donnemartin/data-science-ipython-notebooks
+Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spar…
+
+python aws data-science machine-learning caffe theano big-data spark deep-learning hadoop tensorflow numpy scikit-learn keras pandas kaggle scipy matplotlib mapreduce
+ 21k
+ Python
+Updated on Feb 18
+6 issues need help
+nagadomi/waifu2x
+Image Super-Resolution for Anime-Style Art
+
+waifu2x torch super-resolution
+ 21k
+ Lua
+MIT license
+Updated on Jan 28
+tmux/tmux
+tmux source code
+
+ 21k
+ C
+Updated yesterday
+dimsemenov/PhotoSwipe
+JavaScript image gallery for mobile and desktop, modular, framework independent
+
+ 20.9k
+ JavaScript
+MIT license
+Updated on Mar 18
+
+
+QSCTech/zju-icicles
+浙江大学课程攻略共享计划
+
+ 20.9k
+ C
+Updated 4 hours ago
+bannedbook/fanqiang
+翻墙-科学上网
+
+ssr proxy shadowsocks trojan v2ray psiphon brook fanqiang lightsocks goflyway daze
+ 20.9k
+ Kotlin
+Updated 8 hours ago
+github/hub
+A command-line tool that makes git easier to use with GitHub.
+
+git go homebrew github-api pull-request
+ 20.9k
+ Go
+MIT license
+Updated 3 days ago
+dmlc/xgboost
+Scalable, Portable and Distributed Gradient Boosting (GBDT, GBRT or GBM) Library, for Python, R, Java, Scala, C++ and…
+
+xgboost gbdt gbm distributed-systems machine-learning gbrt
+ 20.9k
+ C++
+Apache-2.0 license
+Updated 4 hours ago
+7 issues need help
+reduxjs/react-redux
+Official React bindings for Redux
+
+redux react
+ 20.8k
+ JavaScript
+MIT license
+Updated 3 days ago
+mdbootstrap/mdb-ui-kit
+Bootstrap 5 & Material Design 2.0 UI KIT
+
+material javascript css html bootstrap framework material-design uikit bootstrap4 bootstrap-material material-design-for-bootstrap bootstrap5
+ 20.8k
+ JavaScript
+Updated 1 hour ago
+encode/django-rest-framework
+Web APIs for Django. 🎸
+
+django python api rest
+ 20.7k
+ Python
+Updated 3 days ago
+fastai/fastai
+The fastai deep learning library
+
+fastai deep-learning notebooks pytorch colab gpu python machine-learning
+ 20.7k
+ Jupyter Notebook
+Apache-2.0 license
+Updated 2 days ago
+guzzle/guzzle
+Guzzle, an extensible PHP HTTP client
+
+guzzle php curl http-client psr-7 requests httpclient webservices
+ 20.7k
+ PHP
+MIT license
+Updated 22 days ago
+cfenollosa/os-tutorial
+How to create an OS from scratch
+
+ 20.7k
+ C
+BSD-3-Clause license
+Updated 17 days ago
+
+
+kubernetes/minikube
+Run Kubernetes locally
+
+minikube kubernetes go containers cluster cncf
+ 20.7k
+ Go
+Apache-2.0 license
+Updated 3 hours ago
+119 issues need help
+YMFE/yapi
+YApi 是一个可本地部署的、打通前后端及QA的、可视化的接口管理平台
+
+api api-management api-manager api-test
+ 20.7k
+ JavaScript
+Apache-2.0 license
+Updated 3 days ago
+2 issues need help
+CMU-Perceptual-Computing-Lab/openpose
+OpenPose: Real-time multi-person keypoint detection library for body, face, hands, and foot estimation
+
+openpose multi-person keypoints face opencv machine-learning real-time caffe computer-vision deep-learning cpp human-pose-estimation pose-estimation human-behavior-understanding cvpr-2017 pose human-pose keypoint-detection hand-estimation foot-estimation
+ 20.7k
+ C++
+Updated 7 hours ago
+3 issues need help
+kriasoft/react-starter-kit
+React Starter Kit — isomorphic web app boilerplate (Node.js, Express, GraphQL, React.js, Babel, PostCSS, Webpack, Bro…
+
+react boilerplate graphql redux babel browsersync flux nodejs javascript i18n webpack ssr reactjs
+ 20.7k
+ JavaScript
+MIT license
+Updated 3 days ago
+43 issues need help
+matteocrippa/awesome-swift
+A collaborative list of awesome Swift libraries and resources. Feel free to contribute!
+
+swift swift-language linux swift-library lists ios list awesome swift-extensions swift-framework awesome-list awesome-lists awesome-swift
+ 20.6k
+ Swift
+CC0-1.0 license
+Updated 23 hours ago
+SeleniumHQ/selenium
+A browser automation framework and ecosystem.
+
+selenium javascript ruby python java webdriver dotnet
+ 20.6k
+ Java
+Apache-2.0 license
+Updated 3 days ago
+ramda/ramda
+🐏 Practical functional Javascript
+
+ramda javascript
+ 20.6k
+ JavaScript
+MIT license
+Updated 16 days ago
+OAI/OpenAPI-Specification
+The OpenAPI Specification Repository
+
+openapi-specification rest openapi apis oas webapi
+ 20.6k
+ JavaScript
+Apache-2.0 license
+Updated 4 hours ago
+googlehosts/hosts
+镜像：https://scaffrey.coding.net/p/hosts/git / https://git.qvq.network/googlehosts/hosts
+
+hosts
+ 20.5k
+Updated 7 days ago
+hashicorp/vault
+A tool for secrets management, encryption as a service, and privileged access management
+
+vault secrets go
+ 20.5k
+ Go
+MPL-2.0 license
+Updated 5 hours ago
+
+emscripten-core/emscripten
+Emscripten: An LLVM-to-WebAssembly Compiler
+
+ 20.5k
+ C++
+Updated 2 days ago
+130 issues need help
+bevacqua/dragula
+👌 Drag and drop so simple it hurts
+
+javascript front-end component vanilla drag-and-drop drag-drop dragging
+ 20.5k
+ JavaScript
+MIT license
+Updated on Mar 11
+trailofbits/algo
+Set up a personal VPN in the cloud
+
+wireguard vpn security ansible encryption ipsec vpn-server vpn-client ikev2 strongswan ssh-tunnel
+ 20.5k
+ Python
+AGPL-3.0 license
+Updated 12 days ago
+3 issues need help
+SwiftyJSON/SwiftyJSON
+The better way to deal with JSON data in Swift.
+
+json swift carthage cocoapods request json-parser response swiftyjson json-parsing-swift json-parsing-library xcode10 swift4-2
+ 20.5k
+ Swift
+MIT license
+Updated 17 days ago
+3 issues need help
+byoungd/English-level-up-tips-for-Chinese
+可能是让你受益匪浅的英语进阶指南
+
+ 20.5k
+Updated on Aug 10, 2020
+pjreddie/darknet
+Convolutional Neural Networks
+
+ 20.5k
+ C
+Updated 9 hours ago
+react-native-elements/react-native-elements
+Cross-Platform React Native UI Toolkit
+
+react android ios ui react-native mobile-app ui-components hacktoberfest
+ 20.5k
+ TypeScript
+MIT license
+Updated 3 hours ago
+mochajs/mocha
+☕️ simple, flexible, fun javascript test framework for node.js & the browser
+
+nodejs javascript testing node browser mocha tdd test bdd test-framework testing-tools mochajs
+ 20.4k
+ JavaScript
+MIT license
+Updated 7 days ago
+87 issues need help
+MostlyAdequate/mostly-adequate-guide
+Mostly adequate guide to FP (in javascript)
+
+javascript tutorial functional-programming reactive-programming
+ 20.4k
+ JavaScript
+Updated 24 days ago
+kataras/iris
+The fastest HTTP/2 Go Web Framework. AWS Lambda, gRPC, MVC, Unique Router, Websockets, Sessions, Test suite, Dependen…
+
+iris mvc go golang middleware laravel performance framework router server expressjs web-framework
+
+markerikson/react-redux-links
+Curated tutorial and resource links I've collected on React, Redux, ES6, and more
+
+redux react webpack javascript es6
+ 20.4k
+Updated on Dec 7, 2020
+signalapp/Signal-Android
+A private messenger for Android.
+
+ 20.4k
+ Java
+GPL-3.0 license
+Updated 19 hours ago
+13 issues need help
+ianstormtaylor/slate
+A completely customizable framework for building rich text editors. (Currently in beta.)
+
+slate react javascript editor framework browser text-editor rich-text
+ 20.4k
+ TypeScript
+MIT license
+Updated yesterday
+google/iosched
+The Google I/O 2019 Android App
+
+ 20.4k
+ Kotlin
+Updated on Feb 15
+cockroachdb/cockroach
+CockroachDB - the open source, cloud-native distributed SQL database.
+
+cockroachdb sql go database distributed-database hacktoberfest
+ 20.4k
+ Go
+Updated 29 minutes ago
+8 issues need help
+psf/black
+The uncompromising Python code formatter
+
+python formatter code yapf gofmt autopep8 codeformatter pyfmt
+ 20.3k
+ Python
+MIT license
+Updated 13 hours ago
+11 issues need help
+curl/curl
+A command line tool and library for transferring data with URL syntax, supporting DICT, FILE, FTP, FTPS, GOPHER, GOPH…
+
+curl libcurl ldap c http mqtt client library user-agent https ftp sftp scp transfer-data
+ 20.3k
+ C
+Updated 1 hour ago
+balena-io/etcher
+Flash OS images to SD cards & USB drives, safely and easily.
+
+etcher usb-drives sd-cards cross-platform
+ 20.3k
+ TypeScript
+Apache-2.0 license
+Updated 14 hours ago
+yunjey/pytorch-tutorial
+PyTorch Tutorial for Deep Learning Researchers
+
+pytorch-tutorial deep-learning pytorch neural-networks
+ 20.3k
+ Python
+MIT license
+Updated 13 days ago
+Meituan-Dianping/mpvue
+基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。
+
+mpvue mini vue weapp wxmp
+ 20.3k
+ JavaScript
+MIT license
+Updated 20 days ago
+9 issues need help
+
+
+vapor/vapor
+💧 A server-side Swift web framework.
+
+vapor swift framework server web-framework server-side-swift
+ 20.2k
+ Swift
+MIT license
+Updated 7 days ago
+lukasz-madon/awesome-remote-job
+A curated list of awesome remote jobs and resources. Inspired by https://github.com/vinta/awesome-python
+
+list awesome awesome-list
+ 20.2k
+Updated 2 days ago
+2 issues need help
+mattermost/mattermost-server
+Open source Slack-alternative in Golang and React - Mattermost
+
+mattermost golang react go react-native collaboration hacktoberfest
+ 20.2k
+ Go
+Updated 1 hour ago
+427 issues need help
+tj/commander.js
+node.js command-line interfaces made easy
+
+ 20.2k
+ JavaScript
+MIT license
+Updated yesterday
+1 issue needs help
+explosion/spaCy
+💫 Industrial-strength Natural Language Processing (NLP) in Python
+
+spacy python natural-language-processing nlp data-science machine-learning ai deep-learning neural-network text-classification cython artificial-intelligence named-entity-recognition neural-networks nlp-library tokenization entity-linking
+ 20.2k
+ Python
+MIT license
+Updated 40 minutes ago
+17 issues need help
+hollischuang/toBeTopJavaer
+To Be Top Javaer - Java工程师成神之路
+
+java mysql spring jvm design-patterns programmer
+ 20.2k
+ Java
+Updated 28 days ago
+inconshreveable/ngrok
+Introspected tunnels to localhost
+
+ 20.2k
+ Go
+Updated on Mar 5
+qiurunze123/miaosha
+⭐⭐⭐⭐秒杀系统设计与实现.互联网工程师进阶与分析🙋🐓
+
+ 20.2k
+ Java
+Updated 7 days ago
+facebook/draft-js
+A React framework for building text editors.
+
+ 20.1k
+ JavaScript
+Updated 3 days ago
+37 issues need help
+usablica/intro.js
+A better way for new feature introduction and step-by-step users guide for your website and project.
+
+javascript html ux guide tour introjs
+ 20.1k
+ HTML
+Updated 7 days ago
+
+react-hook-form/react-hook-form
+📋 React Hooks for forms validation (Web + React Native)
+
+react-hooks react hooks typescript react-native validation forms form form-validation form-builder custom-hooks
+ 20.1k
+ TypeScript
+MIT license
+Updated 16 minutes ago
+1 issue needs help
+pugjs/pug
+Pug – robust, elegant, feature rich template engine for Node.js
+
+ 20.1k
+ JavaScript
+Updated on Mar 4
+6 issues need help
+SwiftGGTeam/the-swift-programming-language-in-chinese
+中文版 Apple 官方 Swift 教程《The Swift Programming Language》
+
+hacktoberfest
+ 20.1k
+ CSS
+Updated on Feb 3
+ColorlibHQ/gentelella
+Free Bootstrap 4 Admin Dashboard Template
+
+bootstrap colorlib html dashboard html-template admin-dashboard
+ 20.1k
+ HTML
+MIT license
+Updated on Oct 27, 2020
+dbeaver/dbeaver
+Free universal database tool and SQL client
+
+dbeaver database java mysql gui sql sqlite postgresql oracle erd db2
+ 20.1k
+ Java
+Apache-2.0 license
+Updated 2 hours ago
+22 issues need help
+pedronauck/docz
+✍ It has never been so easy to document your things!
+
+docz react mdx theme documentation docs ui js gatsby zero-configuration design-system
+ 20.1k
+ TypeScript
+MIT license
+Updated 15 days ago
+pmndrs/react-spring
+✌️ A spring physics based React animation library
+
+ 20.1k
+ TypeScript
+MIT license
+Updated 13 hours ago
+9 issues need help
+paularmstrong/normalizr
+Normalizes nested JSON according to a schema
+
+normalizr redux json javascript api flux reactjs normalize
+ 20.1k
+ JavaScript
+MIT license
+Updated 20 days ago
+rollup/rollup
+Next-generation ES module bundler
+
+ 20k
+ JavaScript
+Updated 4 hours ago
+ReactiveX/RxSwift
+Reactive Programming in Swift
+
+rxswift reactivex swift ios reactive unidirectional observer functional
+ 20k
+ Swift
+Updated 5 days ago
+1 issue needs help
+
+NativeScript/NativeScript
+NativeScript empowers you to access native api's from JavaScript directly. Angular, Capacitor, Ionic, React, Svelte, …
+
+nativescript android angular react javascript ios typescript ionic vue cross-platform svelte capacitor
+ 20k
+ TypeScript
+Apache-2.0 license
+Updated 17 hours ago
+72 issues need help
+Wox-launcher/Wox
+Launcher for Windows, an alternative to Alfred and Launchy.
+
+wox launchy alfred launcher windows spotlight
+ 20k
+ C#
+MIT license
+Updated 18 days ago
+5 issues need help
+HeroTransitions/Hero
+Elegant transition library for iOS & tvOS
+
+hero animations carthage custom-transitions swift xcode ios material-design animation transition-animation ios-animation ios-transition ios-swift ios-lib swiftpm ios-framework
+ 20k
+ Swift
+MIT license
+Updated 8 days ago
+1 issue needs help
+go-kit/kit
+A standard library for microservices.
+
+microservices go golang metallica
+ 20k
+ Go
+MIT license
+Updated 7 days ago
+35 issues need help
+ReactiveCocoa/ReactiveCocoa
+Cocoa framework and Obj-C dynamism bindings for ReactiveSwift.
+
+reactivecocoa reactiveswift swift
+ 20k
+ Swift
+Updated on Mar 16
+3 issues need help
+tornadoweb/tornado
+Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.
+
+python asynchronous
+ 19.9k
+ Python
+Apache-2.0 license
+Updated 7 days ago
+feathericons/feather
+Simply beautiful open source icons
+
+javascript svg icons
+ 19.9k
+ JavaScript
+MIT license
+Updated 12 days ago
+1 issue needs help
+android/architecture-components-samples
+Samples for Android Architecture Components.
+
+ 19.9k
+ Kotlin
+Apache-2.0 license
+Updated 4 days ago
+sqlmapproject/sqlmap
+Automatic SQL injection and database takeover tool
+
+sqlmap database python detection sql-injection pentesting exploitation takeover vulnerability-scanner
+ 19.9k
+ Python
+Updated 6 days ago
+immerjs/immer
+Create the next immutable state by mutating the current one
+
+redux immutable reducer immutables state-tree
+ 19.9k
+ JavaScript
+MIT license
+Updated 8 days ago
+
+swagger-api/swagger-ui
+Swagger UI is a collection of HTML, JavaScript, and CSS assets that dynamically generate beautiful documentation from…
+
+swagger-ui openapi openapi-specification rest rest-api swagger oas hacktoberfest swagger-api openapi3 swagger-js
+ 19.9k
+ JavaScript
+Apache-2.0 license
+Updated 9 minutes ago
+4 issues need help
+vuejs/vue-devtools
+⚙️ Browser devtools extension for debugging Vue.js applications.
+
+ 19.9k
+ JavaScript
+MIT license
+Updated 13 days ago
+wsargent/docker-cheat-sheet
+Docker Cheat Sheet
+
+docker cheet-sheet
+ 19.9k
+CC-BY-4.0 license
+Updated 8 days ago
+facebookarchive/pop Archived
+An extensible iOS and OS X animation library, useful for physics-based interactions.
+
+ 19.8k
+ Objective-C++
+Updated on Jan 3, 2020
+matterport/Mask_RCNN
+Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow
+
+tensorflow keras object-detection instance-segmentation mask-rcnn
+ 19.8k
+ Python
+Updated 22 hours ago
+julycoding/The-Art-Of-Programming-By-July
+本项目曾冲到全球第一，干货集锦见本页面最底部，另完整精致的纸质版《编程之法：面试和算法心得》已在京东/当当上销售
+
+ 19.8k
+ C
+Updated on Dec 27, 2019
+eriklindernoren/ML-From-Scratch
+Machine Learning From Scratch. Bare bones NumPy implementations of machine learning models and algorithms with a focu…
+
+machine-learning deep-learning genetic-algorithm data-science data-mining deep-reinforcement-learning machine-learning-from-scratch
+ 19.7k
+ Python
+MIT license
+Updated 27 days ago
+BradLarson/GPUImage
+An open source iOS framework for GPU-based image and video processing
+
+ 19.7k
+ Objective-C
+BSD-3-Clause license
+Updated on Nov 28, 2020
+Reactive-Extensions/RxJS Archived
+The Reactive Extensions for JavaScript
+
+ 19.7k
+ JavaScript
+Updated on Apr 19, 2018
+nefe/You-Dont-Need-jQuery
+Examples of how to do query, style, dom, ajax, event etc like jQuery with plain javascript.
+
+ 19.7k
+ JavaScript
+MIT license
+Updated 4 days ago
+1 issue needs help
+
+mongodb/mongo
+The MongoDB Database
+
+c-plus-plus database mongodb nosql
+ 19.6k
+ C++
+Updated 5 hours ago
+futurice/android-best-practices
+Do's and Don'ts for Android development, by Futurice developers
+
+android best-practices android-development
+ 19.6k
+Updated on Feb 2
+jamiebuilds/the-super-tiny-compiler
+⛄ Possibly the smallest compiler ever
+
+ 19.6k
+ JavaScript
+CC-BY-4.0 license
+Updated on Feb 27
+labstack/echo
+High performance, minimalist Go web framework
+
+echo middleware go letsencrypt ssl web microservice https websocket micro-framework http2 web-framework labstack-echo
+ 19.6k
+ Go
+MIT license
+Updated 2 days ago
+3 issues need help
+openfaas/faas
+OpenFaaS - Serverless Functions Made Simple
+
+serverless-functions kubernetes gitops nodejs docker golang lambda serverless functions prometheus paas faas k8s functions-as-a-service
+ 19.6k
+ Go
+MIT license
+Updated 7 days ago
+5 issues need help
+veggiemonk/awesome-docker
+🐳 A curated list of Docker resources and projects
+
+docker-image docker-container docker-registry docker-swarm docker-api docker-deployment docker-monitoring docker-security docker dockerfile list awesome tools container docker-machine docker-environment awesome-list moby
+ 19.6k
+Apache-2.0 license
+Updated 10 days ago
+excalidraw/excalidraw
+Virtual whiteboard for sketching hand-drawn like diagrams
+
+diagrams productivity drawing collaboration whiteboard hacktoberfest
+ 19.6k
+ TypeScript
+MIT license
+Updated 12 hours ago
+4 issues need help
+FallibleInc/security-guide-for-developers
+Security Guide for Developers (实用性开发人员安全须知)
+
+api security books security-checklist security-book
+ 19.6k
+Updated on Dec 2, 2020
+petkaantonov/bluebird
+🐦 ⚡ Bluebird is a full featured promise library with unmatched performance.
+
+ 19.6k
+ JavaScript
+MIT license
+Updated on Mar 12
+react-navigation/react-navigation
+Routing and navigation for your React Native apps
+
+navigation react react-native react-navigation hacktoberfest
+ 19.6k
+ TypeScript
+Updated 12 hours ago
+3 issues need help
+
+chenglou/react-motion
+A spring that solves your animation problems.
+
+ 19.6k
+ JavaScript
+MIT license
+Updated 20 days ago
+2 issues need help
+sampotts/plyr
+A simple HTML5, YouTube and Vimeo player
+
+plyr youtube javascript vimeo html5-video
+ 19.6k
+ JavaScript
+MIT license
+Updated yesterday
+24 issues need help
+2dust/v2rayN
+ 19.6k
+ C#
+GPL-3.0 license
+Updated 2 days ago
+1 issue needs help
+jlmakes/scrollreveal
+Animate elements as they scroll into view.
+
+scrollreveal unpkg animation javascript css scroll transition reveal transform
+ 19.6k
+ JavaScript
+Updated on Mar 20
+facebook/rocksdb
+A library that provides an embeddable, persistent key-value store for fast storage.
+
+database storage-engine
+ 19.6k
+ C++
+Updated 10 hours ago
+rust-unofficial/awesome-rust
+A curated list of Rust code and resources.
+
+rust awesome
+ 19.6k
+ Rust
+CC0-1.0 license
+Updated 6 days ago
+Binaryify/NeteaseCloudMusicApi
+网易云音乐 Node.js API service
+
+nodejs javascript api apis neteasecloud cloudmusic
+ 19.6k
+ JavaScript
+MIT license
+Updated 2 hours ago
+DesignPatternsPHP/DesignPatternsPHP
+sample code for several design patterns in PHP 8
+
+designpatternsphp php design-pattern oop phpunit design-patterns code-examples modern-php php8
+ 19.5k
+ PHP
+MIT license
+Updated 4 days ago
+mbadolato/iTerm2-Color-Schemes
+Over 230 terminal color schemes/themes for iTerm/iTerm2. Includes ports to Terminal, Konsole, PuTTY, Xresources, XRDB…
+
+color-scheme terminal-schemes theme iterm2 freebsd-vt iterm terminal xresources themes terminal-themes terminator xrdb konsole putty osx-terminal-themes schemes putty-color-schemes konsole-color-schemes windows-terminal lxterminal
+ 19.5k
+ Shell
+Updated 2 days ago
+nsqio/nsq
+A realtime distributed messaging platform
+
+nsq go distributed-systems queue messaging message-queue
+ 19.5k
+ Go
+MIT license
+Updated 12 days ago
+13 issues need help
+
+
+railsware/upterm Archived
+A terminal emulator for the 21st century.
+
+electron react shell console typescript terminal tty pty terminal-emulators terminals
+ 19.5k
+ TypeScript
+MIT license
+Updated on May 21, 2019
+alibaba/easyexcel
+快速、简单避免OOM的java处理Excel工具
+
+java excel xlsx xls poi oom jxl
+ 19.5k
+ Java
+Apache-2.0 license
+Updated 5 hours ago
+28 issues need help
+enzymejs/enzyme
+JavaScript Testing utilities for React
+
+enzyme react react-components mocha chai testing jest test test-runner traversal assertions ava assertion-library test-runners
+ 19.5k
+ JavaScript
+MIT license
+Updated 13 days ago
+44 issues need help
+bilibili/flv.js
+HTML5 FLV Player
+
+ 19.5k
+ JavaScript
+Apache-2.0 license
+Updated 22 hours ago
+servo/servo
+The Servo Browser Engine
+
+servo rust browser
+ 19.5k
+MPL-2.0 license
+Updated 4 hours ago
+lovell/sharp
+High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses t…
+
+avif libvips webp typical nodejs javascript svg performance image resize png jpeg tiff overlay image-processing crop exif icc sharp
+ 19.5k
+ JavaScript
+Apache-2.0 license
+Updated 2 days ago
+12 issues need help
+jesseduffield/lazygit
+simple terminal UI for git commands
+
+git cli terminal
+ 19.4k
+ Go
+MIT license
+Updated 38 minutes ago
+6 issues need help
+google/gson
+A Java serialization/deserialization library to convert Java Objects into JSON and back
+
+ 19.4k
+ Java
+Apache-2.0 license
+Updated 8 days ago
+postcss/autoprefixer
+Parse CSS and add vendor prefixes to rules by Can I Use
+
+postcss-plugins css prefixer
+ 19.4k
+ JavaScript
+MIT license
+Updated on Mar 12
+apache/incubator-mxnet
+Lightweight, Portable, Flexible Distributed/Mobile Deep Learning with Dynamic, Mutation-aware Dataflow Dep Scheduler;…
+
+mxnet
+ 19.4k
+ C++
+Apache-2.0 license
+Updated 5 hours ago
+11 issues need help
+
+
+komeiji-satori/Dress
+好耶 是女装
+
+ 19.4k
+ Standard ML
+Updated 8 days ago
+3 issues need help
+ReactiveX/RxAndroid
+RxJava bindings for Android
+
+ 19.4k
+ Java
+Apache-2.0 license
+Updated on Feb 5
+SamyPesse/How-to-Make-a-Computer-Operating-System
+How to Make a Computer Operating System in C++
+
+ 19.4k
+ C
+Apache-2.0 license
+Updated on Oct 12, 2020
+helm/helm
+The Kubernetes Package Manager
+
+helm kubernetes chart charts cncf
+ 19.4k
+ Go
+Apache-2.0 license
+Updated 17 hours ago
+4 issues need help
+tipsy/profile-summary-for-github
+Tool for visualizing GitHub profiles
+
+kotlin github-api webapp javalin
+ 19.3k
+ Vue
+Apache-2.0 license
+Updated on Mar 21
+tannerlinsley/react-query
+⚛️ Hooks for fetching, caching and updating asynchronous data in React
+
+react hooks fetch graphql data query rest async cache update stale stale-while-revalidate
+ 19.3k
+ TypeScript
+MIT license
+Updated 3 hours ago
+1 issue needs help
+react-bootstrap/react-bootstrap
+Bootstrap components built with React
+
+bootstrap react
+ 19.3k
+ JavaScript
+MIT license
+Updated 5 hours ago
+8 issues need help
+seata/seata
+🔥 Seata is an easy-to-use, high-performance, open source distributed transaction solution.
+
+seata branch-transactions transaction-manager data-consistency microservice xa tcc saga tcc-transaction gts distributed-transaction dtx fescar
+ 19.2k
+ Java
+Apache-2.0 license
+Updated yesterday
+3 issues need help
+ipfs/ipfs
+Peer-to-peer hypermedia protocol
+
+ipfs-protocol js-ipfs paper protocol ipfs p2p multiformats ipld ipfs-web
+ 19.2k
+MIT license
+Updated on Dec 3, 2020
+JohnCoates/Aerial
+Apple TV Aerial Screensaver for Mac
+
+ 19.2k
+ Swift
+MIT license
+Updated on Mar 12
+1 issue needs help
+
+
+stedolan/jq
+Command-line JSON processor
+
+ 19.2k
+ C
+Updated 18 days ago
+wuyouzhuguli/SpringAll
+循序渐进，学习Spring Boot、Spring Boot & Shiro、Spring Batch、Spring Cloud、Spring Cloud Alibaba、Spring Security & Spring Securi…
+
+spring-boot spring-cloud spring-security learning springboot shiro spring-boot-learning
+ 19.2k
+ Java
+MIT license
+Updated on Jan 31
+ruanyf/es6tutorial
+《ECMAScript 6入门》是一本开源的 JavaScript 语言教程，全面介绍 ECMAScript 6 新增的语法特性。
+
+ 19.2k
+ JavaScript
+Updated 21 hours ago
+keon/algorithms
+Minimal examples of data structures and algorithms in Python
+
+algorithms sort python search tree algorithm data-structure graph competitive-programming
+ 19k
+ Python
+MIT license
+Updated 15 days ago
+4 issues need help
+google/python-fire
+Python Fire is a library for automatically generating command line interfaces (CLIs) from absolutely any Python object.
+
+python cli
+ 19k
+ Python
+Updated 7 days ago
+5 issues need help
+avajs/ava
+Node.js test runner that lets you develop with confidence 🚀
+
+ava tap test-runner nodejs javascript testing cli unit-testing babel performance node tdd async unicorns concurrency async-functions test-framework assert cli-app hacktoberfest
+ 18.9k
+ JavaScript
+MIT license
+Updated 13 days ago
+52 issues need help
+kilimchoi/engineering-blogs
+A curated list of engineering blogs
+
+engineering-blogs tech lists software-development programming-blogs
+ 18.9k
+ Ruby
+Updated 3 days ago
+segmentio/nightmare
+A high-level browser automation library.
+
+electron chrome browser phantomjs headless-chrome
+ 18.9k
+ JavaScript
+Updated on Jan 29
+7 issues need help
+localForage/localForage
+💾 Offline storage, improved. Wraps IndexedDB, WebSQL, or localStorage using a simple but powerful API.
+
+localforage localstorage websql indexeddb javascript offline storage
+ 18.8k
+ JavaScript
+Apache-2.0 license
+Updated 12 days ago
+15 issues need help
+ccxt/ccxt
+A JavaScript / Python / PHP cryptocurrency trading API with support for more than 120 bitcoin/altcoin exchanges
+
+api bot library crypto bitcoin trading ethereum cryptocurrency exchange e-commerce market-data strategy btc trade eth arbitrage altcoin merchant invest
+ 18.8k
+ JavaScript
+MIT license
+Updated 9 hours ago
+1 issue needs help
+
+jaredhanson/passport
+Simple, unobtrusive authentication for Node.js.
+
+ 18.8k
+ JavaScript
+MIT license
+Updated 25 days ago
+vuejs/vuepress
+📝 Minimalistic Vue-powered static site generator
+
+vuepress static-site-generator vue seo blog-engine docs-generator
+ 18.7k
+ JavaScript
+MIT license
+Updated 3 days ago
+1 issue needs help
+afollestad/material-dialogs
+😍 A beautiful, fluid, and extensible dialogs API for Kotlin & Android.
+
+kotlin android alert material-design dialogs androidx bottomsheets
+ 18.7k
+ Kotlin
+Apache-2.0 license
+Updated on Feb 23
+1 issue needs help
+viatsko/awesome-vscode
+🎨 A curated list of delightful VS Code packages and resources.
+
+visual-studio vscode list awesome visual-studio-code vscode-extension awesome-list vscode-theme visualstudio visual-studio-code-extension visual-studio-code-theme
+ 18.7k
+ JavaScript
+CC0-1.0 license
+Updated 6 days ago
+1 issue needs help
+halo-dev/halo
+✍ An excellent open source blog publishing application. | 一个优秀的开源博客发布应用。
+
+halo blog cms blog-engine
+ 18.7k
+ Java
+GPL-3.0 license
+Updated yesterday
+1 issue needs help
+dromara/hutool
+A set of tools that keep Java sweet.
+
+hutool java http json orm tool util
+ 18.7k
+ Java
+Updated 1 hour ago
+felixrieseberg/windows95
+💩🚀 Windows 95 in Electron. Runs on macOS, Linux, and Windows.
+
+ 18.6k
+ TypeScript
+Updated on Mar 11
+1 issue needs help
+xi-editor/xi-editor
+A modern editor with a backend written in Rust.
+
+ 18.6k
+ Rust
+Apache-2.0 license
+Updated on Jan 12
+15 issues need help
+Seldaek/monolog
+Sends your logs to files, sockets, inboxes, databases and various web services
+
+ 18.6k
+ PHP
+MIT license
+Updated 14 hours ago
+necolas/react-native-web
+React Native Components and APIs for the Web
+
+react react-native react-components css-in-js gui-framework react-native-web
+ 18.6k
+ JavaScript
+MIT license
+Updated 3 days ago
+
+apache/kafka
+Mirror of Apache Kafka
+
+kafka scala
+ 18.6k
+ Java
+Apache-2.0 license
+Updated 26 minutes ago
+getredash/redash
+Make Your Company Data Driven. Connect to any data source, easily visualize, dashboard and share your data.
+
+redash dashboard visualization javascript mysql python bigquery bi spark athena analytics postgresql business-intelligence redshift databricks hacktoberfest spark-sql
+ 18.6k
+ Python
+BSD-2-Clause license
+Updated 3 hours ago
+25 issues need help
+verekia/js-stack-from-scratch
+🛠️⚡ Step-by-step tutorial to build a modern JavaScript stack.
+
+react stack tutorial yarn javascript eslint flow webpack redux heroku bootstrap react-router jest socket-io nodemon pm2 server-side-rendering jss immutablejs sinon
+ 18.6k
+ JavaScript
+MIT license
+Updated on Jul 30, 2020
+wangzheng0822/algo
+数据结构和算法必知必会的50个代码实现
+
+ 18.5k
+ Python
+Apache-2.0 license
+Updated 18 days ago
+alibaba/canal
+阿里巴巴 MySQL binlog 增量订阅&消费组件
+
+ 18.5k
+ Java
+Apache-2.0 license
+Updated 3 hours ago
+yeasy/docker_practice
+Learn and understand Docker technologies, with real DevOps practice!
+
+docker linux kubernetes devops spark book container mesos swarm cloud-computing
+ 18.5k
+ Go
+Updated 26 days ago
+1 issue needs help
+marktext/marktext
+📝A simple and elegant markdown editor, available for Linux, macOS and Windows.
+
+mark-text macos linux electron emoji editor windows markdown mac latex vue efficiency next-generation source-code element-ui dark-mode typewriter-mode focus-mode
+ 18.5k
+ JavaScript
+MIT license
+Updated 12 days ago
+elixir-lang/elixir
+Elixir is a dynamic, functional language designed for building scalable and maintainable applications
+
+ 18.5k
+ Elixir
+Apache-2.0 license
+Updated 4 hours ago
+ftlabs/fastclick
+Polyfill to remove click delays on browsers with touch UIs
+
+ 18.5k
+ HTML
+MIT license
+Updated on Feb 12
+parse-community/parse-server
+API server module for Node/Express
+
+parse-server graphql-api notifications nodejs graphql postgres relay mongodb backend rest-api graphql-server baas hacktoberfest object-storage file-storage mbaas graphql-relay parse-platform
+ 18.5k
+ JavaScript
+Updated 3 hours ago
+
+
+google/web-starter-kit
+Web Starter Kit - a workflow for multi-device websites
+
+ 18.5k
+ HTML
+Apache-2.0 license
+Updated 19 days ago
+Prinzhorn/skrollr Archived
+Stand-alone parallax scrolling library for mobile (Android + iOS) and desktop. No jQuery. Just plain JavaScript (and …
+
+ 18.5k
+ HTML
+MIT license
+Updated on Jan 24, 2018
+jorgebucaran/hyperapp
+The tiny framework for building hypertext applications.
+
+javascript framework web vdom
+ 18.5k
+ JavaScript
+MIT license
+Updated 3 hours ago
+fabricjs/fabric.js
+Javascript Canvas Library, SVG-to-Canvas (& canvas-to-SVG) Parser
+
+ 18.5k
+ JavaScript
+Updated 2 hours ago
+3 issues need help
+fastify/fastify
+Fast and low overhead web framework, for Node.js
+
+nodejs performance speed webframework
+ 18.4k
+ JavaScript
+Updated 16 hours ago
+9 issues need help
+alibaba/spring-cloud-alibaba
+Spring Cloud Alibaba provides a one-stop solution for application development for the distributed solutions of Alibab…
+
+spring-cloud-alibaba spring alibaba-middleware java microservices service-discovery spring-cloud cloud-native circuit-breaker aliyun alibaba dubbo service-registry rocketmq distributed-configuration spring-cloud-core distributed-transaction alibaba-oss nacos distributed-messaging
+ 18.4k
+ Java
+Apache-2.0 license
+Updated 4 days ago
+1 issue needs help
+eslint/eslint
+Find and fix problems in your JavaScript code.
+
+eslint ecmascript javascript static-code-analysis linter
+ 18.4k
+ JavaScript
+MIT license
+Updated 2 days ago
+3 issues need help
+onevcat/Kingfisher
+A lightweight, pure-Swift library for downloading and caching images from the web.
+
+kingfisher swift macos ios image xcode cache filters image-processor
+ 18.3k
+ Swift
+MIT license
+Updated yesterday
+sebastianruder/NLP-progress
+Repository to track the progress in Natural Language Processing (NLP), including the datasets and the current state-o…
+
+named-entity-recognition machine-translation natural-language-processing nlp-tasks machine-learning dialogue
+ 18.3k
+ Python
+MIT license
+Updated 15 hours ago
+1 issue needs help
+libgdx/libgdx
+Desktop/Android/HTML5/iOS Java game development framework
+
+libgdx android game java windows linux ios framework html5 cross-platform macosx 3d 2d
+ 18.3k
+ Java
+Updated 13 hours ago
+4 issues need help
+
+
+LeCoupa/awesome-cheatsheets
+👩‍💻👨‍💻 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everyth…
+
+cheatsheets php javascript nodejs vim bash docker language programming-language kubernetes redis vuejs django database frontend backend xcode cheatsheet feathersjs sailsjs
+ 18.3k
+ JavaScript
+MIT license
+Updated 3 days ago
+quasarframework/quasar
+Quasar Framework - Build high-performance VueJS user interfaces in record time
+
+quasar-framework electron javascript android ios vuejs pwa vue material material-design ssr vuejs2 vue-components server-side-rendering vue2 material-components browser-extension material-theme vue-component
+ 18.3k
+ JavaScript
+MIT license
+Updated 2 hours ago
+2 issues need help
+davideuler/architecture.of.internet-product
+互联网公司技术架构，微信/淘宝/微博/腾讯/阿里/美团点评/百度/Google/Facebook/Amazon/eBay的架构，欢迎PR补充
+
+architecture architecture-guidelines internet-architecutre architecture-of-internet-product
+ 18.3k
+Updated on Oct 24, 2020
+highlightjs/highlight.js
+JavaScript syntax highlighter with language auto-detection and zero dependencies.
+
+syntax-highlighter syntax-highlighting language-grammars highlighting hacktoberfest
+ 18.3k
+ JavaScript
+BSD-3-Clause license
+Updated 2 days ago
+9 issues need help
+jhipster/generator-jhipster
+JHipster is a development platform to quickly generate, develop, & deploy modern web applications & microservice arch…
+
+react java docker kubernetes angular cloud webpack generator spring-boot yeoman-generator jhipster hacktoberfest
+ 18.3k
+ JavaScript
+Apache-2.0 license
+Updated 5 minutes ago
+ApolloAuto/apollo
+An open autonomous driving platform
+
+apollo autonomous-vehicles self-driving-car autonomous-driving autonomy
+ 18.2k
+ C++
+Apache-2.0 license
+Updated 2 hours ago
+Popmotion/popmotion
+Simple animation libraries for delightful user interfaces
+
+popmotion css svg tween animation physics motion javascript-motion-engine
+ 18.2k
+ JavaScript
+Updated 20 days ago
+nicolargo/glances
+Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
+
+python multi-platform terminal web monitoring system restful restful-api
+ 18.2k
+ Python
+LGPL-3.0 license
+Updated 2 hours ago
+goldfire/howler.js
+Javascript audio library for the modern web.
+
+web-audio html5-audio playback volume audio-library howler audio javascript
+ 18.2k
+ JavaScript
+MIT license
+Updated on Jan 25
+dhg/Skeleton
+Skeleton: A Dead Simple, Responsive Boilerplate for Mobile-Friendly Development
+
+ 18.2k
+ CSS
+MIT license
+Updated on Dec 3, 2020
+
+Homebrew/homebrew-cask
+🍻 A CLI workflow for the administration of macOS applications distributed as binaries
+
+homebrew cask
+ 18.2k
+ Ruby
+BSD-2-Clause license
+Updated 2 days ago
+11 issues need help
+snowpackjs/snowpack
+ESM-powered frontend build tool. Instant, lightweight, unbundled development. ✌️
+
+ 18.1k
+ JavaScript
+MIT license
+Updated 15 hours ago
+1 issue needs help
+bcit-ci/CodeIgniter
+Open Source PHP Framework (originally from EllisLab)
+
+php
+ 18.1k
+ PHP
+MIT license
+Updated 11 days ago
+huihut/interview
+📚 C/C++ 技术面试基础知识总结，包括语言、程序库、数据结构、算法、系统、网络、链接装载库等知识及面试经验、招聘、内推等信息。This repository is a summary of the basic knowledge…
+
+stl c algorithm database leetcode cpp interview operating-system data-structures interviews interview-practice interview-questions interview-preparation
+ 18.1k
+ C++
+Updated 6 days ago
+zhaoolee/ChromeAppHeroes
+🌈谷粒-Chrome插件英雄榜, 为优秀的Chrome插件写一本中文说明书, 让Chrome插件英雄们造福人类~ ChromePluginHeroes, Write a Chinese manual for the excellen…
+
+ 18.1k
+ JavaScript
+GPL-3.0 license
+Updated 25 days ago
+uglide/RedisDesktopManager
+🔧 Cross-platform GUI management tool for Redis
+
+redis database-gui redis-gui redis-gui-client
+ 18.1k
+ C++
+Updated 6 days ago
+ruby/ruby
+The Ruby Programming Language [mirror]
+
+ruby-language ruby c language object-oriented
+ 18.1k
+ Ruby
+Updated 1 hour ago
+tqdm/tqdm
+A Fast, Extensible Progress Bar for Python and CLI
+
+python cli console gui time terminal telegram utilities jupyter progress discord progress-bar parallel keras meter progressbar pandas progressmeter rate tkinter
+ 18.1k
+ Python
+Updated yesterday
+26 issues need help
+ruanyf/jstraining
+全栈工程师培训材料
+
+ 18.1k
+Updated on Nov 12, 2019
+TeamStuQ/skill-map
+程序员技能图谱
+
+programmer stuq skillmap
+ 18.1k
+ HTML
+Updated on Aug 28, 2020
+
+rwaldron/idiomatic.js
+Principles of Writing Consistent, Idiomatic JavaScript
+
+ 18k
+Updated on Jan 1
+beurtschipper/Depix
+Recovers passwords from pixelized screenshots
+
+ 18k
+ Python
+Updated 23 days ago
+tobiasahlin/SpinKit
+A collection of loading indicators animated with CSS
+
+ 18k
+ CSS
+MIT license
+Updated on Aug 1, 2020
+firstcontributions/first-contributions
+🚀✨ Help beginners to contribute to open source projects
+
+tutorials open-source community tutorial contribution
+ 18k
+MIT license
+Updated 3 hours ago
+3 issues need help
+gfwlist/gfwlist
+The one and only one gfwlist here
+
+china anticensorship censorship-circumvention censorship gfw
+ 18k
+LGPL-2.1 license
+Updated 8 hours ago
+jcjohnson/neural-style
+Torch implementation of neural style algorithm
+
+ 18k
+ Lua
+MIT license
+Updated on Feb 23, 2018
+square/picasso
+A powerful image downloading and caching library for Android
+
+ 17.9k
+ Java
+Apache-2.0 license
+Updated 20 days ago
+vuejs/vue-router
+🚦 The official router for Vue.js.
+
+javascript router vue
+ 17.9k
+ JavaScript
+MIT license
+Updated 3 hours ago
+3 issues need help
+SnapKit/Masonry
+Harness the power of AutoLayout NSLayoutConstraints with a simplified, chainable and expressive syntax. Supports iOS …
+
+ 17.9k
+ Objective-C
+MIT license
+Updated on Nov 3, 2020
+3 issues need help
+drduh/macOS-Security-and-Privacy-Guide
+Guide to securing and improving privacy on macOS
+
+apple macos disk-encryption security privacy osx macbook-configuration macos-setup dnscrypt-proxy macos-security macbook-security
+ 17.9k
+ Python
+MIT license
+Updated on Nov 12, 2020
+
+
+dotnet/corefx
+This repo is used for servicing PR's for .NET Core 2.1 and 3.1. Please visit us at https://github.com/dotnet/runtime
+
+microsoft csharp dotnet dotnetcore coreclr dotnet-core corefx
+ 17.9k
+Updated 3 days ago
+xuxueli/xxl-job
+A distributed task scheduling framework.（分布式任务调度平台XXL-JOB）
+
+xxl-job java task schedule job scheduler restful glue distributed quartz
+ 17.9k
+ Java
+GPL-3.0 license
+Updated 2 hours ago
+16 issues need help
+dnSpy/dnSpy Archived
+.NET debugger and assembly editor
+
+ 17.9k
+ C#
+Updated on Dec 21, 2020
+datasciencemasters/go
+The Open Source Data Science Masters
+
+ 17.9k
+Unlicense license
+Updated yesterday
+benweet/stackedit
+In-browser Markdown editor
+
+stackedit github javascript couchdb editor markdown wordpress gist zendesk gitlab offline dropbox google-drive blogger
+ 17.9k
+ JavaScript
+Apache-2.0 license
+Updated 3 days ago
+reduxjs/reselect
+Selector library for Redux
+
+memoized-selectors redux
+ 17.8k
+ JavaScript
+MIT license
+Updated on Mar 11
+1 issue needs help
+nikitavoloboev/my-mac-os
+List of applications and tools that make my macOS experience even more amazing
+
+macos alfred karabiner ios awesome nix personal curated macros applications mac-setup
+ 17.8k
+Updated on Feb 27
+osquery/osquery
+SQL powered operating system instrumentation, monitoring, and analytics.
+
+sql monitoring security intrusion-detection hacktoberfest
+ 17.8k
+ C++
+Updated 8 hours ago
+vercel/pkg
+Package your Node.js project into an executable
+
+nodejs cli compiler binaries
+ 17.8k
+ JavaScript
+MIT license
+Updated 4 days ago
+1 issue needs help
+judasn/IntelliJ-IDEA-Tutorial
+IntelliJ IDEA 简体中文专题教程
+
+intellij java tutorial jetbrains phpstorm webstorm rubymine pycharm android-studio clion intellij-idea gogland datagrip
+ 17.7k
+GPL-2.0 license
+Updated 27 days ago
+
+
+portainer/portainer
+Making Docker and Kubernetes management easy.
+
+portainer docker dockerfile ui docker-compose docker-deployment docker-container docker-image docker-swarm hacktoberfest docker-ui moby
+ 17.7k
+ JavaScript
+Zlib license
+Updated 2 hours ago
+5 issues need help
+StevenBlack/hosts
+🔒 Consolidating and extending hosts files from several well-curated sources. Optionally pick extensions for porn, so…
+
+unified-hosts curated-sources python security privacy protection anti-virus malware ad-blocker porn-filter social-media-filter hosts gambling-filter ransomware pornblocker trojans
+ 17.7k
+ Python
+MIT license
+Updated 3 days ago
+2 issues need help
+sirupsen/logrus
+Structured, pluggable logging for Go.
+
+logrus go logging
+ 17.6k
+ Go
+MIT license
+Updated 25 days ago
+palantir/blueprint
+A React-based UI toolkit for the web
+
+blueprint react sass components design typescript ui system toolkit table lerna octo-correct-managed
+ 17.6k
+ TypeScript
+Apache-2.0 license
+Updated 3 days ago
+154 issues need help
+Baseflow/PhotoView
+Implementation of ImageView for Android that supports zooming, by various touch gestures.
+
+ 17.6k
+ Java
+Apache-2.0 license
+Updated on Mar 11
+jesseduffield/lazydocker
+The lazier way to manage everything docker
+
+ 17.6k
+ Go
+MIT license
+Updated 24 days ago
+1 issue needs help
+Eugeny/terminus
+A terminal for a more modern age
+
+electron angular typescript terminal terminal-emulators
+ 17.6k
+ TypeScript
+MIT license
+Updated 3 days ago
+google/ExoPlayer
+An extensible media player for Android
+
+exoplayer android java mediaplayer
+ 17.6k
+ Java
+Apache-2.0 license
+Updated 1 hour ago
+leereilly/games
+🎮 A list of popular/awesome video games, add-ons, maps, etc. hosted on GitHub. Any genre. Any platform. Any engine.
+
+game gamedev games game-engine game-development puzzle-game platform-game strategy-game html5-games sandbox-game
+ 17.6k
+Updated 7 days ago
+1 issue needs help
+conwnet/github1s
+One second to read GitHub code with VS Code.
+
+ 17.6k
+ TypeScript
+MIT license
+Updated 19 hours ago
+1 issue needs help
+
+alibaba/weex Archived
+A framework for building Mobile cross-platform UI
+
+android ios mobile sdk web weex
+ 17.5k
+Updated on Oct 19, 2017
+19 issues need help
+graphql/graphql-js
+A reference implementation of GraphQL for JavaScript
+
+graphql graphql-js
+ 17.5k
+ JavaScript
+MIT license
+Updated 3 days ago
+10 issues need help
+homebridge/homebridge
+HomeKit support for the impatient
+
+siri homekit homekit-api homebridge hap homekit-accessory-protocol homekit-bridge
+ 17.5k
+ TypeScript
+Apache-2.0 license
+Updated on Mar 17
+sebastianbergmann/phpunit
+The PHP Unit Testing framework.
+
+phpunit php testing-tools
+ 17.5k
+ PHP
+Updated 3 hours ago
+5 issues need help
+notable/notable
+The Markdown-based note-taking app that doesn't suck.
+
+electron react windows linux markdown mac cross-platform note
+ 17.5k
+ TypeScript
+Updated 8 days ago
+21 issues need help
+validatorjs/validator.js
+String validation
+
+javascript sanitization node validation input validator validations validate hacktoberfest sanitize
+ 17.5k
+ JavaScript
+MIT license
+Updated 3 hours ago
+34 issues need help
+SnapKit/SnapKit
+A Swift Autolayout DSL for iOS & OS X
+
+snapkit swift xcode cocoapods dsl ui layout constraints autolayout auto
+ 17.4k
+ Swift
+MIT license
+Updated 27 days ago
+dwmkerr/hacker-laws
+💻📖 Laws, Theories, Principles and Patterns that developers will find useful. #hackerlaws
+
+principles coding laws computerscience
+ 17.4k
+ Shell
+CC-BY-SA-4.0 license
+Updated 4 hours ago
+airyland/vux
+Mobile UI Components based on Vue & WeUI
+
+vux weui ant javascript components vue web-app vue-components vue2 wechat mobile-web
+ 17.4k
+ Vue
+MIT license
+Updated on Nov 13, 2020
+electron-react-boilerplate/electron-react-boilerplate
+A Foundation for Scalable Cross-Platform Apps
+
+electron react javascript boilerplate babel typescript webpack eslint cross-platform jest hmr starter-kit
+ 17.4k
+ JavaScript
+MIT license
+Updated 10 hours ago
+3 issues need help
+
+js-cookie/js-cookie
+A simple, lightweight JavaScript API for handling browser cookies
+
+javascript cookie
+ 17.4k
+ JavaScript
+MIT license
+Updated on Oct 5, 2020
+git-tips/tips
+Most commonly used git tips and tricks.
+
+git tips tips-and-tricks
+ 17.4k
+ JavaScript
+MIT license
+Updated on Mar 19
+trekhleb/homemade-machine-learning
+🤖 Python examples of popular machine learning algorithms with interactive Jupyter demos and math being explained
+
+machine-learning algorithm python jupyter machine-learning-algorithms jupyter-notebook machinelearning
+ 17.4k
+ Jupyter Notebook
+MIT license
+Updated 18 days ago
+nostalgic-css/NES.css
+NES-style CSS Framework | ファミコン風CSSフレームワーク
+
+nes css css-framework scss 8bit
+ 17.4k
+ SCSS
+MIT license
+Updated 20 days ago
+2 issues need help
+haizlin/fe-interview
+前端面试每日 3+1，以面试题来驱动学习，提倡每日学习与思考，每天进步一点！每天早上5点纯手工发布面试题（死磕自己，愉悦大家），4000+道前端面试题全面覆盖，HTML/CSS/JavaScript/Vue/React/Nodejs/…
+
+css react nodejs javascript html resume front-end node vue js frontend interview interview-questions frontend-interview fe-interview
+ 17.3k
+ JavaScript
+MIT license
+Updated 2 days ago
+BoostIO/Boostnote
+A markdown editor for developers on Mac, Windows and Linux.
+
+linux electron react windows macos stylus
+ 17.3k
+ JavaScript
+Updated 20 days ago
+25 issues need help
+v8/v8 Mirror
+The official mirror of the V8 Git repository
+
+javascript interpreter compiler virtual-machine javascript-engine
+ 17.3k
+ C++
+Updated 7 hours ago
+dotnet-architecture/eShopOnContainers
+Cross-platform .NET sample microservices and container based application that runs on Linux Windows and macOS. Powere…
+
+microservices docker spa xamarin ddd netcore ddd-patterns windowscontainers
+ 17.3k
+ C#
+MIT license
+Updated 4 days ago
+12 issues need help
+docsifyjs/docsify
+🃏 A magical documentation site generator.
+
+docsify markdown github-pages documentation docs vue documentation-tool doc
+ 17.3k
+ JavaScript
+MIT license
+Updated 8 hours ago
+13 issues need help
+npm/npm Archived
+This repository is moving to: https://github.com/npm/cli
+
+ 17.3k
+Updated on Aug 7, 2020
+
+alibaba/nacos
+an easy-to-use dynamic service discovery, configuration and service management platform for building cloud native app…
+
+nacos service-discovery spring-cloud dubbo kubernetes config dns microservices configuration-management service-mesh alibaba istio distributed-configuration
+ 17.3k
+ Java
+Apache-2.0 license
+Updated 8 hours ago
+13 issues need help
+topjohnwu/Magisk
+The Magic Mask for Android
+
+ 17.2k
+ C++
+GPL-3.0 license
+Updated 22 hours ago
+wekan/wekan
+The Open Source kanban (built with Meteor). Keep variable/table/field names camelCase. For translations, only add Pul…
+
+wekan javascript real-time meteor docker-image foss kanban sandstorm snapcraft
+ 17.2k
+ JavaScript
+MIT license
+Updated 6 hours ago
+adobe-fonts/source-code-pro
+Monospaced font family for user interface and coding environments
+
+fonts otf afdko opentype-fonts variable-fonts ttf-fonts
+ 17.2k
+ CSS
+OFL-1.1 license
+Updated 7 days ago
+wenyan-lang/wenyan
+文言文編程語言 A programming language for the ancient Chinese.
+
+wenyan-lang programming-language esoteric-language classical-chinese
+ 17.2k
+ TypeScript
+MIT license
+Updated 16 days ago
+7 issues need help
+jenkinsci/jenkins
+Jenkins automation server
+
+jenkins java groovy devops pipelines-as-code continuous-integration continuous-delivery continuous-deployment cicd hacktoberfest
+ 17.2k
+ Java
+MIT license
+Updated 1 hour ago
+libuv/libuv
+Cross-platform asynchronous I/O
+
+asynchronous unix windows networking unicorns io velociraptors deep-io
+ 17.2k
+ C
+Updated 3 hours ago
+8 issues need help
+coder2gwy/coder2gwy
+互联网首份程序员考公指南，由3位已经进入体制内的前大厂程序员联合献上。
+
+ 17.2k
+Updated on Jan 16
+youzan/vant
+Lightweight Mobile UI Components built on Vue
+
+vant vue components mobile ui-kit ui-library vue3
+ 17.2k
+ TypeScript
+MIT license
+Updated 1 hour ago
+1 issue needs help
+popperjs/popper-core
+🍿Positioning tooltips and popovers is difficult. Popper is here to help!
+
+tooltip-position popovers popover position tooltip dropdown positioning-engine positioning
+ 17.2k
+ JavaScript
+MIT license
+Updated 23 hours ago
+
+didi/DoraemonKit
+A full-featured App (iOS 、Android、miniapp、Flutter) development assistant. You deserve it. 简称 "DoKit" 。一款功能齐全的客户端（ iOS…
+
+android ios performance tools monitoring miniapp mockgps
+ 17.2k
+ Java
+Apache-2.0 license
+Updated 5 hours ago
+tsenart/vegeta
+HTTP load testing tool and library. It's over 9000!
+
+go http benchmarking load-testing
+ 17.1k
+ Go
+MIT license
+Updated 6 days ago
+winstonjs/winston
+A logger for just about everything.
+
+ 17.1k
+ JavaScript
+MIT license
+Updated 19 days ago
+9 issues need help
+mozilla/DeepSpeech
+DeepSpeech is an open source embedded (offline, on-device) speech-to-text engine which can run in real time on device…
+
+machine-learning embedded deep-learning offline tensorflow speech-recognition neural-networks speech-to-text deepspeech on-device
+ 17.1k
+ C++
+MPL-2.0 license
+Updated 3 days ago
+28 issues need help
+celery/celery
+Distributed Task Queue (development branch)
+
+python redis amqp python-library sqs python3 task-runner sqs-queue task-manager task-scheduler queued-jobs queue-workers queue-tasks
+ 17.1k
+ Python
+Updated 2 hours ago
+chakra-ui/chakra-ui
+⚡️ Simple, Modular & Accessible UI Components for your React Applications
+
+chakra-ui react reactjs uikit a11y react-components accessible wai-aria ui-components dark-mode ui-library
+ 17.1k
+ TypeScript
+MIT license
+Updated 12 hours ago
+google-research/google-research
+Google Research
+
+machine-learning research ai
+ 17.1k
+ Jupyter Notebook
+Apache-2.0 license
+Updated 2 days ago
+facebook/flux
+Application Architecture for Building User Interfaces
+
+ 17.1k
+ JavaScript
+Updated 19 days ago
+sharkdp/fd
+A simple, fast and user-friendly alternative to 'find'
+
+search rust cli terminal command-line tool filesystem regex
+ 17k
+ Rust
+Updated 5 days ago
+14 issues need help
+datawhalechina/pumpkin-book
+《机器学习》（西瓜书）公式推导解析，在线阅读地址：https://datawhalechina.github.io/pumpkin-book
+
+machine-learning pumpkin-book
+ 17k
+Updated 4 days ago
+
+InterviewMap/CS-Interview-Knowledge-Map
+Build the best interview map. The current content includes JS, network, browser related, performance optimization, se…
+
+react javascript blog vue algorithms interview
+ 17k
+Updated on May 3, 2020
+microsoft/CNTK
+Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit
+
+cntk deep-learning python java c-sharp c-plus-plus machine-learning deep-neural-networks neural-network distributed cognitive-toolkit
+ 17k
+ C++
+Updated on Sep 9, 2020
+1 issue needs help
+julianshapiro/velocity
+Accelerated JavaScript animation.
+
+ 17k
+ JavaScript
+MIT license
+Updated on Oct 24, 2020
+ChristosChristofidis/awesome-deep-learning
+A curated list of awesome Deep Learning tutorials, projects and communities.
+
+deep-learning machine-learning deep-networks recurrent-networks face-images awesome neural-network awesome-list deep-learning-tutorial
+ 17k
+Updated yesterday
+microsoft/api-guidelines
+Microsoft REST API Guidelines
+
+api styleguide rest-api guidelines
+ 17k
+Updated 20 days ago
+Micropoor/Micro8
+Gitbook
+
+penetration micropoor micro8
+ 17k
+Updated 9 days ago
+halfrost/LeetCode-Go
+✅ Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode 题解
+
+leetcode algorithm math go golang facebook algorithms pattern algo acm-icpc algorithm-competitions leetcode-solutions interview-questions dynamic-programming algorithms-and-data-structures leetcode-golang leetcode-go
+ 16.9k
+ Go
+MIT license
+Updated 2 hours ago
+zsh-users/zsh-autosuggestions
+Fish-like autosuggestions for zsh
+
+zsh zsh-autosuggestions fish shell autocomplete autosuggest
+ 16.9k
+ Shell
+MIT license
+Updated on Mar 9
+sideway/joi
+The most powerful data validation library for JS
+
+javascript schema validation hapi
+ 16.9k
+ JavaScript
+Updated 18 days ago
+facebook/hhvm
+A virtual machine for executing programs written in Hack.
+
+hhvm hack php hacklang
+ 16.9k
+ C++
+Updated 2 hours ago
+
+
+eggjs/egg
+🥚 Born to build better enterprise frameworks and apps with Node.js & Koa
+
+nodejs enterprise koa framework koa-middleware koa2 node-framework egg eggjs
+ 16.9k
+ JavaScript
+MIT license
+Updated 5 days ago
+1 issue needs help
+PostgREST/postgrest
+REST API for any Postgres database
+
+postgrest database haskell rest server postgresql automatic-api
+ 16.9k
+ Haskell
+MIT license
+Updated 14 hours ago
+2 issues need help
+numpy/numpy
+The fundamental package for scientific computing with Python.
+
+numpy python
+ 16.9k
+ Python
+BSD-3-Clause license
+Updated 2 hours ago
+7 issues need help
+prisma/prisma1
+💾 Database Tools incl. ORM, Migrations and Admin UI (Postgres, MySQL & MongoDB)
+
+graphql database orm serverless dao datamapper
+ 16.9k
+ Scala
+Apache-2.0 license
+Updated 20 days ago
+viraptor/reverse-interview
+Questions to ask the company during your interview
+
+ 16.8k
+Updated on Feb 12
+kelthuzadx/hosts Archived
+🗽最新可用的google hosts文件。国内镜像：
+
+google hosts
+ 16.8k
+ Rascal
+MIT license
+Updated on Jul 22, 2018
+nostra13/Android-Universal-Image-Loader
+Powerful and flexible library for loading, caching and displaying images on Android.
+
+ 16.8k
+ Java
+Apache-2.0 license
+Updated on Apr 7, 2020
+DrKLO/Telegram
+Telegram for Android source
+
+telegram
+ 16.8k
+ C++
+GPL-2.0 license
+Updated 2 days ago
+uikit/uikit
+A lightweight and modular front-end framework for developing fast and powerful web interfaces
+
+ 16.8k
+ HTML
+MIT license
+Updated 12 days ago
+swoole/swoole-src
+🚀 Coroutine-based concurrency library for PHP
+
+swoole php coroutines concurrency websocket async network timer event
+ 16.8k
+ C++
+Apache-2.0 license
+Updated 4 days ago
+
+defunkt/jquery-pjax
+pushState + ajax = pjax
+
+ 16.8k
+ JavaScript
+MIT license
+Updated on Dec 20, 2019
+romkatv/powerlevel10k
+A Zsh theme
+
+zsh-theme zsh-prompt
+ 16.8k
+ Shell
+MIT license
+Updated yesterday
+facebook/folly
+An open-source C++ library developed and used at Facebook.
+
+ 16.7k
+ C++
+Apache-2.0 license
+Updated 2 days ago
+AllThingsSmitty/css-protips
+A collection of tips to help take your CSS skills pro
+
+css awesome css3 tips awesome-list useful tips-and-tricks protip css-tricks learning-resources
+ 16.7k
+CC0-1.0 license
+Updated 3 days ago
+fish-shell/fish-shell
+The user-friendly command line shell.
+
+ 16.7k
+ Shell
+Updated 5 hours ago
+9 issues need help
+HelloZeroNet/ZeroNet
+ZeroNet - Decentralized websites using Bitcoin crypto and BitTorrent network
+
+bitcoin python torrent web bittorrent decentralized realtime p2p tor anticensorship internet-freedom anonymity
+ 16.7k
+ JavaScript
+Updated on Mar 3
+18 issues need help
+FelisCatus/SwitchyOmega
+Manage and switch between multiple proxies quickly & easily.
+
+ 16.7k
+ CoffeeScript
+GPL-3.0 license
+Updated 19 days ago
+angular/material
+Material design for AngularJS
+
+angularjs-material lts javascript angularjs material-design
+ 16.7k
+ JavaScript
+MIT license
+Updated 12 days ago
+vercel/swr
+React Hooks library for remote data fetching
+
+swr react fetch hook react-native zeit data-fetching stale-while-revalidate suspense vercel
+ 16.7k
+ TypeScript
+MIT license
+Updated 15 hours ago
+2 issues need help
+1c7/chinese-independent-developer
+👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么
+
+indie china indie-developer
+ 16.7k
+Updated 6 days ago
+
+envoyproxy/envoy
+Cloud-native high-performance edge/middle/service proxy
+
+cats cncf corgis cars rocket-ships more-cats cats-over-dogs nanoservices
+ 16.7k
+ C++
+Apache-2.0 license
+Updated 1 hour ago
+803 issues need help
+google/flexbox-layout
+Flexbox for Android
+
+android flexbox android-library
+ 16.6k
+ Kotlin
+Apache-2.0 license
+Updated on Mar 17
+eligrey/FileSaver.js
+An HTML5 saveAs() FileSaver implementation
+
+ 16.6k
+ JavaScript
+Updated on Mar 1
+4 issues need help
+n0shake/Public-APIs
+📚 A public list of APIs from round the web.
+
+ 16.6k
+Updated 3 days ago
+apache/skywalking
+APM, Application Performance Monitoring System
+
+metrics apm web-performance logging prometheus zabbix dapper service-mesh observability distributed-tracing skywalking open-telemetry
+ 16.6k
+ Java
+Apache-2.0 license
+Updated 1 hour ago
+25 issues need help
+zyedidia/micro
+A modern and intuitive terminal-based text editor
+
+micro go editor golang terminal cross-platform command-line text-editor
+ 16.6k
+ Go
+Updated 3 days ago
+mojs/mojs
+The motion graphics toolbelt for the web
+
+mojs mo-js motion-graphics burst swirl animation shape javascript svg design library webpack web modern es6 timeline graphics motion toolbelt
+ 16.6k
+ CoffeeScript
+MIT license
+Updated 8 days ago
+PKUanonym/REKCARC-TSC-UHT
+清华大学计算机系课程攻略 Guidance for courses in Department of Computer Science and Technology, Tsinghua University
+
+computer-science course course-project tsinghua-university course-assignment
+ 16.6k
+ HTML
+CC-BY-SA-4.0 license
+Updated 3 days ago
+LingCoder/OnJava8
+《On Java 8》中文版
+
+gitbook thinking-in-java on-java-8
+ 16.6k
+MIT license
+Updated on Mar 1
+ehang-io/nps
+一款轻量级、高性能、功能强大的内网穿透代理服务器。支持tcp、udp、socks5、http等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh访问、远程桌面，内网dns解析、内网socks5代理等等……，并带有功能强大的…
+
+nps socks5 udp go dns tunnel ssh http tcp gzip https firewall nat socks snnapy
+ 16.6k
+ Go
+GPL-3.0 license
+Updated 11 days ago
+
+marmelab/react-admin
+A frontend Framework for building B2B applications running in the browser on top of REST/GraphQL APIs, using ES6, Rea…
+
+react material-ui admin rest single-page-app admin-dashboard admin-on-rest frontend-framework react-admin
+ 16.6k
+ TypeScript
+MIT license
+Updated 27 minutes ago
+6 issues need help
+phoenixframework/phoenix
+Peace of mind from prototype to production
+
+elixir realtime web-framework api-server distributed
+ 16.6k
+ Elixir
+MIT license
+Updated 4 hours ago
+less/less.js
+Less. The dynamic stylesheet language.
+
+language css stylesheet-language
+ 16.6k
+ JavaScript
+Apache-2.0 license
+Updated 25 days ago
+9 issues need help
+facebook/fresco
+An Android library for managing images and the memory they use.
+
+ 16.5k
+ Java
+MIT license
+Updated yesterday
+39 issues need help
+jgraph/drawio-desktop
+Official electron build of diagrams.net
+
+graphics electron-app javascript-applications diagram-editor
+ 16.5k
+ JavaScript
+Apache-2.0 license
+Updated 25 days ago
+8 issues need help
+nosir/cleave.js
+Format input text content when you are typing...
+
+input credit-card input-mask creditcard telephone-number
+ 16.5k
+ JavaScript
+Apache-2.0 license
+Updated on Mar 9
+1 issue needs help
+bazelbuild/bazel
+a fast, scalable, multi-language and extensible build system
+
+bazel fast build scalable test build-system correct multi-language
+ 16.5k
+ Java
+Apache-2.0 license
+Updated 26 minutes ago
+34 issues need help
+dennybritz/reinforcement-learning
+Implementation of Reinforcement Learning Algorithms. Python, OpenAI Gym, Tensorflow. Exercises and Solutions to accom…
+
+ 16.5k
+ Jupyter Notebook
+MIT license
+Updated on Feb 1
+magenta/magenta
+Magenta: Music and Art Generation with Machine Intelligence
+
+ 16.5k
+ Python
+Apache-2.0 license
+Updated 3 hours ago
+11 issues need help
+PHPMailer/PHPMailer
+The classic email sending library for PHP
+
+phpmailer smtp php email php-library attachment hacktoberfest tls-support xoauth2
+ 16.5k
+ PHP
+LGPL-2.1 license
+Updated 9 days ago
+6 issues need help
+
+JacksonTian/fks
+前端技能汇总 Frontend Knowledge Structure
+
+ 16.5k
+ JavaScript
+Updated on Jun 27, 2019
+rancher/rancher
+Complete container management platform
+
+rancher docker kubernetes containers orchestration cattle
+ 16.5k
+ Go
+Apache-2.0 license
+Updated 2 days ago
+google/eng-practices
+Google's Engineering Practices documentation
+
+ 16.5k
+Updated on Mar 19
+SpaceVim/SpaceVim
+A community-driven modular vim distribution - The ultimate vim configuration
+
+spacevim vim editor vimrc awesome neovim vim-configuration ide vim-distribution spacemacs space-vim
+ 16.5k
+ Vim script
+GPL-3.0 license
+Updated 19 hours ago
+2 issues need help
+nuysoft/Mock
+A simulation data generator
+
+ 16.5k
+ JavaScript
+MIT license
+Updated on Dec 5, 2020
+remoteintech/remote-jobs
+A list of semi to fully remote-friendly companies in tech.
+
+remote jobs-search job-board jobseeker remote-work jobsearch hacktoberfest remote-job hacktoberfest2020
+ 16.5k
+ JavaScript
+CC0-1.0 license
+Updated yesterday
+8 issues need help
+k3s-io/k3s
+Lightweight Kubernetes
+
+kubernetes k8s
+ 16.4k
+ Go
+Apache-2.0 license
+Updated 19 hours ago
+16 issues need help
+reactnativecn/react-native-guide
+React Native指南汇集了各类react-native学习资源、开源App和组件
+
+ 16.4k
+Updated on Jul 27, 2020
+forem/forem
+For empowering community 🌱
+
+community discussion feedback hacktoberfest
+ 16.3k
+ Ruby
+AGPL-3.0 license
+Updated 34 minutes ago
+12 issues need help
+mysqljs/mysql
+A pure node.js JavaScript Client implementing the MySQL protocol.
+
+nodejs javascript mysql
+ 16.3k
+ JavaScript
+MIT license
+Updated on Mar 1
+13 issues need help
+
+crystal-lang/crystal
+The Crystal Programming Language
+
+crystal efficiency language
+ 16.3k
+ Crystal
+Apache-2.0 license
+Updated 20 hours ago
+MLEveryday/100-Days-Of-ML-Code
+100-Days-Of-ML-Code中文版
+
+jupyter-notebook python machine-learning tutorial deep-learning tensorflow keras supervised-learning unsupervised-learning chinese-simplified infographics 100-days-of-ml-code
+ 16.3k
+ Jupyter Notebook
+MIT license
+Updated 20 days ago
+ElemeFE/mint-ui
+Mobile UI elements for Vue.js
+
+mobile component vue vue-components ui-kit
+ 16.3k
+ Vue
+MIT license
+Updated 20 days ago
+3 issues need help
+jtoy/awesome-tensorflow
+TensorFlow - A curated list of dedicated resources http://tensorflow.org
+
+ 16.3k
+CC0-1.0 license
+Updated 8 days ago
+twitter/typeahead.js
+typeahead.js is a fast and fully-featured autocomplete library
+
+ 16.3k
+ JavaScript
+MIT license
+Updated on Dec 16, 2020
+chalk/chalk
+🖍 Terminal string styling done right
+
+ansi-escape-codes strip-ansi javascript cli console commandline color terminal ansi terminal-emulators chalk
+ 16.2k
+ JavaScript
+MIT license
+Updated 2 days ago
+5 issues need help
+redisson/redisson
+Redisson - Redis Java client with features of In-Memory Data Grid. Over 50 Redis based Java objects and services: Set…
+
+spring-cache java map redis set list queue executor cache scheduler redis-cluster lock session tomcat distributed redis-client hibernate mapreduce distributed-locks
+ 16.2k
+ Java
+Apache-2.0 license
+Updated 3 hours ago
+alibaba/ice
+🚀 The Progressive Framework Based On React（基于 React 的渐进式研发框架）https://ice.work/
+
+icejs iceworks mpa hooks typescript ssr react framework webpack react-router serverless
+ 16.2k
+ TypeScript
+MIT license
+Updated 2 hours ago
+1 issue needs help
+alsotang/node-lessons
+📕《Node.js 包教不包会》 by alsotang
+
+nodejs javascript
+ 16.2k
+ JavaScript
+Updated on Nov 4, 2020
+recharts/recharts
+Redefined chart library built with React and D3
+
+recharts react d3 charting-library
+ 16.2k
+ TypeScript
+MIT license
+Updated yesterday
+
+deezer/spleeter
+Deezer source separation library including pretrained models.
+
+deezer vocals drums pretrained-models bass python deep-learning tensorflow model audio-processing
+ 16.2k
+ Python
+MIT license
+Updated 4 days ago
+reduxjs/redux-thunk
+Thunk middleware for Redux
+
+ 16.2k
+ JavaScript
+MIT license
+Updated on Feb 16
+websockets/ws
+Simple to use, blazing fast and thoroughly tested WebSocket client and server for Node.js
+
+websocket-compression nodejs javascript node real-time websocket-server websocket websocket-client rfc-6455
+ 16.1k
+ JavaScript
+MIT license
+Updated yesterday
+starship/starship
+☄🌌️ The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+
+starship zsh powershell bash rust fish oh-my-zsh zsh-theme shell-prompt fish-theme zsh-prompt fish-prompt
+ 16.1k
+ Rust
+ISC license
+Updated 4 hours ago
+Awesome-HarmonyOS/HarmonyOS
+A curated list of awesome things related to HarmonyOS. 华为鸿蒙操作系统。
+
+harmonyos huawei architecture iot awesome kernel os operating-system iot-platform
+ 16.1k
+ C
+Updated on Feb 3
+basecamp/trix
+A rich text editor for everyday writing
+
+wysiwyg-editor javascript coffeescript wysiwyg custom-elements rich-text-editor
+ 16.1k
+ CoffeeScript
+MIT license
+Updated 2 days ago
+framework7io/framework7
+Full featured HTML framework for building iOS & Android apps
+
+android components ios cordova library mobile framework material material-design touch phonegap
+ 16.1k
+ JavaScript
+MIT license
+Updated 3 days ago
+michalsnik/aos
+Animate on scroll library
+
+ 16.1k
+ JavaScript
+MIT license
+Updated 20 days ago
+Kong/insomnia
+The Open Source API Client and Design Platform for GraphQL, REST and gRPC
+
+api graphql curl rest-api grpc http-client api-client electron-app api-design
+ 16.1k
+ JavaScript
+MIT license
+Updated 2 hours ago
+mxgmn/WaveFunctionCollapse
+Bitmap & tilemap generation from a single example with the help of ideas from quantum mechanics
+
+wfc gamedev machine-learning algorithm csharp procedural-generation
+ 16.1k
+ C#
+Updated on Feb 12
+
+Dreamacro/clash
+A rule-based tunnel in Go.
+
+clash tunnel golang rule-based
+ 16.1k
+ Go
+GPL-3.0 license
+Updated 1 hour ago
+3 issues need help
+google/flatbuffers
+FlatBuffers: Memory Efficient Serialization Library
+
+flatbuffers javascript python c java go c-sharp rust c-plus-plus serialization typescript protobuf cross-platform zero-copy marshalling grpc rpc json-parser mmap serialization-library
+ 16.1k
+ C++
+Apache-2.0 license
+Updated 3 hours ago
+1 issue needs help
+CarGuo/GSYVideoPlayer
+视频播放器（IJKplayer、ExoPlayer、MediaPlayer），HTTPS，支持弹幕，外挂字幕，支持滤镜、水印、gif截图，片头广告、中间广告，多个同时播放，支持基本的拖动，声音、亮度调节，支持边播边缓存，支持视频自带r…
+
+ijkplayer android player video ffmpeg https exoplayer videocache
+ 16k
+ Java
+Apache-2.0 license
+Updated 3 days ago
+1 issue needs help
+apache/flink
+Apache Flink
+
+flink scala java big-data
+ 16k
+ Java
+Apache-2.0 license
+Updated 10 minutes ago
+OWASP/CheatSheetSeries
+The OWASP Cheat Sheet Series was created to provide a concise collection of high value information on specific applic…
+
+owasp security code best-practices application-security appsec cheatsheets
+ 16k
+ Python
+Updated 2 days ago
+facebookresearch/detectron2
+Detectron2 is FAIR's next-generation platform for object detection, segmentation and other visual recognition tasks.
+
+ 16k
+ Python
+Apache-2.0 license
+Updated 1 hour ago
+svg/svgo
+⚙️ Node.js tool for optimizing SVG files
+
+svgo cli nodejs javascript svg optimization minification
+ 16k
+ JavaScript
+MIT license
+Updated 16 hours ago
+Awesome-Windows/Awesome
+💻 🎉 An awesome & curated list of best applications and tools for Windows.
+
+microsoft windows awesome windows-10
+ 16k
+CC0-1.0 license
+Updated 23 hours ago
+vadimdemedes/ink
+🌈 React for interactive command-line apps
+
+react cli command-line interactive flexbox
+ 16k
+ TypeScript
+MIT license
+Updated 3 days ago
+9 issues need help
+go-delve/delve
+Delve is a debugger for the Go programming language.
+
+debugger go golang
+ 16k
+ Go
+MIT license
+Updated 8 hours ago
+3 issues need help
+
+DIYgod/RSSHub
+🍰 Everything is RSSible
+
+rss instagram youtube twitter dribbble zhihu disqus wechat tieba bilibili weibo pixiv douban v2ex douyu zimuzu jike iqiyi juejin douyin
+ 16k
+ JavaScript
+MIT license
+Updated 5 hours ago
+6 issues need help
+pytorch/examples
+A set of examples around pytorch in Vision, Text, Reinforcement Learning, etc.
+
+ 16k
+ Python
+BSD-3-Clause license
+Updated 3 days ago
+apollographql/apollo-client
+🚀 A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server
+
+apollo-client graphql graphql-client typescript apollographql
+ 16k
+ TypeScript
+MIT license
+Updated 2 days ago
+coolsnowwolf/lede
+Lean's OpenWrt source
+
+openwrt lua lede openwrt-package openwrt-zh-cn openwrt-feed openwrt-shadowsocksr-libev-full
+ 16k
+ C
+GPL-2.0 license
+Updated 2 hours ago
+elastic/kibana
+Your window into the Elastic Stack
+
+kibana elasticsearch metrics dashboards visualizations hacktoberfest observability
+ 16k
+ TypeScript
+Updated 10 minutes ago
+7 issues need help
+nickbutcher/plaid
+An Android app which provides design news & inspiration as well as being an example of implementing material design.
+
+ 16k
+ Kotlin
+Apache-2.0 license
+Updated on Dec 28, 2020
+adam-golab/react-developer-roadmap
+Roadmap to becoming a React developer
+
+ 15.9k
+ JavaScript
+Updated on Oct 16, 2020
+bitcoinbook/bitcoinbook
+Mastering Bitcoin 2nd Edition - Programming the Open Blockchain
+
+ 15.9k
+ Python
+Updated 3 days ago
+handlebars-lang/handlebars.js
+ 15.9k
+ JavaScript
+MIT license
+Updated 17 days ago
+3 issues need help
+Kotlin/anko Archived
+Pleasant Android application development
+
+android kotlin
+ 15.9k
+ Kotlin
+Apache-2.0 license
+Updated on Dec 5, 2019
+
+
+shuzheng/zheng
+基于Spring+SpringMVC+Mybatis分布式敏捷开发系统架构，提供整套公共微服务服务模块：集中权限管理（单点登录）、内容管理、支付中心、用户管理（支持第三方登录）、微信平台、存储系统、配置中心、日志分析、任务和通知等，支…
+
+redis springmvc microservices spring solr zookeeper quartz activemq druid mybatis spring-session sequence ehcache shiro dubbo mybatis-generator tbschedule fastdfs swagger2 alioss
+ 15.9k
+ Java
+MIT license
+Updated on Jan 21
+jamiebuilds/react-loadable
+⏳ A higher order component for loading components with promises.
+
+react babel-plugin webpack async ssr code-splitting loading server-side-rendering imports
+ 15.9k
+ JavaScript
+MIT license
+Updated on Jan 7
+alibaba/Sentinel
+A powerful flow control component enabling reliability, resilience and monitoring for microservices. (面向云原生微服务的高可用流控防…
+
+reliability alibaba java microservice rate-limiting circuit-breaker hacktoberfest
+ 15.9k
+ Java
+Apache-2.0 license
+Updated 3 hours ago
+11 issues need help
+MustangYM/WeChatExtension-ForMac
+Mac微信功能拓展/微信插件/微信小助手(A plugin for Mac WeChat)
+
+wechat alfred macos wechat-macos wechat-plugin weixin-plugin
+ 15.9k
+ Objective-C
+MIT license
+Updated 4 days ago
+4 issues need help
+locustio/locust
+Scalable user load testing tool written in Python
+
+locust python http benchmarking load-testing load-generator performance-testing
+ 15.9k
+ Python
+MIT license
+Updated 8 days ago
+dgraph-io/dgraph
+Native GraphQL Database with graph backend
+
+throughput go graphql golang database scale latency production distributed graphql-server graph-database graphdb
+ 15.9k
+ Go
+Updated 12 hours ago
+hubotio/hubot
+A customizable life embetterment robot.
+
+hubot chat bot
+ 15.8k
+ JavaScript
+MIT license
+Updated on Mar 14
+jitsi/jitsi-meet
+Jitsi Meet - Secure, Simple and Scalable Video Conferences that you use as a standalone app or embed in your web appl…
+
+jitsi-meet scalable-video-conferences debian video webrtc sfu video-conferencing video-communication jitsi deep-video
+ 15.8k
+ JavaScript
+Apache-2.0 license
+Updated 3 hours ago
+jashkenas/coffeescript
+Unfancy JavaScript
+
+ 15.8k
+ CoffeeScript
+MIT license
+Updated 18 days ago
+12 issues need help
+jdg/MBProgressHUD
+MBProgressHUD + Customizations
+
+ 15.8k
+ Objective-C
+MIT license
+Updated on Nov 25, 2020
+
+sindresorhus/quick-look-plugins
+List of useful Quick Look plugins for developers
+
+ 15.8k
+Updated on Jan 24
+ventoy/Ventoy
+A new bootable USB solution.
+
+uefi legacy windows linux unix usb vmware multiboot iso-files secure-boot bootable-usb
+ 15.8k
+ C
+GPL-3.0 license
+Updated 10 hours ago
+neoclide/coc.nvim
+Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
+
+nvim vim autocompletion vim-plugin neovim-plugin lsp language-client
+ 15.8k
+ Vim script
+MIT license
+Updated 7 hours ago
+7 issues need help
+asim/go-micro
+Go Micro is a framework for distributed systems development
+
+micro rpc go golang distributed-systems microservices
+ 15.8k
+ Go
+Apache-2.0 license
+Updated 3 days ago
+diem/diem
+Diem’s mission is to build a trusted and innovative financial network that empowers people and businesses around the …
+
+blockchain
+ 15.8k
+ Rust
+Apache-2.0 license
+Updated 2 days ago
+3 issues need help
+microsoft/MS-DOS Archived
+The original sources of MS-DOS 1.25 and 2.0, for reference purposes
+
+ 15.8k
+ Assembly
+Updated on Oct 11, 2019
+microsoft/cascadia-code
+This is a fun, new monospaced font that includes programming ligatures and is designed to enhance the modern look and…
+
+ 15.8k
+ Python
+OFL-1.1 license
+Updated 19 days ago
+Tencent/tinker
+Tinker is a hot-fix solution library for Android, it supports dex, library and resources update without reinstall apk.
+
+android dynamic wechat hotfix
+ 15.8k
+ Java
+Updated 37 minutes ago
+ShareX/ShareX
+ShareX is a free and open source program that lets you capture or record any area of your screen and share it with a …
+
+sharex productivity screenshot share ocr imgur csharp image-annotation dropbox color-picker ftp file-upload file-sharing url-shortener screen-recorder gif capture screen-capture region-capture gif-recorder
+ 15.8k
+ C#
+GPL-3.0 license
+Updated 2 days ago
+coreybutler/nvm-windows
+A node.js version management utility for Windows. Ironically written in Go.
+
+switch nodejs go windows node management nvm versioning version version-manager
+ 15.8k
+ Go
+MIT license
+Updated on Mar 19
+15 issues need help
+
+
+linlinjava/litemall
+又一个小商城。litemall = Spring Boot后端 + Vue管理员前端 + 微信小程序用户前端 + Vue用户移动端
+
+vue spring-boot wechat mall wechat-mini-program litemall
+ 15.7k
+ Java
+MIT license
+Updated 23 hours ago
+Fndroid/clash_for_windows_pkg
+A Windows/macOS GUI based on Clash
+
+ 15.7k
+Updated 3 days ago
+1 issue needs help
+jaywcjlove/linux-command
+Linux命令大全搜索工具，内容包含Linux命令手册、详解、学习、搜集。https://git.io/linux
+
+linux linux-command chrome search bash ssh screenshot command-line gh-pages screen ls
+ 15.7k
+ HTML
+MIT license
+Updated 22 hours ago
+statsd/statsd
+Daemon for easy but powerful stats aggregation
+
+statsd graphite nodejs javascript metrics
+ 15.7k
+ JavaScript
+MIT license
+Updated on Dec 31, 2020
+2 issues need help
+reddit-archive/reddit Archived
+historical code from reddit.com
+
+javascript python reddit
+ 15.7k
+ Python
+Updated on Oct 18, 2017
+kdeldycke/awesome-falsehood
+😱 Falsehoods Programmers Believe in
+
+falsehoods postal-addresses phone-numbers edge-cases myths internationalization geography engineering identity time awesome programming date email phone-number network typography resources awesome-list
+ 15.7k
+CC0-1.0 license
+Updated 6 days ago
+1 issue needs help
+ryanhanwu/How-To-Ask-Questions-The-Smart-Way
+本文原文由知名 Hacker Eric S. Raymond 所撰寫，教你如何正確的提出技術問題並獲得你滿意的答案。
+
+rtfm translation stfw
+ 15.7k
+ JavaScript
+MIT license
+Updated on Feb 28
+ruanyf/weekly
+科技爱好者周刊，每周五发布
+
+ 15.7k
+Updated 5 hours ago
+jsdom/jsdom
+A JavaScript implementation of various web standards, for use with Node.js
+
+jsdom dom-apis nodejs javascript html
+ 15.7k
+ JavaScript
+MIT license
+Updated 13 hours ago
+rust-lang/rustlings
+🦀 Small exercises to get you used to reading and writing Rust code!
+
+rustlings rust beginner-friendly
+ 15.7k
+ Rust
+MIT license
+Updated 3 hours ago
+
+
+davidkpiano/xstate
+State machines and statecharts for the modern web.
+
+visualizer workflow interpreter state-management state-machine statechart state orchestration scxml
+ 15.7k
+ TypeScript
+MIT license
+Updated 4 hours ago
+jumpserver/jumpserver
+JumpServer 是全球首款开源的堡垒机，是符合 4A 的专业运维安全审计系统。
+
+jumpserver python django terminal ssh-server coco luna web-terminal koko
+ 15.7k
+ Python
+GPL-2.0 license
+Updated 2 hours ago
+urfave/cli
+A simple, fast, and fun package for building command line apps in Go
+
+cli go yaml toml json command-line golang-library
+ 15.7k
+ Go
+MIT license
+Updated 10 days ago
+18 issues need help
+react-dnd/react-dnd
+Drag and Drop for React
+
+react drag-and-drop not-the-game
+ 15.6k
+ TypeScript
+MIT license
+Updated 4 days ago
+2 issues need help
+visionmedia/superagent
+Ajax for Node.js and browsers (JS HTTP client)
+
+ 15.6k
+ JavaScript
+MIT license
+Updated on Feb 16
+ray-project/ray
+An open source framework that provides a simple, universal API for building distributed applications. Ray is packaged…
+
+python java data-science machine-learning reinforcement-learning deep-learning deployment optimization parallel distributed model-selection hyperparameter-optimization ray automl hyperparameter-search serving rllib
+ 15.6k
+ Python
+Apache-2.0 license
+Updated 2 hours ago
+64 issues need help
+ruanyf/react-demos
+a collection of simple demos of React.js
+
+ 15.6k
+ JavaScript
+Updated on Mar 15
+iview/iview-admin
+Vue 2.0 admin management system template based on iView
+
+vue admin vuex vue-cli webpack2 axios admin-template iview vue-admin
+ 15.6k
+ Vue
+MIT license
+Updated on Jul 21, 2020
+4 issues need help
+dropzone/dropzone
+Dropzone is an easy to use drag'n'drop library. It supports image previews and shows nice progress bars.
+
+dropzone javascript-library javascript drag-and-drop file-upload
+ 15.6k
+ JavaScript
+Updated 4 days ago
+facebook/relay
+Relay is a JavaScript framework for building data-driven React applications.
+
+ 15.6k
+ JavaScript
+MIT license
+Updated 11 hours ago
+6 issues need help
+
+
+iissnan/hexo-theme-next
+Elegant theme for Hexo.
+
+hexo hexo-theme theme-next
+ 15.6k
+ CSS
+MIT license
+Updated on Apr 2, 2020
+2 issues need help
+rubocop/ruby-style-guide
+A community-driven Ruby coding style guide
+
+ruby rubocop style-guide
+ 15.6k
+Updated on Mar 20
+academic/awesome-datascience
+📝 An awesome Data Science repository to learn and apply for real world problems.
+
+data-science data-mining machine-learning data-scientists deep-learning science analytics data-visualization awesome-list hacktoberfest
+ 15.6k
+MIT license
+Updated 25 days ago
+dotnet/core
+Home repository for .NET Core
+
+dotnet dotnet-core
+ 15.6k
+ Shell
+Updated 3 days ago
+dvajs/dva
+🌱 React and redux based, lightweight and elm-style framework. (Inspired by elm and choo)
+
+dva elm redux framework redux-saga
+ 15.6k
+ JavaScript
+MIT license
+Updated 3 days ago
+ClickHouse/ClickHouse
+ClickHouse® is a free analytics DBMS for big data
+
+clickhouse sql big-data analytics dbms olap distributed-database mpp hacktoberfest
+ 15.6k
+ C++
+Apache-2.0 license
+Updated 2 hours ago
+48 issues need help
+alpinejs/alpine
+A rugged, minimal framework for composing JavaScript behavior in your markup.
+
+ 15.5k
+ JavaScript
+MIT license
+Updated 5 days ago
+shieldfy/API-Security-Checklist
+Checklist of the most important security countermeasures when designing, testing, and releasing your API
+
+jwt api security oauth2
+ 15.5k
+MIT license
+Updated on Dec 25, 2020
+instillai/TensorFlow-Course
+📡 Simple and ready-to-use tutorials for TensorFlow
+
+python deep-learning tensorflow deep-learning-tutorial
+ 15.5k
+ Python
+MIT license
+Updated on Dec 22, 2020
+hwdsl2/setup-ipsec-vpn
+Scripts to build your own IPsec VPN server, with IPsec/L2TP, Cisco IPsec and IKEv2
+
+vpn-server cisco-ipsec ikev2 l2tp security encryption ipsec network vpn vpn-client libreswan
+ 15.5k
+ Shell
+Updated 5 hours ago
+
+charlax/professional-programming
+A collection of full-stack resources for programmers.
+
+read-articles programmer professional programming-language learning computer-science documentation architecture concepts scalability engineer lessons-learned
+ 15.5k
+ Python
+MIT license
+Updated 8 days ago
+Pierian-Data/Complete-Python-3-Bootcamp
+Course Files for Complete Python 3 Bootcamp Course on Udemy
+
+ 15.5k
+ Jupyter Notebook
+Updated 4 hours ago
+yewstack/yew
+Rust / Wasm framework for building client web apps
+
+rust gui web jsx elm concurrency wasm web-framework multithreading emscripten asmjs webworkers
+ 15.5k
+ Rust
+Updated 2 days ago
+5 issues need help
+pubkey/rxdb
+🔄 A realtime Database for JavaScript Applications
+
+rxdb realtime-database nodejs electron react couchdb graphql reactive rxjs react-native database pwa nosql json-schema pouchdb offline-first dapp realtime
+ 15.5k
+ TypeScript
+Apache-2.0 license
+Updated 21 hours ago
+material-components/material-components-web
+Modular and customizable Material Design UI components for the web
+
+material-components css javascript web material-design
+ 15.4k
+ TypeScript
+MIT license
+Updated 2 days ago
+7 issues need help
+mybatis/mybatis-3
+MyBatis SQL mapper framework for Java
+
+mybatis java sql
+ 15.4k
+ Java
+Updated 2 days ago
+ipader/SwiftGuide
+Swift Featured Projects in brain Mapping
+
+swift swift-programming-language
+ 15.4k
+ Swift
+Updated on Aug 3, 2020
+rough-stuff/rough
+Create graphics with a hand-drawn, sketchy, appearance
+
+graphics draw canvas svg html5-canvas svg-path
+ 15.4k
+ TypeScript
+MIT license
+Updated on Feb 19
+spf13/viper
+Go configuration with fangs
+
+ 15.4k
+ Go
+MIT license
+Updated 14 hours ago
+chaozh/awesome-blockchain-cn
+收集所有区块链(BlockChain)技术开发相关资料，包括Fabric和Ethereum开发资料
+
+ 15.4k
+ JavaScript
+Apache-2.0 license
+Updated on May 29, 2020
+
+joewalnes/websocketd
+Turn any program that uses STDIN/STDOUT into a WebSocket server. Like inetd, but for WebSockets.
+
+websocket-server proxy websockets
+ 15.4k
+ Go
+BSD-2-Clause license
+Updated 7 days ago
+facert/awesome-spider
+爬虫集合
+
+spider python awesome
+ 15.4k
+MIT license
+Updated 13 days ago
+qianguyihao/Web
+前端入门到进阶图文教程，超详细的Web前端学习笔记。从零开始学前端，做一名精致优雅的前端工程师。公众号「千古壹号」作者。
+
+javascript css html front-end
+ 15.4k
+ JavaScript
+Updated 7 days ago
+wesbos/JavaScript30
+30 Day Vanilla JS Challenge
+
+ 15.4k
+ HTML
+Updated 2 days ago
+dracula/dracula-theme
+🧛🏻‍♂️ Dark theme for all the things!
+
+dark-theme zsh sublime-text atom vim theme slack alfred iterm terminal emacs xcode brackets jetbrains pygments textmate dracula hyper conemu
+ 15.4k
+MIT license
+Updated 15 hours ago
+philc/vimium
+The hacker's browser.
+
+ 15.4k
+ JavaScript
+MIT license
+Updated 13 days ago
+nothings/stb
+stb single-file public domain libraries for C/C++
+
+ 15.4k
+ C
+Updated 13 hours ago
+2 issues need help
+Tencent/mars
+Mars is a cross-platform network component developed by WeChat.
+
+wechat cross-platform log network
+ 15.4k
+ C++
+Updated 5 days ago
+2 issues need help
+telegramdesktop/tdesktop
+Telegram Desktop messaging app
+
+telegram messenger multi-platform telegram-desktop telegram-solution
+ 15.3k
+ C++
+Updated 3 hours ago
+12 issues need help
+tauri-apps/tauri
+Build smaller, faster, and more secure desktop applications with a web frontend.
+
+rust webview high-performance hacktoberfest works-with-quasar works-with-vue works-with-gatsby works-with-svelte works-with-react works-with-phaser works-with-yew works-with-reason works-with-mint works-with-construct works-with-flutter works-with-elm works-with-clojurescript
+ 15.3k
+ Rust
+Updated 6 hours ago
+4 issues need help
+
+
+ionic-team/ionicons
+Premium hand-crafted icons built by Ionic, for Ionic apps and web apps everywhere 🌎
+
+ionicons ionic webcomponents icons icon-pack iconset stenciljs
+ 15.3k
+ TypeScript
+MIT license
+Updated 28 days ago
+processing/p5.js
+p5.js is a client-side JS platform that empowers artists, designers, students, and anyone to learn to code and expres…
+
+sound javascript art html learning education design graphics
+ 15.3k
+ JavaScript
+LGPL-2.1 license
+Updated 11 hours ago
+7 issues need help
+forezp/SpringCloudLearning
+《史上最简单的Spring Cloud教程源码》
+
+spring-cloud finchley hystrix hystrix-turbine hystrix-dashboard ribbon zuul eureka spring spring-boot consul gateway feign sleuth springbootadmin
+ 15.3k
+ Java
+Updated 7 days ago
+norvig/pytudes
+Python programs, usually short, of considerable difficulty, to perfect particular skills.
+
+python practice programming python-3 demonstrate-skills
+ 15.3k
+ Jupyter Notebook
+MIT license
+Updated 5 days ago
+openssl/openssl
+TLS/SSL and crypto library
+
+openssl tls ssl cryptography encryption decryption
+ 15.3k
+ C
+Apache-2.0 license
+Updated 37 minutes ago
+145 issues need help
+desandro/masonry
+🏩 Cascading grid layout plugin
+
+ 15.3k
+ HTML
+Updated on Jan 14, 2020
+CodeByZach/pace
+Automatically add a progress bar to your site.
+
+pace progress-bar loading-bar loading-animation pace-js loading-indicator
+ 15.2k
+ CSS
+MIT license
+Updated 26 days ago
+dianping/cat
+CAT 作为服务端项目基础组件，提供了 Java, C/C++, Node.js, Python, Go 等多语言客户端，已经在美团点评的基础架构中间件框架（MVC框架，RPC框架，数据库框架，缓存框架等，消息队列，配置系统等）深度集…
+
+java monitoring metrics realtime distributed apm tracing
+ 15.2k
+ Java
+Apache-2.0 license
+Updated on Mar 19
+robertdavidgraham/masscan
+TCP port scanner, spews SYN packets asynchronously, scanning entire Internet in under 5 minutes.
+
+ 15.2k
+ C
+Updated 10 days ago
+jeromeetienne/AR.js
+Efficient Augmented Reality for the Web - 60fps on mobile!
+
+a-frame three-js webar
+ 15.2k
+ HTML
+MIT license
+Updated on Mar 2
+
+
+yudai/gotty
+Share your terminal as a web application
+
+javascript go typescript browser terminal web websocket tty
+ 15.2k
+ Go
+MIT license
+Updated 10 days ago
+preservim/nerdtree
+A tree explorer plugin for vim.
+
+vim vim-plugin vim-plugins file-management file-manager
+ 15.2k
+ Vim script
+WTFPL license
+Updated 11 days ago
+typicode/lowdb
+⚡️ lowdb is a small local JSON database powered by Lodash (supports Node, Electron and the browser)
+
+lodash database electron nodejs javascript json embeddable localstorage embedded-database
+ 15.2k
+ JavaScript
+MIT license
+Updated 21 days ago
+2 issues need help
+zhiwehu/Python-programming-exercises
+100+ Python challenging programming exercises
+
+ 15.2k
+Updated on Feb 18
+toml-lang/toml
+Tom's Obvious, Minimal Language
+
+ 15.2k
+ Python
+MIT license
+Updated 18 days ago
+wagerfield/parallax
+Parallax Engine that reacts to the orientation of a smart device
+
+ 15.2k
+ JavaScript
+Updated on Jul 13, 2020
+cjbarber/ToolsOfTheTrade
+Tools of The Trade, from Hacker News.
+
+ 15.2k
+Updated 9 days ago
+codex-team/editor.js
+A block-styled editor with clean JSON output
+
+javascript editor json typescript ui wysiwyg raw-data codex-editor redactor
+ 15.2k
+ TypeScript
+Apache-2.0 license
+Updated 4 days ago
+1 issue needs help
+elunez/eladmin
+项目基于 Spring Boot 2.1.0 、 Jpa、 Spring Security、redis、Vue的前后端分离的后台管理系统，项目采用分模块开发方式， 权限控制采用 RBAC，支持数据字典与数据权限管理，支持一键生成前后端…
+
+spring-boot redis jwt admin vue jpa spring-security element-ui swagger2 eladmin
+ 15.2k
+ Java
+Apache-2.0 license
+Updated 17 days ago
+1 issue needs help
+briannesbitt/Carbon
+A simple PHP API extension for DateTime.
+
+ 15.2k
+ PHP
+MIT license
+Updated 6 days ago
+
+cocos2d/cocos2d-x
+Cocos2d-x is a suite of open-source, cross-platform, game-development tools used by millions of developers all over t…
+
+cocos2d android lua windows c-plus-plus ios metal game-engine cocos2d-x linx
+ 15.1k
+ C++
+Updated 18 days ago
+zziz/pwc
+Papers with code. Sorted by stars. Updated weekly.
+
+machine-learning code paper cvpr iccv nips icml eccv
+ 15.1k
+Updated on Jan 17, 2020
+2 issues need help
+yabwe/medium-editor
+Medium.com WYSIWYG editor clone. Uses contenteditable API to implement a rich text solution.
+
+javascript editor contenteditable wysiwyg rich-text-editor medium-editor
+ 15.1k
+ JavaScript
+Updated 21 days ago
+bower/bower
+A package manager for the web
+
+bower javascript package-manager front-end
+ 15.1k
+ JavaScript
+MIT license
+Updated on Jan 19
+limetext/lime
+Open source API-compatible alternative to the text editor Sublime Text
+
+editor golang text-editor
+ 15.1k
+BSD-2-Clause license
+Updated on Jan 2
+vim-airline/vim-airline
+lean & mean status/tabline for vim that's light as air
+
+vim-airline statusline tabline vim vim-plugin
+ 15.1k
+ Vim script
+MIT license
+Updated 4 days ago
+
+
+Shopify/draggable
+The JavaScript Drag & Drop library your grandparents warned you about.
+
+javascript es6 drag-and-drop draggable
+ 15.1k
+ JavaScript
+MIT license
+Updated 2 days ago
+2 issues need help
+
+firecracker-microvm/firecracker
+Secure and fast microVMs for serverless computing.
+
+rust open-source serverless containers virtual-machine sandbox virtualization minimalist oversubscription
+ 15.1k
+ Rust
+Apache-2.0 license
+Updated 30 minutes ago
+
+
+jasmine/jasmine
+Simple JavaScript testing framework for browsers and node.js
+
+jasmine javascript testing tdd
+ 15.1k
+ JavaScript
+Updated 2 days ago
+3 issues need help
+
+
+
+arendst/Tasmota
+Alternative firmware for ESP8266 with easy configuration using webUI, OTA updates, automation using timers or rules, …
+
+knx firmware mqtt iot arduino esp8266 automation ota smart-home sonoff tasmota tuya
+ 15.1k
+ C
+GPL-3.0 license
+Updated 10 minutes ago
+
+cocos2d/cocos2d-x
+Cocos2d-x is a suite of open-source, cross-platform, game-development tools used by millions of developers all over t…
+
+cocos2d android lua windows c-plus-plus ios metal game-engine cocos2d-x linx
+ 15.1k
+ C++
+Updated 18 days ago
+briannesbitt/Carbon
+A simple PHP API extension for DateTime.
+
+ 15.2k
+ PHP
+MIT license
+Updated 6 days ago
+elunez/eladmin
+项目基于 Spring Boot 2.1.0 、 Jpa、 Spring Security、redis、Vue的前后端分离的后台管理系统，项目采用分模块开发方式， 权限控制采用 RBAC，支持数据字典与数据权限管理，支持一键生成前后端…
+
+spring-boot redis jwt admin vue jpa spring-security element-ui swagger2 eladmin
+ 15.2k
+ Java
+Apache-2.0 license
+Updated 17 days ago
+1 issue needs help
+codex-team/editor.js
+A block-styled editor with clean JSON output
+
+javascript editor json typescript ui wysiwyg raw-data codex-editor redactor
+ 15.2k
+ TypeScript
+Apache-2.0 license
+Updated 4 days ago
+1 issue needs help
+cjbarber/ToolsOfTheTrade
+Tools of The Trade, from Hacker News.
+
+ 15.2k
+Updated 9 days ago
+wagerfield/parallax
+Parallax Engine that reacts to the orientation of a smart device
+
+ 15.2k
+ JavaScript
+Updated on Jul 13, 2020
+toml-lang/toml
+Tom's Obvious, Minimal Language
+
+ 15.2k
+ Python
+MIT license
+Updated 18 days ago
+typicode/lowdb
+⚡️ lowdb is a small local JSON database powered by Lodash (supports Node, Electron and the browser)
+
+lodash database electron nodejs javascript json embeddable localstorage embedded-database
+ 15.2k
+ JavaScript
+MIT license
+Updated 21 days ago
+2 issues need help
+zhiwehu/Python-programming-exercises
+100+ Python challenging programming exercises
+
+ 15.2k
+Updated on Feb 18
+preservim/nerdtree
+A tree explorer plugin for vim.
+
+vim vim-plugin vim-plugins file-management file-manager
+ 15.2k
+ Vim script
+WTFPL license
+Updated 11 days ago
+
+oracle/graal
+GraalVM: Run Programs Faster Anywhere 🚀
+
+java javascript ruby python c vm r polyglot
+ 15.1k
+ Java
+Updated 1 hour ago
+3 issues need help
+arendst/Tasmota
+Alternative firmware for ESP8266 with easy configuration using webUI, OTA updates, automation using timers or rules, …
+
+knx firmware mqtt iot arduino esp8266 automation ota smart-home sonoff tasmota tuya
+ 15.1k
+ C
+GPL-3.0 license
+Updated 15 minutes ago
+firecracker-microvm/firecracker
+Secure and fast microVMs for serverless computing.
+
+rust open-source serverless containers virtual-machine sandbox virtualization minimalist oversubscription
+ 15.1k
+ Rust
+Apache-2.0 license
+Updated 35 minutes ago
+jasmine/jasmine
+Simple JavaScript testing framework for browsers and node.js
+
+jasmine javascript testing tdd
+ 15.1k
+ JavaScript
+Updated 2 days ago
+3 issues need help
+vim-airline/vim-airline
+lean & mean status/tabline for vim that's light as air
+
+vim-airline statusline tabline vim vim-plugin
+ 15.1k
+ Vim script
+MIT license
+Updated 4 days ago
+Shopify/draggable
+The JavaScript Drag & Drop library your grandparents warned you about.
+
+javascript es6 drag-and-drop draggable
+ 15.1k
+ JavaScript
+MIT license
+Updated 2 days ago
+2 issues need help
+limetext/lime
+Open source API-compatible alternative to the text editor Sublime Text
+
+editor golang text-editor
+ 15.1k
+BSD-2-Clause license
+Updated on Jan 2
+bower/bower
+A package manager for the web
+
+bower javascript package-manager front-end
+ 15.1k
+ JavaScript
+MIT license
+Updated on Jan 19
+yabwe/medium-editor
+Medium.com WYSIWYG editor clone. Uses contenteditable API to implement a rich text solution.
+
+javascript editor contenteditable wysiwyg rich-text-editor medium-editor
+ 15.1k
+ JavaScript
+Updated 21 days ago
+zziz/pwc
+Papers with code. Sorted by stars. Updated weekly.
+
+machine-learning code paper cvpr iccv nips icml eccv
+ 15.1k
+Updated on Jan 17, 2020
+2 issues need help
+
+WordPress/WordPress
+WordPress, Git-ified. This repository is just a mirror of the WordPress subversion repository. Please do not send pul…
+
+ 15k
+ PHP
+Updated 4 hours ago
+tmrts/go-patterns
+Curated list of Go design patterns, recipes and idioms
+
+go golang awesome patterns idioms design-patterns design-patterns-for-humans
+ 15k
+ Go
+Apache-2.0 license
+Updated 20 days ago
+bokeh/bokeh
+Interactive Data Visualization in the browser, from Python
+
+bokeh numfocus visualization javascript python plots jupyter visualisation data-visualisation plotting notebooks interactive-plots
+ 15k
+ Python
+BSD-3-Clause license
+Updated 8 hours ago
+35 issues need help
+hackiftekhar/IQKeyboardManager
+Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. …
+
+iqkeyboardmanager swift xcode keyboard objective-c
+ 15k
+ Objective-C
+MIT license
+Updated 10 days ago
+rome/tools
+The Rome Toolchain. A linter, compiler, bundler, and more for JavaScript, TypeScript, HTML, Markdown, and CSS.
+
+typescript linter css javascript html bundler compiler flavortown
+ 15k
+ TypeScript
+MIT license
+Updated 2 days ago
+2 issues need help
+spf13/spf13-vim
+The ultimate vim distribution
+
+ 15k
+ Vim script
+Apache-2.0 license
+Updated 3 days ago
+aFarkas/lazysizes
+High performance and SEO friendly lazy loader for images (responsive and normal), iframes and more, that detects any …
+
+lazysizes javascript performance lazyload lazy-evaluation responsive-images
+ 15k
+ JavaScript
+MIT license
+Updated 11 days ago
+getlantern/download Archived
+Lantern官方版本下载 蓝灯 翻墙 代理 科学上网 外网 加速器 梯子 路由 proxy vpn circumvention gfw
+
+lantern accelerator censorship-circumvention vpn censorship gfw
+ 15k
+Updated on Aug 15, 2020
+handsontable/handsontable
+JavaScript data grid with a spreadsheet look & feel. Works for React, Angular, and Vue. Supported by the Handsontable…
+
+data-grid spreadsheet react javascript performance angular crud vue excel vue-table data-binding grid-editor data-table formulas react-data-grid
+ 15k
+ JavaScript
+Updated 3 days ago
+helm/charts
+⚠️(OBSOLETE) Curated applications for Kubernetes
+
+kubernetes charts helm
+ 15k
+ Go
+Apache-2.0 license
+Updated 5 days ago
+
+
+PaddlePaddle/Paddle
+PArallel Distributed Deep LEarning: Machine Learning Framework from Industrial Practice （『飞桨』核心框架，深度学习&机器学习高性能单机、分布式训…
+
+paddlepaddle deep-learning python machine-learning neural-network scalability efficiency distributed-training
+ 14.9k
+ Python
+Apache-2.0 license
+Updated 21 minutes ago
+valyala/fasthttp
+Fast HTTP package for Go. Tuned for high performance. Zero memory allocations in hot paths. Up to 10x faster than net…
+
+ 14.9k
+ Go
+MIT license
+Updated 21 days ago
+16 issues need help
+matryer/xbar
+Put the output from any script or program into your macOS Menu Bar (the BitBar reboot)
+
+xbar macos-menu menubar mac scripting bitbar macosx
+ 14.9k
+ Go
+MIT license
+Updated 4 days ago
+madrobby/zepto
+Zepto.js is a minimalist JavaScript library for modern browsers, with a jQuery-compatible API
+
+ 14.9k
+ HTML
+Updated on Oct 29, 2020
+GeekyAnts/NativeBase
+Essential cross-platform UI components for React Native
+
+nativebase android ios react-native ui-components native-platforms
+ 14.9k
+ JavaScript
+Apache-2.0 license
+Updated 2 days ago
+kriskowal/q
+A promise library for JavaScript
+
+ 14.9k
+ JavaScript
+MIT license
+Updated on May 19, 2020
+tensorflow/tfjs
+A WebGL accelerated JavaScript library for training and deploying ML models.
+
+webgl javascript machine-learning typescript deep-learning neural-network wasm web-assembly gpu-acceleration deep-neural-network
+ 15k
+ TypeScript
+Apache-2.0 license
+Updated 3 hours ago
+8 issues need help
+binux/pyspider
+A Powerful Spider(Web Crawler) System in Python.
+
+python crawler
+ 15k
+ Python
+Apache-2.0 license
+Updated on Mar 9
+oxford-cs-deepnlp-2017/lectures
+Oxford Deep NLP 2017 course
+
+nlp machine-learning natural-language-processing deep-learning oxford
+ 15k
+Updated on Jun 12, 2017
+nfl/react-helmet
+A document head manager for React
+
+react helmet side-effect
+ 15k
+ JavaScript
+MIT license
+Updated 20 days ago
+6 issues need help
+
+chai2010/advanced-go-programming-book
+📚 《Go语言高级编程》开源图书，涵盖CGO、Go汇编语言、RPC实现、Protobuf插件实现、Web框架实现、分布式系统等高阶主题(完稿)
+
+cgo go golang cloud web book asm rpc
+ 14.8k
+ Go
+BSD-2-Clause license
+Updated 8 days ago
+1 issue needs help
+luong-komorebi/Awesome-Linux-Software
+A list of awesome applications, software, tools and other materials for Linux distros.
+
+oss-icon desktop-environment icon-theme cross-platform open-source tools applications free software awesome-list cli-app linux-app linux-desktop freeware-icon ubuntu-linux linux-resource gui-app
+ 14.8k
+ Python
+Updated 5 days ago
+2 issues need help
+nswbmw/N-blog
+《一起学 Node.js》
+
+nodejs javascript blog express tutorial course mongodb mongolass
+ 14.8k
+ JavaScript
+Updated on Oct 30, 2019
+matomo-org/matomo
+Liberating Web Analytics. Star us on Github? +1. Matomo is the leading open alternative to Google Analytics that give…
+
+matomo privacy mysql php security website marketing mobile log analytics web-analytics piwik intranet growth hacktoberfest
+ 14.8k
+ PHP
+GPL-3.0 license
+Updated 4 hours ago
+99 issues need help
+css-modules/css-modules
+Documentation about css-modules
+
+ 14.8k
+Updated on Oct 2, 2020
+designmodo/Flat-UI
+Flat UI Free - Design Framework (html/css3/less/js). Flat UI is based on Bootstrap, a comfortable, responsive, and fu…
+
+ 14.9k
+ JavaScript
+MIT license
+Updated on Nov 17, 2020
+sanic-org/sanic
+Async Python 3.7+ web server/framework | Build fast. Run fast.
+
+python framework web-server web sanic web-framework api-server asyncio asgi
+ 14.9k
+ Python
+MIT license
+Updated yesterday
+4 issues need help
+hzlzh/Best-App
+收集&推荐优秀的 Apps/硬件/技巧/周边等
+
+macos mac app
+ 14.9k
+Updated on May 15, 2020
+brettwooldridge/HikariCP
+光 HikariCP・A solid, high-performance, JDBC connection pool at last.
+
+connection-pool jdbc java high-performance
+ 14.9k
+ Java
+Apache-2.0 license
+Updated 13 days ago
+electronicarts/CnC_Remastered_Collection
+ 14.9k
+ C++
+Updated on Sep 25, 2020
+
+ipython/ipython
+Official repository for IPython itself. Other repos in the IPython organization contain things like the website, docu…
+
+python data-science jupyter notebook ipython repl hacktoberfest closember
+ 14.8k
+ Python
+Updated 7 hours ago
+38 issues need help
+tj/git-extras
+GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
+
+git
+ 14.8k
+ Shell
+MIT license
+Updated 23 days ago
+junyanz/pytorch-CycleGAN-and-pix2pix
+Image-to-Image Translation in PyTorch
+
+pix2pix cyclegan computer-vision deep-learning computer-graphics pytorch generative-adversarial-network gan image-manipulation image-generation gans
+ 14.8k
+ Python
+Updated 6 days ago
+iamadamdev/bypass-paywalls-chrome
+Bypass Paywalls web browser extension for Chrome and Firefox.
+
+bypass-paywalls chrome-extension firefox chrome firefox-addon firefox-extension bypass chrome-extensions paywall hacktoberfest
+ 14.8k
+ JavaScript
+Updated 4 days ago
+altercation/solarized
+precision color scheme for multiple applications (terminal, vim, etc.) with both dark/light modes
+
+ 14.8k
+ Vim script
+MIT license
+Updated on Apr 27, 2020
+SortableJS/Vue.Draggable
+Vue drag-and-drop component based on Sortable.js
+
+vue component drag-and-drop
+ 14.8k
+ JavaScript
+MIT license
+Updated 18 days ago
+android10/Android-CleanArchitecture
+This is a sample app that is part of a series of blog posts I have written about how to architect an android applicat…
+
+android android-cleanarchitecture android-application architectural java android-development android-architecture
+ 14.8k
+ Java
+Apache-2.0 license
+Updated on Dec 29, 2020
+1 issue needs help
+wesm/pydata-book
+Materials and IPython notebooks for "Python for Data Analysis" by Wes McKinney, published by O'Reilly Media
+
+ 14.8k
+ Jupyter Notebook
+Updated 10 hours ago
+keystonejs/keystone-classic
+Node.js CMS and web app framework
+
+keystonejs nodejs javascript cms
+ 14.8k
+ JavaScript
+MIT license
+Updated 7 days ago
+66 issues need help
+infernojs/inferno
+🔥 An extremely fast, React-like JavaScript library for building modern user interfaces
+
+inferno jsx inferno-component react performance inferno-js javascript-library vdom
+ 14.8k
+ JavaScript
+MIT license
+Updated 2 days ago
+1 issue needs help
+
+haoel/leetcode
+LeetCode Problems' Solutions
+
+ 14.7k
+ C++
+Updated 8 days ago
+fivethirtyeight/data
+Data and code behind the articles and graphics at FiveThirtyEight
+
+data
+ 14.7k
+ Jupyter Notebook
+CC-BY-4.0 license
+Updated 10 days ago
+oblador/react-native-vector-icons
+Customizable Icons for React Native with support for image source and full styling.
+
+ui react-native icon-pack icon
+ 14.7k
+ JavaScript
+MIT license
+Updated 20 hours ago
+python-poetry/poetry
+Python dependency management and packaging made easy.
+
+python package-manager dependency-manager packaging hacktoberfest
+ 14.7k
+ Python
+MIT license
+Updated 1 hour ago
+22 issues need help
+mpv-player/mpv
+🎥 Command line video player
+
+mpv video audio c ffmpeg multimedia libav mplayer
+ 14.7k
+ C
+Updated 18 minutes ago
+sqlitebrowser/sqlitebrowser
+Official home of the DB Browser for SQLite (DB4S) project. Previously known as "SQLite Database Browser" and "Databas…
+
+database-browser sqlitebrowser c-plus-plus database cross-platform sqlite database-gui
+ 14.7k
+ C++
+Updated 5 days ago
+6 issues need help
+acdlite/recompose
+A React utility belt for function components and higher-order components.
+
+ 14.7k
+ JavaScript
+MIT license
+Updated 20 days ago
+2 issues need help
+airbnb/react-sketchapp
+render React components to Sketch ⚛️💎
+
+react sketch sketch-plugin react-sketchapp react-renderer
+ 14.7k
+ TypeScript
+MIT license
+Updated 11 days ago
+4 issues need help
+taosdata/TDengine
+An open-source big data platform designed and optimized for the Internet of Things (IoT).
+
+iot database monitoring time-series bigdata full-stack connected-vehicles industrial-iot
+ 14.8k
+ C
+AGPL-3.0 license
+Updated 4 hours ago
+98 issues need help
+vnpy/vnpy
+基于Python的开源量化交易平台开发框架
+
+vnpy python finance trading fintech algotrading quant investment
+ 14.8k
+ C++
+MIT license
+Updated 9 hours ago
+7 issues need help
+
+angular-ui/bootstrap Archived
+PLEASE READ THE PROJECT STATUS BELOW. Native AngularJS (Angular) directives for Bootstrap. Smaller footprint (20kB gz…
+
+ 14.6k
+ JavaScript
+MIT license
+Updated on Feb 10, 2019
+iawia002/annie
+👾 Fast, simple and clean video downloader
+
+video go crawler scraper downloader youtube tumblr bilibili qq youku iqiyi
+ 14.6k
+ Go
+MIT license
+Updated on Feb 7
+5 issues need help
+ampproject/amphtml
+The AMP web component framework.
+
+ 14.6k
+ JavaScript
+Apache-2.0 license
+Updated 13 hours ago
+4 issues need help
+youzan/vant-weapp
+轻量、可靠的小程序 UI 组件库
+
+ui weixin weapp vant
+ 14.6k
+ JavaScript
+MIT license
+Updated 5 days ago
+winterbe/java8-tutorial
+Modern Java - A Guide to Java 8
+
+java learning tutorial stream guide java-8 lambda-expressions parallel-streams
+ 14.6k
+ Java
+MIT license
+Updated 16 days ago
+salomonelli/best-resume-ever
+👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+
+vue nodejs javascript resume pdf cv
+ 14.6k
+ Vue
+MIT license
+Updated 26 days ago
+5 issues need help
+realm/SwiftLint
+A tool to enforce Swift style and conventions.
+
+ 14.6k
+ Swift
+MIT license
+Updated 12 hours ago
+1 issue needs help
+ageron/handson-ml2
+A series of Jupyter notebooks that walk you through the fundamentals of Machine Learning and Deep Learning in Python …
+
+ 14.7k
+ Jupyter Notebook
+Apache-2.0 license
+Updated 10 days ago
+nginx-proxy/nginx-proxy
+Automated nginx proxy for Docker containers using docker-gen
+
+letsencrypt docker nginx docker-gen
+ 14.7k
+ Python
+MIT license
+Updated 5 days ago
+menzi11/BullshitGenerator
+Needs to generate some texts to test if my GUI rendering codes good or not. so I made this.
+
+ 14.7k
+ JavaScript
+Updated on Feb 18
+
+gorilla/websocket
+A fast, well-tested and widely used WebSocket implementation for Go.
+
+gorilla-websocket go golang gorilla websocket
+ 14.5k
+ Go
+BSD-2-Clause license
+Updated 17 days ago
+10 issues need help
+open-mmlab/mmdetection
+OpenMMLab Detection Toolbox and Benchmark
+
+retinanet pytorch fast-rcnn ssd faster-rcnn rpn object-detection instance-segmentation mask-rcnn cascade-rcnn
+ 14.5k
+ Python
+Apache-2.0 license
+Updated 2 hours ago
+1 issue needs help
+riot/riot
+Simple and elegant component-based UI library
+
+javascript framework webcomponents minimal simple view elegant client-side customtags lite customelements customelement
+ 14.5k
+ JavaScript
+Updated 6 days ago
+openai/gpt-2
+Code for the paper "Language Models are Unsupervised Multitask Learners"
+
+paper
+ 14.5k
+ Python
+Updated 19 days ago
+eclipse-theia/theia
+Eclipse Theia is a cloud & desktop IDE framework implemented in TypeScript.
+
+electron editor typescript ide language-server-protocol cloud-ide
+ 14.5k
+ TypeScript
+Updated 10 hours ago
+371 issues need help
+zloirock/core-js
+Standard Library
+
+ecmascript-proposals proposals javascript polyfill js es6 es2015 proposal promise ponyfill shim weakmap es7 esnext symbol es2019
+ 14.5k
+ JavaScript
+MIT license
+Updated 4 hours ago
+12 issues need help
+braydie/HowToBeAProgrammer
+A guide on how to be a Programmer - originally published by Robert L Read
+
+learning programming
+ 14.5k
+Updated on Feb 25
+1 issue needs help
+goharbor/harbor
+An open source trusted cloud native registry project that stores, signs, and scans content.
+
+registry cncf helm container
+ 14.5k
+ Go
+Apache-2.0 license
+Updated 8 hours ago
+33 issues need help
+janl/mustache.js
+Minimal templating with {{mustaches}} in JavaScript
+
+ 14.5k
+ JavaScript
+MIT license
+Updated 7 days ago
+Swordfish90/cool-retro-term
+A good looking terminal emulator which mimics the old cathode display...
+
+macos linux qt terminal qml retro
+ 14.6k
+ QML
+Updated 22 days ago
+
+nikic/PHP-Parser
+A PHP parser written in PHP
+
+php parser static-analysis ast
+ 14.4k
+ PHP
+BSD-3-Clause license
+Updated 9 days ago
+easychen/howto-make-more-money
+程序员如何优雅的挣零花钱，2.0版，升级为小书了。Most of this not work outside China , so no English translate
+
+ 14.4k
+ PHP
+Updated on Oct 17, 2020
+EastWorld/wechat-app-mall
+微信小程序商城，微信小程序微店
+
+ 14.4k
+ JavaScript
+Apache-2.0 license
+Updated yesterday
+EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
+FizzBuzz Enterprise Edition is a no-nonsense implementation of FizzBuzz made by serious businessmen for serious busin…
+
+ 14.4k
+ Java
+Updated 19 days ago
+realm/realm-cocoa
+Realm is a mobile database: a replacement for Core Data & SQLite
+
+mobile-database swift ios sync mobile database objective-c threadsafe realtime
+ 14.4k
+ Objective-C
+Updated 2 hours ago
+yuzu-emu/yuzu
+Nintendo Switch Emulator
+
+emulator c-plus-plus cpp emulation switch
+ 14.4k
+ C++
+GPL-2.0 license
+Updated yesterday
+spotify/luigi
+Luigi is a Python module that helps you build complex pipelines of batch jobs. It handles dependency resolution, work…
+
+python hadoop scheduling orchestration-framework luigi
+ 14.4k
+ Python
+Apache-2.0 license
+Updated 3 days ago
+twbs/ratchet
+Build mobile apps with simple HTML, CSS, and JavaScript components.
+
+javascript css html ratchet
+ 14.4k
+ CSS
+MIT license
+Updated on Jun 25, 2020
+python-telegram-bot/python-telegram-bot
+We have made you a wrapper you can't refuse
+
+python bot framework telegram chatbot hacktoberfest
+ 14.5k
+ Python
+Updated 11 hours ago
+tj/n
+Node version management
+
+ 14.5k
+ Shell
+MIT license
+Updated 2 hours ago
+
+
+cookiecutter/cookiecutter
+A command-line utility that creates projects from cookiecutters (project templates), e.g. Python package projects, Vu…
+
+cookiecutter python cookiecutter-
+ 14.3k
+ Python
+BSD-3-Clause license
+Updated 5 days ago
+dotnet/roslyn
+The Roslyn .NET compiler provides C# and Visual Basic languages with rich code analysis APIs.
+
+visual-studio csharp roslyn visual-basic hacktoberfest
+ 14.3k
+ C#
+MIT license
+Updated 4 hours ago
+1586 issues need help
+testing-library/react-testing-library
+🐐 Simple and complete React DOM testing utilities that encourage good testing practices.
+
+javascript testing reactjs
+ 14.3k
+ JavaScript
+MIT license
+Updated 9 days ago
+denysdovhan/spaceship-prompt
+🚀⭐ A Zsh prompt for Astronauts
+
+shell zsh oh-my-zsh terminal prompt zsh-theme zsh-users shell-prompt shell-theme spaceship
+ 14.3k
+ Shell
+MIT license
+Updated yesterday
+10 issues need help
+so-fancy/diff-so-fancy
+Good-lookin' diffs. Actually… nah… The best-lookin' diffs. 🎉
+
+fancy diffs git diff diff-highlight
+ 14.3k
+ Perl
+MIT license
+Updated 15 days ago
+trojan-gfw/trojan
+An unidentifiable mechanism that helps you bypass GFW.
+
+trojan bypass-gfw anticensorship censorship-circumvention china gfw antisurveillance
+ 14.3k
+ C++
+GPL-3.0 license
+Updated on Nov 9, 2020
+plotly/dash
+Analytical Web Apps for Python, R, Julia, and Jupyter. No JavaScript Required.
+
+python julia react productivity flask finance data-science bioinformatics r jupyter web-app modeling plotly data-visualization dash rstats gui-framework charting technical-computing plotly-dash
+ 14.4k
+ Python
+MIT license
+Updated 11 days ago
+2 issues need help
+cool-RR/PySnooper
+Never use print for debugging again
+
+python debugger logging debug introspection
+ 14.4k
+ Python
+MIT license
+Updated 15 days ago
+facebook/zstd
+Zstandard - Fast real-time compression algorithm
+
+ 14.4k
+ C
+Updated 3 days ago
+10 issues need help
+thangchung/awesome-dotnet-core
+🐝 A collection of awesome .NET core libraries, tools, frameworks and software
+
+microsoft list awesome csharp dotnet-core awesome-list
+ 14.4k
+ C#
+Updated 2 days ago
+
+nndl/nndl.github.io
+《神经网络与深度学习》 邱锡鹏著 Neural Network and Deep Learning
+
+ 14.2k
+ HTML
+Updated on Dec 3, 2020
+sindresorhus/refined-github
+:octocat: Browser extension that simplifies the GitHub interface and adds useful features
+
+github chrome-extension firefox-addon github-extension userstyle browser-extension
+ 14.2k
+ TypeScript
+MIT license
+Updated 8 hours ago
+69 issues need help
+MichMich/MagicMirror
+MagicMirror² is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMi…
+
+magicmirror javascript raspberry-pi smarthome mirror domotics
+ 14.2k
+ JavaScript
+MIT license
+Updated 19 hours ago
+nondanee/UnblockNeteaseMusic
+Revive unavailable songs for Netease Cloud Music
+
+proxy-server netease-cloud-music unblocker
+ 14.2k
+ JavaScript
+MIT license
+Updated on Mar 1
+3 issues need help
+ustbhuangyi/better-scroll
+📜 inspired by iscroll, and it supports more features and has a better scroll perfermance
+
+iscroll ios vue mobile-web better-performance more-features
+ 14.3k
+ TypeScript
+MIT license
+Updated 2 hours ago
+3 issues need help
+radareorg/radare2
+UNIX-like reverse engineering framework and command-line toolset
+
+radare2 c commandline security reverse-engineering disassembler forensics malware-analysis binary-analysis hacktoberfest
+ 14.3k
+ C
+LGPL-3.0 license
+Updated 2 hours ago
+122 issues need help
+openzipkin/zipkin
+Zipkin is a distributed tracing system
+
+tracing zipkin observability distributed-tracing openzipkin
+ 14.3k
+ Java
+Apache-2.0 license
+Updated 6 days ago
+6 issues need help
+zergtant/pytorch-handbook
+pytorch handbook是一本开源的书籍，目标是帮助那些希望和使用PyTorch进行深度学习开发和研究的朋友快速入门，其中包含的Pytorch教程全部通过测试保证可以成功运行
+
+pytorch-handbook machine-learning deep-learning neural-network pytorch pytorch-tutorials
+ 14.3k
+ Jupyter Notebook
+Updated on Mar 18
+Carthage/Carthage
+A simple, decentralized dependency manager for Cocoa
+
+carthage swift package-manager cocoa
+ 14.3k
+ Swift
+Updated 14 days ago
+60 issues need help
+facebook/prepack
+A JavaScript bundle optimizer.
+
+javascript optimization
+ 14.3k
+ JavaScript
+Updated 20 days ago
+70 issues need help
+
+tpope/vim-fugitive
+fugitive.vim: A Git wrapper so awesome, it should be illegal
+
+ 14.2k
+ Vim script
+Updated 3 days ago
+gorilla/mux
+A powerful HTTP router and URL matcher for building Go web servers with 🦍
+
+mux middleware router gorilla go http
+ 14.2k
+ Go
+BSD-3-Clause license
+Updated on Jan 27
+google/fonts
+Font files available from Google Fonts, and a public issue tracker for all things Google Fonts
+
+ 14.2k
+ HTML
+Updated 3 days ago
+chubin/wttr.in
+⛅ The right way to check the weather
+
+weather-information weather terminal curl ascii-art weather-api weather-app
+ 14.2k
+ Python
+Apache-2.0 license
+Updated 14 days ago
+10 issues need help
+hoanhan101/ultimate-go
+The Ultimate Go Study Guide
+
+study-guide golang programming ebook computer-systems
+ 14.2k
+ Go
+Apache-2.0 license
+Updated 27 days ago
+yaronn/blessed-contrib
+Build terminal dashboards using ascii/ansi art and javascript
+
+ 14.2k
+ JavaScript
+MIT license
+Updated on Jan 9
+streamlit/streamlit
+Streamlit — The fastest way to build data apps in Python
+
+streamlit python data-science machine-learning deep-learning data-visualization developer-tools data-analysis
+ 14.2k
+ Python
+Apache-2.0 license
+Updated 4 hours ago
+12 issues need help
+facebook/yoga
+Yoga is a cross-platform layout engine which implements Flexbox. Follow https://twitter.com/yogalayout for updates.
+
+ 14.2k
+ C++
+Updated 18 days ago
+you-dont-need/You-Dont-Need-JavaScript
+CSS is powerful, you can do a lot of things without JS.
+
+counter burger-menu treeview accordion carousel javascript css game font popover tooltip textfield
+ 14.2k
+ CSS
+Updated on Oct 17, 2020
+6 issues need help
+30-seconds/30-seconds-of-css
+Short CSS code snippets for all your development needs
+
+snippets css education programming learn-to-code css-snippets snippets-collection learning-resources
+ 14.2k
+ CSS
+CC0-1.0 license
+Updated 17 days ago
+
+buger/goreplay
+GoReplay is an open-source tool for capturing and replaying live HTTP traffic into a test environment in order to con…
+
+testing go devops qa testing-tools
+ 14.1k
+ Go
+Updated 8 days ago
+10 issues need help
+pouchdb/pouchdb
+🐨 - PouchDB is a pocket-sized database.
+
+pouchdb database javascript couchdb hacktoberfest
+ 14.1k
+ JavaScript
+Apache-2.0 license
+Updated 6 days ago
+getify/Functional-Light-JS
+Pragmatic, balanced FP in JavaScript. @FLJSBook on twitter.
+
+javascript education functional-programming book training-providers training-materials
+ 14.1k
+ JavaScript
+Updated on Jan 16
+lutzroeder/netron
+Visualizer for neural network, deep learning, and machine learning models
+
+tensorflow tensorflow-lite mxnet onnx caffe darknet deep-learning machine-learning ai neural-network keras ml torch pytorch visualizer machinelearning deeplearning paddle caffe2 coreml
+ 14.1k
+ JavaScript
+MIT license
+Updated 7 hours ago
+14 issues need help
+rasbt/deeplearning-models
+A collection of various deep learning architectures, models, and tips
+
+ 14.1k
+ Jupyter Notebook
+MIT license
+Updated on Mar 7
+source-foundry/Hack
+A typeface designed for source code
+
+typeface font hack web-fonts developer developer-tools ttf
+ 14.1k
+ Shell
+Updated on Nov 22, 2020
+13 issues need help
+jbhuang0604/awesome-computer-vision
+A curated list of awesome computer vision resources
+
+ 14.1k
+Updated 9 days ago
+vueComponent/ant-design-vue
+🌈 An enterprise-class UI components based on Ant Design and Vue. 🐜
+
+ant vue enterprise react css ui-design ui frontend antd ant-design vuecomponent vue-antd vue-antd-ui vue3 antd-vue
+ 14.2k
+ Vue
+Updated 4 hours ago
+4 issues need help
+JeffLi1993/springboot-learning-example
+spring boot 实践学习案例，是 spring boot 初学者及核心技术巩固的最佳实践。另外写博客，用 OpenWrite。
+
+elasticsearch dubbo redis jpa springboot mybatis webflux
+ 14.2k
+ Java
+Apache-2.0 license
+Updated on Mar 2
+SBoudrias/Inquirer.js
+A collection of common interactive command line user interfaces.
+
+nodejs command-line prompt javascript-library
+ 14.2k
+ JavaScript
+MIT license
+Updated 11 days ago
+
+tannerlinsley/react-table
+⚛️ Hooks for building fast and extendable tables and datagrids for React
+
+react hooks pagination sorting grid table datatable datagrid filtering grouping datagrids
+ 14k
+ JavaScript
+MIT license
+Updated 21 days ago
+2 issues need help
+nextcloud/server
+☁️ Nextcloud server, a safe home for all your data
+
+nextcloud javascript open-source enterprise design opensource cloud ux owncloud decentralized sharing file-sharing collaboration distributed free-software usability self-hosting federation hacktoberfest federated
+ 14k
+ PHP
+Updated 31 minutes ago
+33 issues need help
+NickeManarin/ScreenToGif
+🎬 ScreenToGif allows you to record a selected area of your screen, edit and save it as a gif or video.
+
+video editor wpf gif recorder webcam sketchboard
+ 14k
+ C#
+MS-PL license
+Updated 2 days ago
+knex/knex
+A query builder for PostgreSQL, MySQL and SQLite3, designed to be flexible, portable, and fun to use.
+
+knex sql mysql javascript postgresql sqlite3
+ 14k
+ JavaScript
+MIT license
+Updated 16 hours ago
+47 issues need help
+apache/incubator-weex
+Apache Weex (Incubating)
+
+weex
+ 14k
+ C++
+Apache-2.0 license
+Updated on Jan 27
+iampawan/FlutterExampleApps
+[Example APPS] Basic Flutter apps, for flutter devs.
+
+flutter-apps flutter-plugin android dart ios material-design cross-platform apps flutter dartlang
+ 14k
+ Dart
+Updated on Oct 18, 2020
+apache/rocketmq
+Mirror of Apache RocketMQ
+
+rocketmq
+ 14k
+ Java
+Apache-2.0 license
+Updated 23 minutes ago
+lottie-react-native/lottie-react-native
+Lottie wrapper for React Native.
+
+react react-native animations after-effects bodymovin
+ 14k
+ Java
+Apache-2.0 license
+Updated 4 days ago
+hemanth/functional-programming-jargon
+Jargon from the functional programming world in simple terms!
+
+functional-programming fp
+ 14k
+MIT license
+Updated on Jan 14
+quii/learn-go-with-tests
+Learn Go with test-driven development
+
+tdd testing go golang test-driven-development
+ 14.1k
+ Go
+MIT license
+Updated 7 days ago
+2 issues need help
+
+
+ZhongFuCheng3y/3y
+📓从Java基础、JavaWeb基础到常用的框架再到面试题都有完整的教程，几乎涵盖了Java后端必备的知识点
+
+ 13.9k
+Updated on Jan 10
+badges/shields
+Concise, consistent, and legible badges in SVG and raster format
+
+badge-maker svg github metadata status badge hacktoberfest
+ 13.9k
+ JavaScript
+CC0-1.0 license
+Updated yesterday
+71 issues need help
+sickcodes/Docker-OSX
+Run Mac in a Docker! Run near native OSX-KVM in Docker! X11 Forwarding! CI/CD for OS X!
+
+docker-osx osx-kvm macos docker osx container os x11 kvm x
+ 13.9k
+ Shell
+GPL-3.0 license
+Updated 16 hours ago
+2 issues need help
+enaqx/awesome-pentest
+A collection of awesome penetration testing resources, tools and other shiny things
+
+awesome awesome-list
+ 13.9k
+Updated 23 days ago
+flatpickr/flatpickr
+lightweight, powerful javascript datetimepicker with no dependencies
+
+datetime date timepicker datetime-picker datepicker daterange daterangepicker
+ 13.9k
+ TypeScript
+MIT license
+Updated 11 days ago
+checkcheckzz/system-design-interview
+System design interview for IT companies
+
+interview design-systems system interview-questions interview-preparation system-design
+ 14k
+Updated on Mar 10
+cmusatyalab/openface
+Face recognition with deep neural networks.
+
+face-recognition deep-learning facenet
+ 14k
+ Lua
+Apache-2.0 license
+Updated on Jul 26, 2020
+tzutalin/labelImg
+🖍️ LabelImg is a graphical image annotation tool and label object bounding boxes in images
+
+recognition tools deep-learning detection annotations python3 imagenet image-classification python2
+ 14k
+ Python
+MIT license
+Updated 5 hours ago
+fbsamples/f8app
+Source code of the official F8 app of 2017, powered by React Native and other Facebook open source projects.
+
+ 14k
+ JavaScript
+Updated 20 days ago
+1 issue needs help
+233boy/v2ray
+最好用的 V2Ray 一键安装脚本 & 管理脚本
+
+shell-script v2ray vmess
+ 14k
+ Shell
+Updated on Dec 6, 2020
+
+ZhongFuCheng3y/3y
+📓从Java基础、JavaWeb基础到常用的框架再到面试题都有完整的教程，几乎涵盖了Java后端必备的知识点
+
+ 13.9k
+Updated on Jan 10
+badges/shields
+Concise, consistent, and legible badges in SVG and raster format
+
+badge-maker svg github metadata status badge hacktoberfest
+ 13.9k
+ JavaScript
+CC0-1.0 license
+Updated yesterday
+71 issues need help
+sickcodes/Docker-OSX
+Run Mac in a Docker! Run near native OSX-KVM in Docker! X11 Forwarding! CI/CD for OS X!
+
+docker-osx osx-kvm macos docker osx container os x11 kvm x
+ 13.9k
+ Shell
+GPL-3.0 license
+Updated 16 hours ago
+2 issues need help
+enaqx/awesome-pentest
+A collection of awesome penetration testing resources, tools and other shiny things
+
+awesome awesome-list
+ 13.9k
+Updated 23 days ago
+flatpickr/flatpickr
+lightweight, powerful javascript datetimepicker with no dependencies
+
+datetime date timepicker datetime-picker datepicker daterange daterangepicker
+ 13.9k
+ TypeScript
+MIT license
+Updated 11 days ago
+checkcheckzz/system-design-interview
+System design interview for IT companies
+
+interview design-systems system interview-questions interview-preparation system-design
+ 14k
+Updated on Mar 10
+cmusatyalab/openface
+Face recognition with deep neural networks.
+
+face-recognition deep-learning facenet
+ 14k
+ Lua
+Apache-2.0 license
+Updated on Jul 26, 2020
+tzutalin/labelImg
+🖍️ LabelImg is a graphical image annotation tool and label object bounding boxes in images
+
+recognition tools deep-learning detection annotations python3 imagenet image-classification python2
+ 14k
+ Python
+MIT license
+Updated 5 hours ago
+fbsamples/f8app
+Source code of the official F8 app of 2017, powered by React Native and other Facebook open source projects.
+
+ 14k
+ JavaScript
+Updated 20 days ago
+1 issue needs help
+233boy/v2ray
+最好用的 V2Ray 一键安装脚本 & 管理脚本
+
+shell-script v2ray vmess
+ 14k
+ Shell
+Updated on Dec 6, 2020
+
+
+MengTo/Spring
+A library to simplify iOS animations in Swift.
+
+ 13.9k
+ Swift
+MIT license
+Updated on Feb 6
+JedWatson/classnames
+A simple javascript utility for conditionally joining classNames together
+
+ 13.9k
+ JavaScript
+MIT license
+Updated 2 hours ago
+auth0/node-jsonwebtoken
+JsonWebToken implementation for node.js http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html
+
+ 13.9k
+ JavaScript
+MIT license
+Updated 19 days ago
+PanJiaChen/vue-admin-template
+a vue2.0 minimal admin template
+
+javascript vue vuex vue-cli axios vue-router element-ui vue-admin
+ 13.9k
+ JavaScript
+MIT license
+Updated 9 days ago
+1 issue needs help
+PerfectlySoft/Perfect
+Server-side Swift. The Perfect core toolset and framework for Swift Developers. (For mobile back-end development, web…
+
+swift-perfect-community swift perfect swift-framework server-side-swift web-application-framework
+ 13.9k
+ Swift
+Updated on Feb 9
+nginx/nginx
+An official read-only mirror of http://hg.nginx.org/nginx/ which is updated hourly. Pull requests on GitHub cannot be…
+
+ 13.9k
+ C
+Updated 6 days ago
+fengdu78/lihang-code
+《统计学习方法》的代码实现
+
+ 13.9k
+ Jupyter Notebook
+Updated 20 days ago
+wangshub/wechat_jump_game
+微信《跳一跳》Python 辅助
+
+python adb wechat-app
+ 13.9k
+ Python
+Apache-2.0 license
+Updated on Mar 19
+SimulatedGREG/electron-vue
+An Electron & Vue.js quick start boilerplate with vue-cli scaffolding, common Vue plugins, electron-packager/electron…
+
+vue-cli electron-builder electron-packager boilerplate electron unit-testing documentation babel webpack vue es6 end-to-end-testing
+ 13.9k
+ JavaScript
+MIT license
+Updated 12 days ago
+3 issues need help
+taizilongxu/interview_python
+关于Python的面试题
+
+ 13.9k
+ Shell
+Updated on Mar 3
+
+
+angular-ui/ui-router
+The de-facto solution to flexible routing with nested views in AngularJS
+
+ui-router javascript angularjs typescript router state-machine routing state-tree
+ 13.8k
+ TypeScript
+MIT license
+Updated 22 days ago
+cayleygraph/cayley
+An open-source graph database
+
+cayley graph-database go graph linked-data
+ 13.8k
+ Go
+Apache-2.0 license
+Updated 12 days ago
+1 issue needs help
+NodeRedis/node-redis
+A high performance Node.js Redis client.
+
+redis-command node-redis nodejs redis redis-clients
+ 13.8k
+ JavaScript
+MIT license
+Updated 6 days ago
+3 issues need help
+javascript-tutorial/en.javascript.info
+Modern JavaScript Tutorial
+
+ 13.8k
+ HTML
+Updated yesterday
+netlify/netlify-cms
+A Git-based CMS for Static Site Generators
+
+netlify-cms github react javascript git static-site-generator cms static npm-package jamstack hacktoberfest
+ 13.8k
+ JavaScript
+MIT license
+Updated 3 hours ago
+70 issues need help
+gpakosz/.tmux
+🇫🇷 Oh my tmux! My self-contained, pretty & versatile tmux configuration made with ❤️
+
+tmux cygwin shell theme dotfiles cli console terminal customization configuration plugins screen wsl powerline tmux-plugins tmux-configuration tmux-conf conf tmux-config tmux-theme
+ 13.8k
+Updated 25 days ago
+BabylonJS/Babylon.js
+Babylon.js is a powerful, beautiful, simple, and open game and rendering engine packed into a friendly JavaScript fra…
+
+babylon webgl typescript game-engine webvr game-development webaudio webgl2 game-engine-3d 3d webgpu webxr
+ 13.8k
+ TypeScript
+Apache-2.0 license
+Updated 6 hours ago
+7 issues need help
+android/sunflower
+A gardening app illustrating Android development best practices with Android Jetpack.
+
+ 13.8k
+ Kotlin
+Updated 12 days ago
+3 issues need help
+frappe/charts
+Simple, responsive, modern SVG Charts with zero dependencies
+
+javascript svg chart graph zero-dependency svg-chart
+ 13.8k
+ JavaScript
+MIT license
+Updated 23 hours ago
+2 issues need help
+hdodenhof/CircleImageView
+A circular ImageView for Android
+
+android widget imageview
+ 13.8k
+ Java
+Apache-2.0 license
+Updated on Dec 30, 2020
+
+
+jobbole/awesome-java-cn
+Java资源大全中文版，包括开发库、开发工具、网站、博客、微信、微博等，由伯乐在线持续更新。
+
+ 13.7k
+Updated on Jan 2, 2020
+nodemailer/nodemailer
+✉️ Send e-mails with Node.JS – easy as cake!
+
+nodemailer email email-sender rfc822
+ 13.7k
+ JavaScript
+Updated 28 days ago
+geeeeeeeeek/git-recipes Archived
+🥡 Git recipes in Chinese by Zhongyi Tong. 高质量的Git中文教程.
+
+git tutorials git-recipes
+ 13.7k
+Updated on Mar 5, 2019
+lensapp/lens
+Lens - The Kubernetes IDE
+
+kubernetes devops containers cloud-native kubernetes-dashboard kubernetes-ui
+ 13.7k
+ TypeScript
+Updated 37 minutes ago
+1 issue needs help
+kailashahirwar/cheatsheets-ai
+Essential Cheat Sheets for deep learning and machine learning researchers https://medium.com/@kailashahirwar/essentia…
+
+deep-learning machine-learning numpy keras artificial-intelligence scipy matplotlib
+ 13.7k
+MIT license
+Updated on Oct 19, 2019
+quantopian/zipline
+Zipline, a Pythonic Algorithmic Trading Library
+
+python quant algorithmic-trading zipline
+ 13.7k
+ Python
+Apache-2.0 license
+Updated 13 hours ago
+11 issues need help
+fullcalendar/fullcalendar
+Full-sized drag & drop event calendar
+
+ 13.8k
+ TypeScript
+MIT license
+Updated 2 days ago
+geeeeeeeeek/electronic-wechat Archived
+💬 A better WeChat on macOS and Linux. Built with Electron by Zhongyi Tong.
+
+electron macos linux wechat web-wechat
+ 13.8k
+ JavaScript
+MIT license
+Updated on Sep 30, 2020
+ibireme/YYKit
+A collection of iOS components.
+
+ 13.8k
+ Objective-C
+MIT license
+Updated on Jun 30, 2020
+FormidableLabs/webpack-dashboard
+A CLI dashboard for webpack dev server
+
+webpack-dashboard cli-dashboard cli webpack dashboard devtools dx socket-communication
+ 13.8k
+ JavaScript
+MIT license
+Updated on Jan 30
+
+StackExchange/Dapper
+Dapper - a simple object mapper for .Net
+
+dapper sql ado-net
+ 13.6k
+ C#
+Updated 12 days ago
+LMAX-Exchange/disruptor
+High Performance Inter-Thread Messaging Library
+
+disruptor java concurrency
+ 13.6k
+ Java
+Apache-2.0 license
+Updated 2 days ago
+flutter/plugins
+Plugins for Flutter maintained by the Flutter team
+
+android plugin dart ios flutter flutter-plugin
+ 13.6k
+ Dart
+BSD-3-Clause license
+Updated 15 hours ago
+gocolly/colly
+Elegant Scraper and Crawler Framework for Golang
+
+scraper go golang crawler framework spider scraping crawling
+ 13.7k
+ Go
+Apache-2.0 license
+Updated 2 days ago
+4 issues need help
+browserify/browserify
+browser-side require() the node.js way
+
+javascript bundler browser modules commonjs module-bundler
+ 13.7k
+ JavaScript
+MIT license
+Updated 25 days ago
+spmallick/learnopencv
+Learn OpenCV : C++ and Python Examples
+
+opencv machine-learning deep-neural-networks ai computer-vision deep-learning deeplearning opencv-library opencv-python computervision opencv3 opencv-tutorial opencv-cpp
+ 13.7k
+ Jupyter Notebook
+Updated 3 days ago
+Tencent/weui-wxss
+A UI library by WeChat official design team, includes the most useful widgets/modules.
+
+weui wxss
+ 13.7k
+ Less
+Updated 27 days ago
+lllyasviel/style2paints
+sketch + style = paints 🎨 (TOG2018/SIGGRAPH2018ASIA)
+
+ 13.7k
+ JavaScript
+Apache-2.0 license
+Updated on Jun 6, 2020
+apache/shardingsphere
+Distributed Database Ecosphere
+
+mysql sql database postgresql shard distributed-transactions distributed-database database-cluster shardingsphere distributed-sql-database
+ 13.7k
+ Java
+Apache-2.0 license
+Updated 2 hours ago
+5 issues need help
+yiisoft/yii2
+Yii 2: The Fast, Secure and Professional PHP Framework
+
+yii php framework yii2 php-framework hacktoberfest
+ 13.7k
+ PHP
+BSD-3-Clause license
+Updated 9 days ago
+23 issues need help
+
+TeamNewPipe/NewPipe
+A libre lightweight streaming front-end for Android.
+
+newpipe watch android video translation soundcloud youtube-video download-videos 1080p peertube
+ 13.6k
+ Java
+Updated 6 hours ago
+12 issues need help
+ValveSoftware/Proton
+Compatibility tool for Steam Play based on Wine and additional components
+
+proton
+ 13.6k
+ C++
+Updated 4 days ago
+Redocly/redoc
+📘 OpenAPI/Swagger-generated API Reference Documentation
+
+openapi reactjs swagger api-documentation documentation-tool hacktoberfest documentation-generator redoc openapi3
+ 13.6k
+ TypeScript
+MIT license
+Updated yesterday
+53 issues need help
+substack/stream-handbook
+how to write node programs with streams
+
+ 13.6k
+ JavaScript
+Updated on Jan 23, 2020
+grab/front-end-guide
+📚 Study guide and introduction to the modern front end stack.
+
+react redux javascript stylelint css engineering babel front-end webpack yarn eslint jest css-modules flowtype grab study-plan
+ 13.6k
+ JavaScript
+MIT license
+Updated 20 days ago
+1 issue needs help
+pbatard/rufus
+The Reliable USB Formatting Utility
+
+bootable-drives iso c windows usb assembly boot md5 uefi sha1 sha256 syslinux grub mbr gpt bios freedos grub4dos windows-to-go
+ 13.6k
+ C
+GPL-3.0 license
+Updated 5 days ago
+wulkano/Kap
+An open-source screen recorder built with web technology
+
+kap aperture macos electron javascript productivity open-source mac oss communication nextjs screen-recorder capture screen-capture record
+ 13.6k
+ TypeScript
+MIT license
+Updated on Mar 14
+26 issues need help
+maxwellito/vivus
+JavaScript library to make drawing animation on SVG
+
+ 13.6k
+ JavaScript
+MIT license
+Updated 2 days ago
+marcuswestin/WebViewJavascriptBridge
+An iOS/OSX bridge for sending messages between Obj-C and JavaScript in UIWebViews/WebViews
+
+ 13.6k
+ Objective-C
+MIT license
+Updated 25 days ago
+erusev/parsedown
+Better Markdown Parser in PHP
+
+markdown-parser php markdown parser
+ 13.6k
+ PHP
+MIT license
+Updated 2 days ago
+1 issue needs help
+
+appium/appium
+📱 Automation for iOS, Android, and Windows Apps.
+
+appium webdriver android windows ios automation
+ 13.5k
+ JavaScript
+Apache-2.0 license
+Updated yesterday
+3 issues need help
+textmate/textmate
+TextMate is a graphical text editor for macOS 10.12 or later
+
+textmate macos c-plus-plus objective-c-plus-plus cocoa texteditor
+ 13.5k
+ Objective-C++
+Updated 3 days ago
+amazeui/amazeui
+Amaze UI, a mobile-first and modular front-end framework.
+
+javascript css less responsive mobile-first front-end-framework
+ 13.5k
+ JavaScript
+Updated on Oct 20, 2019
+ty4z2008/Qix
+Machine Learning、Deep Learning、PostgreSQL、Distributed System、Node.Js、Golang
+
+machine-learning go distributed-systems awesome deep-learning postgresql distributed-computing distributed-database
+ 13.5k
+Updated 22 days ago
+lgvalle/Material-Animations
+Android Transition animations explanation with examples.
+
+ 13.5k
+ Java
+MIT license
+Updated on Apr 2, 2019
+grpc/grpc-go
+The Go language implementation of gRPC. HTTP/2 based RPC
+
+grpc go microservices rpc hacktoberfest proto nanoservices giant-robots dogs-over-cats
+ 13.5k
+ Go
+Apache-2.0 license
+Updated yesterday
+ccgus/fmdb
+A Cocoa / Objective-C wrapper around SQLite
+
+ 13.5k
+ Objective-C
+Updated 25 days ago
+ForrestKnight/open-source-cs
+Video discussing this curriculum:
+
+computer-science
+ 13.6k
+MIT license
+Updated on Jan 28
+KaTeX/KaTeX
+Fast math typesetting for the web.
+
+katex math-typesetting javascript latex math
+ 13.6k
+ JavaScript
+MIT license
+Updated 15 hours ago
+5 issues need help
+ethereum/wiki
+The Ethereum Wiki
+
+ 13.6k
+Updated 24 days ago
+
+
+zulip/zulip
+Zulip server and webapp - powerful open source team chat
+
+electron javascript python slack chat react-native foss apache collaboration python3 free zulip
+ 13.4k
+ Python
+Apache-2.0 license
+Updated 31 minutes ago
+379 issues need help
+TKkk-iOSer/WeChatPlugin-MacOS Archived
+plugin macos alfred-workflow weixin wechat tweak
+ 13.4k
+ Objective-C
+Updated on Apr 22, 2019
+marcuswestin/store.js
+Cross-browser storage for all use cases, used across the web.
+
+javascript serialization storage localstorage plugins cross-browser store-json
+ 13.4k
+ JavaScript
+MIT license
+Updated on Mar 9
+CoderMJLee/MJRefresh
+An easy way to use pull-to-refresh.
+
+objective-c refresh
+ 13.4k
+ Objective-C
+MIT license
+Updated 8 hours ago
+microsoft/react-native-windows
+A framework for building native Windows apps with React.
+
+react xbox react-native dotnet uwp
+ 13.4k
+ C++
+Updated 2 days ago
+13 issues need help
+facebookarchive/AsyncDisplayKit
+Smooth asynchronous user interfaces for iOS apps.
+
+ 13.4k
+ Objective-C++
+Updated on Jun 4, 2019
+n8n-io/n8n
+Free and open fair-code licensed node based Workflow Automation Tool. Easily automate tasks across different services.
+
+n8n workflow-automation docker cli workflow integrations development automation node typescript iaas data-flow self-hosted ipaas apis automated low-code integration-framework low-code-development-platform low-code-plattform
+ 13.5k
+ TypeScript
+Updated 1 hour ago
+expo/expo
+An open-source platform for making universal native apps with React. Expo runs on Android, iOS, and the web.
+
+expo universal native-apps android react ios mobile web native web-framework app-framework
+ 13.5k
+ Objective-C
+Updated 1 hour ago
+20 issues need help
+interagent/http-api-design
+HTTP API design guide extracted from work on the Heroku Platform API
+
+ 13.5k
+Updated on Dec 6, 2020
+matplotlib/matplotlib
+matplotlib: plotting with Python
+
+ 13.5k
+ Python
+Updated 5 hours ago
+47 issues need help
+
+basarat/typescript-book
+📚 The definitive guide to TypeScript and possibly the best TypeScript book 📖. Free and Open Source 🌹
+
+typescript-book typescript-community open-source typescript free
+ 13.3k
+ TypeScript
+Updated 25 days ago
+4 issues need help
+motdotla/dotenv
+Loads environment variables from .env for nodejs projects.
+
+ 13.3k
+ JavaScript
+BSD-2-Clause license
+Updated 9 days ago
+1 issue needs help
+teambit/bit
+Build modular projects with components in harmony.
+
+react nodejs git graphql components workflow distributed-systems modules frontend backend reactjs bit collaboration developer-tools ui-components javscript reuse
+ 13.3k
+ TypeScript
+Updated 8 hours ago
+catchorg/Catch2
+A modern, C++-native, header-only, test framework for unit-tests, TDD and BDD - using C++11, C++14, C++17 and later (…
+
+bdd testing c-plus-plus framework tdd cpp11 test-framework header-only no-dependencies single-file
+ 13.3k
+ C++
+BSL-1.0 license
+Updated 3 days ago
+4 issues need help
+feathersjs/feathers
+A framework for real-time applications and REST APIs with JavaScript and TypeScript
+
+feathers javascript feathersjs nodejs real-time framework browser react-native
+ 13.3k
+ TypeScript
+MIT license
+Updated 7 days ago
+2 issues need help
+react-grid-layout/react-grid-layout
+A draggable and resizable grid layout with responsive breakpoints, for React.
+
+react javascript resize grid drag-and-drop es2015
+ 13.3k
+ JavaScript
+MIT license
+Updated 4 days ago
+fatih/vim-go
+Go development plugin for Vim
+
+vim go viml golang vim-plugins vim-go hacktoberfest lps gopls
+ 13.3k
+ Vim script
+Updated 13 hours ago
+mxcl/PromiseKit
+Promises for Swift & ObjC.
+
+swift promises objc
+ 13.3k
+ Swift
+MIT license
+Updated 17 days ago
+1 issue needs help
+meilisearch/MeiliSearch
+Lightning Fast, Ultra Relevant, and Typo-Tolerant Search Engine
+
+search-engine typo-tolerance rust database highlighting synonyms instant site-search entreprise-search
+ 13.4k
+ Rust
+MIT license
+Updated 4 days ago
+jantic/DeOldify
+A Deep Learning based project for colorizing and restoring old images (and video!)
+
+ 13.4k
+ Jupyter Notebook
+MIT license
+Updated 3 days ago
+
+foreversd/forever
+A simple CLI tool for ensuring that a given script runs continuously (i.e. forever)
+
+ 13.3k
+ JavaScript
+MIT license
+Updated on Mar 9
+HubSpot/youmightnotneedjquery
+ 13.3k
+ HTML
+MIT license
+Updated 12 days ago
+prisma-archive/chromeless Archived
+🖥 Chrome automation made simple. Runs locally or headless on AWS Lambda.
+
+chrome serverless integration-testing headless selenium graphcool nightmarejs headless-chrome
+ 13.3k
+ TypeScript
+MIT license
+Updated on Nov 13, 2018
+40 issues need help
+emilwallner/Screenshot-to-code
+A neural network that transforms a design mock-up into a static website.
+
+floydhub machine-learning deep-learning jupyter keras jupyter-notebook cnn lstm seq2seq cnn-keras encoder-decoder
+ 13.3k
+ HTML
+Updated on Feb 9
+1 issue needs help
+angular/angular-seed
+Seed project for angular apps.
+
+ 13.3k
+ JavaScript
+MIT license
+Updated on Oct 2, 2020
+mingrammer/diagrams
+🎨 Diagram as Code for prototyping cloud system architectures
+
+diagram graphviz architecture hacktoberfest diagram-as-code
+ 13.3k
+ Python
+MIT license
+Updated 7 days ago
+2 issues need help
+rbenv/rbenv
+Groom your app’s Ruby environment
+
+ruby-versions ruby-installation ruby
+ 13.3k
+ Shell
+MIT license
+Updated 1 hour ago
+vurtun/nuklear Archived
+A single-header ANSI C gui library
+
+nuklear c gui imgui c89 single-header-lib
+ 13.3k
+ C
+Updated on Jan 4, 2020
+1 issue needs help
+alievk/avatarify-python
+Avatars for Zoom, Skype and other video-conferencing apps.
+
+ 13.3k
+ Python
+Updated 4 days ago
+strongloop/loopback
+LoopBack makes it easy to build modern applications that require complex integrations.
+
+ 13.3k
+ JavaScript
+Updated on Mar 6
+
+
+Kr1s77/awesome-python-login-model
+😮python模拟登陆一些大型网站，还有一些简单的爬虫，希望对你们有所帮助❤️，如果喜欢记得给个star哦🌟
+
+jingdong python twitter-bot selenium facebook-login spiders weixinbot sina-spider github-login zhihu-spider tuchong taobao-spider bilibili-login lagou-spider 163mail-login douban-spider guoke-spider
+ 13.2k
+ Python
+Updated on Oct 2, 2020
+froala/design-blocks
+A set of 170+ Bootstrap based design blocks ready to be used to create clean modern websites.
+
+html5 material-design html-template bootstrap4 designer bootstrap-theme website-design design-templates modern-design
+ 13.2k
+ HTML
+Updated on Feb 24
+4 issues need help
+simdjson/simdjson
+Parsing gigabytes of JSON per second
+
+json c-plus-plus arm neon x64 clang cpp11 simd json-parser avx2 json-pointer arm64 aarch64 gcc-compiler sse42 mingw-w64 vs2019 clang-cl
+ 13.2k
+ C++
+Apache-2.0 license
+Updated yesterday
+4 issues need help
+browsh-org/browsh
+A fully-modern text-based browser, rendering to TTY and browsers
+
+vnc ssh tty mosh http-performance bandwidth-saver
+ 13.2k
+ JavaScript
+LGPL-2.1 license
+Updated 17 days ago
+21 issues need help
+hapijs/hapi
+The Simple, Secure Framework Developers Trust
+
+hapi nodejs http application framework
+ 13.2k
+ JavaScript
+Updated 10 days ago
+posquit0/Awesome-CV
+📄 Awesome CV is LaTeX template for your outstanding job application
+
+resume pdf tex awesome latex cv overleaf sharelatex coverletter latex-template
+ 13.2k
+ TeX
+Updated 16 days ago
+6 issues need help
+scala/scala
+Scala 2 compiler and standard library. For bugs, see scala/bug
+
+scala scala-compiler functional-programming scala-programming-language scala-library jvm-languages object-oriented-programming
+ 13.2k
+ Scala
+Apache-2.0 license
+Updated 11 hours ago
+facebookresearch/faiss
+A library for efficient similarity search and clustering of dense vectors.
+
+ 13.3k
+ C++
+MIT license
+Updated 3 days ago
+5 issues need help
+graphql/graphql-spec
+GraphQL is a query language and execution engine tied to any backend service.
+
+ 13.3k
+ Shell
+Updated 2 days ago
+jaegertracing/jaeger
+CNCF Jaeger, a Distributed Tracing Platform
+
+cncf opentracing hacktoberfest distributed-tracing jaeger
+ 13.3k
+ Go
+Apache-2.0 license
+Updated 11 hours ago
+64 issues need help
+
+
+taichi-dev/taichi
+Productive & portable programming language for high-performance, sparse & differentiable computing on CPUs & GPUs
+
+taichi gpu-programming differentiable-programming sparse-computation
+ 13.1k
+ C++
+MIT license
+Updated 12 minutes ago
+4 issues need help
+jquense/yup
+Dead simple Object schema validation
+
+ 13.1k
+ TypeScript
+MIT license
+Updated 4 days ago
+CocoaPods/CocoaPods
+The Cocoa Dependency Manager.
+
+cocoapods swift mac package-manager ios dependency-manager objective-c
+ 13.1k
+ Ruby
+Updated 5 days ago
+55 issues need help
+mozilla/send Archived
+Simple, private file sharing from the makers of Firefox
+
+ 13.2k
+ JavaScript
+MPL-2.0 license
+Updated on Sep 15, 2020
+2 issues need help
+sass/sass
+Sass makes CSS fun!
+
+ 13.2k
+ JavaScript
+Updated on Mar 18
+13 issues need help
+dcloudio/mui
+最接近原生APP体验的高性能框架
+
+ 13.2k
+ JavaScript
+MIT license
+Updated on Jul 30, 2020
+Nyr/openvpn-install
+OpenVPN road warrior installer for Ubuntu, Debian, CentOS and Fedora
+
+openvpn fedora centos debian ubuntu shell bash vpn
+ 13.2k
+ Shell
+MIT license
+Updated 13 days ago
+SergioBenitez/Rocket
+A web framework for Rust.
+
+rocket rust framework web-development web web-framework
+ 13.2k
+ Rust
+Updated 2 days ago
+9 issues need help
+fingerprintjs/fingerprintjs
+Browser fingerprinting library with the highest accuracy and stability.
+
+fingerprintjs javascript browser detection fingerprint identification fingerprinting browser-fingerprint fraud-detection fraud audio-fingerprinting visitor-identifier
+ 13.2k
+ TypeScript
+MIT license
+Updated 3 days ago
+6 issues need help
+golang/dep Archived
+Go dependency management tool experiment (deprecated)
+
+toolchain golang package-manager dependency-manager
+ 13.2k
+ Go
+Updated on Sep 5, 2020
+
+redox-os/redox
+Mirror of https://gitlab.redox-os.org/redox-os/redox
+
+redox rust operating-system microkernel
+ 13.1k
+ Makefile
+MIT license
+Updated 5 days ago
+allinurl/goaccess
+GoAccess is a real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through yo…
+
+goaccess ncurses c nginx cli privacy real-time terminal monitoring dashboard analytics command-line webserver google-analytics web-analytics apache tui data-analysis gdpr
+ 13.1k
+ C
+MIT license
+Updated 1 hour ago
+notepad-plus-plus/notepad-plus-plus
+Notepad++ official repository
+
+notepad notepad-official editor windows
+ 13.1k
+ C++
+Updated yesterday
+2 issues need help
+lukesampson/scoop
+A command-line installer for Windows.
+
+windows installer bucket scoop scoop-bucket
+ 13.1k
+ PowerShell
+Unlicense license
+Updated 2 days ago
+6 issues need help
+Powerlevel9k/powerlevel9k Archived
+Powerlevel9k was a tool for building a beautiful and highly functional CLI, customized for you. P9k had a substantial…
+
+zsh terminal eye-candy tools terminal-themes powerline-fonts
+ 13.1k
+ Shell
+MIT license
+Updated on Apr 24, 2020
+adobe-webplatform/Snap.svg
+The JavaScript library for modern SVG graphics.
+
+javascript svg snap svg-animations javascript-library
+ 13.1k
+ JavaScript
+Apache-2.0 license
+Updated on Jan 11, 2020
+plotly/plotly.js
+Open-source JavaScript charting library behind Plotly and Dash
+
+visualization d3 charts webgl charting-library plotly data-visualization regl hacktoberfest plotly-dash
+ 13.1k
+ JavaScript
+MIT license
+Updated 2 days ago
+qishibo/AnotherRedisDesktopManager
+🚀🚀🚀A faster, better and more stable redis desktop manager, compatible with Linux, windows, mac. What's more, it won'…
+
+redis-desktop-manager redis-cluster redis-gui redis-desktop
+ 13.1k
+ JavaScript
+MIT license
+Updated 19 days ago
+thedaviddias/Front-End-Performance-Checklist
+🎮 The only Front-End Performance Checklist that runs faster than the others
+
+css javascript html lists checklist performance web-development frontend reference resources performance-metrics guidelines front-end-development front-end-developer-tool
+ 13.1k
+MIT license
+Updated 19 days ago
+1 issue needs help
+bmorelli25/Become-A-Full-Stack-Web-Developer
+Free resources for learning Full Stack Web Development
+
+ 13.1k
+MIT license
+Updated 4 days ago

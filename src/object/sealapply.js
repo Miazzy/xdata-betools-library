@@ -190,6 +190,34 @@ const sealapply = {
             }
         },
 
+        async queryTabSealApplyTypeList(typeName, searchWord, statusType) {
+            let json_data = null;
+            if (typeName == '合同类' || typeName == '非合同类') {
+                json_data = await sealapply.querySealApplyTypeList('bs_seal_regist', typeName, searchWord, statusType);
+            } else if (typeName == '财务归档') {
+                json_data = await sealapply.querySealApplyTypeList('bs_seal_regist_finance', '合同类', searchWord, statusType);
+            } else if (typeName == '档案归档') {
+                json_data = await sealapply.querySealApplyTypeList('bs_seal_regist_archive', '合同类', searchWord, statusType);
+            }
+            return json_data;
+        },
+
+        async querySealApplyTypeList(tableName = 'bs_seal_regist', typeName = '合同类', searchWord, statusType) {
+            const userinfo = await Betools.storage.getStore('system_userinfo'); //获取当前用户信息
+            const searchSql = Betools.tools.isNull(searchWord) ? '' : `~and((filename,like,~${searchWord}~)~or(create_by,like,~${searchWord}~)~or(workno,like,~${searchWord}~)~or(contract_id,like,~${searchWord}~)~or(seal_man,like,~${searchWord}~)~or(sign_man,like,~${searchWord}~)~or(front_name,like,~${searchWord}~)~or(archive_name,like,~${searchWord}~)~or(mobile,like,~${searchWord}~)~or(deal_depart,like,~${searchWord}~)~or(approve_type,like,~${searchWord}~))`; //如果存在搜索关键字
+            const month = dayjs().subtract(36, 'months').format('YYYY-MM-DD'); // 获取最近数月对应的日期
+            const sealTypeSql = `~and(seal_type,like,${typeName})`;
+            const whereSQL = `_where=(status,ne,已作废)~and(create_time,gt,${month})~and(seal_group_ids,like,~${userinfo.username}~)${sealTypeSql}${searchSql}&_sort=-serialid&_p=0&_size=10000`;
+            const tlist = await Betools.manage.queryTableData(tableName, whereSQL);
+            tlist.map((item, index) => {
+                item.create_time = dayjs(item.create_time).format('YYYY-MM-DD HH:mm:ss');
+                item.seal_time = dayjs(item.seal_time).format('YYYY-MM-DD HH:mm:ss');
+                item.receive_time = dayjs(item.receive_time).format('YYYY-MM-DD HH:mm:ss');
+                item.status = item.status_w = statusType[item.status];
+            });
+            return tlist;
+        },
+
         /**
          * 用户选择财务归档人员
          * @param {*} state 
