@@ -1,11 +1,10 @@
 'use strict'
 
-var BesUtils = require('../main/utils')
+var Betools = require('../main/utils')
 var baseExports = require('./base')
 
 /**
  * 获取一个指定范围内随机数
- *
  * @param {Number} min 最小值
  * @param {Number} max 最大值
  * @return {Number}
@@ -16,13 +15,12 @@ function getRandom(min, max) {
 
 function createMinMax(handle) {
     return function(arr, iterate) {
-        return handle(BesUtils.sortBy(baseExports.clone(arr), iterate, this))
+        return handle(Betools.sortBy(baseExports.clone(arr), iterate, this))
     }
 }
 
 /**
  * 获取最小值
- *
  * @param {Array} arr 数组
  * @param {Function} iterate(item, index, obj) 回调
  * @return {Number}
@@ -33,7 +31,6 @@ var arrayMin = createMinMax(function(result) {
 
 /**
  * 获取最大值
- *
  * @param {Array} arr 数组
  * @param {Function} iterate(item, index, obj) 回调
  * @return {Number}
@@ -44,7 +41,6 @@ var arrayMax = createMinMax(function(result) {
 
 /**
  * 千分位分隔符、小数点
- *
  * @param {String/Number} num 数值
  * @param {Object} 参数 {spaceNumber: 分割位数(默认3), separator: 分隔符(默认,), fixed: 小数位数(默认null)}
  * @return {String}
@@ -72,7 +68,6 @@ function createToNumber(handle) {
 
 /**
  * 和 Number.toFixed 类似，区别就是不会对小数进行四舍五入，结果返回字符串
- *
  * @param { String/Number } str 数值
  * @return {String}
  */
@@ -83,7 +78,6 @@ function toFixedString(str, digits) {
 
 /**
  * 和 Number.toFixed 类似，区别就是不会对小数进行四舍五入，结果返回数值
- *
  * @param { String/Number } str 数值
  * @return {String}
  */
@@ -97,7 +91,6 @@ function toFixedNumber(str, digits) {
 /**
  * 转数值
  * @param { String/Number } str 数值
- *
  * @return {Number}
  */
 var stringToNumber = createToNumber(parseFloat)
@@ -105,7 +98,6 @@ var stringToNumber = createToNumber(parseFloat)
 /**
  * 转整数
  * @param { String/Number } str 数值
- *
  * @return {Number}
  */
 var stringToInteger = createToNumber(parseInt)
