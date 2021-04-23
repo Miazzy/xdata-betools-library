@@ -507,7 +507,7 @@ const manage = {
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
-        if (Betools.tools.isNull(data)) {
+        if (Betools.tools.isNull(data) || (data && data.length == 0)) {
             time = curtime + 3600 * 24 * 365 * 3;
             data = await manage.queryTableDataCountDB(tableName, whereSQL);
             console.info(`query table data storage cache : ${curtime} data:`, data);
@@ -563,7 +563,7 @@ const manage = {
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
-        if (Betools.tools.isNull(data)) {
+        if (Betools.tools.isNull(data) || (data && data.length == 0)) {
             time = curtime + 3600 * 24 * 365 * 3;
             data = await manage.queryTableFieldValueDB(tableName, field, value, _fields);
             console.info(`query table data storage cache : ${curtime} data:`, data);
@@ -624,7 +624,7 @@ const manage = {
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
-        if (Betools.tools.isNull(data)) {
+        if (Betools.tools.isNull(data) || (data && data.length == 0)) {
             time = curtime + 3600 * 24 * 365 * 3;
             data = await manage.queryTableFieldValueCountDB(tableName, field, value, _fields);
             console.info(`query table data storage cache : ${curtime} data:`, data);
@@ -685,7 +685,7 @@ const manage = {
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
-        if (Betools.tools.isNull(data)) {
+        if (Betools.tools.isNull(data) || (data && data.length == 0)) {
             time = curtime + 3600 * 24 * 365 * 3;
             data = await manage.queryTableDataByFieldDB(tableName, field, value);
             console.info(`query table data storage cache : ${curtime} data:`, data);
@@ -3573,7 +3573,7 @@ const manage = {
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
-        if (Betools.tools.isNull(data)) {
+        if (Betools.tools.isNull(data) || (data && data.length == 0)) {
             time = curtime + 3600 * 24 * 365 * 3;
             data = await manage.querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page);
             console.info(`query table data storage cache : ${curtime} data:`, data);
@@ -3614,7 +3614,7 @@ const manage = {
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
-        if (Betools.tools.isNull(data)) {
+        if (Betools.tools.isNull(data) || (data && data.length == 0)) {
             time = curtime + 3600 * 24 * 365 * 3;
             data = await manage.querySealListByConTypeDB(userinfo, sealTypeSql, searchSql);
             console.info(`query table data storage cache : ${curtime} data:`, data);
