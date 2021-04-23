@@ -451,7 +451,7 @@ const manage = {
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
-        if (Betools.tools.isNull(data)) {
+        if (Betools.tools.isNull(data) || (data && data.length == 0)) {
             time = curtime + 3600 * 24 * 365 * 3;
             data = await manage.queryTableDataDB(tableName, whereSQL);
             console.info(`query table data storage cache : ${curtime} data:`, data);
