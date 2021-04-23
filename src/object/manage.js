@@ -460,7 +460,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 1.5) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.5) < curtime) {
             (async(tableName, whereSQL) => {
                 data = await manage.queryTableDataDB(tableName, whereSQL);
             })(tableName, whereSQL);
@@ -516,7 +516,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 1.5) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.5) < curtime) {
             (async(tableName, whereSQL) => {
                 data = await manage.queryTableDataCountDB(tableName, whereSQL);
             })(tableName, whereSQL);
@@ -572,7 +572,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 1.5) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.5) < curtime) {
             (async(tableName, field, value, _fields) => {
                 data = await manage.queryTableFieldValueDB(tableName, field, value, _fields);
             })(tableName, field, value, _fields);
@@ -633,7 +633,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 1.5) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.5) < curtime) {
             (async(tableName, field, value, _fields) => {
                 data = await manage.queryTableFieldValueCountDB(tableName, field, value, _fields);
             })(tableName, field, value, _fields);
@@ -694,7 +694,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 1.5) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.5) < curtime) {
             (async(tableName, field, value) => {
                 data = await manage.queryTableDataByFieldDB(tableName, field, value);
             })(tableName, field, value);

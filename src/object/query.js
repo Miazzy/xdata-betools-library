@@ -138,7 +138,7 @@ const query = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 5) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.5) < curtime) {
             (async(tableName, id) => {
                 data = await query.queryTableDataDB(tableName, id);
             })(tableName, id);
@@ -842,7 +842,7 @@ const query = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 100) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 1000) < curtime) {
             (async(userinfo, resp, role, cacheKey) => {
                 role = await Betools.query.queryRoleInfoDB(userinfo, resp, role, cacheKey);
             })(userinfo, resp, role, cacheKey);
