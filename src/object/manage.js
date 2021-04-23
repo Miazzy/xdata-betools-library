@@ -460,7 +460,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 3) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 1.5) < curtime) {
             (async(tableName, whereSQL) => {
                 data = await manage.queryTableDataDB(tableName, whereSQL);
             })(tableName, whereSQL);
