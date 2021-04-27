@@ -2,8 +2,9 @@ var constant = require('./constant')
 
 try {
     if (localforage) {
+        const __Driver = typeof window.openDatabase == 'function' ? localforage.WEBSQL : localforage.INDEXEDDB;
         localforage.config({
-            driver: localforage.WEBSQL,
+            driver: __Driver,
             name: 'cache',
             version: 1.0,
             size: 4294967296,
