@@ -1,7 +1,7 @@
 var constant = require('./constant')
 
 try {
-    if (localforage) {
+    if (localforage) { //只有google系的浏览器实现了websql，火狐不支持
         const __Driver = typeof window.openDatabase == 'function' ? localforage.WEBSQL : localforage.INDEXEDDB;
         localforage.config({
             driver: __Driver,
