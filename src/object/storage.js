@@ -1,21 +1,60 @@
-var constant = require('./constant')
+const { setTimeout } = require('core-js');
+const constant = require('./constant');
+
+const getUAID = () => {
+    if (window.navigator.userAgent.toLowerCase().includes('firefox')) {
+        return 'firefox';
+    } else if (window.navigator.userAgent.toLowerCase().includes('edg')) {
+        return 'edg';
+    } else if (window.navigator.userAgent.toLowerCase().includes('chrome')) {
+        return 'chrome';
+    } else if (window.navigator.userAgent.toLowerCase().includes('mobile')) {
+        return 'mobile';
+    } else if (window.navigator.userAgent.toLowerCase().includes('safari')) {
+        return 'safari';
+    } else if (window.navigator.userAgent.toLowerCase().includes('applewebkit')) {
+        return 'applewebkit';
+    }
+}
 
 try {
-    if (localforage) { //只有google系的浏览器实现了websql，火狐不支持
-        const __Driver = typeof window.openDatabase == 'function' ? localforage.WEBSQL : localforage.INDEXEDDB;
-        localforage.config({
-            driver: __Driver,
-            name: 'cache',
-            version: 1.0,
-            size: 4294967296,
-            storeName: 'keyvaluepairs',
-            description: ''
-        });
+    window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+    window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+    window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+    const __ua__ = getUAID();
+    if (__ua__ == 'firefox' || __ua__ == 'safari') {
+        setTimeout(() => {
+            if (localforage) { //只有google系的浏览器实现了websql，火狐不支持
+                const __Driver = typeof window.openDatabase == 'function' ? localforage.WEBSQL : localforage.INDEXEDDB;
+                localforage.config({
+                    driver: __Driver,
+                    name: 'cache',
+                    version: 1.0,
+                    size: 4294967296,
+                    storeName: 'keyvaluepairs',
+                    description: '',
+                });
+            } else {
+                localforage = { setItem: localStorage.setItem, getItem: localStorage.getItem, removeItem: localStorage.removeItem, clear: localStorage.clear };
+            }
+        }, 5);
     } else {
-        localforage = { setItem: () => {}, getItem: () => {}, removeItem: () => {}, clear: () => {} };
+        if (localforage) { //只有google系的浏览器实现了websql，火狐不支持
+            const __Driver = typeof window.openDatabase == 'function' ? localforage.WEBSQL : localforage.INDEXEDDB;
+            localforage.config({
+                driver: __Driver,
+                name: 'cache',
+                version: 1.0,
+                size: 4294967296,
+                storeName: 'keyvaluepairs',
+                description: '',
+            });
+        } else {
+            localforage = { setItem: localStorage.setItem, getItem: localStorage.getItem, removeItem: localStorage.removeItem, clear: localStorage.clear };
+        }
     }
 } catch (error) {
-    console.log(error);
+    console.log(`init localforage error :`, error);
 }
 
 const storage = {
