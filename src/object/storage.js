@@ -1,5 +1,15 @@
 const constant = require('./constant');
 
+const initIndexDB = () => {
+    try {
+        window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+        window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+        window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+    } catch (error) {
+        console.log(`init indexDB error:`, error);
+    }
+}
+
 const getUAID = () => {
     if (window.navigator.userAgent.toLowerCase().includes('firefox')) {
         return 'firefox';
@@ -16,10 +26,9 @@ const getUAID = () => {
     }
 }
 
+initIndexDB();
+
 try {
-    window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-    window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-    window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
     const __ua__ = getUAID();
     if (__ua__ == 'firefox' || __ua__ == 'safari') {
         setTimeout(() => {
