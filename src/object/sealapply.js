@@ -168,6 +168,20 @@ const sealapply = {
         },
 
         /**
+         * 刷新用印登记的不同状态的列表数据
+         */
+        async refreshSealApplyTabList() {
+            setTimeout(() => {
+                Betools.sealapply.querySealApplyTabList(1, 0, '', '', '', '');
+                Betools.sealapply.querySealApplyTabList(2, 0, '', '', '', '');
+            }, 500);
+            setTimeout(() => {
+                Betools.sealapply.querySealApplyTabList(1, 0, '', '', '', '');
+                Betools.sealapply.querySealApplyTabList(2, 0, '', '', '', '');
+            }, 1000);
+        },
+
+        /**
          * 跳转到用印合同详情
          * @param {*} item 
          * @param {*} tabname 
