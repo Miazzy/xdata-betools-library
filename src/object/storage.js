@@ -1,4 +1,3 @@
-const { setTimeout } = require('core-js');
 const constant = require('./constant');
 
 const getUAID = () => {
