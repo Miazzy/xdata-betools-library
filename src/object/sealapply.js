@@ -174,10 +174,12 @@ const sealapply = {
             setTimeout(() => {
                 Betools.sealapply.querySealApplyTabList(1, 0, '', '', '', '');
                 Betools.sealapply.querySealApplyTabList(2, 0, '', '', '', '');
+                Betools.sealapply.querySealApplyTabList(6, 0, '', '', '', '');
             }, 500);
             setTimeout(() => {
                 Betools.sealapply.querySealApplyTabList(1, 0, '', '', '', '');
                 Betools.sealapply.querySealApplyTabList(2, 0, '', '', '', '');
+                Betools.sealapply.querySealApplyTabList(6, 0, '', '', '', '');
             }, 1000);
         },
 
