@@ -2884,8 +2884,8 @@ const manage = {
             "topicCode": "cor_c",
             "jsonData": [{
                 "single": [{
-                    "sn": company.id.slice(0, 16),
-                    "comPanyNum": company.id.slice(0, 16),
+                    "sn": company.id,
+                    "comPanyNum": company.id,
                     "companyAreaCode": "0000",
                     "registrationStatusCode": "4201",
                     "companyArea": company.companyCode,
