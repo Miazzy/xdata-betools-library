@@ -2999,8 +2999,8 @@ const manage = {
     /**
      * 根据ID向主数据同步公司工商数据
      */
-     async syncMainDataCompanyInfo(id) {
-        const state = {id:item.id,item:{}};
+     async syncMainDataCompanyInfo(id , item = {}) {
+        const state = {id,item};
         await Betools.manage.queryCompanyIndustryInfo('bs_company_flow_data', state.id , state);
         Betools.manage.patchMainDataInfoInc(state).then(()=>{console.log(`更新法人信息_更新推送#主数据:`,JSON.stringify(state.item))});
     },
