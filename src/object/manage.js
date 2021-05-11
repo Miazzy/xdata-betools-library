@@ -2959,8 +2959,8 @@ const manage = {
             "topicCode": "cor_c",
             "jsonData": [{
                 "single": [{
-                    "sn": id.slice(0, 16),
-                    "comPanyNum": id.slice(0, 16),
+                    "sn": id,
+                    "comPanyNum": id,
                     "companyAreaCode": "",
                     "registrationStatusCode": "",
                     "companyArea": '',
@@ -2994,6 +2994,15 @@ const manage = {
         }
 
         return resp;
+    },
+
+    /**
+     * 根据ID向主数据同步公司工商数据
+     */
+     async syncMainDataCompanyInfo(id) {
+        const state = {id:item.id,item:{}};
+        await Betools.manage.queryCompanyIndustryInfo('bs_company_flow_data', state.id , state);
+        Betools.manage.patchMainDataInfoInc(state).then(()=>{console.log(`更新法人信息_更新推送#主数据:`,JSON.stringify(state.item))});
     },
 
     /**
