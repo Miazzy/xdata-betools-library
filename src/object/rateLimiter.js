@@ -24,7 +24,7 @@ export class RateLimiter {
             this.tokenBucket.content = tokensPerInterval;
             this.curIntervalStart = getMilliseconds();
             this.tokensThisInterval = 0;
-            this.fireImmediately = fireImmediately ? ? false;
+            this.fireImmediately = fireImmediately || false;
         }
         /**
          * Remove the requested number of tokens. If the rate limiter contains enough
