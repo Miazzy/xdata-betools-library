@@ -23,6 +23,7 @@ var manageExports = require('./manage');
 var consoleExports = require('./console');
 var sealapplyExports = require('./sealapply');
 var workflowExports = require('./workflow');
+var rateLimiterExports = require('./rateLimiter');
 var wflowprocessExports = require('./wflow.process');
 var methodExports = {};
 
@@ -52,6 +53,7 @@ Object.assign(
     lockExports,
     crontabExports,
     consoleExports,
+    rateLimiterExports,
 );
 
 module.exports = methodExports
