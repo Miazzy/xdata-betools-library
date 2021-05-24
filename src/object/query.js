@@ -1,6 +1,7 @@
 var { storage } = require('./storage');
 var { tools } = require('./tools');
 var { contact } = require('./contact');
+const { async } = require('regenerator-runtime');
 
 const query = {
 
@@ -71,27 +72,36 @@ const query = {
      * @param {*} key 
      * @returns 
      */
-    async queryNacosConfig(dataID = '', groupID = 'DEFAULT_GROUP', key = '', data = []) {
+    async queryNacosConfig(dataID = '', key = '', groupID = 'DEFAULT_GROUP', ) {
 
-        const cacheKey = `nacos#config#cache#${groupID}#${dataID}`;
-        const companyAPI = `${window.BECONFIG['xmysqlAPI'].replace('gateway-xmysql','gateway-config')}/${dataID}`;
+        try {
+            const cacheKey = `nacos#config#cache#${groupID}#${dataID}`;
+            const cacheAPI = `${window.BECONFIG['xmysqlAPI'].replace('gateway-xmysql','gateway-config')}/${dataID}`;
+            let data = await Betools.storage.getStoreDB(cacheKey); //查询缓存，如果缓存中含有数据，则直接返回
 
-        //查询缓存，如果缓存中含有数据，则直接返回
-        data = await Betools.storage.getStoreDB(cacheKey);
+            if (!(Betools.tools.isNull(data) || data.length == 0)) {
+                (async() => {
+                    const tArray = await superagent.get(cacheAPI).set('Content-Type', 'application/json;charset=UTF-8').set('accept', 'json'); //查询配置服务中心是否含有信息，如果含有返回配置中心的信息数据列表
+                    if (!Betools.tools.isNull(tArray)) {
+                        const text = JSON.parse(tArray.text);
+                        const tData = Betools.tools.isNull(key) ? text : text[key];
+                        Betools.storage.setStoreDB(cacheKey, tData, 3600 * 24 * 365); //保存缓存信息，下次直接使用缓存数据
+                    }
+                })();
+                return data;
+            }
 
-        if (!(Betools.tools.isNull(data) || data.length == 0)) {
+            const arr = await superagent.get(cacheAPI).set('Content-Type', 'application/json;charset=UTF-8').set('accept', 'json'); //查询配置服务中心是否含有信息，如果含有返回配置中心的信息数据列表
+            if (!Betools.tools.isNull(arr)) {
+                const text = JSON.parse(arr.text);
+                data = Betools.tools.isNull(key) ? text : text[key];
+                Betools.storage.setStoreDB(cacheKey, data, 3600 * 24 * 365); //保存缓存信息，下次直接使用缓存数据
+            }
+
             return data;
+        } catch (error) {
+            console.error(`query nacos config :`, error);
         }
-
-        //查询配置服务中心是否含有信息，如果含有返回配置中心的信息数据列表
-        const arr = await superagent.get(companyAPI).set('Content-Type', 'application/json;charset=UTF-8').set('accept', 'json')
-        if (!Betools.tools.isNull(arr)) {
-            const text = JSON.parse(arr.text);
-            data = text[key];
-            Betools.storage.setStoreDB(cacheKey, data, 3600 * 24 * 365); //保存缓存信息，下次直接使用缓存数据
-        }
-
-        return data;
     },
 
     /**
