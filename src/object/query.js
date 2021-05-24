@@ -66,7 +66,8 @@ const query = {
 
     /**
      * 查询公司列表信息
-     * @param {*} data 
+     * @param {*} dataID 
+     * @param {*} groupID 
      * @param {*} key 
      * @returns 
      */
