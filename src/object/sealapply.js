@@ -680,41 +680,44 @@ const sealapply = {
          */
         async queryCompanyCommonSearch(data, key) {
 
-            //查询缓存，如果缓存中含有数据，则直接返回
-            data = await Betools.storage.getStoreDB('bs_company_flow_base#cache#find_company' + key);
-
-            if(!(Betools.tools.isNull(data) || data.length == 0)){
+            try {
+                const companyAPI = `${window.BECONFIG['xmysqlAPI'].replace('gateway-xmysql','gateway-config')}/system.admin.config`;
+                
+                data = await Betools.storage.getStoreDB('bs_company_flow_base#cache#find_company' + key); //查询缓存，如果缓存中含有数据，则直接返回
+                
+                if(!(Betools.tools.isNull(data) || data.length == 0)){
+                    return data;
+                }
+                
+                let companyArray = '';
+                let array =[];
+                let tempData = [];
+                
+                const companyArr = await superagent.get(companyAPI).set('Content-Type','application/json;charset=UTF-8').set('accept', 'json'); //查询配置服务中心是否含有查询信息，如果存在，则返回配置中心的数据
+                
+                if(!Betools.tools.isNull(companyArr)){
+                    let text = JSON.parse(companyArr.text);
+                    companyArray = text.simple_company_array;
+                    array =[...new Set(companyArray.split(','))];
+                    data = array.filter(item => item.includes(key));
+                }
+                
+                if(!(Betools.tools.isNull(data) || data.length == 0)){
+                    data.map((item) => tempData.push({ title: item, name:item, code:item, }));
+                    data = tempData;
+                }
+                
+                if((Betools.tools.isNull(data) || data.length == 0)){ //如果未获取到数据，则查询数据库的公司列表信息
+                    data = await Betools.manage.queryTableData('bs_company_flow_base', `_where=(status,in,0)~and(level,gt,2)~and(name,like,~${key}~)&_fields=id,ename,name,xid&_sort=id&_p=0&_size=30`); // 获取最近12个月的已用印记录 //查询数据库的公司列表信息
+                    data.map((item, index) => { item.title = item.code = item.name; });
+                }
+    
+                Betools.storage.setStoreDB('bs_company_flow_base#cache#find_company' + key, data, 1800); //保存缓存信息，下次直接使用缓存数据
                 return data;
+            } catch (error) {
+                console.error(`query company common search:`, error);
             }
 
-            const companyAPI = `${window.BECONFIG['xmysqlAPI'].replace('gateway-xmysql','gateway-config')}/system.admin.config`;
-            let companyArray = '';
-            let array =[];
-            let tempData = [];
-
-            //查询配置服务中心是否含有公司列表信息，返回配置中心的公司列表
-            const companyArr = await superagent.get(companyAPI).set('Content-Type','application/json;charset=UTF-8').set('accept', 'json')
-            if(!Betools.tools.isNull(companyArr)){
-                let text = JSON.parse(companyArr.text);
-                companyArray = text.simple_company_array;
-                array =[...new Set(companyArray.split(','))];
-                data = array.filter(item => item.includes(key));
-            }
-            
-            if(!(Betools.tools.isNull(data) || data.length == 0)){
-                data.map((item) => tempData.push({ title: item, name:item, code:item, }));
-                data = tempData;
-            }
-            
-            if((Betools.tools.isNull(data) || data.length == 0)){ //如果未获取到数据，则查询数据库的公司列表信息
-                data = await Betools.manage.queryTableData('bs_company_flow_base', `_where=(status,in,0)~and(level,gt,2)~and(name,like,~${key}~)&_fields=id,ename,name,xid&_sort=id&_p=0&_size=30`); // 获取最近12个月的已用印记录 //查询数据库的公司列表信息
-                data.map((item, index) => { item.title = item.code = item.name; });
-            }
-
-            //保存缓存信息，下次直接使用缓存数据
-            Betools.storage.setStoreDB('bs_company_flow_base#cache#find_company' + key, data, 3600);
-
-            return data;
         },
 
         /**
