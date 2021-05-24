@@ -692,7 +692,7 @@ const sealapply = {
                 let companyArray = '';
                 let array =[];
                 let tempData = [];
-                
+
                 const companyArr = await superagent.get(companyAPI).set('Content-Type','application/json;charset=UTF-8').set('accept', 'json'); //查询配置服务中心是否含有查询信息，如果存在，则返回配置中心的数据
                 
                 if(!Betools.tools.isNull(companyArr)){
@@ -717,7 +717,6 @@ const sealapply = {
             } catch (error) {
                 console.error(`query company common search:`, error);
             }
-
         },
 
         /**
