@@ -681,7 +681,7 @@ const sealapply = {
         async queryCompanyCommonSearch(data, key) {
 
             //查询缓存，如果缓存中含有数据，则直接返回
-            data = await Betools.storage.setStoreDB('bs_company_flow_base#cache#find_company' + key);
+            data = await Betools.storage.getStoreDB('bs_company_flow_base#cache#find_company' + key);
 
             if(!(Betools.tools.isNull(data) || data.length == 0)){
                 return data;

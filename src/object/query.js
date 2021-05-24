@@ -65,6 +65,35 @@ const query = {
     },
 
     /**
+     * 查询公司列表信息
+     * @param {*} data 
+     * @param {*} key 
+     * @returns 
+     */
+    async queryNacosConfig(dataID = '', groupID = 'DEFAULT_GROUP', key = '', data = []) {
+
+        const cacheKey = `nacos#config#cache#${groupID}#${dataID}`;
+        const companyAPI = `${window.BECONFIG['xmysqlAPI'].replace('gateway-xmysql','gateway-config')}/${dataID}`;
+
+        //查询缓存，如果缓存中含有数据，则直接返回
+        data = await Betools.storage.getStoreDB(cacheKey);
+
+        if (!(Betools.tools.isNull(data) || data.length == 0)) {
+            return data;
+        }
+
+        //查询配置服务中心是否含有信息，如果含有返回配置中心的信息数据列表
+        const arr = await superagent.get(companyAPI).set('Content-Type', 'application/json;charset=UTF-8').set('accept', 'json')
+        if (!Betools.tools.isNull(arr)) {
+            const text = JSON.parse(arr.text);
+            data = text[key];
+            Betools.storage.setStoreDB(cacheKey, data, 3600); //保存缓存信息，下次直接使用缓存数据
+        }
+
+        return data;
+    },
+
+    /**
      * @description 查询表字段信息
      * @param {*} tableName
      */
