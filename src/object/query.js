@@ -88,7 +88,7 @@ const query = {
         if (!Betools.tools.isNull(arr)) {
             const text = JSON.parse(arr.text);
             data = text[key];
-            Betools.storage.setStoreDB(cacheKey, data, 3600); //保存缓存信息，下次直接使用缓存数据
+            Betools.storage.setStoreDB(cacheKey, data, 3600 * 24 * 365); //保存缓存信息，下次直接使用缓存数据
         }
 
         return data;
