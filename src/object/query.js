@@ -223,6 +223,17 @@ const query = {
     },
 
     /**
+     * 缓存表数据
+     * @param {*} tableName 
+     * @param {*} id 
+     * @param {*} elem 
+     */
+    async cacheTableDataByID(tableName, id, elem) {
+        let cacheKey = 'sys_cache_' + tableName + '_#id#_' + id;
+        storage.setStore(cacheKey, elem, 3600 * 24 * 365 * 3);
+    },
+
+    /**
      * 查询数据
      * @param {*} tableName
      * @param {*} id

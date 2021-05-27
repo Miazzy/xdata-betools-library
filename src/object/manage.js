@@ -997,6 +997,9 @@ const manage = {
      */
     async queryUserByNameAndMobile(name, mobile, seclevel = 1000) {
 
+        name = name.trim();
+        mobile = mobile.trim();
+
         let result = [];
 
         if (tools.isNull(name)) {
@@ -1006,7 +1009,7 @@ const manage = {
         try {
 
             //如果用印登记类型为合同类，则查询最大印章编号，然后按序使用更大的印章编号
-            var temp_ = await superagent.get(`${window.BECONFIG['xmysqlAPI']}/api/v_hrmresource?_where=((name,like,~${name}~)~or(userid,like,~${name}~))~and(mobile,eq,${mobile})~and(seclevel,lt,${seclevel})`).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            var temp_ = await superagent.get(`${window.BECONFIG['xmysqlAPI']}/api/v_hrmresource?_where=((name,like,~${name}~)~or(userid,like,~${name}~))~and(mobile,like,~${mobile}~)~and(seclevel,lt,${seclevel})`).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
 
             result = [...temp_.body];
 
