@@ -164,8 +164,8 @@ const query = {
     async queryTableData(tableName, id) {
 
         let cacheKey = 'sys_cache_' + tableName + '_#id#_' + id;
-        let time = await Betools.storage.getStore(`${cacheKey}_expire`) || 0;
-        let data = await Betools.storage.getStore(`${cacheKey}`);
+        let time = await Betools.storage.getStoreDB(`${cacheKey}_expire`) || 0;
+        let data = await Betools.storage.getStoreDB(`${cacheKey}`);
         let curtime = new Date().getTime() / 1000;
 
         //如果缓存中没有获取到数据，则直接查询服务器
@@ -230,7 +230,7 @@ const query = {
      */
     async cacheTableDataByID(tableName, id, elem) {
         let cacheKey = 'sys_cache_' + tableName + '_#id#_' + id;
-        storage.setStore(cacheKey, elem, 3600 * 24 * 365 * 3);
+        storage.setStoreDB(cacheKey, elem, 3600 * 24 * 365 * 3);
     },
 
     /**
