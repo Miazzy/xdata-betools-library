@@ -484,6 +484,11 @@ const manage = {
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
+            (async(res, tableName) => {
+                if(res && res.body && res.body.length > 0){
+                    res.body.map(element => { query.cacheTableDataByID(tableName, element.id); console.log(`cache `, tableName , ` id:`, element.id); });
+                } 
+            })(res, tableName);
             storage.setStoreDB(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
@@ -3002,10 +3007,10 @@ const manage = {
     /**
      * 根据ID向主数据同步公司工商数据
      */
-     async syncMainDataCompanyInfo(id , item = {}) {
-        const state = {id,item};
-        await Betools.manage.queryCompanyIndustryInfo('bs_company_flow_data', state.id , state);
-        Betools.manage.patchMainDataInfoInc(state).then(()=>{console.log(`更新法人信息_更新推送#主数据:`,JSON.stringify(state.item))});
+    async syncMainDataCompanyInfo(id, item = {}) {
+        const state = { id, item };
+        await Betools.manage.queryCompanyIndustryInfo('bs_company_flow_data', state.id, state);
+        Betools.manage.patchMainDataInfoInc(state).then(() => { console.log(`更新法人信息_更新推送#主数据:`, JSON.stringify(state.item)) });
     },
 
     /**
