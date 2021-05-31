@@ -484,16 +484,14 @@ const manage = {
 
         try {
             res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
-            (async(res, tableName) => {
-                if (res && res.body && res.body.length > 0) {
-                    res.body.map(element => { query.cacheTableDataByID(tableName, element.id); });
-                }
-            })(res, tableName);
             storage.setStoreDB(cacheKey, res.body, 3600 * 24 * 365 * 3);
         } catch (err) {
             console.log(err);
         } finally {
-            manage.recordDatabaseLog('query', tableName, '', whereSQL).then(() => { console.log(`record database log [type#query] complete ... `); });
+            (async() => {
+                (res && res.body && res.body.length > 0) ? res.body.map(element => { query.cacheTableDataByID(tableName, element.id, element); }) : null;
+                manage.recordDatabaseLog('query', tableName, '', whereSQL).then(() => { console.log(`record database log [type#query] complete ... `); });
+            })();
         }
 
         return res.body;
