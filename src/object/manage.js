@@ -454,15 +454,15 @@ const manage = {
         if (Betools.tools.isNull(data) || (data && data.length == 0)) {
             time = curtime + 3600 * 24 * 365 * 3;
             data = await manage.queryTableDataDB(tableName, whereSQL);
-            console.info(`query table data storage cache : ${curtime} data:`, data);
+            console.info(`query table data not hit cache and storage cache : ${curtime} data:`, data);
         } else {
             console.info(`query table data hit cache : ${curtime} data: `, data);
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.05) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
             (async(tableName, whereSQL) => {
-                data = await manage.queryTableDataDB(tableName, whereSQL);
+                setTimeout(async() => { manage.queryTableDataDB(tableName, whereSQL); }, 3000);
             })(tableName, whereSQL);
             console.info(`query table data refresh cache : ${curtime} data:`, data);
         }
@@ -489,8 +489,10 @@ const manage = {
             console.log(err);
         } finally {
             (async() => {
-                (res && res.body && res.body.length > 0) ? res.body.map(element => { query.cacheTableDataByID(tableName, element.id, element); }) : null;
-                manage.recordDatabaseLog('query', tableName, '', whereSQL).then(() => { console.log(`record database log [type#query] complete ... `); });
+                setTimeout(() => {
+                    (res && res.body && res.body.length > 0) ? res.body.map(element => { query.cacheTableDataByID(tableName, element.id, element); }): null;
+                    manage.recordDatabaseLog('query', tableName, '', whereSQL).then(() => { console.log(`record database log [type#query] complete ... `); });
+                }, 3000);
             })();
         }
 
@@ -519,9 +521,9 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.05) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
             (async(tableName, whereSQL) => {
-                data = await manage.queryTableDataCountDB(tableName, whereSQL);
+                setTimeout(async() => { manage.queryTableDataCountDB(tableName, whereSQL); }, 3000);
             })(tableName, whereSQL);
             console.info(`query table data refresh cache : ${curtime} data:`, data);
         }
@@ -575,9 +577,9 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.05) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
             (async(tableName, field, value, _fields) => {
-                data = await manage.queryTableFieldValueDB(tableName, field, value, _fields);
+                setTimeout(async() => { manage.queryTableFieldValueDB(tableName, field, value, _fields); }, 3000)
             })(tableName, field, value, _fields);
             console.info(`query table data refresh cache : ${curtime} data:`, data);
         }
@@ -636,9 +638,9 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.05) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
             (async(tableName, field, value, _fields) => {
-                data = await manage.queryTableFieldValueCountDB(tableName, field, value, _fields);
+                setTimeout(async() => { manage.queryTableFieldValueCountDB(tableName, field, value, _fields); }, 3000);
             })(tableName, field, value, _fields);
             console.info(`query table data refresh cache : ${curtime} data:`, data);
         }
@@ -697,9 +699,9 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.05) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
             (async(tableName, field, value) => {
-                data = await manage.queryTableDataByFieldDB(tableName, field, value);
+                setTimeout(async() => { manage.queryTableDataByFieldDB(tableName, field, value); }, 3000);
             })(tableName, field, value);
             console.info(`query table data refresh cache : ${curtime} data:`, data);
         }
@@ -3743,9 +3745,9 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.05) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
             (async(status, month, userinfo, sealTypeSql, searchSql, page) => {
-                data = await manage.querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page);
+                setTimeout(async() => { manage.querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page); }, 3000);
             })(status, month, userinfo, sealTypeSql, searchSql, page);
             console.info(`query table data refresh cache : ${curtime} data:`, data);
         }
@@ -3786,7 +3788,7 @@ const manage = {
         //如果缓存时间快到期，则重新查询数据
         if ((time - 3600 * 24 * 365 * 3 + 10800) < curtime) {
             (async(userinfo, sealTypeSql, searchSql) => {
-                data = await manage.querySealListByConTypeDB(userinfo, sealTypeSql, searchSql);
+                setTimeout(async() => { manage.querySealListByConTypeDB(userinfo, sealTypeSql, searchSql); }, 3000);
             })(userinfo, sealTypeSql, searchSql);
             console.info(`query table data refresh cache : ${curtime} data:`, data);
         }
