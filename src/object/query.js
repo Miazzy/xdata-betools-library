@@ -222,6 +222,29 @@ const query = {
         }
     },
 
+    // 基于实时缓存查询列表信息
+    async cacheQueryList(callback, argValue) {
+        const key = JSON.stringify([...argValue]);
+        const time = await Betools.storage.getStoreDB(`${key}_expire`) || 0;
+        const curtime = new Date().getTime() / 1000;
+        const args = JSON.parse(key);
+        let list = null;
+        list = await Betools.storage.getStoreDB(key);
+        if (Betools.tools.isNull(list) || (list && list.length == 0)) {
+            list = await callback(...args);
+            Betools.storage.setStoreDB(key, list, 3600 * 24 * 365 * 3);
+        }
+        if ((time - 3600 * 24 * 365 * 3 + 5) < curtime) {
+            (async() => {
+                setTimeout(async() => {
+                    const list = await callback(...args);
+                    Betools.storage.setStoreDB(key, list, 3600 * 24 * 365 * 3);
+                }, 100);
+            })();
+        }
+        return list;
+    },
+
     /**
      * 查询不同状态的领用数据
      * @param {*} tableName 
