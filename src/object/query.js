@@ -857,6 +857,26 @@ const query = {
                     console.log(e);
                 }
 
+                /** 查询即将开庭的案件记录 */
+                try {
+                    if (nowtime.includes('17:0') || nowtime.includes('15:0') || nowtime.includes('09:0') || nowtime.includes('10:3')) {
+                        const legalList = await Betools.query.queryLawList();
+                        for await (const legal of legalList) {
+                            const rurl = window.encodeURIComponent('https://legal.yunwisdom.club:30443/');
+                            if (!Betools.tools.isNull(legal.apply_username)) {
+                                const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.apply_username}/您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统就行操作！?rurl=${rurl}`;
+                                const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                            }
+                            if (!Betools.tools.isNull(legal.inHouseLawyersMobile)) {
+                                const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.inHouseLawyersMobile}/您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统就行操作！?rurl=${rurl}`;
+                                const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                            }
+                        }
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+
                 //向数据库解锁
                 await Betools.manage.unlock('crontab_task');
             }
@@ -868,6 +888,26 @@ const query = {
         } catch (error) {
             console.log(error);
         }
+    },
+
+    /**
+     * 查询即将开庭的案件列表
+     * @param {*} tableName 
+     * @param {*} page 
+     * @param {*} size 
+     * @returns 
+     */
+    async queryLawList(tableName = 'bs_legal', page = 0, size = 10000) {
+        const startDate = dayjs().format('YYYY-MM-DD');
+        const endDate = dayjs().add(24 * 5, 'hour').format('YYYY-MM-DD');
+        let list = await Betools.manage.queryTableData(tableName, `_where=(fstCourtDate,gt,${startDate})~and(fstCourtDate,lt,${endDate})&_sort=-id&_p=${page}&_size=${size}`);
+        list.map((item) => {
+            item.create_time = dayjs(item.create_time).format('YYYY-MM-DD');
+            item.receiveTime = dayjs(item.receiveTime).format('YYYY-MM-DD') == 'Invalid Date' ? '/' : dayjs(item.receiveTime).format('YYYY-MM-DD');
+            item.lawRTime = dayjs(item.lawRTime).format('YYYY-MM-DD') == 'Invalid Date' ? '/' : dayjs(item.lawRTime).format('YYYY-MM-DD');
+            item.handledTime = dayjs(item.handledTime).format('YYYY-MM-DD') == 'Invalid Date' ? '/' : dayjs(item.handledTime).format('YYYY-MM-DD');
+        });
+        return list;
     },
 
     /**
