@@ -922,7 +922,8 @@ const query = {
      */
     async queryVisitList(tableName = 'bs_visit_apply', status = 'init,confirm', userinfo, searchSql = '', page = 0, size = 1000) {
         (Betools.tools.isNull(userinfo) || typeof userinfo == 'string') ? userinfo = { username: '' }: null;
-        const cstatus = this.cstatus;
+        const vstatus = { init: '待处理', confirm: '未到访', visit: '已到访', devisit: '已作废', invalid: '已作废' };
+        const cstatus = { init: 5, confirm: 6, visit: 7, devisit: 8, invalid: 9, };
         const startDate = dayjs().add(-1, 'day').format('YYYY-MM-DD');
         let list = await Betools.manage.queryTableData(tableName, `_where=(time,gt,${startDate})~and(status,in,${status})~and(user_group_ids,like,~${userinfo.username.replace(/\(|\)/g,'_')}~)${searchSql}&_sort=-id&_p=${page}&_size=${size}`);
         list.map((item, index) => {
