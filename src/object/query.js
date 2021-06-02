@@ -911,6 +911,36 @@ const query = {
     },
 
     /**
+     * 查询拜访列表信息
+     * @param {*} tableName 
+     * @param {*} status 
+     * @param {*} userinfo 
+     * @param {*} searchSql 
+     * @param {*} page 
+     * @param {*} size 
+     * @returns 
+     */
+    async queryVisitList(tableName = 'bs_visit_apply', status = 'init,confirm', userinfo, searchSql = '', page = 0, size = 1000) {
+        (Betools.tools.isNull(userinfo) || typeof userinfo == 'string') ? userinfo = { username: '' }: null;
+        const cstatus = this.cstatus;
+        const startDate = dayjs().add(-1, 'day').format('YYYY-MM-DD');
+        let list = await Betools.manage.queryTableData(tableName, `_where=(time,gt,${startDate})~and(status,in,${status})~and(user_group_ids,like,~${userinfo.username.replace(/\(|\)/g,'_')}~)${searchSql}&_sort=-id&_p=${page}&_size=${size}`);
+        list.map((item, index) => {
+            item.name = item.address;
+            item.address = item.visitor_company + '的' + item.visitor_name + `预计${dayjs(item.time).format('YYYY-MM-DD')} ${item.dtime}到访。`;
+            item.tel = '';
+            item.isDefault = true;
+        });
+        list = list.sort(function(a, b) { //callback
+            const value = cstatus[a.status] * 100000000000000 + (100000000000000 - parseInt(dayjs(a.create_time).format('YYYYMMDDHHmmss')));
+            const value_ = cstatus[b.status] * 100000000000000 + (100000000000000 - parseInt(dayjs(b.create_time).format('YYYYMMDDHHmmss')));
+            return value - value_; //返回正数 ，b排列在a之前
+        });
+        list = list.filter(item => { return item.id == item.pid; });
+        return list;
+    },
+
+    /**
      * 搜索角色信息
      * @param {*} userinfo 
      * @param {*} resp 
