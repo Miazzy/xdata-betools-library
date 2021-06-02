@@ -223,6 +223,19 @@ const query = {
     },
 
     /**
+     * 查询不同状态的领用数据
+     * @param {*} tableName 
+     * @param {*} departKey 
+     * @param {*} page 
+     * @param {*} size 
+     * @returns 
+     */
+    async queryLawyerList(tableName = 'v_hrmresource', departKey = '法务', page = 0, size = 10000) {
+        let list = await Betools.manage.queryTableData(tableName, `_where=(company,like,~${departKey}~)&_fields=id,userid,loginid,mobile,name,position,gender,cname,company&_sort=-id&_p=${page}&_size=${size}`);
+        return list;
+    },
+
+    /**
      * 缓存表数据
      * @param {*} tableName 
      * @param {*} id 
