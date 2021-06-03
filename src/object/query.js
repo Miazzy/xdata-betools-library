@@ -918,6 +918,7 @@ const query = {
 
             if ('13:30|14:30|15:30'.includes(nowtime)) { //特定时间解下锁
                 await Betools.manage.unlock('crontab_task');
+                await Betools.manage.unlock('crontab_legal_message_mission');
             }
 
         } catch (error) {
