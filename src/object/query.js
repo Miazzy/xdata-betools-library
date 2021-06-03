@@ -883,16 +883,20 @@ const query = {
                 /** 查询即将开庭的案件记录 */
                 try {
                     if (nowtime.includes('17:0') || nowtime.includes('15:0') || nowtime.includes('09:0') || nowtime.includes('10:3')) {
-                        const legalList = await Betools.query.queryLawList();
-                        for await (const legal of legalList) {
-                            const rurl = window.encodeURIComponent('https://legal.yunwisdom.club:30443/');
-                            if (!Betools.tools.isNull(legal.apply_username)) {
-                                const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.apply_username}/您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统就行操作！?rurl=${rurl}`;
-                                const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
-                            }
-                            if (!Betools.tools.isNull(legal.inHouseLawyersMobile)) {
-                                const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.inHouseLawyersMobile}/您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统就行操作！?rurl=${rurl}`;
-                                const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                        const legalLockFlag = await Betools.manage.lock('crontab_legal_message_mission', 3600, username); //向数据库上锁，如果查询到数据库有锁，则不推送消息
+                        console.log(`lock flag : `, legalLockFlag, ` nowtime: `, nowtime);
+                        if (!!legalLockFlag) {
+                            const legalList = await Betools.query.queryLawList();
+                            for await (const legal of legalList) {
+                                const rurl = window.encodeURIComponent('https://legal.yunwisdom.club:30443/');
+                                if (!Betools.tools.isNull(legal.apply_username)) {
+                                    const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.apply_username}/您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统就行操作！?rurl=${rurl}`;
+                                    const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                                }
+                                if (!Betools.tools.isNull(legal.inHouseLawyersMobile)) {
+                                    const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.inHouseLawyersMobile}/您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统就行操作！?rurl=${rurl}`;
+                                    const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                                }
                             }
                         }
                     }
