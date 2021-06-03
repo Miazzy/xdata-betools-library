@@ -874,7 +874,7 @@ const query = {
 
                 /** 推送每季度绩效考核指标填写计划 */
                 try {
-                    if ('/[03-20|06-20|09-20|12-20|03-25|06-25|09-25|12-25||03-30|06-30|09-30|12-30]/'.includes(dayjs().format('MM-DD')) && nowtime.includes('15:00')) { //检查是否为每季度末下午，如果是，推送提示
+                    if ('/[03-20|06-20|09-20|12-20|03-25|06-25|09-25|12-25||03-30|06-30|09-30|12-30]/'.includes(dayjs().format('MM-DD')) && (nowtime.includes('15:00') || nowtime.includes('16:00') || nowtime.includes('17:00'))) { //检查是否为每季度末下午，如果是，推送提示
                         const rurl = window.encodeURIComponent('https://www.italent.cn//143616195/UpaasNewMobileHome#/');
                         resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
                         for await (elem of resp) {
