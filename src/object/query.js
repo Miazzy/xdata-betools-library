@@ -904,7 +904,6 @@ const query = {
                                     const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
                                 }
                             }
-                            await Betools.manage.unlock('crontab_legal_message_mission'); //向数据库解锁
                             await Betools.tools.sleep(150);
                             await Betools.manage.unlock('crontab_legal_message_mission'); //向数据库解锁
                         }
