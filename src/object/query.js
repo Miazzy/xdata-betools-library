@@ -878,7 +878,7 @@ const query = {
                         const rurl = window.encodeURIComponent('http://yp.leading-group.com:9036/H5#/folder/ent');
                         resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
                         for await (elem of resp) {
-                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/尊敬的领导及同事，您好，本周工作即将结束，请记得及时填写本周工作汇报哦！?rurl=${rurl}`;
+                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/尊敬的同事，您好，本周工作即将结束，请记得及时填写本周工作汇报哦！?rurl=${rurl}`;
                             const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
                         }
                     }
@@ -892,7 +892,7 @@ const query = {
                         const rurl = window.encodeURIComponent('https://www.italent.cn//143616195/UpaasNewMobileHome#/');
                         resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
                         for await (elem of resp) {
-                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/尊敬的领导及同事，您好，本季度工作即将结束，请记得及时在HR系统上填写本季度工作汇报和发起绩效考核流程哦！?rurl=${rurl}`;
+                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/尊敬的同事，您好，本季度工作即将结束，请记得及时在HR系统上填写本季度工作汇报和发起绩效考核流程哦！?rurl=${rurl}`;
                             const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
                         }
                     }
