@@ -862,8 +862,11 @@ const query = {
                 try {
                     if (dayjs().get('day') == 5 && (nowtime.includes('15:00') || nowtime.includes('16:00') || nowtime.includes('17:00'))) { //检查是否为周五下午，如果是，推送提示，填写周报
                         const rurl = window.encodeURIComponent('http://yp.leading-group.com:9036/H5#/folder/ent');
-                        const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/wucm1,tangj1023,huangxz0611,pengss,ouk,chenlu,yik1109,zhaozy1028/您好，本周工作即将结束，请记得及时填写本周工作汇报哦！?rurl=${rurl}`;
-                        const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                        resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
+                        for await (elem of resp) {
+                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/尊敬的领导及同事，您好，本周工作即将结束，请记得及时填写本周工作汇报哦！?rurl=${rurl}`;
+                            const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                        }
                     }
                 } catch (e) {
                     console.log(e);
@@ -873,8 +876,11 @@ const query = {
                 try {
                     if ('/[03-20|06-20|09-20|12-20|03-25|06-25|09-25|12-25||03-30|06-30|09-30|12-30]/'.includes(dayjs().format('MM-DD')) && nowtime.includes('15:00')) { //检查是否为每季度末下午，如果是，推送提示
                         const rurl = window.encodeURIComponent('https://www.italent.cn//143616195/UpaasNewMobileHome#/');
-                        const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/zhaozy1028/亲爱的同事，本季度工作即将结束，请记得及时在HR系统上填写本季度工作汇报和发起绩效考核流程哦！?rurl=${rurl}`;
-                        const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                        resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
+                        for await (elem of resp) {
+                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/尊敬的领导及同事，您好，本季度工作即将结束，请记得及时在HR系统上填写本季度工作汇报和发起绩效考核流程哦！?rurl=${rurl}`;
+                            const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                        }
                     }
                 } catch (e) {
                     console.log(e);
