@@ -860,7 +860,7 @@ const query = {
 
                 /** 推送每日提醒工作 */
                 try {
-                    if ((nowtime.includes('18:00') || nowtime.includes('18:30'))) { //检查是否为周五下午，如果是，推送提示，填写周报
+                    if ((dayjs().get('day') <= 5 && dayjs().get('day') >= 1) && (nowtime.includes('18:00') || nowtime.includes('18:30'))) { //检查是否为周五下午，如果是，推送提示，填写周报
                         const rurl = window.encodeURIComponent('http://yp.leading-group.com:9036/H5#/folder/ent');
                         resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
                         for await (elem of resp) {
