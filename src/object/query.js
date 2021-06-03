@@ -178,7 +178,7 @@ const query = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.01) < curtime) {
             (async(tableName, id) => {
                 setTimeout(async() => { query.queryTableDataDB(tableName, id); }, 3000);
             })(tableName, id);
@@ -234,7 +234,7 @@ const query = {
             list = await callback(...args);
             Betools.storage.setStoreDB(key, list, 3600 * 24 * 365 * 3);
         }
-        if ((time - 3600 * 24 * 365 * 3 + 5) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.01) < curtime) {
             (async() => {
                 setTimeout(async() => {
                     const list = await callback(...args);

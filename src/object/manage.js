@@ -460,7 +460,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.01) < curtime) {
             (async(tableName, whereSQL) => {
                 setTimeout(async() => { manage.queryTableDataDB(tableName, whereSQL); }, 3000);
             })(tableName, whereSQL);
@@ -521,7 +521,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.01) < curtime) {
             (async(tableName, whereSQL) => {
                 setTimeout(async() => { manage.queryTableDataCountDB(tableName, whereSQL); }, 3000);
             })(tableName, whereSQL);
@@ -577,7 +577,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.01) < curtime) {
             (async(tableName, field, value, _fields) => {
                 setTimeout(async() => { manage.queryTableFieldValueDB(tableName, field, value, _fields); }, 3000)
             })(tableName, field, value, _fields);
@@ -638,7 +638,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.01) < curtime) {
             (async(tableName, field, value, _fields) => {
                 setTimeout(async() => { manage.queryTableFieldValueCountDB(tableName, field, value, _fields); }, 3000);
             })(tableName, field, value, _fields);
@@ -699,7 +699,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.01) < curtime) {
             (async(tableName, field, value) => {
                 setTimeout(async() => { manage.queryTableDataByFieldDB(tableName, field, value); }, 3000);
             })(tableName, field, value);
@@ -3745,7 +3745,7 @@ const manage = {
         }
 
         //如果缓存时间快到期，则重新查询数据
-        if ((time - 3600 * 24 * 365 * 3 + 0.15) < curtime) {
+        if ((time - 3600 * 24 * 365 * 3 + 0.01) < curtime) {
             (async(status, month, userinfo, sealTypeSql, searchSql, page) => {
                 setTimeout(async() => { manage.querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page); }, 3000);
             })(status, month, userinfo, sealTypeSql, searchSql, page);
