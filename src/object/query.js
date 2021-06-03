@@ -888,7 +888,7 @@ const query = {
 
                 /** 查询即将开庭的案件记录 */
                 try {
-                    if (nowtime.includes('17:0') || nowtime.includes('15:0') || nowtime.includes('09:0') || nowtime.includes('10:3')) {
+                    if (nowtime.includes('17:00') || nowtime.includes('15:00') || nowtime.includes('09:00') || nowtime.includes('10:30')) {
                         const legalLockFlag = await Betools.manage.lock('crontab_legal_message_mission', 3600, username); //向数据库上锁，如果查询到数据库有锁，则不推送消息
                         console.log(`lock flag : `, legalLockFlag, ` nowtime: `, nowtime);
                         if (!!legalLockFlag) {
