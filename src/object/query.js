@@ -858,6 +858,20 @@ const query = {
                     console.log(e)
                 };
 
+                /** 推送每日提醒工作 */
+                try {
+                    if ((nowtime.includes('18:00') || nowtime.includes('18:30'))) { //检查是否为周五下午，如果是，推送提示，填写周报
+                        const rurl = window.encodeURIComponent('http://yp.leading-group.com:9036/H5#/folder/ent');
+                        resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
+                        for await (elem of resp) {
+                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/工作了一天辛苦了，下班时请不要忘记打卡哦！?rurl=${rurl}`;
+                            const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                        }
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+
                 /** 推送每周周报填写计划 */
                 try {
                     if (dayjs().get('day') == 5 && (nowtime.includes('15:00') || nowtime.includes('16:00') || nowtime.includes('17:00'))) { //检查是否为周五下午，如果是，推送提示，填写周报
