@@ -862,7 +862,7 @@ const query = {
                 try {
                     if (dayjs().get('day') == 5 && (nowtime.includes('15:00') || nowtime.includes('16:00') || nowtime.includes('17:00'))) { //检查是否为周五下午，如果是，推送提示，填写周报
                         const rurl = window.encodeURIComponent('http://yp.leading-group.com:9036/H5#/folder/ent');
-                        const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/zhaozy1028/亲爱的同事，本周工作即将结束，请记得及时填写本周工作汇报哦！?rurl=${rurl}`;
+                        const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/wucm1,tangj1023,huangxz0611,pengss,ouk,chenlu,yik1109,zhaozy1028/您好，本周工作即将结束，请记得及时填写本周工作汇报哦！?rurl=${rurl}`;
                         const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
                     }
                 } catch (e) {
