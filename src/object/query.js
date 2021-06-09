@@ -1009,7 +1009,7 @@ const query = {
         curtime = new Date().getTime() / 1000;
 
         //开启debugger模式
-        if (role && (role.includes('COMMON_DEBUG_ADMIN') || role.includes('SEAL_ADMIN'))) {
+        if (role && (role.includes('COMMON_DEBUG_ADMIN') || role.includes('SEAL_ADMIN') || role.includes('LEGAL_ADMIN'))) {
             try {
                 window.vConsole = window.vConsole ? window.vConsole : new VConsole();
             } catch (error) {
@@ -1091,6 +1091,16 @@ const query = {
             resp = await Betools.query.queryRoleGroupList('COMMON_DEBUG_ADMIN', username);
             if (resp && resp.length > 0 && resp[0].userlist.includes(username)) {
                 role += ',COMMON_DEBUG_ADMIN';
+                window.vConsole = window.vConsole ? window.vConsole : new VConsole(); // 初始化vconsole
+            };
+            resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', username);
+            if (resp && resp.length > 0 && resp[0].userlist.includes(username)) {
+                role += ',MESSAGE_REPORT_ADMIN';
+                window.vConsole = window.vConsole ? window.vConsole : new VConsole(); // 初始化vconsole
+            };
+            resp = await Betools.query.queryRoleGroupList('LEGAL_ADMIN', username);
+            if (resp && resp.length > 0 && resp[0].userlist.includes(username)) {
+                role += ',LEGAL_ADMIN';
                 window.vConsole = window.vConsole ? window.vConsole : new VConsole(); // 初始化vconsole
             };
             try {
