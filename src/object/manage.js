@@ -3821,6 +3821,22 @@ const manage = {
         return { size, result };
     },
 
+    /**
+     * 向特定用户推送企业微信消息函数
+     * @param {*} system agentid 默认系统 reward 奖惩管理系统 stock 股权管理系统 legal 法务管理系统
+     * @param {*} content 消息内容
+     * @param {*} users 接收消息的用户
+     * @param {*} url 跳转网址 
+     */
+    async sendMessage(system = 'agentid' , content , users , url = '') {
+        try{
+            const content = window.encodeURIComponent(content.replace(/\//g,''));
+            await superagent.get(`${window.BECONFIG['restAPI']}/api/v1/weappms/${users}/${content}?type=${system}&url=${url}`).set('accept', 'json');
+        } catch(e) { 
+            console.error(e);
+        }
+    },
+
     // 记录操作日志
     async handleLog(tableName, element, action = '发起', opinion, content) {
 
