@@ -3830,8 +3830,9 @@ const manage = {
      */
     async sendMessage(system = 'agentid' , content , users , url = '') {
         try{
-            const content = window.encodeURIComponent(content.replace(/\//g,''));
+            content = window.encodeURIComponent(content.replace(/\//g,''));
             await superagent.get(`${window.BECONFIG['restAPI']}/api/v1/weappms/${users}/${content}?type=${system}&url=${url}`).set('accept', 'json');
+            Betools.console.info(system == 'agentid' ? 'admin' : system , {content,users,url} , 'message' , 'LAW' , users);
         } catch(e) { 
             console.error(e);
         }
