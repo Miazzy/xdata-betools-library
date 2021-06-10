@@ -860,11 +860,12 @@ const query = {
 
                 /** 推送每日提醒工作 */
                 try {
-                    if ((dayjs().get('day') <= 5 && dayjs().get('day') >= 1) && (nowtime.includes('18:00') || nowtime.includes('18:30'))) { //检查是否为工作日，如果是，推送提示
+                    if ((dayjs().get('day') <= 5 && dayjs().get('day') >= 1) && (nowtime.includes('17:59') || nowtime.includes('18:00'))) { //检查是否为工作日，如果是，推送提示
                         const rurl = window.encodeURIComponent('http://yp.leading-group.com:9036/H5#/folder/ent');
                         resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
+                        Betools.console.info('info', JSON.stringify(resp), 'notify', 'ADM', username);
                         for await (elem of resp) {
-                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist_reception}/尊敬的同事，您好，工作了一天辛苦了，下班前请记得保存好工作资料，也不要忘记打卡哦！?rurl=${rurl}`;
+                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist_reception}/您好，工作了一天辛苦了，下班前请记得保存好工作资料，也不要忘记打卡哦！?rurl=${rurl}`;
                             const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
                         }
                     }
@@ -877,8 +878,9 @@ const query = {
                     if (dayjs().get('day') == 5 && (nowtime.includes('15:00') || nowtime.includes('16:00') || nowtime.includes('17:00'))) { //检查是否为周五下午，如果是，推送提示，填写周报
                         const rurl = window.encodeURIComponent('http://yp.leading-group.com:9036/H5#/folder/ent');
                         resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
+                        Betools.console.info('info', JSON.stringify(resp), 'week', 'ADM', username);
                         for await (elem of resp) {
-                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/尊敬的同事，您好，本周工作即将结束，请记得及时填写本周工作汇报哦！?rurl=${rurl}`;
+                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/您好，本周工作即将结束，请记得及时填写本周工作汇报哦！?rurl=${rurl}`;
                             const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
                         }
                     }
@@ -891,8 +893,9 @@ const query = {
                     if ('/[03-20|06-20|09-20|12-20|03-25|06-25|09-25|12-25||03-30|06-30|09-30|12-30]/'.includes(dayjs().format('MM-DD')) && (nowtime.includes('15:00') || nowtime.includes('16:00') || nowtime.includes('17:00'))) { //检查是否为每季度末下午，如果是，推送提示
                         const rurl = window.encodeURIComponent('https://www.italent.cn//143616195/UpaasNewMobileHome#/');
                         resp = await Betools.query.queryRoleGroupList('MESSAGE_REPORT_ADMIN', '');
+                        Betools.console.info('info', JSON.stringify(resp), 'quarter', 'ADM', username);
                         for await (elem of resp) {
-                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/尊敬的同事，您好，本季度工作即将结束，请记得及时在HR系统上填写本季度工作汇报和发起绩效考核流程哦！?rurl=${rurl}`;
+                            const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${elem.userlist}/您好，本季度工作即将结束，请记得及时在HR系统上填写本季度工作汇报和发起绩效考核流程哦！?rurl=${rurl}`;
                             const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
                         }
                     }
@@ -902,7 +905,7 @@ const query = {
 
                 /** 查询即将开庭的案件记录 */
                 try {
-                    if (nowtime.includes('17:00') || nowtime.includes('15:00') || nowtime.includes('09:00') || nowtime.includes('10:30')) {
+                    if (nowtime.includes('17:30') || nowtime.includes('15:00') || nowtime.includes('09:00')) {
                         const legalLockFlag = await Betools.manage.lock('crontab_legal_message_mission', 3600, username); //向数据库上锁，如果查询到数据库有锁，则不推送消息
                         console.log(`lock flag : `, legalLockFlag, ` nowtime: `, nowtime);
                         if (!!legalLockFlag) {
@@ -910,12 +913,16 @@ const query = {
                             for await (const legal of legalList) {
                                 const rurl = window.encodeURIComponent('https://legal.yunwisdom.club:30443/');
                                 if (!Betools.tools.isNull(legal.apply_username)) {
-                                    const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.apply_username}/您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统就行操作！?rurl=${rurl}`;
+                                    const content = window.encodeURIComponent(`您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统进行操作！`);
+                                    const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.apply_username}/${content}?type=legal&rurl=${rurl}`;
                                     const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                                    Betools.console.info('info', content, 'message', 'LAW', legal.apply_username);
                                 }
                                 if (!Betools.tools.isNull(legal.inHouseLawyersMobile)) {
-                                    const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.inHouseLawyersMobile}/您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统就行操作！?rurl=${rurl}`;
+                                    const content = window.encodeURIComponent(`您好，您跟进的案件：${legal.caseID}，项目：${legal.zoneProject}，即将开庭，请在开庭前好在准备工作，如需修改案件信息，请前往法务诉讼系统进行操作！`);
+                                    const queryURL = `${window.BECONFIG['restAPI']}/api/v1/weappms/${legal.inHouseLawyersMobile}/${content}?type=legal&rurl=${rurl}`;
                                     const resp = await superagent.get(queryURL).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+                                    Betools.console.info('info', content, 'message', 'LAW', legal.inHouseLawyersMobile);
                                 }
                             }
                             await Betools.tools.sleep(150);

@@ -3821,7 +3821,34 @@ const manage = {
         return { size, result };
     },
 
+    // 记录操作日志
+    async handleLog(tableName, element, action = '发起', opinion, content) {
 
+        const userinfo = await Betools.storage.getStore('system_userinfo'); // 获取用户基础信息
+        const prLogHisNode = {
+            id: Betools.tools.queryUniqueID(),
+            table_name: tableName,
+            main_value: element.id,
+            proponents: userinfo.username,
+            business_data_id: element.id,
+            business_code: '000000000',
+            process_name: opinion,
+            employee: userinfo.realname,
+            approve_user: userinfo.username,
+            action: action,
+            action_opinion: opinion,
+            operate_time: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+            functions_station: userinfo.position,
+            process_station: '案件审批',
+            business_data: JSON.stringify(this.item),
+            content: content,
+            process_audit: element.id,
+            create_time: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+            relate_data: '',
+            origin_data: JSON.stringify(element),
+        }
+        await Betools.workflow.approveViewProcessLog(prLogHisNode);
+    },
 };
 
 var manageExports = {
