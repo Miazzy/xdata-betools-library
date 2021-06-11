@@ -308,10 +308,11 @@ const query = {
     async queryRoleGroupList(name, username = '') {
 
         var queryURL = `${window.BECONFIG['xmysqlAPI']}/api/bs_admin_group?_where=(groupname,eq,${name})~and(userlist,like,~${username}~)&_sort=create_time`;
+        const cacheKey = `sys_user_cache@bs_admin_group&groupname${name}&username${username}`;
 
         try {
             //获取缓存中的数据
-            var cache = storage.getStore(`sys_user_cache@bs_admin_group&groupname${name}`);
+            var cache = storage.getStore(cacheKey);
 
             //返回缓存值
             if (typeof cache != 'undefined' && cache != null && cache != '') {
@@ -321,7 +322,7 @@ const query = {
             var res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
 
             if (res.body != null && res.body.length > 0) {
-                storage.setStore(`sys_user_cache@bs_admin_group&groupname${name}`, res.body, 2);
+                storage.setStore(cacheKey, res.body, 1800);
             }
 
             return res.body;
