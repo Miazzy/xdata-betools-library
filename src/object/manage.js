@@ -3829,6 +3829,7 @@ const manage = {
      * @param {*} url 跳转网址 
      */
     async sendMessage(system = 'agentid' , content , users , url = '') {
+        system = system == 'admin' ? 'agentid' : system;
         try{
             content = window.encodeURIComponent(content.replace(/\//g,''));
             await superagent.get(`${window.BECONFIG['restAPI']}/api/v1/weappms/${users}/${content}?type=${system}&url=${url}`).set('accept', 'json');
