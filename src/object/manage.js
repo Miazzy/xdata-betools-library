@@ -3828,13 +3828,13 @@ const manage = {
      * @param {*} users 接收消息的用户
      * @param {*} url 跳转网址 
      */
-    async sendMessage(system = 'agentid' , content , users , url = '') {
+    async sendMessage(system = 'agentid', content, users, url = '') {
         system = system == 'admin' ? 'agentid' : system;
-        try{
-            content = window.encodeURIComponent(content.replace(/\//g,''));
+        try {
+            content = window.encodeURIComponent(content.replace(/\//g, ''));
             await superagent.get(`${window.BECONFIG['restAPI']}/api/v1/weappms/${users}/${content}?type=${system}&url=${url}`).set('accept', 'json');
-            Betools.console.info(system == 'agentid' ? 'admin' : system , {content,users,url} , 'message' , 'LAW' , users);
-        } catch(e) { 
+            Betools.console.info(system == 'agentid' ? 'admin' : system, { content, users, url }, 'message', 'LAW', users);
+        } catch (e) {
             console.error(e);
         }
     },
@@ -3858,7 +3858,7 @@ const manage = {
             operate_time: dayjs().format('YYYY-MM-DD HH:mm:ss'),
             functions_station: userinfo.position,
             process_station: '案件审批',
-            business_data: JSON.stringify(this.item),
+            business_data: JSON.stringify(element),
             content: content,
             process_audit: element.id,
             create_time: dayjs().format('YYYY-MM-DD HH:mm:ss'),
