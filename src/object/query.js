@@ -1124,6 +1124,28 @@ const query = {
         }
     },
 
+    /**
+     * 获取处理日志
+     * @returns 返回查询到的流程处理日志
+     */
+    async queryProcessLog() {
+        const id = Betools.tools.getUrlParam('id');
+        try {
+            const processLogList = await Betools.workflow.queryPRLogHistoryByDataID(id);
+            if (processLogList && processLogList.length > 0) { //如果查询出出来记录，则将处理记录排序
+                processLogList.map(item => {
+                    item.create_time = dayjs(item.create_time).format('YYYY-MM-DD HH:mm');
+                    item.unique = `${item.employee} ${item.action} ${item.action_opinion} ${item.create_time} `;
+                });
+                processLogList = processLogList.filter((item, index) => { const findex = processLogList.findIndex(elem => { return item.unique == elem.unique }); return findex == index; });
+                processLogList.sort();
+            }
+            return processLogList;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
 }
 
 var queryExports = {
