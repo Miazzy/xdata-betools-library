@@ -1131,7 +1131,7 @@ const query = {
     async queryProcessLog() {
         const id = Betools.tools.getUrlParam('id');
         try {
-            const processLogList = await Betools.workflow.queryPRLogHistoryByDataID(id);
+            let processLogList = await Betools.workflow.queryPRLogHistoryByDataID(id);
             if (processLogList && processLogList.length > 0) { //如果查询出出来记录，则将处理记录排序
                 processLogList.map(item => {
                     item.create_time = dayjs(item.create_time).format('YYYY-MM-DD HH:mm');
