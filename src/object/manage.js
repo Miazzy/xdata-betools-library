@@ -3876,16 +3876,18 @@ const manage = {
      * @param {*} tableName 表单名称
      * @param {*} fieldName 字段名称 
      */
-    async sortTableData(tableName , fieldName = 'serialid') {
+    async sortTableData(tableName, fieldName = 'serialid') {
+        const uniqueID = Betools.tools.queryUniqueID();
+        const url = Betools.workconfig.queryAPI.tableSerialAPI.replace('serialid', fieldName).replace('{table_name}', tableName);
+
         //发送自动设置排序号请求
         const resp = await superagent
-            .get(Betools.workconfig.queryAPI.tableSerialAPI.replace('{table_name}', tableName)).replace('serialid',fieldName)
-            .set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
+            .get(url).set('xid', uniqueID).set('accept', 'json');
 
         //打印日志信息
-        (async()=>{
+        (async() => {
             const userinfo = await Betools.storage.getStore('system_userinfo'); // 获取用户基础信息
-            Betools.console.info('admin' , { tableName, sort:'sort', field:fieldName }, 'sort', 'LAW', userinfo.username);
+            Betools.console.info('admin', { tableName, sort: 'sort', field: fieldName, resp }, 'sort', 'LAW', userinfo.username);
         })();
     },
 };
