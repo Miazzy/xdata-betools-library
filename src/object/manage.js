@@ -3887,7 +3887,8 @@ const manage = {
         //打印日志信息
         (async() => {
             const userinfo = await Betools.storage.getStore('system_userinfo'); // 获取用户基础信息
-            Betools.console.info('admin', { tableName, sort: 'sort', field: fieldName, resp }, 'sort', 'LAW', userinfo.username);
+            const content = JSON.stringify({ tableName, sort: 'sort', field: fieldName, resp });
+            Betools.console.info('admin', content, 'sort', 'LAW', userinfo.username);
         })();
     },
 };
