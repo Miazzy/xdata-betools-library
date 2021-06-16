@@ -3834,7 +3834,25 @@ const manage = {
         try {
             content = window.encodeURIComponent(content.replace(/\//g, ''));
             await superagent.get(`${window.BECONFIG['restAPI']}/api/v1/weappms/${users}/${content}?type=${system}&url=${url}`).set('accept', 'json');
-            Betools.console.info(system == 'agentid' ? 'admin' : system, { content, users, url }, 'message', 'LAW', users);
+            Betools.console.info(system == 'agentid' ? 'admin' : system, JSON.stringify({ content, users, url }), 'message', 'LAW', users);
+        } catch (e) {
+            console.error(e);
+        }
+    },
+
+    /**
+     * 向特定用户推送邮件消息
+     * @param {*} receiver 消息接收者
+     * @param {*} content 消息内容
+     * @param {*} title 消息标题
+     * @param {*} url 跳转网址 
+     */
+    async sendMail(receiver, title, content, url = '') {
+        system = system == 'admin' ? 'agentid' : system;
+        try {
+            content = window.encodeURIComponent(content.replace(/\//g, ''));
+            await superagent.get(`${window.BECONFIG['restAPI']}//api/v1/mail/${title}/${content}/${receiver}?url=${url}`).set('accept', 'json');
+            Betools.console.info('mail', JSON.stringify({ receiver, title, content }), 'message', 'LAW', receiver);
         } catch (e) {
             console.error(e);
         }
@@ -3876,9 +3894,9 @@ const manage = {
      * @param {*} tableName 表单名称
      * @param {*} fieldName 字段名称 
      */
-    async sortTableData(tableName, fieldName = 'serialid') {
+    async sortTableData(tableName, fieldName = 'serialid', value = '') {
         const uniqueID = Betools.tools.queryUniqueID();
-        const url = Betools.workconfig.queryAPI.tableSerialAPI.replace('serialid', fieldName).replace('{table_name}', tableName);
+        const url = Betools.workconfig.queryAPI.tableSerialAPI.replace('serialid', fieldName).replace('{table_name}', tableName) + `?value=${value}`;
 
         //发送自动设置排序号请求
         const resp = await superagent
@@ -3897,5 +3915,4 @@ var manageExports = {
     manage,
 }
 
-module.exports = manageExports
-module.exports = manageExports
+module.exports = manageExports;
