@@ -147,11 +147,12 @@ const sealapply = {
 
             const userinfo = await Betools.storage.getStore('system_userinfo'); //获取当前用户信息
 
+            const random = Math.random().toString().slice(2, 6);
             let { initContractList, sealContractList, failContractList, json_data, json_data_common } = {};
             let month = dayjs().subtract(12, 'months').format('YYYY-MM-DD'); // 获取最近几个月对应的日期
             let searchSql = !searchWord ? '' : `~and((filename,like,~${searchWord}~)~or(serialid,like,~${searchWord}~)~or(create_by,like,~${searchWord}~)~or(workno,like,~${searchWord}~)~or(contract_id,like,~${searchWord}~)~or(seal_man,like,~${searchWord}~)~or(sign_man,like,~${searchWord}~)~or(front_name,like,~${searchWord}~)~or(archive_name,like,~${searchWord}~)~or(mobile,like,~${searchWord}~)~or(deal_depart,like,~${searchWord}~)~or(approve_type,like,~${searchWord}~))`;
             let sealTypeSql = (sealType === 0 || tabname == '合同类') ? `~and(seal_type,like,合同类)` : ((sealType === 1 || tabname == '非合同类') ? `~and(seal_type,like,非合同类)` : '');
-            let status = tabname == 1 ? '待用印' : (tabname == 2 ? '已用印,已领取,移交前台,财务归档,档案归档,已完成' : (tabname == 6 || tabname == 0 ? '已退回' : ''));
+            let status = tabname == 1 ? `待用印,${random}` : (tabname == 2 ? '已用印,已领取,移交前台,财务归档,档案归档,已完成' : (tabname == 6 || tabname == 0 ? '已退回' : ''));
 
             if (tabname == 1 || tabname == 2 || tabname == 6 || tabname == 0) {
                 resp = await Betools.manage.querySealListByConStatus(status, month, userinfo, sealTypeSql, searchSql, page);
