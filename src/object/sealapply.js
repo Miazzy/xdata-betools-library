@@ -154,11 +154,13 @@ const sealapply = {
             let sealTypeSql = (sealType === 0 || tabname == '合同类') ? `~and(seal_type,like,合同类)` : ((sealType === 1 || tabname == '非合同类') ? `~and(seal_type,like,非合同类)` : '');
             let status = tabname == 1 ? `待用印,${random}` : (tabname == 2 ? '已用印,已领取,移交前台,财务归档,档案归档,已完成' : (tabname == 6 || tabname == 0 ? '已退回' : ''));
 
-            if (tabname == 1 || tabname == 2 || tabname == 6 || tabname == 0) {
+            if (tabname == 2 || tabname == 6 || tabname == 0) {
                 resp = await Betools.manage.querySealListByConStatus(status, month, userinfo, sealTypeSql, searchSql, page);
-                initContractList = tabname == 1 ? resp.result : initContractList;
                 sealContractList = tabname == 2 ? resp.result : sealContractList;
                 failContractList = (tabname == 6 || tabname == 0) ? resp.result : failContractList;
+            } else if (tabname == 1) {
+                resp = await Betools.manage.querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page);
+                initContractList = tabname == 1 ? resp.result : initContractList;
             } else if (tabname == '非合同类' || tabname == '合同类') {
                 resp = await Betools.manage.querySealListByConType(userinfo, sealTypeSql, '~and(status,ne,已作废)' + searchSql);
                 json_data_common = tabname == '非合同类' ? resp.result : json_data_common;
@@ -817,4 +819,5 @@ var sealapplyExports = {
     sealapply,
 }
 
+module.exports = sealapplyExports
 module.exports = sealapplyExports
