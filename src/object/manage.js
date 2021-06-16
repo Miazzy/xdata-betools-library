@@ -3848,11 +3848,10 @@ const manage = {
      * @param {*} url 跳转网址 
      */
     async sendMail(receiver, title, content, url = '') {
-        system = system == 'admin' ? 'agentid' : system;
         try {
             content = window.encodeURIComponent(content.replace(/\//g, ''));
             await superagent.get(`${window.BECONFIG['restAPI']}//api/v1/mail/${title}/${content}/${receiver}?url=${url}`).set('accept', 'json');
-            Betools.console.info('mail', JSON.stringify({ receiver, title, content }), 'message', 'LAW', receiver);
+            Betools.console.info('mail', JSON.stringify({ receiver, title, content, url }), 'message', 'LAW', receiver);
         } catch (e) {
             console.error(e);
         }
