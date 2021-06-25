@@ -983,7 +983,7 @@ const query = {
         const vstatus = { init: '待处理', confirm: '未到访', visit: '已到访', devisit: '已作废', invalid: '已作废' };
         const cstatus = { init: 5, confirm: 6, visit: 7, devisit: 8, invalid: 9, };
         const startDate = dayjs().add(-1, 'day').format('YYYY-MM-DD');
-        let list = await Betools.manage.queryTableData(tableName, `_where=(time,gt,${startDate})~and(status,in,${status})~and(user_group_ids,like,~${userinfo.username.replace(/\(|\)/g,'_')}~)${searchSql}&_sort=-id&_p=${page}&_size=${size}`);
+        let list = await Betools.manage.queryTableData(tableName, `_where=(time,gt,${startDate})~and(status,in,${status})~and(user_group_ids,like,~${userinfo.username.replace(/\(|\)/g,'_')}~)${searchSql}&_sort=-id&_p=${page}&_size=${size}&_fields=id,address,create_by,create_time,department,dtime,employee,mobile,position,serialid,status,time,user_admin_name,user_group_ids,userid,visitor_company,visitor_count,visitor_mobile,visitor_name,zone`);
         list.map((item, index) => {
             item.name = item.address;
             item.address = item.visitor_company + '的' + item.visitor_name + `预计${dayjs(item.time).format('YYYY-MM-DD')} ${item.dtime}到访。`;
