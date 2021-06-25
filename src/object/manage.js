@@ -3756,9 +3756,9 @@ const manage = {
         return data;
     },
 
-    async querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page) {
+    async querySealListByConStatusDB(status, month, userinfo, sealTypeSql, searchSql, page = 0, size = 10) {
         let cacheKey = 'sys_seal_cache_' + status + month + sealTypeSql + '_#' + userinfo.username + '#_' + searchSql + '#page#_' + page;
-        const whereSQL = `_where=(status,in,${status})~and(create_time,gt,${month})~and(seal_group_ids,like,~${userinfo.username}~)${sealTypeSql}${searchSql}&_sort=-id&_p=${page}&_size=10`;
+        const whereSQL = `_where=(status,in,${status})~and(create_time,gt,${month})~and(seal_group_ids,like,~${userinfo.username}~)${sealTypeSql}${searchSql}&_sort=-id&_p=${page}&_size=${size}&_fields=id,approve_type,archive,archive_name,company,contract_id,count,create_by,deal_manager,filename,finance,finance_name,mobile,order_type,prefix,remark,seal,seal_category,seal_group_ids,seal_man,seal_type,serialid,sign_man,status,username,workno,zone_name`;
         const resp = await manage.querySealListByCondition('bs_seal_regist', whereSQL); //获取最近几个月的待用印记录
         Betools.storage.setStoreDB(cacheKey, resp, 3600 * 24 * 365 * 3);
         return resp;
