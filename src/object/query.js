@@ -995,7 +995,7 @@ const query = {
             const value_ = cstatus[b.status] * 100000000000000 + (100000000000000 - parseInt(dayjs(b.create_time).format('YYYYMMDDHHmmss')));
             return value - value_; //返回正数 ，b排列在a之前
         });
-        list = list.filter(item => { return item.id == item.pid; });
+        // list = list.filter(item => { return item.id == item.pid; });
         return list;
     },
 
