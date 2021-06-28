@@ -1017,7 +1017,7 @@ const query = {
         curtime = new Date().getTime() / 1000;
 
         //开启debugger模式
-        if (role && (role.includes('COMMON_DEBUG_ADMIN') || role.includes('SEAL_ADMIN') || role.includes('LEGAL_ADMIN'))) {
+        if (role && (role.includes('COMMON_DEBUG_ADMIN') || role.includes('SEAL_ADMIN') || role.includes('LEGAL_ADMIN') || role.includes('STOCK_OPERATE_ADMIN'))) {
             try {
                 window.vConsole = window.vConsole ? window.vConsole : new VConsole();
             } catch (error) {
