@@ -1111,6 +1111,16 @@ const query = {
                 role += ',LEGAL_ADMIN';
                 window.vConsole = window.vConsole ? window.vConsole : new VConsole(); // 初始化vconsole
             };
+            resp = await Betools.query.queryRoleGroupList('LEGAL_OPERATE_ADMIN', username);
+            if (resp && resp.length > 0 && resp[0].userlist.includes(username)) {
+                role += ',LEGAL_OPERATE_ADMIN';
+                window.vConsole = window.vConsole ? window.vConsole : new VConsole(); // 初始化vconsole
+            };
+            resp = await Betools.query.queryRoleGroupList('STOCK_OPERATE_ADMIN', username);
+            if (resp && resp.length > 0 && resp[0].userlist.includes(username)) {
+                role += ',STOCK_OPERATE_ADMIN';
+                window.vConsole = window.vConsole ? window.vConsole : new VConsole(); // 初始化vconsole
+            };
             try {
                 role = role.replace('null', 'view');
                 role = [...new Set(role.split(','))].toString();
@@ -1152,4 +1162,5 @@ var queryExports = {
     query,
 }
 
+module.exports = queryExports
 module.exports = queryExports
