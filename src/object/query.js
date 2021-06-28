@@ -322,7 +322,7 @@ const query = {
             var res = await superagent.get(queryURL).set('xid', tools.queryUniqueID()).set('id', tools.queryUniqueID()).set('accept', 'json');
 
             if (res.body != null && res.body.length > 0) {
-                storage.setStore(cacheKey, res.body, 1800);
+                storage.setStore(cacheKey, res.body, 30);
             }
 
             return res.body;
