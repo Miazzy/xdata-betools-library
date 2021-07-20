@@ -246,7 +246,7 @@ const query = {
     },
 
     /**
-     * 查询不同状态的领用数据
+     * 查询法务人员列表
      * @param {*} tableName 
      * @param {*} departKey 
      * @param {*} page 
@@ -259,7 +259,7 @@ const query = {
     },
 
     /**
-     * 查询不同状态的领用数据
+     * 查询系统用户信息列表
      * @param {*} tableName 
      * @param {*} searchKey 
      * @param {*} page 
