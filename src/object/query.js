@@ -259,6 +259,22 @@ const query = {
     },
 
     /**
+     * 查询不同状态的领用数据
+     * @param {*} tableName 
+     * @param {*} searchKey 
+     * @param {*} page 
+     * @param {*} size 
+     * @returns 
+     */
+    async querySystemAccountList(tableName = 'v_hrmresource', searchKey = '', page = 0, size = 10000) {
+        let list = [];
+        if (searchKey && searchKey.length >= 2) {
+            list = await Betools.manage.queryTableData(tableName, `_where=(name,like,~${searchKey}~)&_fields=id,userid,loginid,mobile,name,position,gender,cname,company&_sort=-id&_p=${page}&_size=${size}`);
+        }
+        return list;
+    },
+
+    /**
      * 缓存表数据
      * @param {*} tableName 
      * @param {*} id 
@@ -1162,5 +1178,4 @@ var queryExports = {
     query,
 }
 
-module.exports = queryExports
-module.exports = queryExports
+module.exports = queryExports;
