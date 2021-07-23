@@ -2584,14 +2584,14 @@ const manage = {
 
                 try {
                     //通知签收人领取资料(企业微信发送)
-                    await superagent.get(`${window.BECONFIG['restAPI']}/api/v1/weappms/${username}/亲爱的同事，您提交的用印登记申请，文件:‘${state.item.filename}’（${state.item.sealtype}），${state.noname}：${state.item.contractId}，已知会盖印人?rurl=${receiveURL}`)
+                    await superagent.get(`${window.BECONFIG['restAPI']}/api/v1/weappms/${username}/您好，您提交的用印登记申请，资料名为:‘${state.item.filename}’（${state.item.sealtype}），序号：${state.item.serialid}，已知会盖印人！?rurl=${receiveURL}`)
                         .set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
                 } catch (error) {
                     console.log(error);
                 }
 
                 try {
-                    const message = `亲爱的用印管理员，您有一份新的用印登记申请，文件名‘${state.item.filename}’（${state.item.sealtype}），${state.noname}：${state.item.contractId}，请记得及时处理`;
+                    const message = `您好，您有新的用印申请，资料名为：‘${state.item.filename}’（${state.item.sealtype}），经办人：${state.item.create_by}，序号：${state.item.serialid}，请记得及时处理!`;
                     if (state.item.seal_mobile) {
                         //通知印章人领取资料(企业微信发送)
                         await superagent.post(`${window.BECONFIG['restAPI']}/api/v5/wework_message/${state.item.seal_mobile}?message=${message}&url=${url}`).set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
