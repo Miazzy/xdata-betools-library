@@ -2584,7 +2584,7 @@ const manage = {
 
                 try {
                     //通知签收人领取资料(企业微信发送)
-                    await superagent.get(`${window.BECONFIG['restAPI']}/api/v1/weappms/${username}/您好，您提交的用印登记申请，资料名为:‘${state.item.filename}’（${state.item.sealtype}），序号：${state.item.serialid}，已知会盖印人！?rurl=${receiveURL}`)
+                    await superagent.get(`${window.BECONFIG['restAPI']}/api/v1/weappms/${username}/您好，您提交的用印申请，资料名为:‘${state.item.filename}’（${state.item.sealtype}），序号：${state.item.serialid}，已知会盖印人！?rurl=${receiveURL}`)
                         .set('xid', Betools.tools.queryUniqueID()).set('accept', 'json');
                 } catch (error) {
                     console.log(error);
